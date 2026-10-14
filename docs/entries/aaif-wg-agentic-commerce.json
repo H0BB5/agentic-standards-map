@@ -51,7 +51,7 @@
    "class": "statement"
   }
  ],
- "participation": "The author of this map wrote on the public working group mailing list on 2026-10-12 (06:23 UTC), accepting a 30-minute slot, and has announced a presentation at the working group call of 2026-10-14; see Disclosure.",
+ "participation": "The author of this map wrote on the public working group mailing list on 2026-10-12, accepting a 30-minute slot, and has announced a presentation at the working group call of 2026-10-14; see Disclosure.",
  "overlaps": [
   "ucp",
   "aaif-structure",
@@ -70,20 +70,20 @@
  "open_proposals": [
   {
    "what": "Capability Map input on cross-boundary evidence and audit, and post-purchase rows P1 to P7",
-   "author": "narko4u",
+   "author": "a participant",
    "date": "2026-08-26",
    "state": "open",
    "url": "https://github.com/aaif/wg-agentic-commerce/issues/5"
   },
   {
    "what": "Capability map to add a buyer-capacity attribute and a table of records kept per party",
-   "author": "smcd",
+   "author": "a participant",
    "date": "2026-09-24",
    "state": "open",
    "url": "https://github.com/aaif/wg-agentic-commerce/issues/8"
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/aaif-wg-agentic-commerce.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/29b25b51341c495002691c8af8e756032da98c76/entries/aaif-wg-agentic-commerce.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/89b9f50aec1878ec617bd0bcd5a83e16f3e9c189/entries/aaif-wg-agentic-commerce.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

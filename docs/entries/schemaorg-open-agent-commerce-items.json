@@ -60,62 +60,62 @@
  "open_proposals": [
   {
    "what": "Issue #4824: BookingChannel for LodgingBusiness, pointing to a well-known manifest.",
-   "author": "CohenNathan",
+   "author": "a participant",
    "date": "2026-05-23",
    "state": "open",
    "url": "https://github.com/schemaorg/schemaorg/issues/4824"
   },
   {
    "what": "Issue #4786: WebPageSemanticRepresentation type for AI agent consumption.",
-   "author": "dbhurley",
+   "author": "a participant",
    "date": "2026-03-25",
    "state": "open",
    "url": "https://github.com/schemaorg/schemaorg/issues/4786"
   },
   {
    "what": "Issue #4828: SoftwareAgent type (possible subtype of SoftwareApplication).",
-   "author": "groovy-ross",
+   "author": "a participant",
    "date": "2026-05-25",
    "state": "open",
    "url": "https://github.com/schemaorg/schemaorg/issues/4828"
   },
   {
    "what": "Issue #4774: PaymentMethod collections or profiles via @id for acceptedPaymentMethod on Offer.",
-   "author": "itsgroup-co-nz",
+   "author": "a participant",
    "date": "2026-02-27",
    "state": "open",
    "url": "https://github.com/schemaorg/schemaorg/issues/4774"
   },
   {
    "what": "Issue #4928: public registration number of establishments (hasCertification or identifier).",
-   "author": "frmoretto",
+   "author": "the author of this map",
    "date": "2026-09-26",
    "state": "open",
    "url": "https://github.com/schemaorg/schemaorg/issues/4928"
   },
   {
    "what": "Issues #4572 and #4615: cart object and structured payloads for cart and checkout actions.",
-   "author": "MatthiasWiesmann",
+   "author": "a participant",
    "date": "2025-11-10",
    "state": "open",
    "url": "https://github.com/schemaorg/schemaorg/issues/4572"
   },
   {
    "what": "Issue #4525: economic operator attribute on Product.",
-   "author": "MatthiasWiesmann",
+   "author": "a participant",
    "date": "2025-10-09",
    "state": "open",
    "url": "https://github.com/schemaorg/schemaorg/issues/4525"
   },
   {
    "what": "Discussion #4699: buyer-owned checkout from Demand, Offer and Order.",
-   "author": "emmett08",
+   "author": "a participant",
    "date": "2026-01-24",
    "state": "open",
    "url": "https://github.com/schemaorg/schemaorg/discussions/4699"
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/schemaorg-open-agent-commerce-items.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/29b25b51341c495002691c8af8e756032da98c76/entries/schemaorg-open-agent-commerce-items.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/89b9f50aec1878ec617bd0bcd5a83e16f3e9c189/entries/schemaorg-open-agent-commerce-items.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

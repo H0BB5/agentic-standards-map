@@ -70,35 +70,35 @@
  "open_proposals": [
   {
    "what": "Terms extension specification",
-   "author": "CameronWhiteside",
+   "author": "a participant",
    "date": "2026-04-10",
    "state": "open",
    "url": "https://github.com/x402-foundation/x402/pull/1986"
   },
   {
    "what": "Authority extension: bounded, offline-verifiable spending mandates",
-   "author": "whawk46",
+   "author": "a participant",
    "date": "2026-08-20",
    "state": "open",
    "url": "https://github.com/x402-foundation/x402/pull/3220"
   },
   {
    "what": "Offer-receipt additions: action-receipt, v2 bindings, delivery proof, conformance (#2906 and others)",
-   "author": "jsuich",
+   "author": "a participant",
    "date": "2026-07-19",
    "state": "open",
    "url": "https://github.com/x402-foundation/x402/issues/2906"
   },
   {
    "what": "Dispute evidence layer: working-group request (#2887), feature (#3500)",
-   "author": "stillmarcus24",
+   "author": "a participant",
    "date": "2026-07-17",
    "state": "open",
    "url": "https://github.com/x402-foundation/x402/issues/2887"
   },
   {
    "what": "Reviews extension: links to payment-backed reviews in 402 and settlement responses",
-   "author": "damiafuentes",
+   "author": "a participant",
    "date": "2026-10-02",
    "state": "open",
    "url": "https://github.com/x402-foundation/x402/pull/3656"
@@ -114,6 +114,6 @@
   "source": "https://github.com/x402-foundation/x402/blob/main/specs/extensions/extension-offer-and-receipt.md"
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/x402.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/29b25b51341c495002691c8af8e756032da98c76/entries/x402.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/89b9f50aec1878ec617bd0bcd5a83e16f3e9c189/entries/x402.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

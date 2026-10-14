@@ -59,27 +59,27 @@
  "open_proposals": [
   {
    "what": "PR #2240: /.well-known/ai-catalog.json as the Preferred discovery mechanism (base dev-1.1).",
-   "author": "Tehsmash",
+   "author": "a participant",
    "date": "2026-09-16",
    "state": "open",
    "url": "https://github.com/a2aproject/A2A/pull/2240"
   },
   {
    "what": "Issue #2276: /.well-known/agent-card-list.json, an array of AgentCards.",
-   "author": "amolofeev",
+   "author": "a participant",
    "date": "2026-10-01",
    "state": "open",
    "url": "https://github.com/a2aproject/A2A/issues/2276"
   },
   {
    "what": "Issue #2248: standard multi-agent aggregation path and a ListAgents remote procedure call (RPC).",
-   "author": "dongjiang1989",
+   "author": "a participant",
    "date": "2026-09-20",
    "state": "open",
    "url": "https://github.com/a2aproject/A2A/issues/2248"
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/a2a-discovery.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/29b25b51341c495002691c8af8e756032da98c76/entries/a2a-discovery.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/89b9f50aec1878ec617bd0bcd5a83e16f3e9c189/entries/a2a-discovery.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

@@ -5,7 +5,7 @@
  "kind": "specification",
  "tier": "context",
  "status": "Individual draft-httpauth-payment-01 (2026-09-09), Standards Track intended, no Working Group (WG), expires 2027-03-13; authors from Tempo Labs and Stripe. The datatracker record of 2026-10-13 gives revision 01 (time 2026-09-09 16:08 UTC) and no later revision.",
- "status_as_of": "2026-10-13",
+ "status_as_of": "2026-10-14",
  "relevance": "On receipts, -01 reads \"Servers SHOULD include a Payment-Receipt header on successful responses\"; the receipt table has four fields (status, method, timestamp, reference) and no signature field.",
  "sources": [
   {
@@ -17,18 +17,23 @@
    "url": "https://www.ietf.org/archive/id/draft-httpauth-payment-01.txt",
    "read": "2026-10-03",
    "class": "third-party"
+  },
+  {
+   "url": "https://docs.stripe.com/payments/machine/mpp",
+   "read": "2026-10-14",
+   "class": "statement"
   }
  ],
  "seams": [
   "S4"
  ],
- "verified": "2026-10-13",
+ "verified": "2026-10-14",
  "evidence": {
   "read": "On 2026-10-13: the datatracker record.",
-  "not_read": "Full -01 text, payment method and intent specifications on mpp.dev, software development kit (SDK) licensing, IETF list discussion, Tempo and Stripe pages.",
-  "not_found": "Not found, 2026-10-03, in -01: agent protocol, card network, AP2, x402, Verifiable Intent; in the eight lists: the draft name."
+  "not_read": "Full -01 text, payment method and intent specifications on mpp.dev, software development kit (SDK) licensing, IETF list discussion, Tempo pages. mpp.dev was not read again on 2026-10-14: its robots.txt carries the signal ai-input=no.",
+  "not_found": "Not found, 2026-10-03, in -01: agent protocol, card network, AP2, x402, Verifiable Intent; in the eight lists: the draft name. The Stripe page on the Machine Payments Protocol (MPP), read 2026-10-14, describes MPP as \"co-authored by Stripe and Tempo\" and does not mention this draft; a statement by a primary source that links the draft to MPP: not found there."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/ietf-httpauth-payment.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/29b25b51341c495002691c8af8e756032da98c76/entries/ietf-httpauth-payment.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/89b9f50aec1878ec617bd0bcd5a83e16f3e9c189/entries/ietf-httpauth-payment.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

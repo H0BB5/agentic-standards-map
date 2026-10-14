@@ -4,20 +4,20 @@
  "org": "Industry",
  "kind": "specification",
  "tier": "core",
- "status": "Commercial programme of Mastercard for agent-initiated payments, described on its framework page of 2025-10-14 (read 2026-10-02). Not re-verified on 2026-10-13: mastercard.com answers HTTP 403.",
- "status_as_of": "2026-10-02",
- "relevance": "The framework page of 2025-10-14 (a Mastercard statement) says \"By implementing the emerging Web Bot Auth standard (as outlined in the framework) at the Content Delivery Network (CDN) layer, merchants can verify agent authenticity\", and that \"we've partnered with Cloudflare to support Web Bot Auth in Mastercard Agent Pay\". Mastercard is the maintainer of Verifiable Intent (see verifiable-intent).\n",
- "boundary": "not found in the framework page of 2025-10-14 (read 2026-10-02)",
+ "status": "Commercial programme of Mastercard for agent-initiated payments, described on its framework page (read in a browser on 2026-10-14; first read 2026-10-02). Page metadata: datePublished 2025-10-14, dateModified 2025-11-04. The page introduces the Mastercard Agent Pay Acceptance Framework: registration and verification of agents before they transact with agentic tokens, Web Bot Auth at the content delivery network (CDN) layer, and a Dynamic Token Verification Code, an agentic token formatted for standard card payment fields, submitted in existing checkout forms. The page refers to developer.mastercard.com for use cases; that site was not read.",
+ "status_as_of": "2026-10-14",
+ "relevance": "The framework page (a Mastercard statement) says \"By implementing the emerging Web Bot Auth standard (as outlined in the framework) at the Content Delivery Network (CDN) layer, merchants can verify agent authenticity\", and that \"we’ve partnered with Cloudflare to support Web Bot Auth in Mastercard Agent Pay\". Mastercard is the maintainer of Verifiable Intent (see verifiable-intent).",
+ "boundary": "not found in the framework page (read in a browser on 2026-10-14)",
  "committed_next": [],
  "sources": [
   {
    "url": "https://www.mastercard.com/europe/en/news-and-trends/stories/2025/agentic-commerce-framework.html",
-   "read": "2026-10-02",
+   "read": "2026-10-14",
    "class": "statement"
   },
   {
    "url": "https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/",
-   "read": "2026-10-03",
+   "read": "2026-10-14",
    "class": "decision"
   },
   {
@@ -34,12 +34,12 @@
  "seams": [
   "S3"
  ],
- "verified": "2026-10-03",
+ "verified": "2026-10-14",
  "evidence": {
-  "read": "Framework page of 2025-10-14 in full (2026-10-02); FIDO release of 2026-04-28 (2026-10-03); Verifiable Intent README (2026-10-02).",
+  "read": "Framework page in full, read in a browser on 2026-10-14 (title \"Agentic token framework: Driving trusted AI transactions | Mastercard Europe\"; first read 2026-10-02); FIDO release of 2026-04-28 (2026-10-03); Verifiable Intent README (2026-10-02).",
   "not_read": "Three Mastercard pages of 2026 (Agent Pay for Machines, trust and intelligence services, Verifiable Intent)."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/mastercard-agent-pay.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/29b25b51341c495002691c8af8e756032da98c76/entries/mastercard-agent-pay.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/89b9f50aec1878ec617bd0bcd5a83e16f3e9c189/entries/mastercard-agent-pay.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

@@ -46,13 +46,13 @@
  "open_proposals": [
   {
    "what": "Proposes to \"Stand up a new community group for agent-assisted user agents (name to be decided).\"",
-   "author": "marcoscaceres (WebKit standards-positions)",
+   "author": "a participant (WebKit standards-positions)",
    "date": "2026-06-17",
    "state": "closed",
    "url": "https://github.com/WebKit/standards-positions/issues/670#issuecomment-4729132384"
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/w3c-webmcp-cg-report.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/29b25b51341c495002691c8af8e756032da98c76/entries/w3c-webmcp-cg-report.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/89b9f50aec1878ec617bd0bcd5a83e16f3e9c189/entries/w3c-webmcp-cg-report.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

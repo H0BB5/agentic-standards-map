@@ -71,13 +71,13 @@
  "open_proposals": [
   {
    "what": "TPAC 2026 breakout on KYAPay (agentic commerce on the existing web); no slot assigned yet.",
-   "author": "selfissued (Michael B. Jones) and skyfire-ankit",
+   "author": "Michael B. Jones and a co-author",
    "date": "2026-10-01",
    "state": "open",
    "url": "https://github.com/w3c/tpac2026-breakouts/issues/39"
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/kyapay.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/29b25b51341c495002691c8af8e756032da98c76/entries/kyapay.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/89b9f50aec1878ec617bd0bcd5a83e16f3e9c189/entries/kyapay.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

@@ -93,34 +93,34 @@
  "open_proposals": [
   {
    "what": "Issue #88: field data on ai-catalog.json and ard.json; asks for a fallback to the predecessor path.",
-   "author": "neuronto",
+   "author": "a participant",
    "date": "2026-08-31",
    "state": "open",
    "url": "https://github.com/ards-project/ard-spec/issues/88"
   },
   {
    "what": "Issue #20: access and monetization signalling in ARD entries.",
-   "author": "zeroasterisk",
+   "author": "a participant",
    "date": "2026-06-19",
    "state": "open",
    "url": "https://github.com/ards-project/ard-spec/issues/20"
   },
   {
    "what": "Issue #78: discovery confers no contact authority.",
-   "author": "rhein1",
+   "author": "a participant",
    "date": "2026-08-20",
    "state": "open",
    "url": "https://github.com/ards-project/ard-spec/issues/78"
   },
   {
    "what": "Issue #43: application/install-manifest+json in the AI Catalog (closed as completed on 2026-10-11: ARD v0.91 accepts any valid RFC 6838 media type in `type`).",
-   "author": "yepgent",
+   "author": "a participant",
    "date": "2026-06-23",
    "state": "closed",
    "url": "https://github.com/ards-project/ard-spec/issues/43"
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/ard.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/29b25b51341c495002691c8af8e756032da98c76/entries/ard.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/89b9f50aec1878ec617bd0bcd5a83e16f3e9c189/entries/ard.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

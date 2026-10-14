@@ -111,13 +111,13 @@
  "open_proposals": [
   {
    "what": "Issue #374: the Mandate Receipt is described with a `result` field of `[\"success\", \"error\"]` (docs/ap2/agent_authorization.md, lines 503 to 516) and with a `status` field of `Success` or `Error` (code/sdk/schemas/ap2/checkout_receipt.json and types/receipt_status.json), both read at commit e1ea56d; no comment on the issue on 2026-10-13.",
-   "author": "putsuka",
+   "author": "a participant",
    "date": "2026-10-11",
    "state": "open",
    "url": "https://github.com/google-agentic-commerce/AP2/issues/374"
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/ap2.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/29b25b51341c495002691c8af8e756032da98c76/entries/ap2.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/89b9f50aec1878ec617bd0bcd5a83e16f3e9c189/entries/ap2.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

@@ -85,11 +85,11 @@
  ],
  "verified": "2026-10-13",
  "evidence": {
-  "read": "Toolkit releases v2.0.0 to v2.1.1 and the two plugin files, a connector listing page, shopify.dev pages on Checkout WebMCP, the developer changelog of 2026-09-28 and the MCP developer page, npm registry metadata, issue #62, read 2026-10-08; on 2026-10-13: the list of toolkit releases (latest v2.1.1, 2026-10-08), the CHANGELOG and the folder skills/ucp at the tag v2.1.1, the npm registry entries of @shopify/dev-mcp (1.16.0) and @shopify/shopify-dev-tools (E404), and issue #62 (open, no comments).",
+  "read": "Toolkit releases v2.0.0 to v2.1.1 and the two plugin files, shopify.dev pages on Checkout WebMCP, the developer changelog of 2026-09-28 and the MCP developer page, npm registry metadata, issue #62, read 2026-10-08; on 2026-10-13: the list of toolkit releases (latest v2.1.1, 2026-10-08), the CHANGELOG and the folder skills/ucp at the tag v2.1.1, the npm registry entries of @shopify/dev-mcp (1.16.0) and @shopify/shopify-dev-tools (E404), and issue #62 (open, no comments).",
   "not_read": "The shopify.dev pages on Checkout WebMCP, the developer changelog of 2026-09-28 and the MCP developer page were not re-read on 2026-10-13 (last read 2026-10-08). help.shopify.com, any merchant-facing page on shopify.com, the telemetry code of the toolkit, the X post of the Shopify product manager on Checkout WebMCP; the compiled binary lib/shop.wasm and the .mjs files of Shop CLI, the server mcp.shop.com (no call made), the plugin files of Shop CLI.",
   "not_found": "Not found, 2026-10-08: setup.shopify.com in the shopify.dev pages read (the MCP developer page and the changelog index); a page of Shopify describing the merchant MCP. Not found in the README, SKILL.md and transactions.md of Shopify/shop at d1e8c7c (2026-10-13): beta, preview, experimental, a list of supported countries, and a confirmation sent to the shopper on a durable medium."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/shopify.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/29b25b51341c495002691c8af8e756032da98c76/entries/shopify.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/89b9f50aec1878ec617bd0bcd5a83e16f3e9c189/entries/shopify.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }
