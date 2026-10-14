@@ -22,5 +22,5 @@ seams:
 verified: 2026-10-13
 evidence:
   read: 'On 2026-10-13: the list of releases and the specification directory of the repository; the blog post, the governance page and the versioning page were not re-read.'
-  not_read: Full text of each specification chapter, the SEP process pages, licence texts beyond README and GOVERNANCE.md.
+  not_read: Full text of each specification chapter, the Specification Enhancement Proposal (SEP) process pages, licence texts beyond README and GOVERNANCE.md.
   not_found: 'Not found on the governance and specification pages: foundation, AAIF, Linux.'

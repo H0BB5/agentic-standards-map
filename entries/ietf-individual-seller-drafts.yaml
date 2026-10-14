@@ -3,7 +3,7 @@ name: Individual IETF drafts on the seller side
 org: IETF
 kind: work-item
 tier: core
-status: 'Three individual Internet-Drafts on the seller side of agent transactions, none adopted by a WG: anders merchant-identity-assertions -01, kavian offering-discovery-protocol -01, hood agtp-merchant-identity (-02, an Independent Submission dated 26 May 2026, Informational, expires 27 November 2026; -00 and -02 read).'
+status: 'Three individual Internet-Drafts on the seller side of agent transactions, none adopted by a Working Group (WG): anders merchant-identity-assertions -01, kavian offering-discovery-protocol -01, hood agtp-merchant-identity (-02, an Independent Submission dated 26 May 2026, Informational, expires 27 November 2026; -00 and -02 read).'
 status_as_of: 2026-10-13
 relevance: draft-anders-merchant-identity-assertions defines a Merchant Identity Assertion, a signed JSON document binding a legal identity to the merchant receiving a payment, so that an automated client can verify the merchant before completing it. draft-kavian-offering-discovery-protocol lets an agent discover a Service's Collections and Offerings and find links to subsequent operations, for "catalogs ranging from a few Offerings to large marketplaces without imposing a universal product taxonomy". draft-hood-agtp-merchant-identity states "This is the merchant identity gap." and treats merchant identity as the receiving side of a purchase.
 committed_next: []

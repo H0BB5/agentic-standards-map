@@ -2,6 +2,7 @@
 
 - `build_map.py` checks the entries against the schema and writes `MAP.md`.
 - `build_bundle.py` writes `map-bundle.md`.
+- `count_sources.py [FOLDER]` prints the counts of sources quoted on the site and in the README (source references, distinct URLs, primary and third-party-only URLs, distinct URLs in the bundle) and a `[SCOPE]` line saying what it does not count.
 - `build_site.py` writes the static site (one page per entry, notes, graph, `map.json`, `calendar.ics`).
 
 ## Publishing the site

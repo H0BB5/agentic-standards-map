@@ -5,7 +5,7 @@ One YAML file per entry. `python tools/build_map.py --check entries/<id>.yaml` v
 ```yaml
 id: short-kebab-id             # unique, used in `overlaps`
 name: Human-readable name
-org: W3C | IETF | GS1 | UN/CEFACT | AAIF | Linux Foundation | Independent | Industry
+org: W3C | IETF | GS1 | UN/CEFACT | Other standards bodies | AAIF | Linux Foundation | Independent | Industry
 kind: venue | charter | specification | work-item | event | position
 tier: core | context           # core: on the path of a seller, a product or a service; context: touches it
 status: Two sentences at most. What the item is now. Dated by status_as_of.

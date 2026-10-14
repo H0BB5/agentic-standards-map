@@ -1,6 +1,6 @@
 id: cen-clc-jtc24-dpp
 name: CEN/CENELEC JTC 24 Digital Product Passport standards (EN 18216 to EN 18246)
-org: Industry
+org: Other standards bodies
 kind: specification
 tier: core
 status: 'Eight horizontal standards; six cited in the Official Journal of the EU according to the CEN-CENELEC page of 2026-07-15 (page re-read on 2026-10-13, unchanged); the two not cited are EN 18239 and EN 18246, and their status is not read. The Official Journal itself was not read: EUR-Lex answered HTTP 202 without content on 2026-10-13.'

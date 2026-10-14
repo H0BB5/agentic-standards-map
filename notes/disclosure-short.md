@@ -6,6 +6,7 @@ The author of this map, Francesco Marinoni Moretto, has the following public int
 - Working paper: "Layered Agentic Retrieval" (LAR), SSRN, https://doi.org/10.2139/ssrn.6801118. It is a publisher-side proposal related to seam S1 (discovery layers) and to position statement #14 at the W3C/GS1 workshop.
 - Census of agentic surfaces: "Agentic surface census, 19 September 2026", Zenodo, https://doi.org/10.5281/zenodo.22893539; tool: https://github.com/frmoretto/ucp-probe
 - Atlas for Agents, a measurement of Italian accommodation (Puglia): https://atlasforagents.com/
+- Public repository frmoretto/shopify-dev-mcp-changelog (release notes for @shopify/dev-mcp, see entry `shopify`): https://github.com/frmoretto/shopify-dev-mcp-changelog
 - Independent advisory activity.
 - Speaker at AGNTCon 2026 (San Jose), 2026-10-23, with the talk "Reading is Free, Spending is Not: What a Minimal Agent Learns Probing Live Ecommerce Endpoints" (program page read on 2026-10-13): https://events.linuxfoundation.org/agntcon-mcpcon-north-america/program/schedule/
 
@@ -24,4 +25,5 @@ The author of this map, Francesco Marinoni Moretto, has the following public int
 - IETF AUDIT list and architecture draft issue #35: entry `ietf-audit`; seams S4 and the closing section on what is not established.
 - IETF vcon list, two messages, and PR #41 on the charter text: entry `ietf-vcon`; seam S4.
 - AAIF Agentic Commerce Working Group, a message on the working group list (12 October, 06:23 UTC) and a presentation announced for the call of 14 October: entry `aaif-wg-agentic-commerce`; seam S4.
-- Shopify AI Toolkit issue #62 and a public changelog repository for @shopify/dev-mcp: entry `shopify`.
+- Shopify AI Toolkit, issue #62: entry `shopify`.
+- IETF AUDIT: the lead editor of the expected-record draft stated on 2026-10-08 that the author will be named as a contributor for case 7 (see the full disclosure): entry `ietf-audit`.

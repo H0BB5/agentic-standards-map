@@ -4,7 +4,7 @@
 
 W3C, IETF, GS1, UN/CEFACT, the Linux Foundation, AAIF, and the industry protocols (UCP, ACP, AP2, x402, Visa, Mastercard) are all working on how an AI agent finds a seller, trusts a product, proves who it acts for and pays. They do it at the same time, at different speeds and with different rules. This map puts them on one page.
 
-Every statement is dated and points to a public source. No predictions, no proposals, no rankings.
+Every statement is dated and points to a public source. The map makes no predictions or recommendations of its own and does not rank approaches. Third-party proposals are recorded with attribution and their stated status.
 
 *Version 1.0, as of 2026-10-14. The map is updated as venues move; each entry carries its own read date.*
 
@@ -12,17 +12,17 @@ Every statement is dated and points to a public source. No predictions, no propo
 
 ## Four things you see only when you look across venues
 
-**1. Discovery has at least seven front doors.** `/.well-known/ucp`, A2A's `agent-card.json`, schema.org, ARD, AI Catalog, MCP Server Cards and DNS-AID. Only `agent-card.json` is in the IANA well-known registry. Two venues are writing discovery charters right now: IETF DAWN and the W3C Agentic Web WG. [Seam S1](map-bundle.md#part-seams)
+**1. The map identifies at least seven discovery mechanisms or publication paths.** `/.well-known/ucp`, A2A's `agent-card.json`, schema.org, ARD, AI Catalog, MCP Server Cards and DNS-AID. Of these seven, only `agent-card.json` is in the IANA well-known registry (updated 2026-10-07, read 2026-10-14). Two venues have discovery-charter work in progress: the IETF DAWN charter is in external review, with comments to the IESG due by 2026-10-19 and an IESG telechat listed for 2026-10-22, and the W3C Agentic Web WG charter is in refinement. [Seam S1](map-bundle.md#part-seams)
 
-**2. We can resolve a product and verify a signature, but not check who may speak for it.** GS1 Digital Link gives a ratified route to product identifiers; the DID route cited for Digital Product Passports rests on a feature the DID Resolution Candidate Recommendation marks at risk. In Sven Böckelmann's three checks: "Where. Who signed. Who may." [Seam S2](map-bundle.md#part-seams)
+**2. Product identity: one ratified route and one route marked at risk.** GS1 Digital Link gives a ratified route to product identifiers; the DID route cited for Digital Product Passports rests on a feature that the DID Resolution Candidate Recommendation Draft marks at risk. One workshop position statement (#31, Sven Böckelmann) frames the open question as three checks: "Where. Who signed. Who may." [Seam S2](map-bundle.md#part-seams)
 
-**3. Agent identity is converging on HTTP Message Signatures, without a coordinating venue.** Visa TAP, Mastercard Agent Pay, UCP and x402 all build on RFC 9421 or Web Bot Auth. The IETF agentproto charter names webbotauth; ACP's texts do not mention it. [Seam S3](map-bundle.md#part-seams)
+**3. Agent identity: several protocols reference HTTP Message Signatures or Web Bot Auth.** Visa TAP, Mastercard Agent Pay, UCP and x402 build on RFC 9421 or Web Bot Auth. The IETF agentproto charter names webbotauth among the groups to coordinate with, and the draft W3C Agentic Web charter lists it for coordination too. ACP's texts do not mention it (not found in the ACP repository, 2026-10-03). [Seam S3](map-bundle.md#part-seams)
 
-**4. Checkout is signed; what happens after it, much less.** Native AP2 chains a merchant-signed checkout, the user's mandate and a Checkout Receipt that the merchant must return once it accepts or rejects the mandate (AP2 documentation at commit e1ea56d, read 2026-10-13). The words refund and cancel are not found in the seven AP2 documents of docs/ap2; fulfil(l) appears only as a generic verb, never for the fulfilment of an order (2026-10-14). For cancellations, refunds and partial fulfilment, the other texts read define no comparable signed record: UCP signs the delivery of order webhooks (RFC 9421), ACP signs its webhooks with HMAC, and those are signatures on a delivery. Poppy, PACT and Shopify/shop (read 2026-10-13) each state in writing what their own record does not prove, and none describes a confirmation to the consumer on a durable medium. [Seam S4](map-bundle.md#part-seams)
+**4. Checkout: what each protocol defines differs between the checkout and the events after it.** Native AP2 chains a merchant-signed checkout, the user's mandate and a Checkout Receipt that the merchant must return once it accepts or rejects the mandate (docs/ap2/specification.md at commit e1ea56d, read 2026-10-13). The words refund and cancel are not found in the seven AP2 documents of docs/ap2; the goods-return term occurs only as the field return_policy ("30-day returns") in two example checkouts of checkout_mandate.md, and fulfil(l) only as a generic verb, never for the fulfilment of an order (2026-10-14). UCP signs the delivery of order webhooks (RFC 9421) and ACP signs its webhooks with HMAC: those are signatures on a delivery. Poppy, PACT and Shopify/shop each state in writing what their own record does not prove. A confirmation to the consumer on a durable medium is not found in the Poppy specification and operations pages, the PACT specification page or the Shopify/shop README, SKILL.md and transactions.md (2026-10-13). [Seam S4](map-bundle.md#part-seams)
 
 ## Next on the calendar
 
-- **15 Oct** Accuracy & Reliability of AI Agents: Virtual Summit, 15:00 to 17:00 GMT, online, "Organized by Agentic AI
+- **15 Oct** Accuracy & Reliability of AI Agents: Virtual Summit, 15:00 to 17:00 GMT, online
 - **15 Oct** AAIF Taxonomy and Landscape Workstream: Ecosystem Architecture Map v1.0, target in the charter
 - **approx. 19 Oct** Schedule of the Monday to Wednesday TPAC breakouts added to the TPAC calendar
 - **19 Oct** Comments on the proposed DAWN charter due to the IESG mailing list
@@ -68,4 +68,4 @@ Corrections and additions based on public sources are welcome: see [CONTRIBUTING
 
 ## Licence
 
-Content (entries, notes, `MAP.md`, `map-bundle.md`): [CC BY 4.0](LICENSE). Code (`tools/`): [MIT](LICENSE-CODE).
+Content (entries, notes, `MAP.md`, `map.json`, the per-entry JSON files, `map-bundle.md`): [CC BY 4.0](LICENSE). Code (`tools/`): [MIT](LICENSE-CODE).

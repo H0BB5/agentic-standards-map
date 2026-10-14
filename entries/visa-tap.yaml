@@ -39,7 +39,7 @@ evidence:
   not_read: Code, Client Implementation Guide (not public), other Visa documents.
   not_found: 'Standards-body submission: not found in Visa pages, repository 2026-10-03.'
 matrix:
-  governance: Published by Visa under Visa Product Terms of 2025-10-10; licence conditioned on implementing the current Specification in full
+  governance: Published by Visa under Visa Product Terms of 2025-10-10; see the Visa Product Terms for the licence conditions
   version_state: 'Product page: "This product is in the process of development and deployment."; revision date, release: not found, 2026-10-03'
   signs: 'Three signatures: agent recognition (header, HTTP Message Signatures), signed consumer/device identity, signed payment container'
   signer: The agent, with a private key; the merchant or site protection provider verifies with the public key from a key store

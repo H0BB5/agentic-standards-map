@@ -5,7 +5,7 @@ kind: charter
 tier: context
 status: Proposed charter in Advisory Committee review (2026-09-30); public comments invited through 2026-10-28.
 status_as_of: 2026-10-13
-relevance: 'Mission: "to standardize DID Methods that use Web technologies"; a separate maintenance charter for the existing DID WG, whose mission includes DID Resolution, went into refinement on 2026-08-10 and was sent to the Advisory Committee on 2026-10-07, with public comments invited through 2026-11-05 (see w3c-did-wg).'
+relevance: 'Mission: "to standardize DID Methods that use Web technologies"; a separate maintenance charter for the existing Decentralized Identifier (DID) Working Group (WG), whose mission includes DID Resolution, went into refinement on 2026-08-10 and was sent to the Advisory Committee on 2026-10-07, with public comments invited through 2026-11-05 (see w3c-did-wg).'
 sources:
 - url: https://www.w3.org/2026/09/proposed-did-methods-wg-charter.html
   read: 2026-10-02

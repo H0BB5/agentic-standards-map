@@ -12,7 +12,7 @@ import sys
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-ORDER = ["W3C", "IETF", "GS1", "UN/CEFACT", "AAIF", "Linux Foundation", "Independent", "Industry"]
+ORDER = ["W3C", "IETF", "GS1", "UN/CEFACT", "Other standards bodies", "AAIF", "Linux Foundation", "Independent", "Industry"]
 TIERS = ("core", "context")
 CLASSES = {
     "normative": "normative text",
@@ -213,19 +213,25 @@ def cell(v):
     return one_line(v).replace("|", "\\|") or "not found"
 
 
-def next_date(e):
+def next_date(e, ref):
+    """the earliest dated item of committed_next that is not before `ref` (a full date or an 'approx.' date), else '-'"""
+    best = None
     for c in e.get("committed_next") or []:
         w = d(c.get("when"))
-        if w and w != "undated":
-            return w
-    return "-"
+        m = re.search(r"\d{4}-\d{2}-\d{2}", w or "")
+        if not m or m.group(0) < ref:
+            continue
+        if best is None or m.group(0) < best[0]:
+            best = (m.group(0), w)
+    return best[1] if best else "-"
 
 
 def status_table(entries):
+    ref = max(d(e["verified"]) for e in entries)
     core = sorted((e for e in entries if e["tier"] == "core"), key=key)
     out = ["| Org | Item | State (as of) | Next dated item |", "|---|---|---|---|"]
     for e in core:
-        out.append(f"| {e['org']} | [{e['name']}](#{e['id']}) | {cell(e['status'])} ({d(e['status_as_of'])}) | {next_date(e)} |")
+        out.append(f"| {e['org']} | [{e['name']}](#{e['id']}) | {cell(e['status'])} ({d(e['status_as_of'])}) | {next_date(e, ref)} |")
     return "\n".join(out)
 
 

@@ -5,7 +5,7 @@ kind: specification
 tier: core
 status: 'Commercial programme of Mastercard for agent-initiated payments, described on its framework page of 2025-10-14 (read 2026-10-02). Not re-verified on 2026-10-13: mastercard.com answers HTTP 403.'
 status_as_of: 2026-10-02
-relevance: 'The framework page of 2025-10-14 (a Mastercard statement) says "By implementing the emerging Web Bot Auth standard (as outlined in the framework) at the Content Delivery Network (CDN) layer, merchants can verify agent authenticity without deploying new code", and that "we''ve partnered with Cloudflare to support Web Bot Auth in Mastercard Agent Pay". Mastercard is the maintainer of Verifiable Intent (see verifiable-intent).
+relevance: 'The framework page of 2025-10-14 (a Mastercard statement) says "By implementing the emerging Web Bot Auth standard (as outlined in the framework) at the Content Delivery Network (CDN) layer, merchants can verify agent authenticity", and that "we''ve partnered with Cloudflare to support Web Bot Auth in Mastercard Agent Pay". Mastercard is the maintainer of Verifiable Intent (see verifiable-intent).
 
   '
 boundary: not found in the framework page of 2025-10-14 (read 2026-10-02)

@@ -5,7 +5,7 @@ kind: work-item
 tier: core
 status: 'A2A registers /.well-known/agent-card.json for a single AgentCard; proposals for hosts serving several agents (PR #2240, issues #2276 and #2248) were open on 2026-10-13: PR #2240 and issue #2248 have no comment, and issue #2276 has no comment after 2026-10-02.'
 status_as_of: 2026-10-13
-relevance: 'PR #2240 proposes /.well-known/ai-catalog.json as the "Preferred" discovery mechanism, and issue #2276 proposes /.well-known/agent-card-list.json for providers serving multiple agents. The documentation (docs/topics/agent-discovery.md on main) says "The current A2A specification does not prescribe a standard API for curated registries."; AI Catalog and ARD not found in that file (2026-10-03). darrelmiller wrote on issue #1807 (2026-05-12) "Rather than layering trust information into the AgentCard, we are attempting to use AI Catalog to contain that kind of trust information." HTTP Archive custom-metrics PR #176, merged on 2026-10-07, adds a metric for "/.well-known/agent-card.json" to track its presence and key metadata.'
+relevance: 'PR #2240 proposes /.well-known/ai-catalog.json as the "Preferred" discovery mechanism, and issue #2276 proposes /.well-known/agent-card-list.json for providers serving multiple agents. The documentation (docs/topics/agent-discovery.md on main) says "The current A2A specification does not prescribe a standard API for curated registries."; AI Catalog and Agentic Resource Discovery (ARD) not found in that file (2026-10-03). darrelmiller wrote on issue #1807 (2026-05-12) "Rather than layering trust information into the AgentCard, we are attempting to use AI Catalog to contain that kind of trust information." HTTP Archive custom-metrics PR #176, merged on 2026-10-07, adds a metric for "/.well-known/agent-card.json" to track its presence and key metadata.'
 committed_next: []
 boundary: 'A maintainer wrote on PR #418 that the A2A working group "will not be building any kind of registry standard".'
 participation: 'The author of this map took part in issue #2276 (two comments, 2026-10-02); see Disclosure.'
@@ -37,7 +37,7 @@ seams:
 verified: 2026-10-13
 evidence:
   read: 'Repository items read (updated 2026-01-01 to 2026-10-02): discovery threads in full, the rest by keyword search; docs/roadmap.md and agent-discovery.md on main, 2026-10-03.'
-  not_read: 'TSC minutes and recordings, the diff of PR #2240, the Discord, long identity threads, replies on #2276 after 2026-10-02 (none found: the thread has three comments, the last of 2026-10-02).'
+  not_read: 'Technical Steering Committee (TSC) minutes and recordings, the diff of PR #2240, the Discord, long identity threads, replies on #2276 after 2026-10-02 (none found: the thread has three comments, the last of 2026-10-02).'
   not_found: 'On 2026-10-13 (main at commit 7c861a5): the state, comment count and last update of PR #2240 and issues #2276 and #2248, the latest release (v1.0.1, 2026-05-28), docs/topics/agent-discovery.md (the quoted sentence present; AI Catalog not found in it) and the history of GOVERNANCE.md (last change 2026-08-25). Not found in roadmap.md: discovery.'
 open_proposals:
 - what: 'PR #2240: /.well-known/ai-catalog.json as the Preferred discovery mechanism (base dev-1.1).'
@@ -50,7 +50,7 @@ open_proposals:
   date: 2026-10-01
   state: open
   url: https://github.com/a2aproject/A2A/issues/2276
-- what: 'Issue #2248: standard multi-agent aggregation path and a ListAgents RPC.'
+- what: 'Issue #2248: standard multi-agent aggregation path and a ListAgents remote procedure call (RPC).'
   author: dongjiang1989
   date: 2026-09-20
   state: open

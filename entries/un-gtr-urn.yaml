@@ -3,7 +3,7 @@ name: UN Global Trust Register, namespace urn:gtr
 org: UN/CEFACT
 kind: work-item
 tier: context
-status: 'Namespace "IANA registration pending" per the UNTP specification. Not found in the IANA URN namespaces registry (updated 2026-10-12, read 2026-10-13): a record named gtr.'
+status: 'Namespace "IANA registration pending" per the UN Transparency Protocol (UNTP) specification. Not found in the Internet Assigned Numbers Authority (IANA) Uniform Resource Name (URN) namespaces registry (updated 2026-10-12, read 2026-10-13): a record named gtr.'
 status_as_of: 2026-10-13
 relevance: The specification says "Either register your own scheme with IANA or use the UN global trust register gtr URN namespace (IANA registration pending)", pattern urn:gtr:{identifier-scheme}:{identifier-value}.
 sources:

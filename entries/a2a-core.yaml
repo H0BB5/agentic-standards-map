@@ -33,4 +33,4 @@ seams:
 verified: 2026-10-13
 evidence:
   read: 'On 2026-10-13: the release list (latest v1.0.1, 2026-05-28),. On 2026-10-03: a2a.proto, docs/specification.md, GOVERNANCE.md, the release list.'
-  not_read: TSC minutes and recordings, specification chapters beyond the definitions, the project's later announcements.
+  not_read: Technical Steering Committee (TSC) minutes and recordings, specification chapters beyond the definitions, the project's later announcements.

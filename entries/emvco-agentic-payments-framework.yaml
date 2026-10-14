@@ -39,8 +39,8 @@ evidence:
 matrix:
   governance: EMVCo, Agentic Payments Task Force; collaboration with FIDO Alliance, OpenID Foundation, OpenWallet Foundation and W3C
   version_state: Framework for Specifications v1.0 DRAFT; comment period ended 2026-09-30
-  signs: not found in the press release and Insights article, 2026-10-02 (draft not read)
-  signer: not found in the press release and Insights article, 2026-10-02 (draft not read)
+  signs: 'not assessed: the public-feedback draft was not read; press release and Insights article only (2026-10-02)'
+  signer: 'not assessed: the public-feedback draft was not read; press release and Insights article only (2026-10-02)'
   record: Intent Services register, reference, retrieve and manage consumer-authorised intent (press release); draft not read
-  dispute: not found in the press release and Insights article, 2026-10-02 (draft not read)
+  dispute: 'not assessed: the public-feedback draft was not read; press release and Insights article only (2026-10-02)'
   source: https://www.emvco.com/news/emvco-requests-feedback-on-framework-for-secure-interoperable-and-scalable-card-based-agentic-payments/

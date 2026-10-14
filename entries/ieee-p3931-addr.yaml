@@ -1,11 +1,11 @@
 id: ieee-p3931-addr
 name: IEEE P3931 Agent Description, Discovery, and Registry (ADDR) Interoperability
-org: Industry
+org: Other standards bodies
 kind: work-item
 tier: context
 status: PAR approved 2026-03-26; "Draft Development" on the IEEE SA active PARs page of the AI standards committee read on 2026-10-13.
 status_as_of: 2026-10-13
-relevance: The PAR says the standard will specify "a description model, registry mechanisms, and discovery protocols for intelligent agents operating across platforms, organizations, and ecosystems".
+relevance: The Project Authorization Request (PAR) says the standard will specify "a description model, registry mechanisms, and discovery protocols for intelligent agents operating across platforms, organizations, and ecosystems".
 sources:
 - url: https://sagroups.ieee.org/ai-sc/active-pars/
   read: 2026-10-13
@@ -21,5 +21,5 @@ overlaps:
 verified: 2026-10-13
 evidence:
   read: 'On 2026-10-13: the active PARs page (P3931 listed as Draft Development; the PAR text adds that identity frameworks, trust scoring systems, collaborative governance policies and domain-specific business semantics are beyond its scope).'
-  not_read: Working group membership and chair; whether the work references DAWN or ARD.
+  not_read: Working group membership and chair; whether the work references DAWN or Agentic Resource Discovery (ARD).
   not_found: 'Not found in the PAR scope text, 2026-10-02: commerce, merchant, product.'

@@ -5,9 +5,9 @@ kind: venue
 tier: core
 status: Active Community Group (created 2025-05-08); agent identity is DID-method-agnostic (did:wba, did:web, did:webvh) since 2026-08-13. Bi-weekly meetings; the meeting of 2026-10-07 was announced as canceled (calendar notice of 2026-10-01) and the October 2026 list archive holds 5 messages, the last of 2026-10-07, none announcing a later meeting (read 2026-10-13); the W3C group data list two chairs.
 status_as_of: 2026-10-13
-relevance: The protocol draft defines an Agent Discovery Service Protocol in JSON-LD, with active discovery at https://{domain}/.well-known/agent-descriptions and an Agent Description "Information" that covers "products, or services". The use_case.html draft includes a hotel booking scenario (Personal Agent, Search Agent, hotel Service Agent) with the requirement "Agent Transactions". The agent identity draft uses a DID URL as the HTTP signature keyid with RFC 9421 and RFC 9530.
+relevance: The protocol draft defines an Agent Discovery Service Protocol in JSON-LD, with active discovery at https://{domain}/.well-known/agent-descriptions and an Agent Description "Information" that covers "products, or services". The use_case.html draft includes a hotel booking scenario (Personal Agent, Search Agent, hotel Service Agent) with the requirement "Agent Transactions". The agent identity draft uses a Decentralized Identifier (DID) URL as the HTTP signature keyid with RFC 9421 and RFC 9530.
 committed_next:
-- what: Topics "streaming HTTP authentication, mutual DID authentication"; joint TPAC session with the WebAgents CG under discussion
+- what: Topics "streaming HTTP authentication, mutual DID authentication"; joint Technical Plenary and Advisory Committee (TPAC) session with the WebAgents Community Group (CG) under discussion
   when: undated
   source: https://lists.w3.org/Archives/Public/public-agentprotocol/2026Sep/0009.html
   class: statement

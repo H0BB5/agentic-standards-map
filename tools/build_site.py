@@ -35,7 +35,7 @@ import yaml
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from build_map import seam_members, check_seams, find_italian, italian_selftest, ITALIAN_WORDS  # noqa: E402  the same reader and rules as the check of the entries
+from build_map import seam_members, check_seams, find_italian, italian_selftest, ITALIAN_WORDS, next_date  # noqa: E402  the same reader and rules as the check of the entries
 ROOT = HERE.parent
 PLACEHOLDER_BASE = "https://example.invalid/"
 DEFAULT_REPO = "https://github.com/frmoretto/agentic-standards-map"
@@ -53,8 +53,8 @@ AUTHOR_PART = "I have taken part in some of the venues mapped; the %s lists wher
 CITE_REQUEST = "Please cite the entry id, the date it was read and the DOI."
 CREATOR = {"@type": "Person", "name": AUTHOR, "identifier": ORCID, "sameAs": [ORCID, GITHUB, LINKEDIN], "url": GITHUB}
 LICENCE_URL = "https://creativecommons.org/licenses/by/4.0/"
-ORDER = ["W3C", "IETF", "GS1", "UN/CEFACT", "AAIF", "Linux Foundation", "Independent", "Industry"]
-COLOURS = {"W3C": "#1f6fb2", "IETF": "#c0392b", "GS1": "#2e8b57", "UN/CEFACT": "#8e6bbf", "AAIF": "#d98c10",
+ORDER = ["W3C", "IETF", "GS1", "UN/CEFACT", "Other standards bodies", "AAIF", "Linux Foundation", "Independent", "Industry"]
+COLOURS = {"W3C": "#1f6fb2", "IETF": "#c0392b", "GS1": "#2e8b57", "UN/CEFACT": "#8e6bbf", "Other standards bodies": "#5a7d2a", "AAIF": "#d98c10",
            "Linux Foundation": "#7f8c8d", "Independent": "#b5499b", "Industry": "#127c82"}
 SEAM_COLOURS = {"S1": "#1f6fb2", "S2": "#2e8b57", "S3": "#c0392b", "S4": "#d98c10"}
 CLASSES = {"normative": "normative text", "decision": "official decision or commitment", "statement": "maintainer or chair statement",
@@ -525,9 +525,9 @@ class Site:
         if jsonld:
             ld = '<script type="application/ld+json">%s</script>\n' % json.dumps(jsonld, ensure_ascii=False, indent=1).replace("</", "<\\/")
         if self.sha:
-            commit = 'commit <a href="%s/commit/%s" rel="noopener">%s</a>' % (attr(self.a.repo_url), self.sha, self.sha[:7])
+            commit = 'the data at commit <a href="%s/commit/%s" rel="noopener">%s</a>' % (attr(self.a.repo_url), self.sha, self.sha[:7])
         else:
-            commit = 'the <a href="%s" rel="noopener">repository</a>' % attr(self.a.repo_url)
+            commit = 'the data of the <a href="%s" rel="noopener">repository</a>' % attr(self.a.repo_url)
         page = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n'
                 '<title>%s</title>\n<meta name="description" content="%s">\n<link rel="canonical" href="%s">\n<link rel="stylesheet" href="%sstyle.css">\n%s%s</head>\n'
                 '<body>\n<header class="site">%s</header>\n<main>\n%s\n</main>\n'
@@ -614,10 +614,14 @@ def data_page_html(a, site, n_entries, newest, map_size, n_events, sha):
         cite_p = "<p>%s<br>%s</p>" % (esc(cite), esc(CITE_REQUEST))
     else:
         cite_p = "<p>Cite the entry id and the date it was read.</p>"
+    if a.doi:
+        citable_p = '<p>The citable version is the tag <code>v1.0.0</code> of the repository, archived with the DOI <a href="https://doi.org/%s" rel="noopener">%s</a>. The site is regenerated at each commit, so a page can be newer than the tag: cite the tag and the date it was read.</p>' % (attr(a.doi), esc(a.doi))
+    else:
+        citable_p = "<p>The citable version of the map is the tag <code>v1.0.0</code> of the repository, with its DOI. That tag and DOI do not exist yet; until they do, cite the entry id, the date it was read and the commit shown in the footer of the page.</p>"
     rows = [
         ("<a href=\"map.json\">map.json</a>", "All entries as in the YAML (schema v2, described in entries/_schema.md) and the graph of overlaps and seams. Top-level fields: schema, schema_description, generated, source_commit, licence, entries, graph. %d entries; generated %s; source commit %s; licence CC BY 4.0; size %d bytes." % (n_entries, esc(site.today), esc(sha[:7] if sha else "not given"), map_size)),
         ("<code>entries/&lt;id&gt;.json</code>", "One file per entry: the same object as in map.json, plus <code>url</code> (the page of the entry), <code>source_url</code> (the YAML file in the repository at the source commit) and <code>licence</code>. Example: <a href=\"entries/ap2.json\">entries/ap2.json</a>."),
-        ("<a href=\"calendar.ics\">calendar.ics</a>", "The dated items committed by the venues (%d events with a full date), in iCalendar format." % n_events),
+        ("<a href=\"calendar.ics\">calendar.ics</a>", "The same dated events as the Calendar page (%d), in iCalendar format." % n_events),
         ("<a href=\"map-bundle.md\">map-bundle.md</a>", "The full text of the map in one Markdown file."),
         ("<a href=\"sitemap.xml\">sitemap.xml</a>", "The list of the pages of the site."),
         ("JSON-LD", "Every page carries JSON-LD: a Dataset on the home page, a WebPage on the others; an entry page names the primary sources of the entry as citations."),
@@ -628,10 +632,11 @@ def data_page_html(a, site, n_entries, newest, map_size, n_events, sha):
             "<p>This site uses generic web mechanisms (JSON files, link rel=alternate, schema.org JSON-LD, a sitemap). It does not adopt any of the discovery mechanisms described in the map, so that the map does not take a side in what it maps.</p>"
             "<h2 id=\"files\">Files</h2><div class=\"scroll\"><table><thead><tr><th>File</th><th>What it holds</th></tr></thead><tbody>%s</tbody></table></div>"
             "<h2 id=\"licence\">Licence</h2><p>The content is under <a href=\"%s\" rel=\"noopener\">CC BY 4.0</a>; the scripts in <code>tools/</code> are under the MIT licence. Reuse is free with attribution.</p>"
-            "<h2 id=\"cite\">How to cite</h2>%s"
+            "<h2 id=\"cite\">How to cite</h2>%s%s"
+            "<h2 id=\"counts\">Counts</h2><p>The numbers of sources quoted on the site (source references, distinct URLs, primary and third-party-only URLs) are produced by <a href=\"%s\" rel=\"noopener\">tools/count_sources.py</a>, run on the files of the repository. A source reference is one use of a URL in the field <code>sources</code> or in a <code>committed_next</code> item; a distinct URL is counted once whatever the number of uses; a URL with a fragment is a different URL. The script counts URLs and does not check that they respond.</p>"
             "<h2 id=\"updates\">Updates</h2><p>Each entry carries its own read date (the fields <code>verified</code> and <code>status_as_of</code>). The site is regenerated from the data at each commit of the repository; the newest verification date is %s.</p>"
             "<h2 id=\"corrections\">Corrections</h2><p>Corrections and missing sources: <a href=\"%s\" rel=\"noopener\">open an issue on the repository</a>.</p>"
-            % (tbl, attr(LICENCE_URL), cite_p, esc(newest), attr(ISSUES_URL)))
+            % (tbl, attr(LICENCE_URL), cite_p, citable_p, attr(a.repo_url.rstrip("/") + "/blob/main/tools/count_sources.py"), esc(newest), attr(ISSUES_URL)))
 
 
 def llms_txt(a, site, n_entries):
@@ -723,40 +728,39 @@ def split_paragraphs(md, text):
 
 
 def status_rows(entries):
+    ref = max(d(e["verified"]) for e in entries.values())
     core = sorted((e for e in entries.values() if e["tier"] == "core"), key=key)
     rows = []
     for e in core:
         s = one_line(e["status"])
         m = re.search(r"(?<=[a-z0-9\)])\.\s+(?=[A-Z])", s)
         first = s[:m.start() + 1] if m else s
-        nd = "-"
-        for c in e.get("committed_next") or []:
-            w = d(c.get("when"))
-            if w and w != "undated":
-                nd = w
-                break
+        nd = next_date(e, ref)
         rows.append((e, first, nd))
     return rows
 
 
-def ics_events(entries, site):
-    stats = {"full": 0, "approx": 0, "undated": 0, "other": 0}
-    ev = []
-    for i, e in sorted(entries.items()):
-        for idx, c in enumerate(e.get("committed_next") or []):
-            w = c.get("when")
-            ws = d(w).strip()
-            if isinstance(w, datetime.date) or re.fullmatch(r"\d{4}-\d{2}-\d{2}", ws):
-                day = ws
-                stats["full"] += 1
-                ev.append((i, idx, day, e["name"], one_line(c["what"]), c["source"]))
-            elif ws.startswith("approx"):
-                stats["approx"] += 1
-            elif ws == "undated":
-                stats["undated"] += 1
-            else:
-                stats["other"] += 1
-    return ev, stats
+def calendar_events(src):
+    """The events of calendar.ics are the rows of the calendar note, the same list as calendar.html (one source, two renderings)."""
+    text = (src / "notes" / "calendar-2026.md").read_text(encoding="utf-8")
+    note = [l.strip() for l in text.split("\n") if l.strip().startswith("This calendar lists dated public events")]
+    if len(note) != 1:
+        raise SystemExit("notes/calendar-2026.md: the line 'This calendar lists dated public events ...' is missing or repeated")
+    ev, stats = [], {"rows": 0, "approx": 0, "ranges": 0}
+    for line in text.split("\n"):
+        if not (line.startswith("| 20") or line.startswith("| approx.")):
+            continue
+        cells = [c.strip() for c in line.strip().strip("|").split(" | ")]
+        dates = re.findall(r"\d{4}-\d{2}-\d{2}", cells[0])
+        if len(cells) < 4 or not dates:
+            raise SystemExit("calendar note: a row without a date or without four cells: %s" % line[:80])
+        approx = cells[0].startswith("approx.")
+        stats["rows"] += 1
+        stats["approx"] += 1 if approx else 0
+        stats["ranges"] += 1 if len(dates) > 1 else 0
+        ev.append({"start": dates[0], "end": dates[-1], "approx": approx, "what": cells[1].replace("`", ""),
+                   "entries": re.findall(r"`([a-z0-9-]+)`", cells[2]), "sources": re.findall(r"https?://[^\s;]+", cells[3])})
+    return ev, stats, note[0].split(" Dates declared")[0]
 
 
 def fold(line):
@@ -778,17 +782,19 @@ def ics_text(s):
     return s.replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
 
 
-def build_ics(events, site):
+def build_ics(events, site, caldesc):
     stamp = site.today.replace("-", "") + "T000000Z"
-    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Agentic standards map//committed next//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
-             "X-WR-CALNAME:Agentic standards map: committed next"]
-    for i, idx, day, name, what, src in events:
-        start = day.replace("-", "")
-        nxt = (datetime.date.fromisoformat(day) + datetime.timedelta(days=1)).strftime("%Y%m%d")
-        lines += ["BEGIN:VEVENT", "UID:%s-%d-%s.agentic-standards-map.invalid" % (i, idx, day), "DTSTAMP:" + stamp,
-                  "DTSTART;VALUE=DATE:" + start, "DTEND;VALUE=DATE:" + nxt,
-                  "SUMMARY:" + ics_text(short_desc("%s: %s" % (re.split(r" \(|, | - |: ", name)[0].strip(), what), 120)),
-                  "DESCRIPTION:" + ics_text("%s Source: %s" % (what, src)), "URL:" + site.base("entries/%s.html" % i), "END:VEVENT"]
+    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Agentic standards map//calendar//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+             "X-WR-CALNAME:Agentic standards map: calendar", "X-WR-CALDESC:" + ics_text(caldesc)]
+    for n, e in enumerate(events):
+        end = (datetime.date.fromisoformat(e["end"]) + datetime.timedelta(days=1)).strftime("%Y%m%d")
+        first = e["entries"][0] if e["entries"] else ""
+        summ = ("approx. " if e["approx"] else "") + short_desc(re.split(r" \(|; ", e["what"])[0].strip(), 110)
+        lines += ["BEGIN:VEVENT", "UID:%s-%s-%d.agentic-standards-map.invalid" % (first or "map", e["start"], n), "DTSTAMP:" + stamp,
+                  "DTSTART;VALUE=DATE:" + e["start"].replace("-", ""), "DTEND;VALUE=DATE:" + end, "SUMMARY:" + ics_text(summ),
+                  "DESCRIPTION:" + ics_text("%s Source: %s" % (e["what"], "; ".join(e["sources"]))), "END:VEVENT"]
+        if first:
+            lines.insert(len(lines) - 1, "URL:" + site.base("entries/%s.html" % first))
     lines.append("END:VCALENDAR")
     return "\r\n".join(fold(l) for l in lines) + "\r\n"
 
@@ -876,6 +882,9 @@ def main():
                 if not m:
                     raise SystemExit("notes/intro.md: the closing paragraphs to replace by the author block were not found")
                 body = md.render(text[:m.start()] + "\n", skip_h1=False) + author_block_html(a)
+            elif page == "disclosure.html":
+                short = (src / "notes" / "disclosure-short.md").read_text(encoding="utf-8")
+                body = md.render(short.rstrip("\n") + "\n\n## Full disclosure\n\n" + text, skip_h1=False)
             else:
                 body = md.render(text, skip_h1=False)
             if not re.search(r"<h1[ >]", body):
@@ -939,8 +948,8 @@ def main():
         site.write("index.html", ibody, SITE_TITLE, idesc, newest, dataset_ld(site, newest), alternates=[("application/json", "map.json"), ("text/calendar", "calendar.ics")])
 
         # data files
-        events, stats = ics_events(entries, site)
-        (out / "calendar.ics").write_text(build_ics(events, site), encoding="utf-8", newline="")
+        events, stats, caldesc = calendar_events(src)
+        (out / "calendar.ics").write_text(build_ics(events, site, caldesc), encoding="utf-8", newline="")
         mapjson = {"schema": "v2", "schema_description": "entries/_schema.md", "generated": today, "source_commit": sha or "", "licence": LICENCE_URL,
                    "entries": [entry_object(entries[i]) for i in sorted(entries)],
                    "graph": {"nodes": sorted(entries), "overlap_edges": [list(x) for x in edges], "seams": {k: {"title": t, "entries": ids_} for k, (t, ids_) in seams.items()}}}
@@ -1017,7 +1026,8 @@ def report(a, out, site, entries, seams, edges, unknown_overlap, unknown_seam, e
     print("[CHECK] seams: differences between the entries and notes/seams.md: %d %s" % (len(seam_diffs), seam_diffs[:5]))
     print("[CHECK] entry pages with a graph of neighbours: %d; without (no neighbours): %d" % (n_graph, n_nograph))
     print("[CHECK] edges to ids that do not exist: overlaps %d %s, seams %d %s" % (len(unknown_overlap), unknown_overlap, len(unknown_seam), unknown_seam))
-    print("[CHECK] calendar.ics: %d events produced; excluded: approx %d, undated %d, other forms %d" % (len(events), stats["approx"], stats["undated"], stats["other"]))
+    cal_rows = len(re.findall(r"<tr><td", (out / "calendar.html").read_text(encoding="utf-8")))
+    print("[CHECK] calendar.ics: %d events, the rows of the calendar note (%d with an approximate date, %d ranges); rows in calendar.html: %d; same list: %s" % (len(events), stats["approx"], stats["ranges"], cal_rows, cal_rows == len(events)))
     titles = [site.pages[p]["title"] for p in pages]
     dup = sorted({t for t in titles if titles.count(t) > 1})
     nodesc = [p for p in pages if not site.pages[p]["desc"].strip()]

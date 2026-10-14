@@ -4,8 +4,8 @@
 - **Uses** (STM categories): writing or drafting content; refinement and editing of text; assisting with gathering references. Not in the STM list: checking quotes and dates against the sources; adversarial review.
 - **Parts concerned:** all entries, seams, appendices and the calendar. The introduction and the README were drafted with assistance and revised by the author.
 - **Who directed the work:** the author, who chose the scope and the rules, decided every change and checked every statement against its source.
-- **As of:** 2026-10-06.
-- **Version covered:** `map-bundle.md` at tag v1.0.0, sha256 f474372531c40f292cc66f286a14e658772ffb57992344d098cac819080afc8d.
+- **As of:** 2026-10-14.
+- **Version covered:** version 1.0; `map-bundle.md` at tag v1.0.0, sha256 ec30d2ee7f3961b8cad357604652109c8a4b1df4aa726350174c9c043694a594.
 - **Record:** drafts, prompts, research outputs, reviews and the change log, retained by the author.
 - No pass to remove traces of machine assistance was applied to this text.
 
@@ -16,9 +16,9 @@ The same declaration in a machine-readable form follows. It is illustrative, not
   "illustrative_only": true,
   "work": {
     "title": "Agentic Standards Map",
-    "version": { "file": "map-bundle.md", "sha256": "f474372531c40f292cc66f286a14e658772ffb57992344d098cac819080afc8d", "tag": "v1.0.0" }
+    "version": { "file": "map-bundle.md", "sha256": "ec30d2ee7f3961b8cad357604652109c8a4b1df4aa726350174c9c043694a594", "tag": "v1.0.0" }
   },
-  "as_of": "2026-10-06",
+  "as_of": "2026-10-14",
   "tools": [
     { "name": "Claude", "provider": "Anthropic", "interfaces": ["claude.ai", "Claude Code"] },
     { "name": "ChatGPT", "provider": "OpenAI" },

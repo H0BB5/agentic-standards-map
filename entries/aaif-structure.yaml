@@ -43,4 +43,4 @@ verified: 2026-10-13
 evidence:
   read: 'On 2026-10-13: the file listing, the commits to 2026-10-12, the releases and the issue and pull request list of ws-taxonomy-landscape, the portal page at aaif.github.io/ws-taxonomy-landscape, and the README (last changed 2026-09-16, unchanged on the Landscape sentence).'
   not_read: Discord, mailing lists, recordings, Google Documents.
-  not_found: 'Not found in the proposals repositories, 2026-10-03: AI Catalog, ARD, DAWN, UCP, Verifiable Intent.'
+  not_found: 'Not found in the proposals repositories, 2026-10-03: AI Catalog, Agentic Resource Discovery (ARD), DAWN, UCP, Verifiable Intent.'

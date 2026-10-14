@@ -5,7 +5,7 @@ kind: specification
 tier: core
 status: Latest stable version 0.7.0 (GitLab tag of 2026-05-04); the 0.7.0 page says the team "expects to release UNTP version 1.0", without a date.
 status_as_of: 2026-10-13
-relevance: 'The Resolver Workflow section lists, among "some common conditions that a link resolver service SHOULD manage consistently", "When there is no data for the requested entity ID."; not found in its prose, 2026-10-02: the response for that case. The 0.7.0 OpenAPI artefact defines 404 ("No link resolver entry found for this identifier.") and 400 for a path that does not match the registered scheme patterns. The specification describes the gtr URN namespace of the UN global trust register as "IANA registration pending" (see un-gtr-urn).'
+relevance: 'The Resolver Workflow section lists, among "some common conditions that a link resolver service SHOULD manage consistently", "When there is no data for the requested entity ID."; not found in its prose, 2026-10-02: the response for that case. The 0.7.0 OpenAPI artefact defines 404 ("No link resolver entry found for this identifier.") and 400 for a path that does not match the registered scheme patterns. The specification describes the gtr Uniform Resource Name (URN) namespace of the UN global trust register as "IANA registration pending" (see un-gtr-urn).'
 committed_next:
 - what: release of UNTP version 1.0 (no date given)
   when: undated

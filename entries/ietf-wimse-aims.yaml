@@ -3,7 +3,7 @@ name: IETF WIMSE, AI Identity Management System (draft-ietf-wimse-aims)
 org: IETF
 kind: work-item
 tier: context
-status: WG document draft-ietf-wimse-aims-00 (2026-09-15), Informational; adopted 2026-09-09, expires 2027-03-19; replaces draft-klrc-aiagent-auth. The datatracker record of 2026-10-13 gives revision 00 (time 2026-09-15 14:40 UTC) and no later revision.
+status: Working Group (WG) document draft-ietf-wimse-aims-00 (2026-09-15), Informational; adopted 2026-09-09, expires 2027-03-19; replaces draft-klrc-aiagent-auth. The datatracker record of 2026-10-13 gives revision 00 (time 2026-09-15 14:40 UTC) and no later revision.
 status_as_of: 2026-10-13
 relevance: 'The draft "proposes best practices for authentication and authorization of AI agent interactions"; commerce, merchant, seller or purchase text: not found in -00, 2026-10-02. ACP and AP2 appear only in the references.'
 sources:
