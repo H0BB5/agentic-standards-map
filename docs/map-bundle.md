@@ -1864,7 +1864,7 @@ Read on 2026-10-13 with GitHub search (issues, pull requests and Discussions aut
 | 2026-10-12, 06:23 | AAIF Agentic Commerce Working Group (`aaif-wg-agentic-commerce`) | Message on the public working group mailing list, subject "Re: [wg-agentic-commerce] Call for topics & presenters", addressed to Ilya Grigorik, chair of the working group, with the list in copy | Accepts a 30-minute slot at the call (about 20 minutes of presentation, the rest for questions) and announces that the map will be public before the call and the link shared with the group. |
 | 2026-10-13, 04:22 | UCP (`ucp`) | [Review comment on PR #897](https://github.com/Universal-Commerce-Protocol/ucp/pull/897#discussion_r4254706577), open | Asks that the response carry the basis of a percentage tip, not only the computed amount. |
 | 2026-10-13, 04:38 | UCP (`ucp`) | [Review comment on PR #897](https://github.com/Universal-Commerce-Protocol/ucp/pull/897#discussion_r4254785229), open | Asks that a changed `allergens` disclosure after review be re-sent, and no completion until the buyer has seen it, on the same terms as a changed total. |
-| 2026-10-14 (announced, not yet given on 2026-10-13) | AAIF Agentic Commerce Working Group (`aaif-wg-agentic-commerce`) | Presentation at the working group call | Announced in the message of 2026-10-12; the content is not recorded here. |
+| 2026-10-14 (scheduled for the call of 2026-10-14; not yet given when version 1.0 was frozen) | AAIF Agentic Commerce Working Group (`aaif-wg-agentic-commerce`) | Presentation at the working group call | Announced in the message of 2026-10-12; the content is not recorded here. |
 
 ---
 
