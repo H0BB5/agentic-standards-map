@@ -125,20 +125,20 @@
   },
   {
    "what": "Issue #114: measurement of did:web host identifiers.",
-   "author": "kinlane",
+   "author": "a participant",
    "date": "2026-09-13",
    "state": "open",
    "url": "https://github.com/Agent-Card/ai-catalog/issues/114"
   },
   {
    "what": "PR #117: trust metadata grouped by contributor, generalized signatures (not a draft on 2026-10-13; open, 6 comments).",
-   "author": "jonathanhefner",
+   "author": "a participant",
    "date": "2026-09-13",
    "state": "open",
    "url": "https://github.com/Agent-Card/ai-catalog/pull/117"
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/lf-ai-catalog.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/b11567137c7840e42e6ebbc04eee72ce841b2578/entries/lf-ai-catalog.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/29b25b51341c495002691c8af8e756032da98c76/entries/lf-ai-catalog.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

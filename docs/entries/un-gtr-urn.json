@@ -32,6 +32,6 @@
   "not_found": "Not found in the IANA XML, GRID site or Internet-Draft search, 2026-10-02: an operational register."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/un-gtr-urn.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/b11567137c7840e42e6ebbc04eee72ce841b2578/entries/un-gtr-urn.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/29b25b51341c495002691c8af8e756032da98c76/entries/un-gtr-urn.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }
