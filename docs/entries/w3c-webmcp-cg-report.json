@@ -4,7 +4,7 @@
  "org": "W3C",
  "kind": "specification",
  "tier": "context",
- "status": "Draft Community Group Report, dated 9 October 2026 on the page read on 2026-10-13 (2026-09-30 on 2026-10-03), no numbered version; on 2026-10-08 PR #338, \"Remove declarative API from spec\", was merged (the specification now focuses on the imperative registerTool() API); the draft Agentic Web WG charter lists WebMCP as its normative deliverable.",
+ "status": "Draft Community Group Report, dated 9 October 2026 on the page read on 2026-10-13 (2026-09-30 on 2026-10-03), no numbered version; on 2026-10-08 PR #338, \"Remove declarative API from spec\", was merged (the specification now focuses on the imperative registerTool() API); the draft Agentic Web Working Group (WG) charter lists WebMCP as its normative deliverable.",
  "status_as_of": "2026-10-13",
  "relevance": "Draft: \"The WebMCP API enables web applications to provide JavaScript-based tools to AI agents.\"; an editor wrote on 2026-09-25 that identity and delegation proposals \"are beyond the scope of the simple WebMCP API\".",
  "sources": [
@@ -53,6 +53,6 @@
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/w3c-webmcp-cg-report.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/05fa5a174529690b7d7dbf551f34eea80e45b494/entries/w3c-webmcp-cg-report.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/b11567137c7840e42e6ebbc04eee72ce841b2578/entries/w3c-webmcp-cg-report.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

@@ -64,9 +64,9 @@
  "evidence": {
   "read": "On 2026-10-13: the file listing, the commits to 2026-10-12, the releases and the issue and pull request list of ws-taxonomy-landscape, the portal page at aaif.github.io/ws-taxonomy-landscape, and the README (last changed 2026-09-16, unchanged on the Landscape sentence).",
   "not_read": "Discord, mailing lists, recordings, Google Documents.",
-  "not_found": "Not found in the proposals repositories, 2026-10-03: AI Catalog, ARD, DAWN, UCP, Verifiable Intent."
+  "not_found": "Not found in the proposals repositories, 2026-10-03: AI Catalog, Agentic Resource Discovery (ARD), DAWN, UCP, Verifiable Intent."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/aaif-structure.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/05fa5a174529690b7d7dbf551f34eea80e45b494/entries/aaif-structure.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/b11567137c7840e42e6ebbc04eee72ce841b2578/entries/aaif-structure.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

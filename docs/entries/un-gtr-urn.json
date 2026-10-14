@@ -4,7 +4,7 @@
  "org": "UN/CEFACT",
  "kind": "work-item",
  "tier": "context",
- "status": "Namespace \"IANA registration pending\" per the UNTP specification. Not found in the IANA URN namespaces registry (updated 2026-10-12, read 2026-10-13): a record named gtr.",
+ "status": "Namespace \"IANA registration pending\" per the UN Transparency Protocol (UNTP) specification. Not found in the Internet Assigned Numbers Authority (IANA) Uniform Resource Name (URN) namespaces registry (updated 2026-10-12, read 2026-10-13): a record named gtr.",
  "status_as_of": "2026-10-13",
  "relevance": "The specification says \"Either register your own scheme with IANA or use the UN global trust register gtr URN namespace (IANA registration pending)\", pattern urn:gtr:{identifier-scheme}:{identifier-value}.",
  "sources": [
@@ -32,6 +32,6 @@
   "not_found": "Not found in the IANA XML, GRID site or Internet-Draft search, 2026-10-02: an operational register."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/un-gtr-urn.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/05fa5a174529690b7d7dbf551f34eea80e45b494/entries/un-gtr-urn.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/b11567137c7840e42e6ebbc04eee72ce841b2578/entries/un-gtr-urn.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

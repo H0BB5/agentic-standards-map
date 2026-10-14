@@ -62,7 +62,7 @@
   "S3",
   "S4"
  ],
- "verified": "2026-10-13",
+ "verified": "2026-10-14",
  "evidence": {
   "read": "On 2026-10-13 (fetch of the repository, commit 6c470a8): TSC.md, README.md, the core specification header, specs/extensions/extension-offer-and-receipt.md (still \"Wire shape and field placement are not considered stable\"), docs/faq.md, and the state of PRs #1986, #3220, #3656, #3789 and issues #2887, #2906, #3500. x402-foundation/x402, 2026-10-03: main branch read (README, TSC.md, ROADMAP, specs, docs, Technical Charter), issues and pull requests updated since 2026-03-01, and the two Linux Foundation releases.",
   "not_read": "Slack, the tsc and wg-identity repositories, x402.org member and calendar pages, older items; usage figures on x402.org (self-reported)."
@@ -110,10 +110,10 @@
   "signs": "Payer signs the payment (PAYMENT-SIGNATURE); with offer-and-receipt the server commits to the offer terms and signs a receipt",
   "signer": "The client for the payment; the server for offer and receipt",
   "record": "Signed receipt (offer-and-receipt), declared use \"dispute evidence and auditability\"; wire shape not stable",
-  "dispute": "\"irreversible once executed\" (exact scheme, FAQ); auth-capture: void, refund, reclaim; dispute process: not found, 2026-10-03",
+  "dispute": "\"irreversible once executed\" (exact scheme, FAQ); auth-capture: void, refund, reclaim; dispute process: not found in the pages read, 2026-10-03; the repository has changed since (head e95b066 on 2026-10-13) and a text search of 2026-10-14 finds the word dispute in 26 files, among them the offer-and-receipt specification and scheme texts, not read for a dispute process",
   "source": "https://github.com/x402-foundation/x402/blob/main/specs/extensions/extension-offer-and-receipt.md"
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/x402.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/05fa5a174529690b7d7dbf551f34eea80e45b494/entries/x402.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/b11567137c7840e42e6ebbc04eee72ce841b2578/entries/x402.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

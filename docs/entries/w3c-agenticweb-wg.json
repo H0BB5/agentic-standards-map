@@ -6,7 +6,7 @@
  "tier": "core",
  "status": "Draft charter for a proposed Working Group, in refinement until approx. 2026-11-10 (W3C Team estimate, public-new-work). On 2026-10-13 the last change to the charter text is still the commit of 2026-09-30 (a definition of the term and a simplified scope), and the Strategy issue #576 is open with 4 comments, the last of 2026-10-01.",
  "status_as_of": "2026-10-13",
- "relevance": "The draft charter proposes a Working Group \"to develop specifications that facilitate web pages and applications to be leveraged by LLMs and AI agents\", scoped to site capabilities and context for agents, agent identity and delegation, and permissions and policies for agent actions. Its one normative deliverable is WebMCP, adopted from the Web Machine Learning Community Group; it lists the Web Payment Security IG, IETF webbotauth and IETF aipref for coordination. On 2026-08-13 a representative of Apple wrote on PR #829 \"Expect a formal objection if this is merged.\", about the earlier plan to place WebMCP in the Web Machine Learning WG. Charter-drafts PR #888 (editorial fixes, opened by the author of this map on 2026-10-02) was open on 2026-10-13 with a clean merge state; a participant approved it on 2026-10-08 at 22:11 UTC with the review text \"LGTM\" (review 5463458958).",
+ "relevance": "The draft charter proposes a Working Group \"to develop specifications that facilitate web pages and applications to be leveraged by LLMs and AI agents\", scoped to site capabilities and context for agents, agent identity and delegation, and permissions and policies for agent actions. Its one normative deliverable is WebMCP, adopted from the Web Machine Learning Community Group; it lists the Web Payment Security Interest Group (IG), IETF webbotauth and IETF aipref for coordination. On 2026-08-13 a representative of Apple wrote on PR #829 \"Expect a formal objection if this is merged.\", about the earlier plan to place WebMCP in the Web Machine Learning Working Group (WG). Charter-drafts PR #888 (editorial fixes, opened by the author of this map on 2026-10-02) was open on 2026-10-13 with a clean merge state; a participant approved it on 2026-10-08 at 22:11 UTC with the review text \"LGTM\" (review 5463458958).",
  "committed_next": [
   {
    "what": "Charter refinement until approximately 10 November 2026; notices of extension on the Strategy issue",
@@ -59,6 +59,6 @@
   "not_read": "Charter HTML in the 2026-10-03 files, list archives, meeting minutes, TPAC breakout slots."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/w3c-agenticweb-wg.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/05fa5a174529690b7d7dbf551f34eea80e45b494/entries/w3c-agenticweb-wg.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/b11567137c7840e42e6ebbc04eee72ce841b2578/entries/w3c-agenticweb-wg.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

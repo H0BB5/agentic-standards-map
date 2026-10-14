@@ -4,7 +4,7 @@
  "org": "Independent",
  "kind": "work-item",
  "tier": "core",
- "status": "Issues #4824, #4786, #4828, #4774 and #4928 were open on 2026-10-13 (issue #4928, 1 comment, last activity 2026-10-08). The Digital Product Passport vocabulary (PR #4871, merged 2026-08-17) is the file data/ext/pending/issue-4870.ttl on main as read on 2026-10-03; the release notes of V30.1 (2026-09-16) read \"Add vocabulary to support discovery of EU Digital Product Passports\" and the term page schema.org/hasDigitalProductPassport exists (2026-10-13); whether the terms of PR #4871 are the ones released was not checked term by term.",
+ "status": "Issues #4824, #4786, #4828, #4774 and #4928 were open on 2026-10-13 (issue #4928, 1 comment, last activity 2026-10-08). The Digital Product Passport vocabulary (PR #4871, merged 2026-08-17) is the file data/ext/pending/issue-4870.ttl on main as read on 2026-10-03; the release notes of V30.1 (2026-09-16) read \"Add vocabulary to support discovery of EU Digital Product Passports\" and attribute to PR #4871 the class DigitalProductPassport and the property hasDigitalProductPassport for use on Product and Offer (release notes read 2026-10-14), and the term page schema.org/hasDigitalProductPassport exists (2026-10-13).",
  "status_as_of": "2026-10-13",
  "relevance": "Issue #4824 proposes a direct booking channel for LodgingBusiness; the author of the Vacation Rental Protocol commented on 2026-09-02: \"For machine consumers that distinction should be verifiable, not only declared.\" PR #4871 links Product, and also Offer, to a passport by hasDigitalProductPassport, a sub-property of hasCertification; a reviewer wrote \"Privacy will also need some consideration if \"product\" passports are not to become proxy identifiers for their holders, traders and purchasers.\" PR #4861 (2026-07-23) says \"This puts several pending schema types and properties into GA (General Availability).\"",
  "committed_next": [],
@@ -33,7 +33,7 @@
   },
   {
    "url": "https://schema.org/docs/releases.html",
-   "read": "2026-10-13",
+   "read": "2026-10-14",
    "class": "normative"
   },
   {
@@ -51,9 +51,9 @@
  "seams": [
   "S2"
  ],
- "verified": "2026-10-13",
+ "verified": "2026-10-14",
  "evidence": {
-  "read": "On 2026-10-13: the state, comment count and last update of issues #4824, #4786, #4828, #4774, #4928, #4572, #4615, #4525 and PRs #4861, #4871, #4880, #4889, #4897; schema.org/docs/releases.html; the term page hasDigitalProductPassport.",
+  "read": "On 2026-10-14: the release notes of V30.1 (the terms attributed to PR #4871).",
   "not_read": "The well-known files named in #4824; whether the terms of PR #4871 are in release 30.1 (pending on 2026-10-03).",
   "not_found": "Not found in the repository read: a maintainer release date for the five issues."
  },
@@ -116,6 +116,6 @@
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/schemaorg-open-agent-commerce-items.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/05fa5a174529690b7d7dbf551f34eea80e45b494/entries/schemaorg-open-agent-commerce-items.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/b11567137c7840e42e6ebbc04eee72ce841b2578/entries/schemaorg-open-agent-commerce-items.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

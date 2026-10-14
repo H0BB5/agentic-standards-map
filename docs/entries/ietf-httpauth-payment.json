@@ -1,10 +1,10 @@
 {
  "id": "ietf-httpauth-payment",
- "name": "Payment HTTP Authentication Scheme (the core of MPP)",
+ "name": "Payment HTTP Authentication Scheme (draft-httpauth-payment, Tempo Labs and Stripe)",
  "org": "IETF",
  "kind": "specification",
  "tier": "context",
- "status": "Individual draft-httpauth-payment-01 (2026-09-09), Standards Track intended, no WG, expires 2027-03-13; authors from Tempo Labs and Stripe. The datatracker record of 2026-10-13 gives revision 01 (time 2026-09-09 16:08 UTC) and no later revision.",
+ "status": "Individual draft-httpauth-payment-01 (2026-09-09), Standards Track intended, no Working Group (WG), expires 2027-03-13; authors from Tempo Labs and Stripe. The datatracker record of 2026-10-13 gives revision 01 (time 2026-09-09 16:08 UTC) and no later revision.",
  "status_as_of": "2026-10-13",
  "relevance": "On receipts, -01 reads \"Servers SHOULD include a Payment-Receipt header on successful responses\"; the receipt table has four fields (status, method, timestamp, reference) and no signature field.",
  "sources": [
@@ -25,10 +25,10 @@
  "verified": "2026-10-13",
  "evidence": {
   "read": "On 2026-10-13: the datatracker record.",
-  "not_read": "Full -01 text, payment method and intent specifications on mpp.dev, SDK licensing, IETF list discussion, Tempo and Stripe pages.",
+  "not_read": "Full -01 text, payment method and intent specifications on mpp.dev, software development kit (SDK) licensing, IETF list discussion, Tempo and Stripe pages.",
   "not_found": "Not found, 2026-10-03, in -01: agent protocol, card network, AP2, x402, Verifiable Intent; in the eight lists: the draft name."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/ietf-httpauth-payment.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/05fa5a174529690b7d7dbf551f34eea80e45b494/entries/ietf-httpauth-payment.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/b11567137c7840e42e6ebbc04eee72ce841b2578/entries/ietf-httpauth-payment.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

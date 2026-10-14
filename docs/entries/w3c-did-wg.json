@@ -6,7 +6,7 @@
  "tier": "context",
  "status": "Proposed maintenance charter sent to the Advisory Committee on 2026-10-07; W3C invites public comments through 2026-11-05, and the Advisory Committee call for review closes at 23:59 UTC on 2026-11-05. The current charter of the group \"is hereby extended until 31 January 2027\"; the start and end dates in the proposed charter text are placeholders.",
  "status_as_of": "2026-10-09",
- "relevance": "The mission \"is to maintain the specifications produced so far by the Working Group\": Decentralized Identifiers and DID Resolution; the listed chairs are Will Abramson and Otto Mora. Out of scope are class 4 changes to the DID specification, authentication or authorization protocols, and browser APIs; further notes \"will not include DID Method specifications and will not address issues regarding any particular DID Methods\". The charter text contains no occurrence of agent, payment, product or commerce (2026-10-08). The call for review says \"The Controlled Identifiers (CIDs) recommendation, which is foundational to Decentralized Identifiers, is now also maintained by the DID Working Group.\" and \"The Advisory Committee Representatives of current participants will need to have their organizations re-join the group if the revised charter gets approved.\"",
+ "relevance": "The mission \"is to maintain the specifications produced so far by the Working Group\": Decentralized Identifiers and Decentralized Identifier (DID) Resolution; the listed chairs are Will Abramson and Otto Mora. Out of scope are class 4 changes to the DID specification, authentication or authorization protocols, and browser APIs; further notes \"will not include DID Method specifications and will not address issues regarding any particular DID Methods\". The charter text contains no occurrence of agent, payment, product or commerce (2026-10-08). The call for review says \"The Controlled Identifiers (CIDs) recommendation, which is foundational to Decentralized Identifiers, is now also maintained by the DID Working Group.\" and \"The Advisory Committee Representatives of current participants will need to have their organizations re-join the group if the revised charter gets approved.\"",
  "sources": [
   {
    "url": "https://www.w3.org/2026/10/proposed-did-wg-charter.html",
@@ -35,6 +35,6 @@
   "not_found": "Not found, 2026-10-08: agent, payment, product, commerce."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/w3c-did-wg.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/05fa5a174529690b7d7dbf551f34eea80e45b494/entries/w3c-did-wg.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/b11567137c7840e42e6ebbc04eee72ce841b2578/entries/w3c-did-wg.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

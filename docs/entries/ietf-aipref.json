@@ -6,7 +6,7 @@
  "tier": "core",
  "status": "The vocabulary draft is at -08 (2026-09-13 in the datatracker history) and the attach draft was last seen at -05 (2026-08-19). A virtual interim meeting is announced for 2026-10-21. On 2026-10-13 the datatracker record gives revision 08 of the vocabulary draft (time 2026-09-14 06:18 UTC) and revision 05 of the attach draft (2026-08-19), no later revision; the interim announcement was not rechecked.",
  "status_as_of": "2026-10-13",
- "relevance": "The WG develops building blocks to express preferences about how content is collected and processed for AI model development, deployment and use, and the draft W3C Agentic Web charter lists it for coordination. For a seller, the vocabulary is the layer in which a publisher states what automated systems may do with its content. The editor copy of the vocabulary draft (main branch of ietf-wg-aipref/drafts, read 2026-10-03) has a section AI Use that reads \"where the asset is not directly provided by the user.\" with a note that issue 249 asks whether referencing an asset by URL counts as direct.",
+ "relevance": "The Working Group (WG) develops building blocks to express preferences about how content is collected and processed for AI model development, deployment and use, and the draft W3C Agentic Web charter lists it for coordination. For a seller, the vocabulary is the layer in which a publisher states what automated systems may do with its content. The editor copy of the vocabulary draft (main branch of ietf-wg-aipref/drafts, read 2026-10-03) has a section AI Use that reads \"where the asset is not directly provided by the user.\" with a note that issue 249 asks whether referencing an asset by URL counts as direct.",
  "committed_next": [
   {
    "what": "Virtual interim meeting, 20:00 to 21:30 UTC.",
@@ -53,7 +53,7 @@
  "evidence": {
   "read": "On 2026-10-13: the datatracker records of draft-ietf-aipref-vocab and draft-ietf-aipref-attach. ai-control list, 2026-08-01 to 2026-09-30 (137 messages, read without quoted replies); datatracker history of draft-ietf-aipref-vocab; editor copy of the vocabulary and attach drafts, by keyword.",
   "not_read": "Posted text of -08, WG milestones page, August interim minutes, repository issues and pull requests, use-case wiki.",
-  "not_found": "Not found in the ai-control list, 2026-08-01 to 2026-09-30: commerce, merchant, checkout, KYA, know your agent, minors, buyer age."
+  "not_found": "Not found in the ai-control list, 2026-08-01 to 2026-09-30: commerce, merchant, checkout, Know Your Agent (KYA), know your agent, minors, buyer age."
  },
  "open_proposals": [
   {
@@ -65,6 +65,6 @@
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/ietf-aipref.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/05fa5a174529690b7d7dbf551f34eea80e45b494/entries/ietf-aipref.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/b11567137c7840e42e6ebbc04eee72ce841b2578/entries/ietf-aipref.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }
