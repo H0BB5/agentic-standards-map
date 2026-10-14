@@ -71,7 +71,7 @@ NOTE_PAGES = [  # (source file in the export, page, title, description)
     ("AI-USE.md", "ai-use.html", "Declaration of AI use", "How language model assistants were used for the map and what the author checked."),
 ]
 LINK_MAP = {"map-bundle.md#part-seams": "seams.html", "map-bundle.md#part-calendar": "calendar.html", "map-bundle.md#part-status": "index.html#where-things-stand",
-            "map-bundle.md#part-matrix": "index.html#matrix", "map-bundle.md#part-disclosure": "disclosure.html", "map-bundle.md": "map.json",
+            "map-bundle.md#part-matrix": "index.html#matrix", "map-bundle.md#part-disclosure": "disclosure.html", "map-bundle.md": "map-bundle.md",
             "entries/": "index.html#entries", "METHOD.md": "method.html", "AI-USE.md": "ai-use.html"}
 REPO_FILES = ("CONTRIBUTING.md", "LICENSE", "LICENSE-CODE")
 
@@ -515,11 +515,12 @@ class Site:
     def base(self, path=""):
         return self.a.base_url + path
 
-    def write(self, path, body, title, desc, lastmod, jsonld=None, depth=0):
+    def write(self, path, body, title, desc, lastmod, jsonld=None, depth=0, alternates=None):
         rel = "../" * depth
+        alt = "".join('<link rel="alternate" type="%s" href="%s">\n' % (attr(t_), attr(h_)) for t_, h_ in (alternates or []))
         nav = "".join('<a href="%s%s">%s</a>' % (rel, h, t) for h, t in (("index.html", "Map"), ("graph.html", "Graph"), ("seams.html", "Seams"),
                                                                            ("calendar.html", "Calendar"), ("intro.html", "Introduction"),
-                                                                           ("disclosure.html", "Disclosure"), ("method.html", "Method")))
+                                                                           ("disclosure.html", "Disclosure"), ("method.html", "Method"), ("data.html", "For agents and tools")))
         ld = ""
         if jsonld:
             ld = '<script type="application/ld+json">%s</script>\n' % json.dumps(jsonld, ensure_ascii=False, indent=1).replace("</", "<\\/")
@@ -528,10 +529,10 @@ class Site:
         else:
             commit = 'the <a href="%s" rel="noopener">repository</a>' % attr(self.a.repo_url)
         page = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n'
-                '<title>%s</title>\n<meta name="description" content="%s">\n<link rel="canonical" href="%s">\n<link rel="stylesheet" href="%sstyle.css">\n%s</head>\n'
+                '<title>%s</title>\n<meta name="description" content="%s">\n<link rel="canonical" href="%s">\n<link rel="stylesheet" href="%sstyle.css">\n%s%s</head>\n'
                 '<body>\n<header class="site">%s</header>\n<main>\n%s\n</main>\n'
                 '<footer class="site">%s. Generated on %s from %s; content under CC BY 4.0. Generated from the data of the map, never edited by hand. No tracking, no scripts.</footer>\n</body>\n</html>\n'
-                % (esc(title), attr(desc), attr(self.base(path)), rel, ld, nav, body, esc(SITE_TITLE), self.today, commit))
+                % (esc(title), attr(desc), attr(self.base(path)), rel, alt, ld, nav, body, esc(SITE_TITLE), self.today, commit))
         target = self.out / path
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(page, encoding="utf-8", newline="\n")
@@ -579,6 +580,67 @@ def check_readme_block(readme_text):
     need = [AUTHOR, AUTHOR_LINE, ORCID, GITHUB, LINKEDIN, ISSUES_URL, "## About the author"]
     miss = [n for n in need if n not in readme_text]
     return miss
+
+
+def entry_object(e):
+    """The entry as in the YAML, without the working field _file."""
+    return {k: v for k, v in e.items() if k != "_file"}
+
+
+def entry_json(site, e):
+    """Per-entry JSON: the object of map.json plus url, source_url (the YAML at the source commit) and licence."""
+    o = entry_object(e)
+    ref = site.sha or "main"
+    o["url"] = site.base("entries/%s.html" % e["id"])
+    o["source_url"] = "%s/blob/%s/entries/%s" % (site.a.repo_url, ref, e["_file"])
+    o["licence"] = LICENCE_URL
+    return o
+
+
+def entry_ld(site, e, desc):
+    """WebPage of the entry: part of the dataset, with the date of verification, the licence, what it is about and the primary sources as citations."""
+    prim = [x["url"] for x in e.get("sources") or [] if x.get("class") != "third-party"]
+    return {"@context": "https://schema.org", "@type": "WebPage", "name": e["name"], "description": desc, "dateModified": d(e["verified"]),
+            "url": site.base("entries/%s.html" % e["id"]), "isPartOf": {"@id": site.base("") + "#dataset"}, "license": LICENCE_URL,
+            "about": {"@type": "Thing", "name": e["name"]},
+            "citation": [{"@type": "CreativeWork", "url": u} for u in prim]}
+
+
+def data_page_html(a, site, n_entries, newest, map_size, n_events, sha):
+    cite = cite_text(a)
+    if cite:
+        cite_p = "<p>%s<br>%s</p>" % (esc(cite), esc(CITE_REQUEST))
+    else:
+        cite_p = "<p>Cite the entry id and the date it was read; the DOI will be added here when there is one.</p>"
+    rows = [
+        ("<a href=\"map.json\">map.json</a>", "All entries as in the YAML (schema v2, described in entries/_schema.md) and the graph of overlaps and seams. Top-level fields: schema, schema_description, generated, source_commit, licence, entries, graph. %d entries; generated %s; source commit %s; licence CC BY 4.0; size %d bytes." % (n_entries, esc(site.today), esc(sha[:7] if sha else "not given"), map_size)),
+        ("<code>entries/&lt;id&gt;.json</code>", "One file per entry: the same object as in map.json, plus <code>url</code> (the page of the entry), <code>source_url</code> (the YAML file in the repository at the source commit) and <code>licence</code>. Example: <a href=\"entries/ap2.json\">entries/ap2.json</a>."),
+        ("<a href=\"calendar.ics\">calendar.ics</a>", "The dated items committed by the venues (%d events with a full date), in iCalendar format." % n_events),
+        ("<a href=\"map-bundle.md\">map-bundle.md</a>", "The full text of the map in one Markdown file."),
+        ("<a href=\"sitemap.xml\">sitemap.xml</a>", "The list of the pages of the site."),
+        ("JSON-LD", "Every page carries JSON-LD: a Dataset on the home page, a WebPage on the others; an entry page names the primary sources of the entry as citations."),
+    ]
+    tbl = "".join("<tr><td>%s</td><td>%s</td></tr>" % (a_, b_) for a_, b_ in rows)
+    return ("<h1>For agents and tools</h1>"
+            "<p>The map in machine-readable form. These are plain files and standard web formats.</p>"
+            "<h2 id=\"files\">Files</h2><div class=\"scroll\"><table><thead><tr><th>File</th><th>What it holds</th></tr></thead><tbody>%s</tbody></table></div>"
+            "<h2 id=\"licence\">Licence</h2><p>The content is under <a href=\"%s\" rel=\"noopener\">CC BY 4.0</a>; the scripts in <code>tools/</code> are under the MIT licence. Reuse is free with attribution.</p>"
+            "<h2 id=\"cite\">How to cite</h2>%s"
+            "<h2 id=\"updates\">Updates</h2><p>Each entry carries its own read date (the fields <code>verified</code> and <code>status_as_of</code>). The site is regenerated from the data at each commit of the repository; the newest verification date is %s.</p>"
+            "<h2 id=\"corrections\">Corrections</h2><p>Corrections and missing sources: <a href=\"%s\" rel=\"noopener\">open an issue on the repository</a>.</p>"
+            % (tbl, attr(LICENCE_URL), cite_p, esc(newest), attr(ISSUES_URL)))
+
+
+def llms_txt(a, site, n_entries):
+    lines = ["# Agentic Standards Map", "",
+             "> A map of who is standardising agentic commerce, where, and what each venue has committed to next: %d dated, sourced entries, one per specification, draft or group." % n_entries, "",
+             "- [For agents and tools](%s): files, formats, licence, how to cite" % site.base("data.html"),
+             "- [map.json](%s): all entries and the graph, schema v2" % site.base("map.json"),
+             "- [map-bundle.md](%s): the full text of the map in one Markdown file" % site.base("map-bundle.md"),
+             "- [calendar.ics](%s): dated items committed by the venues" % site.base("calendar.ics"),
+             "", "Licence: content CC BY 4.0 (%s); scripts MIT." % LICENCE_URL,
+             "How to cite: the entry id, the date it was read, and the DOI when there is one (see the page for agents and tools)."]
+    return "\n".join(lines) + "\n"
 
 
 def dataset_ld(site, newest):
@@ -795,9 +857,11 @@ def main():
                 n_nograph += 1
                 graph_html = "<p>No overlap is declared and no seam names this entry, so it has no neighbours to draw.</p>"
             desc = short_desc(e["status"])
-            ld = {"@context": "https://schema.org", "@type": "WebPage", "name": e["name"], "description": desc, "dateModified": d(e["verified"]),
-                  "url": site.base("entries/%s.html" % e["id"]), "isPartOf": {"@id": site.base("") + "#dataset"}}
-            site.write("entries/%s.html" % e["id"], entry_body(e, entries, md, seams, graph_html), "%s | %s" % (e["name"], SITE_TITLE), desc, d(e["verified"]), ld, depth=1)
+            ld = entry_ld(site, e, desc)
+            site.write("entries/%s.html" % e["id"], entry_body(e, entries, md, seams, graph_html), "%s | %s" % (e["name"], SITE_TITLE), desc, d(e["verified"]), ld, depth=1,
+                       alternates=[("application/json", "%s.json" % e["id"])])
+            (out / "entries").mkdir(parents=True, exist_ok=True)
+            (out / "entries" / ("%s.json" % e["id"])).write_text(json.dumps(entry_json(site, e), ensure_ascii=False, indent=1, default=d), encoding="utf-8", newline="\n")
             unmapped += md.unmapped
 
         # notes
@@ -861,7 +925,7 @@ def main():
             es = sorted((e for e in entries.values() if e["org"] == o), key=lambda x: x["name"])
             if es:
                 allp.append("<h3>%s</h3><ul>%s</ul>" % (esc(o), "".join('<li><a href="entries/%s.html">%s</a> <span class="cls">%s</span></li>' % (attr(e["id"]), esc(e["name"]), e["tier"]) for e in es)))
-        links = '<p><a href="graph-seams.svg"><strong>Graph of the seams</strong></a> | <a href="graph.svg">All overlaps</a> | <a href="graph.html">Both graphs on one page</a> | <a href="seams.html">Seams</a> | <a href="calendar.html">Calendar</a> | <a href="map.json">map.json</a> | <a href="calendar.ics">calendar.ics</a></p>'
+        links = '<p><a href="graph-seams.svg"><strong>Graph of the seams</strong></a> | <a href="graph.svg">All overlaps</a> | <a href="graph.html">Both graphs on one page</a> | <a href="seams.html">Seams</a> | <a href="calendar.html">Calendar</a> | <a href="map.json">map.json</a> | <a href="calendar.ics">calendar.ics</a> | <a href="map-bundle.md">map-bundle.md</a> | <a href="data.html">For agents and tools</a></p>'
         if sha:
             stamp = '<p class="verified">Entries verified up to %s; pages generated on %s from commit <a href="%s/commit/%s" rel="noopener">%s</a>.</p>' % (newest, today, attr(a.repo_url), sha, sha[:7])
         else:
@@ -869,15 +933,28 @@ def main():
         ibody = md.render(head) + stamp + links + md.render(nextsec) + "".join(wt) + "".join(mx) + md.render(tail_a) + author_html + md.render(tail_b) + "".join(allp)
         unmapped += md.unmapped
         idesc = short_desc("Who is standardising agentic commerce, where, and what each venue has committed to next: %d dated, sourced entries across W3C, IETF, GS1, UN/CEFACT, AAIF, Linux Foundation and industry protocols." % len(entries))
-        site.write("index.html", ibody, SITE_TITLE, idesc, newest, dataset_ld(site, newest))
+        site.write("index.html", ibody, SITE_TITLE, idesc, newest, dataset_ld(site, newest), alternates=[("application/json", "map.json"), ("text/calendar", "calendar.ics")])
 
         # data files
         events, stats = ics_events(entries, site)
         (out / "calendar.ics").write_text(build_ics(events, site), encoding="utf-8", newline="")
         mapjson = {"schema": "v2", "schema_description": "entries/_schema.md", "generated": today, "source_commit": sha or "", "licence": LICENCE_URL,
-                   "entries": [entries[i] for i in sorted(entries)],
+                   "entries": [entry_object(entries[i]) for i in sorted(entries)],
                    "graph": {"nodes": sorted(entries), "overlap_edges": [list(x) for x in edges], "seams": {k: {"title": t, "entries": ids_} for k, (t, ids_) in seams.items()}}}
         (out / "map.json").write_text(json.dumps(mapjson, ensure_ascii=False, indent=1, default=d), encoding="utf-8", newline="\n")
+
+        # page for agents and tools, llms.txt, the bundle
+        bundle_src = src / "map-bundle.md"
+        if bundle_src.exists():
+            shutil.copyfile(bundle_src, out / "map-bundle.md")
+        else:
+            raise SystemExit("map-bundle.md is not in the source folder: the page for agents needs it")
+        mj_size = (out / "map.json").stat().st_size
+        dbody = data_page_html(a, site, len(entries), newest, mj_size, len(events), sha)
+        site.write("data.html", dbody, "For agents and tools | %s" % SITE_TITLE, "Files and formats of the map: map.json, one JSON per entry, calendar.ics, map-bundle.md, JSON-LD; licence and how to cite.", newest,
+                   {"@context": "https://schema.org", "@type": "WebPage", "name": "For agents and tools", "dateModified": newest, "url": site.base("data.html"),
+                    "description": "Files and formats of the map.", "isPartOf": {"@id": site.base("") + "#dataset"}})
+        (out / "llms.txt").write_text(llms_txt(a, site, len(entries)), encoding="utf-8", newline="\n")
 
         # sitemap and robots
         urls = sorted(site.pages)
@@ -965,7 +1042,7 @@ def report(a, out, site, entries, seams, edges, unknown_overlap, unknown_seam, e
         excluded = [l for l in lines[1:2]] + [l.split(".")[0] for l in lines if l.startswith("This page is only for")]
     hits_excluded = []
     for f in list(out.rglob("*")):
-        if f.is_file() and f.suffix in (".html", ".json", ".ics", ".xml", ".svg", ".txt", ".css"):
+        if f.is_file() and f.suffix in (".html", ".json", ".ics", ".xml", ".svg", ".txt", ".css", ".md"):
             t = f.read_text(encoding="utf-8")
             hits_excluded += [(f.name, "excluded text") for p_ in excluded if p_ and p_ in t]
             if re.search(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", t):
