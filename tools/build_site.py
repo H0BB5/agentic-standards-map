@@ -600,10 +600,12 @@ def entry_json(site, e):
 def entry_ld(site, e, desc):
     """WebPage of the entry: part of the dataset, with the date of verification, the licence, what it is about and the primary sources as citations."""
     prim = [x["url"] for x in e.get("sources") or [] if x.get("class") != "third-party"]
-    return {"@context": "https://schema.org", "@type": "WebPage", "name": e["name"], "description": desc, "dateModified": d(e["verified"]),
+    ld = {"@context": "https://schema.org", "@type": "WebPage", "name": e["name"], "description": desc, "dateModified": d(e["verified"]),
             "url": site.base("entries/%s.html" % e["id"]), "isPartOf": {"@id": site.base("") + "#dataset"}, "license": LICENCE_URL,
-            "about": {"@type": "Thing", "name": e["name"]},
-            "citation": [{"@type": "CreativeWork", "url": u} for u in prim]}
+            "about": {"@type": "Thing", "name": e["name"]}}
+    if prim:
+        ld["citation"] = [{"@type": "CreativeWork", "url": u} for u in prim]
+    return ld
 
 
 def data_page_html(a, site, n_entries, newest, map_size, n_events, sha):
@@ -611,7 +613,7 @@ def data_page_html(a, site, n_entries, newest, map_size, n_events, sha):
     if cite:
         cite_p = "<p>%s<br>%s</p>" % (esc(cite), esc(CITE_REQUEST))
     else:
-        cite_p = "<p>Cite the entry id and the date it was read; the DOI will be added here when there is one.</p>"
+        cite_p = "<p>Cite the entry id and the date it was read.</p>"
     rows = [
         ("<a href=\"map.json\">map.json</a>", "All entries as in the YAML (schema v2, described in entries/_schema.md) and the graph of overlaps and seams. Top-level fields: schema, schema_description, generated, source_commit, licence, entries, graph. %d entries; generated %s; source commit %s; licence CC BY 4.0; size %d bytes." % (n_entries, esc(site.today), esc(sha[:7] if sha else "not given"), map_size)),
         ("<code>entries/&lt;id&gt;.json</code>", "One file per entry: the same object as in map.json, plus <code>url</code> (the page of the entry), <code>source_url</code> (the YAML file in the repository at the source commit) and <code>licence</code>. Example: <a href=\"entries/ap2.json\">entries/ap2.json</a>."),
@@ -999,7 +1001,7 @@ def report(a, out, site, entries, seams, edges, unknown_overlap, unknown_seam, e
     pages = sorted(site.pages)
     n_entry = sum(1 for p in pages if p.startswith("entries/"))
     n_note = len(NOTE_PAGES)
-    print("[CHECK] pages generated: %d (entries %d + notes %d + index 1 + graph 1)" % (len(pages), n_entry, n_note))
+    print("[CHECK] pages generated: %d (entries %d + notes %d + index 1 + graph 1 + data 1)" % (len(pages), n_entry, n_note))
     checked, broken = internal_links(out)
     print("[CHECK] internal links checked: %d; broken: %d %s" % (checked, len(broken), broken[:10]))
     if unmapped:
