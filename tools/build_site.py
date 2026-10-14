@@ -35,7 +35,7 @@ import yaml
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from build_map import seam_members, check_seams, find_italian, italian_selftest, ITALIAN_WORDS, next_date  # noqa: E402  the same reader and rules as the check of the entries
+from build_map import seam_members, check_seams, find_italian, italian_selftest, ITALIAN_WORDS, next_date, source_label  # noqa: E402  the same reader and rules as the check of the entries
 ROOT = HERE.parent
 PLACEHOLDER_BASE = "https://example.invalid/"
 DEFAULT_REPO = "https://github.com/frmoretto/agentic-standards-map"
@@ -510,7 +510,16 @@ th{background:var(--chip)}blockquote{margin:1rem 0;padding:.2rem 1rem;border-lef
 ul.sources{padding-left:1.1rem}ul.sources li{margin:.3rem 0}.cls{color:var(--muted);font-size:.85rem}
 section.author{border-top:1px solid var(--line);margin-top:2rem;padding-top:.5rem}section.author h2{font-size:1.1rem}footer.site{border-top:1px solid var(--line);margin-top:3rem;padding-top:1rem;padding-bottom:1rem;color:var(--muted);font-size:.85rem}
 .eg svg{width:100%;height:auto}.eg .legend{font-size:.85rem;color:var(--muted)}.graph{overflow:auto;border:1px solid var(--line);margin:1rem 0}.graph svg{max-width:none;height:auto}
-@media (max-width:40rem){:root{--pad:.7rem}body{font-size:15px}}
+table.matrix .mmeta{font-size:.8rem;color:var(--muted);margin-top:.35rem}table.matrix .mmeta div{margin-top:.15rem}table.matrix .lab{font-weight:700}
+table.matrix td.mp{min-width:11rem}
+@media (min-width:64rem){.scroll.wide{position:relative;left:50%;transform:translateX(-50%);width:min(72rem,calc(100vw - 4rem))}}
+@media (max-width:40rem){:root{--pad:.7rem}body{font-size:15px}
+table.matrix,table.matrix tbody,table.matrix tr,table.matrix td{display:block;width:100%}
+table.matrix thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+table.matrix tr{border:1px solid var(--line);border-radius:.4rem;margin:0 0 1rem 0;padding:.2rem .6rem}
+table.matrix td{border-bottom:0;padding:.35rem 0}
+table.matrix td:not(.mp)::before{content:attr(data-label);display:block;font-weight:700;color:var(--accent);font-size:.8rem;margin-bottom:.1rem}
+table.matrix td.mp{min-width:0;font-size:1rem;border-bottom:1px solid var(--line)}}
 """
 
 
@@ -939,11 +948,22 @@ def main():
             wt.append('<tr><td class="nw">%s</td><td class="it"><a href="entries/%s.html">%s</a></td><td>%s (%s)</td><td class="nw">%s</td></tr>' % (esc(e["org"]), attr(e["id"]), esc(e["name"]), md.inline(first), esc(d(e["status_as_of"])), esc(nd)))
         wt.append("</tbody></table></div>")
         by = {e["id"]: e for e in entries.values()}
-        mx = ['<h2 id="matrix">Payment protocols compared</h2><div class="scroll"><table><thead><tr><th>Protocol</th>%s</tr></thead><tbody>' % "".join("<th>%s</th>" % esc(h) for _, h in MATRIX_COLS)]
+        # Four columns (2026-10-14). Same fields, same words, other places: governance, version and source under the protocol,
+        # what is signed and who signs in one cell. Under 40rem each protocol becomes a block (CSS only, data-label).
+        def mline(lab, k, m):
+            v = one_line(m.get(k)) or "not found"
+            if lab == "Source" and re.match(r"https?://", v):
+                v = "[%s](%s)" % (source_label(v), v)   # short label, the full URL stays the href
+            return '<div><span class="lab">%s:</span> %s</div>' % (lab, md.inline(v))
+        mx = ['<h2 id="matrix">Payment protocols compared</h2><div class="scroll wide"><table class="matrix"><thead><tr><th>Protocol</th><th>Signatures</th><th>Receipt or record</th><th>Dispute</th></tr></thead><tbody>']
         for i in MATRIX_ORDER:
             e = by[i]
             m = e.get("matrix") or {}
-            mx.append('<tr><td><a href="entries/%s.html">%s</a></td>%s</tr>' % (attr(i), esc(e["name"]), "".join("<td>%s</td>" % md.inline(one_line(m.get(k)) or "not found") for k, _ in MATRIX_COLS)))
+            mx.append('<tr><td class="mp" data-label="Protocol"><a href="entries/%s.html">%s</a><div class="mmeta">%s%s%s</div></td>'
+                      '<td data-label="Signatures">%s%s</td><td data-label="Receipt or record">%s</td><td data-label="Dispute">%s</td></tr>' % (
+                          attr(i), esc(e["name"]), mline("Governance", "governance", m), mline("Version", "version_state", m), mline("Source", "source", m),
+                          mline("What", "signs", m), mline("Who", "signer", m),
+                          md.inline(one_line(m.get("record")) or "not found"), md.inline(one_line(m.get("dispute")) or "not found")))
         mx.append("</tbody></table></div>")
         allp = ['<h2 id="entries">All entries</h2>']
         for o in ORDER:

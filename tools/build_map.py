@@ -9,6 +9,7 @@ from pathlib import Path
 import datetime
 import re
 import sys
+import urllib.parse
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -235,13 +236,63 @@ def status_table(entries):
     return "\n".join(out)
 
 
+def matrix_parts(e):
+    """The four columns of the comparison table as lists of (label, text) lines.
+
+    It is a view of the `matrix:` block of the entry, not a change of the data: the seven fields keep their text
+    word for word, only where they stand changes. Governance, version and source go under the
+    protocol; what is signed and who signs go in one cell. An empty field is still "not found"."""
+    m = e.get("matrix") or {}
+
+    def g(k):
+        return cell(m.get(k))
+    return {"protocol": [("Governance", g("governance")), ("Version", g("version_state")), ("Source", g("source"))],
+            "signatures": [("What", g("signs")), ("Who", g("signer"))],
+            "record": [(None, g("record"))],
+            "dispute": [(None, g("dispute"))]}
+
+
+MATRIX_HEADERS = ("Protocol", "Signatures", "Receipt or record", "Dispute")
+
+
+def source_label(url):
+    """The visible text of the Source link in the comparison table: the repository (or the domain) and the name of
+    the file, with the short sha when the link is pinned to a commit. The href stays the full URL; the label is not
+    a quotation and is not compared with anything. A file name longer than 40 characters is cut at 37 and ends in
+    an ellipsis. A value that is not a URL is returned as it is."""
+    if not re.match(r"https?://", url or ""):
+        return url
+    u = urllib.parse.urlparse(url)
+    host = u.netloc.lower()
+    host = host[4:] if host.startswith("www.") else host
+    parts = [urllib.parse.unquote(x) for x in u.path.split("/") if x]
+    name = parts[-1] if parts else ""
+    if len(name) > 40:
+        name = name[:37] + "…"
+    if host == "github.com" and len(parts) >= 2:
+        label = parts[1]
+        pinned = len(parts) >= 5 and parts[2] in ("blob", "tree", "commit", "raw")
+        if pinned and name:
+            label += " " + name
+        sha = parts[3] if pinned else ""
+        if re.fullmatch(r"[0-9a-f]{7,40}", sha):
+            label += " @" + sha[:7]
+        return label
+    return host + (" " + name if name else "")
+
+
 def matrix(entries):
     by = {e["id"]: e for e in entries}
-    out = ["| Protocol | " + " | ".join(h for _, h in MATRIX_COLS) + " |", "|---|" + "---|" * len(MATRIX_COLS)]
+    out = ["| " + " | ".join(MATRIX_HEADERS) + " |", "|" + "---|" * len(MATRIX_HEADERS)]
     for i in MATRIX_ORDER:
         e = by[i]
-        m = e.get("matrix") or {}
-        out.append(f"| [{e['name']}](#{e['id']}) | " + " | ".join(cell(m.get(k)) for k, _ in MATRIX_COLS) + " |")
+        p = matrix_parts(e)
+        # the Source line of the protocol cell shows the short label and carries the full URL as the href
+        p["protocol"] = [(lab, f"[{source_label(txt)}]({txt})" if lab == "Source" and re.match(r"https?://", txt) else txt)
+                         for lab, txt in p["protocol"]]
+        proto = f"[{e['name']}](#{e['id']})<br><small>" + "<br>".join(f"{lab}: {txt}" for lab, txt in p["protocol"]) + "</small>"
+        sig = "<br>".join(f"{lab}: {txt}" for lab, txt in p["signatures"])
+        out.append(f"| {proto} | {sig} | {p['record'][0][1]} | {p['dispute'][0][1]} |")
     return "\n".join(out)
 
 
