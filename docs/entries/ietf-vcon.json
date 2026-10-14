@@ -35,6 +35,7 @@
   },
   {
    "url": "https://datatracker.ietf.org/doc/draft-ietf-vcon-vcon-core/",
+   "archived": "https://web.archive.org/web/20261004125524/https://datatracker.ietf.org/doc/draft-ietf-vcon-vcon-core/",
    "read": "2026-10-13",
    "class": "decision"
   },
@@ -65,6 +66,7 @@
   },
   {
    "url": "https://datatracker.ietf.org/doc/draft-rosenberg-vcon-restructure/",
+   "archived": "https://web.archive.org/web/20261008040119/https://datatracker.ietf.org/doc/draft-rosenberg-vcon-restructure/",
    "read": "2026-10-13",
    "class": "third-party"
   },
@@ -152,6 +154,6 @@
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/ietf-vcon.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/aa8677d2f05d1800b4df1bc0c8725eec5129893c/entries/ietf-vcon.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/82729c545a474a3655eaad513d99715086f6f41b/entries/ietf-vcon.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

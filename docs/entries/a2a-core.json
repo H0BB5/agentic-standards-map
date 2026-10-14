@@ -10,31 +10,37 @@
  "sources": [
   {
    "url": "https://github.com/a2aproject/A2A/blob/main/specification/a2a.proto",
+   "archived": "https://web.archive.org/web/20261014051215/https://github.com/a2aproject/A2A/blob/main/specification/a2a.proto",
    "read": "2026-10-03",
    "class": "normative"
   },
   {
    "url": "https://github.com/a2aproject/A2A/blob/main/GOVERNANCE.md",
+   "archived": "https://web.archive.org/web/20261014051447/https://github.com/a2aproject/A2A/blob/main/GOVERNANCE.md",
    "read": "2026-10-03",
    "class": "normative"
   },
   {
    "url": "https://www.linuxfoundation.org/press/linux-foundation-launches-the-agent2agent-protocol-project-to-enable-secure-intelligent-communication-between-ai-agents",
+   "archived": "https://web.archive.org/web/20261009075953/https://www.linuxfoundation.org/press/linux-foundation-launches-the-agent2agent-protocol-project-to-enable-secure-intelligent-communication-between-ai-agents",
    "read": "2026-10-03",
    "class": "decision"
   },
   {
    "url": "https://github.com/a2aproject/A2A/blob/main/docs/specification.md",
+   "archived": "https://web.archive.org/web/20261014051730/https://github.com/a2aproject/A2A/blob/main/docs/specification.md",
    "read": "2026-10-08",
    "class": "normative"
   },
   {
    "url": "https://github.com/a2aproject/A2A/pull/2081",
+   "archived": "https://web.archive.org/web/20261014051811/https://github.com/a2aproject/A2A/pull/2081",
    "read": "2026-10-08",
    "class": "third-party"
   },
   {
    "url": "https://www.iana.org/assignments/well-known-uris/well-known-uris.xml",
+   "archived": "https://web.archive.org/web/20261014051947/https://www.iana.org/assignments/well-known-uris/well-known-uris.xml",
    "read": "2026-10-05",
    "class": "normative"
   }
@@ -52,6 +58,6 @@
   "not_read": "Technical Steering Committee (TSC) minutes and recordings, specification chapters beyond the definitions, the project's later announcements."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/a2a-core.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/aa8677d2f05d1800b4df1bc0c8725eec5129893c/entries/a2a-core.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/82729c545a474a3655eaad513d99715086f6f41b/entries/a2a-core.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

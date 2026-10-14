@@ -12,12 +12,14 @@
    "what": "Lookup by identifier (PR #74, still open on 2026-10-13): \"We will merge this into main and ensure it gets synced into the v0.91 draft structure as well.\"",
    "when": "undated",
    "source": "https://github.com/ards-project/ard-spec/pull/74",
+   "archived": "https://web.archive.org/web/20261014062034/https://github.com/ards-project/ard-spec/pull/74",
    "class": "statement"
   },
   {
    "what": "Neutral host: \"a decision for **roughly twelve months out**, not now.\"",
    "when": "undated",
    "source": "https://agenticresourcediscovery.org/governance/",
+   "archived": "https://web.archive.org/web/20261014062115/https://agenticresourcediscovery.org/governance/",
    "class": "normative"
   }
  ],
@@ -31,46 +33,55 @@
   },
   {
    "url": "https://agenticresourcediscovery.org/governance/",
+   "archived": "https://web.archive.org/web/20261014062115/https://agenticresourcediscovery.org/governance/",
    "read": "2026-10-13",
    "class": "normative"
   },
   {
    "url": "https://github.com/ards-project/ard-spec/issues/61",
+   "archived": "https://web.archive.org/web/20261014062215/https://github.com/ards-project/ard-spec/issues/61",
    "read": "2026-10-03",
    "class": "statement"
   },
   {
    "url": "https://github.com/ards-project/ard-spec/issues/20",
+   "archived": "https://web.archive.org/web/20261014062251/https://github.com/ards-project/ard-spec/issues/20",
    "read": "2026-10-13",
    "class": "third-party"
   },
   {
    "url": "https://github.com/GoogleChrome/lighthouse/pull/17295",
+   "archived": "https://web.archive.org/web/20261014062434/https://github.com/GoogleChrome/lighthouse/pull/17295",
    "read": "2026-10-13",
    "class": "third-party"
   },
   {
    "url": "https://github.com/GoogleChrome/lighthouse/pull/17260#discussion_r4210867267",
+   "archived": "https://web.archive.org/web/20261014062514/https://github.com/GoogleChrome/lighthouse/pull/17260#discussion_r4210867267",
    "read": "2026-10-08",
    "class": "third-party"
   },
   {
    "url": "https://github.com/ards-project/ard-spec/blob/main/adr/0010-ard-and-ai-catalog-loose-coupling.md",
+   "archived": "https://web.archive.org/web/20261014062557/https://github.com/ards-project/ard-spec/blob/main/adr/0010-ard-and-ai-catalog-loose-coupling.md",
    "read": "2026-10-13",
    "class": "decision"
   },
   {
    "url": "https://github.com/ards-project/ard-spec/issues/78",
+   "archived": "https://web.archive.org/web/20261014062639/https://github.com/ards-project/ard-spec/issues/78",
    "read": "2026-10-13",
    "class": "statement"
   },
   {
    "url": "https://github.com/ards-project/ard-spec/pull/60",
+   "archived": "https://web.archive.org/web/20261014062715/https://github.com/ards-project/ard-spec/pull/60",
    "read": "2026-10-03",
    "class": "third-party"
   },
   {
    "url": "https://github.com/ards-project/ard-spec/pull/74",
+   "archived": "https://web.archive.org/web/20261014062034/https://github.com/ards-project/ard-spec/pull/74",
    "read": "2026-10-03",
    "class": "third-party"
   }
@@ -96,31 +107,35 @@
    "author": "a participant",
    "date": "2026-08-31",
    "state": "open",
-   "url": "https://github.com/ards-project/ard-spec/issues/88"
+   "url": "https://github.com/ards-project/ard-spec/issues/88",
+   "archived": "https://web.archive.org/web/20261014062807/https://github.com/ards-project/ard-spec/issues/88"
   },
   {
    "what": "Issue #20: access and monetization signalling in ARD entries.",
    "author": "a participant",
    "date": "2026-06-19",
    "state": "open",
-   "url": "https://github.com/ards-project/ard-spec/issues/20"
+   "url": "https://github.com/ards-project/ard-spec/issues/20",
+   "archived": "https://web.archive.org/web/20261014062251/https://github.com/ards-project/ard-spec/issues/20"
   },
   {
    "what": "Issue #78: discovery confers no contact authority.",
    "author": "a participant",
    "date": "2026-08-20",
    "state": "open",
-   "url": "https://github.com/ards-project/ard-spec/issues/78"
+   "url": "https://github.com/ards-project/ard-spec/issues/78",
+   "archived": "https://web.archive.org/web/20261014062639/https://github.com/ards-project/ard-spec/issues/78"
   },
   {
    "what": "Issue #43: application/install-manifest+json in the AI Catalog (closed as completed on 2026-10-11: ARD v0.91 accepts any valid RFC 6838 media type in `type`).",
    "author": "a participant",
    "date": "2026-06-23",
    "state": "closed",
-   "url": "https://github.com/ards-project/ard-spec/issues/43"
+   "url": "https://github.com/ards-project/ard-spec/issues/43",
+   "archived": "https://web.archive.org/web/20261014062843/https://github.com/ards-project/ard-spec/issues/43"
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/ard.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/aa8677d2f05d1800b4df1bc0c8725eec5129893c/entries/ard.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/82729c545a474a3655eaad513d99715086f6f41b/entries/ard.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

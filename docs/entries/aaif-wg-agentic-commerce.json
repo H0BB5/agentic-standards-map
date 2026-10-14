@@ -12,11 +12,13 @@
  "sources": [
   {
    "url": "https://github.com/aaif/wg-agentic-commerce/blob/main/charter.md",
+   "archived": "https://web.archive.org/web/20261014055057/https://github.com/aaif/wg-agentic-commerce/blob/main/charter.md",
    "read": "2026-10-02",
    "class": "normative"
   },
   {
    "url": "https://github.com/aaif/wg-agentic-commerce/blob/main/README.md",
+   "archived": "https://web.archive.org/web/20261014055233/https://github.com/aaif/wg-agentic-commerce/blob/main/README.md",
    "read": "2026-10-03",
    "class": "normative"
   },
@@ -27,31 +29,36 @@
   },
   {
    "url": "https://github.com/aaif/wg-agentic-commerce/pull/7",
+   "archived": "https://web.archive.org/web/20261014055417/https://github.com/aaif/wg-agentic-commerce/pull/7",
    "read": "2026-10-02",
    "class": "statement"
   },
   {
    "url": "https://github.com/aaif/wg-agentic-commerce/issues/5#issuecomment-6052049160",
+   "archived": "https://web.archive.org/web/20261014055457/https://github.com/aaif/wg-agentic-commerce/issues/5#issuecomment-6052049160",
    "read": "2026-10-08",
    "class": "third-party"
   },
   {
    "url": "https://datatracker.ietf.org/doc/draft-krausz-verification-state/",
+   "archived": "https://web.archive.org/web/20261014055533/https://datatracker.ietf.org/doc/draft-krausz-verification-state/",
    "read": "2026-10-08",
    "class": "third-party"
   },
   {
    "url": "https://github.com/aaif/wg-agentic-commerce/blob/main/reporting/2026-08-report.md",
+   "archived": "https://web.archive.org/web/20261014055651/https://github.com/aaif/wg-agentic-commerce/blob/main/reporting/2026-08-report.md",
    "read": "2026-10-13",
    "class": "statement"
   },
   {
    "url": "https://github.com/aaif/wg-agentic-commerce/issues/9",
+   "archived": "https://web.archive.org/web/20261014055733/https://github.com/aaif/wg-agentic-commerce/issues/9",
    "read": "2026-10-13",
    "class": "statement"
   }
  ],
- "participation": "The author of this map wrote on the public working group mailing list on 2026-10-12, accepting a 30-minute slot, and has announced a presentation at the working group call of 2026-10-14; see Disclosure.",
+ "participation": "The author of this map wrote on the public working group mailing list on 2026-10-12, accepting a 30-minute slot, wrote again in the same thread on 2026-10-14, and gave a presentation of the map at the working group call of 2026-10-14; see Disclosure.",
  "overlaps": [
   "ucp",
   "aaif-structure",
@@ -73,17 +80,19 @@
    "author": "a participant",
    "date": "2026-08-26",
    "state": "open",
-   "url": "https://github.com/aaif/wg-agentic-commerce/issues/5"
+   "url": "https://github.com/aaif/wg-agentic-commerce/issues/5",
+   "archived": "https://web.archive.org/web/20261014055457/https://github.com/aaif/wg-agentic-commerce/issues/5"
   },
   {
    "what": "Capability map to add a buyer-capacity attribute and a table of records kept per party",
    "author": "a participant",
    "date": "2026-09-24",
    "state": "open",
-   "url": "https://github.com/aaif/wg-agentic-commerce/issues/8"
+   "url": "https://github.com/aaif/wg-agentic-commerce/issues/8",
+   "archived": "https://web.archive.org/web/20261014055836/https://github.com/aaif/wg-agentic-commerce/issues/8"
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/aaif-wg-agentic-commerce.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/aa8677d2f05d1800b4df1bc0c8725eec5129893c/entries/aaif-wg-agentic-commerce.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/82729c545a474a3655eaad513d99715086f6f41b/entries/aaif-wg-agentic-commerce.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

@@ -10,26 +10,31 @@
  "sources": [
   {
    "url": "https://datatracker.ietf.org/doc/draft-schrock-ep-architecture/",
+   "archived": "https://web.archive.org/web/20261014063750/https://datatracker.ietf.org/doc/draft-schrock-ep-architecture/",
    "read": "2026-10-08",
    "class": "third-party"
   },
   {
    "url": "https://datatracker.ietf.org/doc/draft-schrock-action-evidence-boundary/",
+   "archived": "https://web.archive.org/web/20261014063932/https://datatracker.ietf.org/doc/draft-schrock-action-evidence-boundary/",
    "read": "2026-10-08",
    "class": "third-party"
   },
   {
    "url": "https://github.com/emiliaprotocol/emilia-protocol",
+   "archived": "https://web.archive.org/web/20261014064007/https://github.com/emiliaprotocol/emilia-protocol",
    "read": "2026-10-08",
    "class": "third-party"
   },
   {
    "url": "https://mailarchive.ietf.org/arch/msg/agentproto/_-7ahBTxuzTScC_1yCTarPXsbzU/",
+   "archived": "https://web.archive.org/web/20261014064139/https://mailarchive.ietf.org/arch/msg/agentproto/_-7ahBTxuzTScC_1yCTarPXsbzU/",
    "read": "2026-10-08",
    "class": "third-party"
   },
   {
    "url": "https://github.com/aaif/wg-identity-and-trust/issues/13",
+   "archived": "https://web.archive.org/web/20261014052528/https://github.com/aaif/wg-identity-and-trust/issues/13",
    "read": "2026-10-08",
    "class": "third-party"
   }
@@ -49,6 +54,6 @@
   "not_found": "Not found, 2026-10-08: EMILIA in the comments of AAIF issue #13 (7 comments)."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/emilia-protocol.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/aa8677d2f05d1800b4df1bc0c8725eec5129893c/entries/emilia-protocol.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/82729c545a474a3655eaad513d99715086f6f41b/entries/emilia-protocol.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

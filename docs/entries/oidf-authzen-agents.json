@@ -10,6 +10,7 @@
  "sources": [
   {
    "url": "https://arxiv.org/abs/2510.25819",
+   "archived": "https://web.archive.org/web/20261008130758/https://arxiv.org/abs/2510.25819",
    "read": "2026-10-06",
    "class": "third-party"
   },
@@ -25,6 +26,7 @@
   },
   {
    "url": "https://openid.net/wg/",
+   "archived": "https://web.archive.org/web/20261012025353/https://openid.net/wg/",
    "read": "2026-10-02",
    "class": "statement"
   }
@@ -42,6 +44,6 @@
   "not_found": "Not found in the announcement, 2026-10-02: commerce, merchant, product. Counts in the text of the arXiv version, 2026-10-06: Web Bot Auth 8 times (one a reference, one an IETF proposal described as a \"passport for agents\"), Agent Payments Protocol (AP2) 3, commerce 2 and AuthZEN 1; not found, 2026-10-06: UCP, ACP, x402, TAP."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/oidf-authzen-agents.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/aa8677d2f05d1800b4df1bc0c8725eec5129893c/entries/oidf-authzen-agents.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/82729c545a474a3655eaad513d99715086f6f41b/entries/oidf-authzen-agents.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

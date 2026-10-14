@@ -12,16 +12,19 @@
  "sources": [
   {
    "url": "https://ref.gs1.org/standards/resolver/",
+   "archived": "https://web.archive.org/web/20261010235715/https://ref.gs1.org/standards/resolver/",
    "read": "2026-10-13",
    "class": "normative"
   },
   {
    "url": "https://ref.gs1.org/standards/resolver/1.2.1/GS1_Conformant_Resolver_standard_i1.2.1-r-2026-08-07",
+   "archived": "https://web.archive.org/web/20261014064746/https://ref.gs1.org/standards/resolver/1.2.1/GS1_Conformant_Resolver_standard_i1.2.1-r-2026-08-07",
    "read": "2026-10-03",
    "class": "normative"
   },
   {
    "url": "https://ref.gs1.org/standards/resolver/archive",
+   "archived": "https://web.archive.org/web/20261014064814/https://ref.gs1.org/standards/resolver/archive",
    "read": "2026-10-13",
    "class": "decision"
   }
@@ -40,6 +43,6 @@
   "not_read": "The www.gs1.org standards page."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/gs1-conformant-resolver.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/aa8677d2f05d1800b4df1bc0c8725eec5129893c/entries/gs1-conformant-resolver.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/82729c545a474a3655eaad513d99715086f6f41b/entries/gs1-conformant-resolver.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

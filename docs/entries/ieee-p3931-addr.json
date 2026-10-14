@@ -10,11 +10,13 @@
  "sources": [
   {
    "url": "https://sagroups.ieee.org/ai-sc/active-pars/",
+   "archived": "https://web.archive.org/web/20261014065221/https://sagroups.ieee.org/ai-sc/active-pars/",
    "read": "2026-10-13",
    "class": "normative"
   },
   {
    "url": "https://standards.ieee.org/about/sasb/sba/26mar2026/",
+   "archived": "https://web.archive.org/web/20261014065352/https://standards.ieee.org/about/sasb/sba/26mar2026/",
    "read": "2026-10-02",
    "class": "decision"
   }
@@ -32,6 +34,6 @@
   "not_found": "Not found in the PAR scope text, 2026-10-02: commerce, merchant, product."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/ieee-p3931-addr.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/aa8677d2f05d1800b4df1bc0c8725eec5129893c/entries/ieee-p3931-addr.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/82729c545a474a3655eaad513d99715086f6f41b/entries/ieee-p3931-addr.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

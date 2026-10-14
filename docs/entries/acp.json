@@ -13,42 +13,50 @@
    "what": "README future path: \"Neutral foundation stewardship as ecosystem matures\"; no date",
    "when": "undated",
    "source": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/main/README.md",
+   "archived": "https://web.archive.org/web/20261014055927/https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/main/README.md",
    "class": "statement"
   }
  ],
  "sources": [
   {
    "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/main/README.md",
+   "archived": "https://web.archive.org/web/20261014055927/https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/main/README.md",
    "read": "2026-10-03",
    "class": "normative"
   },
   {
    "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/02672abb230d7fd75b10264fd9a9a8b9b10e0fa6/MAINTAINERS.md#L9",
+   "archived": "https://web.archive.org/web/20261014060006/https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/02672abb230d7fd75b10264fd9a9a8b9b10e0fa6/MAINTAINERS.md#L9",
    "read": "2026-10-03",
    "class": "normative"
   },
   {
    "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/pull/236",
+   "archived": "https://web.archive.org/web/20261014060046/https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/pull/236",
    "read": "2026-10-03",
    "class": "decision"
   },
   {
    "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/main/rfcs/rfc.discovery.md",
+   "archived": "https://web.archive.org/web/20261014060127/https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/main/rfcs/rfc.discovery.md",
    "read": "2026-10-03",
    "class": "normative"
   },
   {
    "url": "https://developers.openai.com/commerce/specs/checkout",
+   "archived": "https://web.archive.org/web/20261014060210/https://developers.openai.com/commerce/specs/checkout",
    "read": "2026-10-14",
    "class": "statement"
   },
   {
    "url": "https://developers.openai.com/commerce/guides/key-concepts",
+   "archived": "https://web.archive.org/web/20261014060347/https://developers.openai.com/commerce/guides/key-concepts",
    "read": "2026-10-14",
    "class": "statement"
   },
   {
    "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/main/docs/governance.md",
+   "archived": "https://web.archive.org/web/20261014060508/https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/main/docs/governance.md",
    "read": "2026-10-03",
    "class": "normative"
   }
@@ -76,21 +84,24 @@
    "author": "a participant",
    "date": "2026-04-23",
    "state": "open",
-   "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/issues/231"
+   "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/issues/231",
+   "archived": "https://web.archive.org/web/20261014060557/https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/issues/231"
   },
   {
    "what": "Final commit-time authorization evidence in checkout and payment flows (discussion)",
    "author": "a participant",
    "date": "2026-06-06",
    "state": "open",
-   "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/discussions/265"
+   "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/discussions/265",
+   "archived": "https://web.archive.org/web/20261014060728/https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/discussions/265"
   },
   {
    "what": "SEP for a dispute resolution extension (ATDRP) and the sponsor request for it (#303, #304)",
    "author": "a participant",
    "date": "2026-09-09",
    "state": "open",
-   "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/issues/303"
+   "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/issues/303",
+   "archived": "https://web.archive.org/web/20261014060900/https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/issues/303"
   }
  ],
  "matrix": {
@@ -103,6 +114,6 @@
   "source": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/main/README.md"
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/acp.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/aa8677d2f05d1800b4df1bc0c8725eec5129893c/entries/acp.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/82729c545a474a3655eaad513d99715086f6f41b/entries/acp.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

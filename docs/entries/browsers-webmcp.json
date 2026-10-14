@@ -12,6 +12,7 @@
    "what": "Mozilla reviewer: \"willing to come back to revisit it once there is more evidence of how it will be used by sites\"",
    "when": "undated",
    "source": "https://github.com/mozilla/standards-positions/issues/1412#issuecomment-4593221809",
+   "archived": "https://web.archive.org/web/20261014062922/https://github.com/mozilla/standards-positions/issues/1412#issuecomment-4593221809",
    "class": "statement"
   }
  ],
@@ -19,36 +20,43 @@
  "sources": [
   {
    "url": "https://github.com/WebKit/standards-positions/issues/670",
+   "archived": "https://web.archive.org/web/20261014063001/https://github.com/WebKit/standards-positions/issues/670",
    "read": "2026-10-13",
    "class": "statement"
   },
   {
    "url": "https://github.com/mozilla/standards-positions/issues/1412",
+   "archived": "https://web.archive.org/web/20261014062922/https://github.com/mozilla/standards-positions/issues/1412",
    "read": "2026-10-13",
    "class": "statement"
   },
   {
    "url": "https://developer.chrome.com/blog/webmcp-epp",
+   "archived": "https://web.archive.org/web/20261009053420/https://developer.chrome.com/blog/webmcp-epp",
    "read": "2026-10-13",
    "class": "decision"
   },
   {
    "url": "https://blogs.windows.com/msedgedev/2026/09/21/new-in-edge-for-developers-create-better-components-and-make-your-site-agent-ready/",
+   "archived": "https://web.archive.org/web/20261010190017/https://blogs.windows.com/msedgedev/2026/09/21/new-in-edge-for-developers-create-better-components-and-make-your-site-agent-ready/",
    "read": "2026-10-13",
    "class": "decision"
   },
   {
    "url": "https://developer.paypal.com/community/blog/WebMCP_PayPal_Agent_Ready/",
+   "archived": "https://web.archive.org/web/20261014063159/https://developer.paypal.com/community/blog/WebMCP_PayPal_Agent_Ready/",
    "read": "2026-10-08",
    "class": "statement"
   },
   {
    "url": "https://shopify.dev/changelog/posts/webmcp-support-for-checkout",
+   "archived": "https://web.archive.org/web/20261014063333/https://shopify.dev/changelog/posts/webmcp-support-for-checkout",
    "read": "2026-10-08",
    "class": "statement"
   },
   {
    "url": "https://shopify.dev/docs/agents/carts-and-checkout/checkout-webmcp",
+   "archived": "https://web.archive.org/web/20261014063415/https://shopify.dev/docs/agents/carts-and-checkout/checkout-webmcp",
    "read": "2026-10-08",
    "class": "normative"
   }
@@ -68,6 +76,6 @@
   "not_read": "Safari or Apple pages outside the issue, Chrome Status, other Mozilla pages, other vendors, implementation documentation."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/browsers-webmcp.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/aa8677d2f05d1800b4df1bc0c8725eec5129893c/entries/browsers-webmcp.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/82729c545a474a3655eaad513d99715086f6f41b/entries/browsers-webmcp.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

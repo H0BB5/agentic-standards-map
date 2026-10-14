@@ -47,8 +47,9 @@ DTEND;VALUE=DATE:20261020
 SUMMARY:approx. Schedule of the Monday to Wednesday TPAC breakouts added to
   the TPAC calendar
 DESCRIPTION:Schedule of the Monday to Wednesday TPAC breakouts added to the
-  TPAC calendar (README: "Around 19 October we will add the schedule") Sour
- ce: https://github.com/w3c/tpac2026-breakouts
+  TPAC calendar (README: "Around 19 October we will add the schedule")\; on
+  2026-10-14 the calendar page already lists sessions marked "Tentative" So
+ urce: https://github.com/w3c/tpac2026-breakouts
 URL:https://frmoretto.github.io/agentic-standards-map/entries/w3c-tpac-2026
  .html
 END:VEVENT
@@ -137,13 +138,43 @@ SUMMARY:TPAC 2026\, Dublin. Proposed breakouts on agents
 DESCRIPTION:TPAC 2026\, Dublin. Proposed breakouts on agents (#22 The Agent
  ic Web\, opened 2026-09-16\; #24 and #25 on the same theme\, opened 2026-0
  9-17\; #34 Zurich workshop report\, #37 DID Methods WG pre-kickoff\, #39 K
- YAPay and others)\; slots not assigned Source: https://github.com/w3c/tpac
- 2026-breakouts
+ YAPay and others)\; provisional slots of some of them below\, listed as "T
+ entative" on the TPAC calendar on 2026-10-14 Source: https://github.com/w3
+ c/tpac2026-breakouts
 URL:https://frmoretto.github.io/agentic-standards-map/entries/w3c-tpac-2026
  .html
 END:VEVENT
 BEGIN:VEVENT
-UID:w3c-did-methods-wg-2026-10-28-10.agentic-standards-map.invalid
+UID:kyapay-2026-10-26-10.agentic-standards-map.invalid
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20261026
+DTEND;VALUE=DATE:20261027
+SUMMARY:TPAC 2026 breakout #39\, KYAPay: Verified Agent Identity and Paymen
+ ts for Ubiquitous Agentic Commerce on the…
+DESCRIPTION:TPAC 2026 breakout #39\, KYAPay: Verified Agent Identity and Pa
+ yments for Ubiquitous Agentic Commerce on the Existing Web: provisional sl
+ ot\, 17:00 to 18:00 GMT as listed (18:00 to 19:00 in Rome\, converted)\, S
+ econd Floor - Room 3\, marked "Tentative" (TPAC calendar\, read on 2026-10
+ -14) Source: https://www.w3.org/calendar/tpac2026/breakout-sessions/
+URL:https://frmoretto.github.io/agentic-standards-map/entries/kyapay.html
+END:VEVENT
+BEGIN:VEVENT
+UID:w3c-gs1-ecommerce-workshop-2026-10-28-11.agentic-standards-map.invalid
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:TPAC 2026 breakout #34\, Report and follow-ups from the E-commerce 
+ for Humans and AI Agents workshop…
+DESCRIPTION:TPAC 2026 breakout #34\, Report and follow-ups from the E-comme
+ rce for Humans and AI Agents workshop: provisional slot\, 15:15 to 16:15 G
+ MT as listed (16:15 to 17:15 in Rome\, converted)\, Second Floor - Room 1 
+ and 2\, marked "Tentative" (TPAC calendar\, read on 2026-10-14) Source: ht
+ tps://www.w3.org/calendar/tpac2026/breakout-sessions/
+URL:https://frmoretto.github.io/agentic-standards-map/entries/w3c-gs1-ecomm
+ erce-workshop.html
+END:VEVENT
+BEGIN:VEVENT
+UID:w3c-did-methods-wg-2026-10-28-12.agentic-standards-map.invalid
 DTSTAMP:20261014T000000Z
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261029
@@ -155,7 +186,7 @@ URL:https://frmoretto.github.io/agentic-standards-map/entries/w3c-did-metho
  ds-wg.html
 END:VEVENT
 BEGIN:VEVENT
-UID:w3c-tpac-2026-2026-10-29-11.agentic-standards-map.invalid
+UID:w3c-tpac-2026-2026-10-29-13.agentic-standards-map.invalid
 DTSTAMP:20261014T000000Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
@@ -169,7 +200,7 @@ URL:https://frmoretto.github.io/agentic-standards-map/entries/w3c-tpac-2026
  .html
 END:VEVENT
 BEGIN:VEVENT
-UID:aaif-structure-2026-10-29-12.agentic-standards-map.invalid
+UID:aaif-structure-2026-10-29-14.agentic-standards-map.invalid
 DTSTAMP:20261014T000000Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
@@ -183,7 +214,21 @@ URL:https://frmoretto.github.io/agentic-standards-map/entries/aaif-structur
  e.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ucp-2026-11-02-13.agentic-standards-map.invalid
+UID:w3c-agenticweb-wg-2026-10-30-15.agentic-standards-map.invalid
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:TPAC 2026 breakout #22\, The Agentic Web: provisional slot\, 08:30 
+ to 09:30 GMT as listed
+DESCRIPTION:TPAC 2026 breakout #22\, The Agentic Web: provisional slot\, 08
+ :30 to 09:30 GMT as listed (09:30 to 10:30 in Rome\, converted)\, Second F
+ loor - Room 3\, marked "Tentative" (TPAC calendar\, read on 2026-10-14) So
+ urce: https://www.w3.org/calendar/tpac2026/breakout-sessions/
+URL:https://frmoretto.github.io/agentic-standards-map/entries/w3c-agenticwe
+ b-wg.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ucp-2026-11-02-16.agentic-standards-map.invalid
 DTSTAMP:20261014T000000Z
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
@@ -194,7 +239,7 @@ DESCRIPTION:UCP Agentic Donations DWG proposal (issue #924): target date fo
 URL:https://frmoretto.github.io/agentic-standards-map/entries/ucp.html
 END:VEVENT
 BEGIN:VEVENT
-UID:w3c-digital-policy-wg-2026-11-02-14.agentic-standards-map.invalid
+UID:w3c-digital-policy-wg-2026-11-02-17.agentic-standards-map.invalid
 DTSTAMP:20261014T000000Z
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
@@ -205,7 +250,7 @@ URL:https://frmoretto.github.io/agentic-standards-map/entries/w3c-digital-p
  olicy-wg.html
 END:VEVENT
 BEGIN:VEVENT
-UID:w3c-agenticweb-wg-2026-11-10-15.agentic-standards-map.invalid
+UID:w3c-agenticweb-wg-2026-11-10-18.agentic-standards-map.invalid
 DTSTAMP:20261014T000000Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
@@ -217,7 +262,7 @@ URL:https://frmoretto.github.io/agentic-standards-map/entries/w3c-agenticwe
  b-wg.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ietf-webbotauth-2026-11-14-16.agentic-standards-map.invalid
+UID:ietf-webbotauth-2026-11-14-19.agentic-standards-map.invalid
 DTSTAMP:20261014T000000Z
 DTSTART;VALUE=DATE:20261114
 DTEND;VALUE=DATE:20261121
@@ -232,7 +277,7 @@ URL:https://frmoretto.github.io/agentic-standards-map/entries/ietf-webbotau
  th.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ietf-dnsaid-2026-11-28-17.agentic-standards-map.invalid
+UID:ietf-dnsaid-2026-11-28-20.agentic-standards-map.invalid
 DTSTAMP:20261014T000000Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129

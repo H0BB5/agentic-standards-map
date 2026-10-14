@@ -12,12 +12,14 @@
    "what": "Virtual interim meeting, 20:00 to 21:30 UTC.",
    "when": "2026-10-21",
    "source": "https://mailarchive.ietf.org/arch/msg/ai-control/H8Gycx8vy4BKierBvIhG8V2JYFQ/",
+   "archived": "https://web.archive.org/web/20261014071353/https://mailarchive.ietf.org/arch/msg/ai-control/H8Gycx8vy4BKierBvIhG8V2JYFQ/",
    "class": "decision"
   },
   {
    "what": "Two sessions of 1.5 hours at IETF 127 (14 to 20 November 2026), requested by the chair on 2026-09-14.",
    "when": "undated",
    "source": "https://mailarchive.ietf.org/arch/msg/ai-control/95iDQg7QAejNvt6iJiEhfbpXMbk/",
+   "archived": "https://web.archive.org/web/20261014071452/https://mailarchive.ietf.org/arch/msg/ai-control/95iDQg7QAejNvt6iJiEhfbpXMbk/",
    "class": "statement"
   }
  ],
@@ -25,26 +27,31 @@
  "sources": [
   {
    "url": "https://datatracker.ietf.org/wg/aipref/about/",
+   "archived": "https://web.archive.org/web/20261005001403/https://datatracker.ietf.org/wg/aipref/about/",
    "read": "2026-09-29",
    "class": "normative"
   },
   {
    "url": "https://datatracker.ietf.org/doc/draft-ietf-aipref-vocab",
+   "archived": "https://web.archive.org/web/20261005001438/https://datatracker.ietf.org/doc/draft-ietf-aipref-vocab/",
    "read": "2026-10-03",
    "class": "normative"
   },
   {
    "url": "https://datatracker.ietf.org/doc/draft-ietf-aipref-vocab/history/",
+   "archived": "https://web.archive.org/web/20261014071631/https://datatracker.ietf.org/doc/draft-ietf-aipref-vocab/history/",
    "read": "2026-10-03",
    "class": "decision"
   },
   {
    "url": "https://mailarchive.ietf.org/arch/msg/ai-control/H8Gycx8vy4BKierBvIhG8V2JYFQ/",
+   "archived": "https://web.archive.org/web/20261014071353/https://mailarchive.ietf.org/arch/msg/ai-control/H8Gycx8vy4BKierBvIhG8V2JYFQ/",
    "read": "2026-10-03",
    "class": "decision"
   },
   {
    "url": "https://mailarchive.ietf.org/arch/msg/ai-control/A63f3A3k2a9GjhEtOy7J56aUorM",
+   "archived": "https://web.archive.org/web/20261014071757/https://mailarchive.ietf.org/arch/msg/ai-control/A63f3A3k2a9GjhEtOy7J56aUorM",
    "read": "2026-10-03",
    "class": "third-party"
   }
@@ -61,10 +68,11 @@
    "author": "Tyler Martin",
    "date": "2026-08-26",
    "state": "open",
-   "url": "https://mailarchive.ietf.org/arch/msg/ai-control/p9kpjIxFOia7MTYnQnDVrIZH8aw"
+   "url": "https://mailarchive.ietf.org/arch/msg/ai-control/p9kpjIxFOia7MTYnQnDVrIZH8aw",
+   "archived": "https://web.archive.org/web/20261014071836/https://mailarchive.ietf.org/arch/msg/ai-control/p9kpjIxFOia7MTYnQnDVrIZH8aw"
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/ietf-aipref.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/aa8677d2f05d1800b4df1bc0c8725eec5129893c/entries/ietf-aipref.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/82729c545a474a3655eaad513d99715086f6f41b/entries/ietf-aipref.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

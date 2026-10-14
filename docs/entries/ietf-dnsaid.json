@@ -10,51 +10,61 @@
  "sources": [
   {
    "url": "https://www.ietf.org/archive/id/draft-mozleywilliams-dnsop-dnsaid-02.txt",
+   "archived": "https://web.archive.org/web/20261014085023/https://www.ietf.org/archive/id/draft-mozleywilliams-dnsop-dnsaid-02.txt",
    "read": "2026-10-02",
    "class": "third-party"
   },
   {
    "url": "https://datatracker.ietf.org/wg/dnsop/documents/",
+   "archived": "https://web.archive.org/web/20261014085057/https://datatracker.ietf.org/wg/dnsop/documents/",
    "read": "2026-10-02",
    "class": "decision"
   },
   {
    "url": "https://datatracker.ietf.org/doc/draft-ihsanullah-dnsid/",
+   "archived": "https://web.archive.org/web/20261014085138/https://datatracker.ietf.org/doc/draft-ihsanullah-dnsid/",
    "read": "2026-10-13",
    "class": "third-party"
   },
   {
    "url": "https://datatracker.ietf.org/doc/draft-ferro-dnsop-apertoid/",
+   "archived": "https://web.archive.org/web/20261014085216/https://datatracker.ietf.org/doc/draft-ferro-dnsop-apertoid/",
    "read": "2026-10-13",
    "class": "third-party"
   },
   {
    "url": "https://datatracker.ietf.org/doc/draft-morrison-mcp-dns-discovery/",
+   "archived": "https://web.archive.org/web/20261014085255/https://datatracker.ietf.org/doc/draft-morrison-mcp-dns-discovery/",
    "read": "2026-10-13",
    "class": "third-party"
   },
   {
    "url": "https://datatracker.ietf.org/doc/draft-ranjbar-dane-did/",
+   "archived": "https://web.archive.org/web/20261014085443/https://datatracker.ietf.org/doc/draft-ranjbar-dane-did/",
    "read": "2026-10-13",
    "class": "third-party"
   },
   {
    "url": "https://mailarchive.ietf.org/arch/msg/dns-underscore-keys/Atm6JcPnAlMDGYTfUwksFWi9KO4/",
+   "archived": "https://web.archive.org/web/20261014085542/https://mailarchive.ietf.org/arch/msg/dns-underscore-keys/Atm6JcPnAlMDGYTfUwksFWi9KO4/",
    "read": "2026-10-13",
    "class": "third-party"
   },
   {
    "url": "https://mailarchive.ietf.org/arch/msg/dns-underscore-keys/IZ2sMGeSEHr-A16iL6VCwtQWQeY/",
+   "archived": "https://web.archive.org/web/20261014085621/https://mailarchive.ietf.org/arch/msg/dns-underscore-keys/IZ2sMGeSEHr-A16iL6VCwtQWQeY/",
    "read": "2026-10-13",
    "class": "third-party"
   },
   {
    "url": "https://mailarchive.ietf.org/arch/msg/dns-underscore-keys/9lSuPLAWz8e5aFdcwhYr4cutWYI/",
+   "archived": "https://web.archive.org/web/20261014085706/https://mailarchive.ietf.org/arch/msg/dns-underscore-keys/9lSuPLAWz8e5aFdcwhYr4cutWYI/",
    "read": "2026-10-13",
    "class": "third-party"
   },
   {
    "url": "https://datatracker.ietf.org/doc/html/draft-mozleywilliams-dnsop-dnsaid-02",
+   "archived": "https://web.archive.org/web/20261014085743/https://datatracker.ietf.org/doc/html/draft-mozleywilliams-dnsop-dnsaid-02",
    "read": "2026-10-05",
    "class": "third-party"
   }
@@ -69,6 +79,6 @@
   "not_found": "Adoption call, objection or dated promise for the draft: not found in the lists read, 2026-10-03."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/ietf-dnsaid.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/aa8677d2f05d1800b4df1bc0c8725eec5129893c/entries/ietf-dnsaid.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/82729c545a474a3655eaad513d99715086f6f41b/entries/ietf-dnsaid.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

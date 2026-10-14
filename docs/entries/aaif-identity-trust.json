@@ -10,31 +10,37 @@
  "sources": [
   {
    "url": "https://github.com/aaif/wg-identity-and-trust/issues/13",
+   "archived": "https://web.archive.org/web/20261014052528/https://github.com/aaif/wg-identity-and-trust/issues/13",
    "read": "2026-10-13",
    "class": "third-party"
   },
   {
    "url": "https://github.com/aaif/wg-identity-and-trust/blob/main/README.md",
+   "archived": "https://web.archive.org/web/20261014052614/https://github.com/aaif/wg-identity-and-trust/blob/main/README.md",
    "read": "2026-10-09",
    "class": "statement"
   },
   {
    "url": "https://github.com/agentrust-io/integrations/issues/286",
+   "archived": "https://web.archive.org/web/20261014052649/https://github.com/agentrust-io/integrations/issues/286",
    "read": "2026-10-09",
    "class": "third-party"
   },
   {
    "url": "https://github.com/agentrust-io/integrations/issues/287",
+   "archived": "https://web.archive.org/web/20261014052734/https://github.com/agentrust-io/integrations/issues/287",
    "read": "2026-10-13",
    "class": "third-party"
   },
   {
    "url": "https://github.com/agentrust-io/integrations/pull/288",
+   "archived": "https://web.archive.org/web/20261014052814/https://github.com/agentrust-io/integrations/pull/288",
    "read": "2026-10-13",
    "class": "third-party"
   },
   {
    "url": "https://github.com/agentrust-io/integrations/pull/288#pullrequestreview-5447425825",
+   "archived": "https://web.archive.org/web/20261014052814/https://github.com/agentrust-io/integrations/pull/288#pullrequestreview-5447425825",
    "read": "2026-10-09",
    "class": "third-party"
   },
@@ -45,76 +51,91 @@
   },
   {
    "url": "https://github.com/agentrust-io/integrations/blob/main/README.md",
+   "archived": "https://web.archive.org/web/20261014052934/https://github.com/agentrust-io/integrations/blob/main/README.md",
    "read": "2026-10-09",
    "class": "statement"
   },
   {
    "url": "https://github.com/agentrust-io/trace-spec/blob/main/README.md",
+   "archived": "https://web.archive.org/web/20261014053010/https://github.com/agentrust-io/trace-spec/blob/main/README.md",
    "read": "2026-10-09",
    "class": "statement"
   },
   {
    "url": "https://github.com/agentrust-io/trace-spec/blob/main/MAINTAINERS.md",
+   "archived": "https://web.archive.org/web/20261014053045/https://github.com/agentrust-io/trace-spec/blob/main/MAINTAINERS.md",
    "read": "2026-10-09",
    "class": "statement"
   },
   {
    "url": "https://github.com/agentrust-io/trace-spec/releases/tag/v0.11.0",
+   "archived": "https://web.archive.org/web/20261014053124/https://github.com/agentrust-io/trace-spec/releases/tag/v0.11.0",
    "read": "2026-10-09",
    "class": "decision"
   },
   {
    "url": "https://github.com/proofable/docs/commit/63fc73ba27e510b4a06e352321820ae0759653c2",
+   "archived": "https://web.archive.org/web/20261014053201/https://github.com/proofable/docs/commit/63fc73ba27e510b4a06e352321820ae0759653c2",
    "read": "2026-10-09",
    "class": "third-party"
   },
   {
    "url": "https://gitlab.com/mintid/mintid/-/tags",
+   "archived": "https://web.archive.org/web/20261014053237/https://gitlab.com/mintid/mintid/-/tags",
    "read": "2026-10-09",
    "class": "third-party"
   },
   {
    "url": "https://github.com/agentrust-io",
+   "archived": "https://web.archive.org/web/20261014053314/https://github.com/agentrust-io",
    "read": "2026-10-09",
    "class": "statement"
   },
   {
    "url": "https://github.com/agentrust-io/integrations",
+   "archived": "https://web.archive.org/web/20261014053445/https://github.com/agentrust-io/integrations",
    "read": "2026-10-09",
    "class": "statement"
   },
   {
    "url": "https://lists.aaif.io/g/wg-identity-trust/message/44",
+   "archived": "https://web.archive.org/web/20261014053528/https://lists.aaif.io/g/wg-identity-trust/message/44",
    "read": "2026-10-09",
    "class": "third-party"
   },
   {
    "url": "https://lists.aaif.io/g/wg-identity-trust/message/45",
+   "archived": "https://web.archive.org/web/20261014053704/https://lists.aaif.io/g/wg-identity-trust/message/45",
    "read": "2026-10-09",
    "class": "third-party"
   },
   {
    "url": "https://lists.aaif.io/g/wg-identity-trust/message/46",
+   "archived": "https://web.archive.org/web/20261014053838/https://lists.aaif.io/g/wg-identity-trust/message/46",
    "read": "2026-10-09",
    "class": "third-party"
   },
   {
    "url": "https://lists.aaif.io/g/wg-identity-trust/message/47",
+   "archived": "https://web.archive.org/web/20261014053912/https://lists.aaif.io/g/wg-identity-trust/message/47",
    "read": "2026-10-09",
    "class": "third-party"
   },
   {
    "url": "https://gitlab.com/mintid/mintid/-/tree/public-v2026-10-08.2/test-harness/trace/records",
+   "archived": "https://web.archive.org/web/20261014053950/https://gitlab.com/mintid/mintid/-/tree/public-v2026-10-08.2/test-harness/trace/records",
    "read": "2026-10-09",
    "class": "third-party"
   },
   {
    "url": "https://lists.aaif.io/g/wg-identity-trust/message/40",
+   "archived": "https://web.archive.org/web/20261014054028/https://lists.aaif.io/g/wg-identity-trust/message/40",
    "read": "2026-10-09",
    "class": "third-party"
   },
   {
    "url": "https://lists.aaif.io/g/wg-identity-trust/message/48",
+   "archived": "https://web.archive.org/web/20261014054103/https://lists.aaif.io/g/wg-identity-trust/message/48",
    "read": "2026-10-09",
    "class": "third-party"
   },
@@ -125,11 +146,13 @@
   },
   {
    "url": "https://github.com/proofable/docs/commit/4ceb58b68784266be73957c0727bbbf1477bf25b",
+   "archived": "https://web.archive.org/web/20261014054204/https://github.com/proofable/docs/commit/4ceb58b68784266be73957c0727bbbf1477bf25b",
    "read": "2026-10-09",
    "class": "third-party"
   },
   {
    "url": "https://github.com/agentrust-io/integrations/issues/287#issuecomment-6051738118",
+   "archived": "https://web.archive.org/web/20261014052734/https://github.com/agentrust-io/integrations/issues/287#issuecomment-6051738118",
    "read": "2026-10-09",
    "class": "third-party"
   },
@@ -140,6 +163,7 @@
   },
   {
    "url": "https://github.com/proofable/docs/tree/9851059900e29ba701bb0f4df2bf89a2107f430c/public/evidence/aaif/authority-at-dispatch/2026-10-08",
+   "archived": "https://web.archive.org/web/20261014054250/https://github.com/proofable/docs/tree/9851059900e29ba701bb0f4df2bf89a2107f430c/public/evidence/aaif/authority-at-dispatch/2026-10-08",
    "read": "2026-10-13",
    "class": "third-party"
   }
@@ -149,6 +173,7 @@
    "what": "ALIGN to confirm the start date of its independent run (\"We will confirm the start date on October 15.\"); a confirmation of the date, not the start.",
    "when": "2026-10-15",
    "source": "https://lists.aaif.io/g/wg-identity-trust/message/47",
+   "archived": "https://web.archive.org/web/20261014053912/https://lists.aaif.io/g/wg-identity-trust/message/47",
    "class": "third-party"
   }
  ],
@@ -162,6 +187,6 @@
   "not_found": "Not found, 2026-10-09: a merge of pull request #288 (also not found on 2026-10-13); a release object or release notes for the MintID tags."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/aaif-identity-trust.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/aa8677d2f05d1800b4df1bc0c8725eec5129893c/entries/aaif-identity-trust.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/82729c545a474a3655eaad513d99715086f6f41b/entries/aaif-identity-trust.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

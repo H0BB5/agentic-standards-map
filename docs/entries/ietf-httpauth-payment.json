@@ -10,16 +10,19 @@
  "sources": [
   {
    "url": "https://datatracker.ietf.org/doc/draft-httpauth-payment/",
+   "archived": "https://web.archive.org/web/20261014085833/https://datatracker.ietf.org/doc/draft-httpauth-payment/",
    "read": "2026-10-03",
    "class": "decision"
   },
   {
    "url": "https://www.ietf.org/archive/id/draft-httpauth-payment-01.txt",
+   "archived": "https://web.archive.org/web/20261014085912/https://www.ietf.org/archive/id/draft-httpauth-payment-01.txt",
    "read": "2026-10-03",
    "class": "third-party"
   },
   {
    "url": "https://docs.stripe.com/payments/machine/mpp",
+   "archived": "https://web.archive.org/web/20261014090103/https://docs.stripe.com/payments/machine/mpp",
    "read": "2026-10-14",
    "class": "statement"
   }
@@ -34,6 +37,6 @@
   "not_found": "Not found, 2026-10-03, in -01: agent protocol, card network, AP2, x402, Verifiable Intent; in the eight lists: the draft name. The Stripe page on the Machine Payments Protocol (MPP), read 2026-10-14, describes MPP as \"co-authored by Stripe and Tempo\" and does not mention this draft; a statement by a primary source that links the draft to MPP: not found there."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/ietf-httpauth-payment.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/aa8677d2f05d1800b4df1bc0c8725eec5129893c/entries/ietf-httpauth-payment.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/82729c545a474a3655eaad513d99715086f6f41b/entries/ietf-httpauth-payment.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

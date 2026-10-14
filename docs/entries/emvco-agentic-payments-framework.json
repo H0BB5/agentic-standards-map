@@ -12,26 +12,31 @@
  "sources": [
   {
    "url": "https://www.emvco.com/news/emvco-requests-feedback-on-framework-for-secure-interoperable-and-scalable-card-based-agentic-payments/",
+   "archived": "https://web.archive.org/web/20261014064219/https://www.emvco.com/news/emvco-requests-feedback-on-framework-for-secure-interoperable-and-scalable-card-based-agentic-payments/",
    "read": "2026-10-02",
    "class": "decision"
   },
   {
    "url": "https://www.emvco.com/resources/emv-agentic-payments-framework-for-specifications-v1-0-draft-comment-period-ends-30-sept-2026/",
+   "archived": "https://web.archive.org/web/20261014064408/https://www.emvco.com/resources/emv-agentic-payments-framework-for-specifications-v1-0-draft-comment-period-ends-30-sept-2026/",
    "read": "2026-10-02",
    "class": "statement"
   },
   {
    "url": "https://www.emvco.com/knowledge-hub/how-emvco-is-working-to-enable-secure-interoperable-and-scalable-card-based-agentic-payments/",
+   "archived": "https://web.archive.org/web/20261014064500/https://www.emvco.com/knowledge-hub/how-emvco-is-working-to-enable-secure-interoperable-and-scalable-card-based-agentic-payments/",
    "read": "2026-10-02",
    "class": "statement"
   },
   {
    "url": "https://www.emvco.com/news/emvco-newsletter-q3-2026/",
+   "archived": "https://web.archive.org/web/20261014064554/https://www.emvco.com/news/emvco-newsletter-q3-2026/",
    "read": "2026-10-13",
    "class": "statement"
   },
   {
    "url": "https://www.emvco.com/news/",
+   "archived": "https://web.archive.org/web/20261014064651/https://www.emvco.com/news/",
    "read": "2026-10-13",
    "class": "statement"
   }
@@ -59,6 +64,6 @@
   "source": "https://www.emvco.com/news/emvco-requests-feedback-on-framework-for-secure-interoperable-and-scalable-card-based-agentic-payments/"
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/emvco-agentic-payments-framework.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/aa8677d2f05d1800b4df1bc0c8725eec5129893c/entries/emvco-agentic-payments-framework.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/82729c545a474a3655eaad513d99715086f6f41b/entries/emvco-agentic-payments-framework.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

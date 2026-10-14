@@ -10,6 +10,7 @@
  "sources": [
   {
    "url": "https://github.com/agentrust-io/trace-spec/blob/main/README.md",
+   "archived": "https://web.archive.org/web/20261014053010/https://github.com/agentrust-io/trace-spec/blob/main/README.md",
    "read": "2026-10-13",
    "class": "statement"
   },
@@ -25,6 +26,7 @@
   },
   {
    "url": "https://github.com/agentrust-io/trace-spec/blob/main/MAINTAINERS.md",
+   "archived": "https://web.archive.org/web/20261014053045/https://github.com/agentrust-io/trace-spec/blob/main/MAINTAINERS.md",
    "read": "2026-10-09",
    "class": "statement"
   },
@@ -35,6 +37,7 @@
   },
   {
    "url": "https://github.com/agentrust-io/trace-spec/releases/tag/v0.11.0",
+   "archived": "https://web.archive.org/web/20261014053124/https://github.com/agentrust-io/trace-spec/releases/tag/v0.11.0",
    "read": "2026-10-09",
    "class": "decision"
   },
@@ -53,6 +56,6 @@
   "not_read": "The rest of the specification (980 lines), the schema, the conformance suite, the roadmap and governance files, the limitations file."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/trace.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/aa8677d2f05d1800b4df1bc0c8725eec5129893c/entries/trace.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/82729c545a474a3655eaad513d99715086f6f41b/entries/trace.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

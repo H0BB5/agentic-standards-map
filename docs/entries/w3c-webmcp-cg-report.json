@@ -10,21 +10,25 @@
  "sources": [
   {
    "url": "https://webmachinelearning.github.io/webmcp/",
+   "archived": "https://web.archive.org/web/20261008115750/https://webmachinelearning.github.io/webmcp/",
    "read": "2026-10-02",
    "class": "normative"
   },
   {
    "url": "https://github.com/webmachinelearning/webmcp/issues/257",
+   "archived": "https://web.archive.org/web/20261009024837/https://github.com/webmachinelearning/webmcp/issues/257",
    "read": "2026-10-03",
    "class": "third-party"
   },
   {
    "url": "https://github.com/webmachinelearning/webmcp/pull/338",
+   "archived": "https://web.archive.org/web/20261008115307/https://github.com/webmachinelearning/webmcp/pull/338",
    "read": "2026-10-13",
    "class": "decision"
   },
   {
    "url": "https://github.com/WebKit/standards-positions/issues/670",
+   "archived": "https://web.archive.org/web/20261014063001/https://github.com/WebKit/standards-positions/issues/670",
    "read": "2026-10-03",
    "class": "third-party"
   }
@@ -49,10 +53,11 @@
    "author": "a participant (WebKit standards-positions)",
    "date": "2026-06-17",
    "state": "closed",
-   "url": "https://github.com/WebKit/standards-positions/issues/670#issuecomment-4729132384"
+   "url": "https://github.com/WebKit/standards-positions/issues/670#issuecomment-4729132384",
+   "archived": "https://web.archive.org/web/20261014063001/https://github.com/WebKit/standards-positions/issues/670#issuecomment-4729132384"
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/w3c-webmcp-cg-report.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/aa8677d2f05d1800b4df1bc0c8725eec5129893c/entries/w3c-webmcp-cg-report.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/82729c545a474a3655eaad513d99715086f6f41b/entries/w3c-webmcp-cg-report.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

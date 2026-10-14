@@ -28,16 +28,19 @@
   },
   {
    "url": "https://github.com/schemaorg/schemaorg/pull/4861",
+   "archived": "https://web.archive.org/web/20261012053010/https://github.com/schemaorg/schemaorg/pull/4861",
    "read": "2026-10-03",
    "class": "decision"
   },
   {
    "url": "https://schema.org/docs/releases.html",
+   "archived": "https://web.archive.org/web/20261012074212/https://schema.org/docs/releases.html",
    "read": "2026-10-14",
    "class": "normative"
   },
   {
    "url": "https://github.com/schemaorg/schemaorg/issues/4870",
+   "archived": "https://web.archive.org/web/20261010235714/https://github.com/schemaorg/schemaorg/issues/4870",
    "read": "2026-10-03",
    "class": "third-party"
   }
@@ -98,14 +101,16 @@
    "author": "a participant",
    "date": "2025-11-10",
    "state": "open",
-   "url": "https://github.com/schemaorg/schemaorg/issues/4572"
+   "url": "https://github.com/schemaorg/schemaorg/issues/4572",
+   "archived": "https://web.archive.org/web/20261012053119/https://github.com/schemaorg/schemaorg/issues/4572"
   },
   {
    "what": "Issue #4525: economic operator attribute on Product.",
    "author": "a participant",
    "date": "2025-10-09",
    "state": "open",
-   "url": "https://github.com/schemaorg/schemaorg/issues/4525"
+   "url": "https://github.com/schemaorg/schemaorg/issues/4525",
+   "archived": "https://web.archive.org/web/20261010023455/https://github.com/schemaorg/schemaorg/issues/4525"
   },
   {
    "what": "Discussion #4699: buyer-owned checkout from Demand, Offer and Order.",
@@ -116,6 +121,6 @@
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/schemaorg-open-agent-commerce-items.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/aa8677d2f05d1800b4df1bc0c8725eec5129893c/entries/schemaorg-open-agent-commerce-items.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/82729c545a474a3655eaad513d99715086f6f41b/entries/schemaorg-open-agent-commerce-items.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

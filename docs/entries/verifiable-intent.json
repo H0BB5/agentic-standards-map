@@ -22,6 +22,7 @@
   },
   {
    "url": "https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/",
+   "archived": "https://web.archive.org/web/20261014061119/https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/",
    "read": "2026-10-03",
    "class": "decision"
   }
@@ -95,6 +96,6 @@
   "source": "https://github.com/agent-intent/verifiable-intent/blob/main/README.md"
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/verifiable-intent.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/aa8677d2f05d1800b4df1bc0c8725eec5129893c/entries/verifiable-intent.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/82729c545a474a3655eaad513d99715086f6f41b/entries/verifiable-intent.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }
