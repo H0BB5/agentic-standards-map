@@ -6,7 +6,7 @@ W3C, IETF, GS1, UN/CEFACT, the Linux Foundation, AAIF, and the industry protocol
 
 Every statement is dated and points to a public source. No predictions, no proposals, no rankings.
 
-*v0.2, working draft, as of 2026-10-14.*
+*Version 1.0, as of 2026-10-14. The map is updated as venues move; each entry carries its own read date.*
 
 ---
 
