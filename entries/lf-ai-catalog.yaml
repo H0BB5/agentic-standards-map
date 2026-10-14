@@ -86,12 +86,12 @@ open_proposals:
   state: open
   url: https://github.com/Agent-Card/ai-catalog/pull/91
 - what: 'Issue #114: measurement of did:web host identifiers.'
-  author: kinlane
+  author: a participant
   date: 2026-09-13
   state: open
   url: https://github.com/Agent-Card/ai-catalog/issues/114
 - what: 'PR #117: trust metadata grouped by contributor, generalized signatures (not a draft on 2026-10-13; open, 6 comments).'
-  author: jonathanhefner
+  author: a participant
   date: 2026-09-13
   state: open
   url: https://github.com/Agent-Card/ai-catalog/pull/117
