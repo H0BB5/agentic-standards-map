@@ -488,6 +488,7 @@ CSS = """:root{--measure:56rem;--pad:1rem;--fg:#1b1b1b;--bg:#fff;--muted:#555;--
 body{margin:0;font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--fg);background:var(--bg)}
 header.site,footer.site{padding-left:max(var(--pad),calc((100% - var(--measure))/2 + var(--pad)));padding-right:max(var(--pad),calc((100% - var(--measure))/2 + var(--pad)))}
 header.site{border-bottom:1px solid var(--line);padding-top:.6rem;padding-bottom:.6rem}
+header.site{display:flex;flex-wrap:wrap;row-gap:.2rem}
 header.site a{margin-right:1rem;color:var(--accent);text-decoration:none;font-weight:600;white-space:nowrap}
 main{max-width:var(--measure);margin:0 auto;padding:var(--pad)}
 h1,h2,h3{color:var(--accent);line-height:1.25}h1{font-size:1.7rem}h2{font-size:1.3rem;margin-top:2rem}h3{font-size:1.1rem}
