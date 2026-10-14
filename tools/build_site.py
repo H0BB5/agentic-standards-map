@@ -625,6 +625,7 @@ def data_page_html(a, site, n_entries, newest, map_size, n_events, sha):
     tbl = "".join("<tr><td>%s</td><td>%s</td></tr>" % (a_, b_) for a_, b_ in rows)
     return ("<h1>For agents and tools</h1>"
             "<p>The map in machine-readable form. These are plain files and standard web formats.</p>"
+            "<p>This site uses generic web mechanisms (JSON files, link rel=alternate, schema.org JSON-LD, a sitemap). It does not adopt any of the discovery mechanisms described in the map, so that the map does not take a side in what it maps.</p>"
             "<h2 id=\"files\">Files</h2><div class=\"scroll\"><table><thead><tr><th>File</th><th>What it holds</th></tr></thead><tbody>%s</tbody></table></div>"
             "<h2 id=\"licence\">Licence</h2><p>The content is under <a href=\"%s\" rel=\"noopener\">CC BY 4.0</a>; the scripts in <code>tools/</code> are under the MIT licence. Reuse is free with attribution.</p>"
             "<h2 id=\"cite\">How to cite</h2>%s"
