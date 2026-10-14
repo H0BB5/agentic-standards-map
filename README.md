@@ -8,7 +8,7 @@ Every statement is dated and points to a public source. The map makes no predict
 
 This map documents public standardisation activity, specifications and declared commitments. It does not measure market adoption, transaction volume, cross-protocol interoperability or the reliability of deployed implementations. Implementation claims are reported only where supported by dated public evidence and are not treated as evidence of interoperability.
 
-*Version 1.0, as of 2026-10-14. The map is updated as venues move; each entry carries its own read date.*
+*Version 1.0.1, as of 2026-10-14. The map is updated as venues move; each entry carries its own read date.*
 
 DOI (all versions): [10.5281/zenodo.23357361](https://doi.org/10.5281/zenodo.23357361)
 
@@ -16,7 +16,7 @@ DOI (all versions): [10.5281/zenodo.23357361](https://doi.org/10.5281/zenodo.233
 
 ## Four things you see only when you look across venues
 
-**1. The map identifies at least seven discovery mechanisms or publication paths.** `/.well-known/ucp`, A2A's `agent-card.json`, schema.org, ARD, AI Catalog, MCP Server Cards and DNS-AID. Of these seven, only `agent-card.json` is in the IANA well-known registry (updated 2026-10-07, read 2026-10-14). Two venues have discovery-charter work in progress: the IETF DAWN charter is in external review, with comments to the IESG due by 2026-10-19 and an IESG telechat listed for 2026-10-22, and the W3C Agentic Web WG charter is in refinement. [Seam S1](map-bundle.md#part-seams)
+**1. The map identifies at least eight discovery mechanisms or publication paths.** `/.well-known/ucp`, A2A's `agent-card.json`, schema.org, ARD, AI Catalog, MCP Server Cards, DNS-AID and the `/.well-known/poppy.json` of the Personal Agent Protocol. Of these eight, only `agent-card.json` is in the IANA well-known registry (updated 2026-10-07, read 2026-10-14). Two venues have discovery-charter work in progress: the IETF DAWN charter is in external review, with comments to the IESG due by 2026-10-19 and an IESG telechat listed for 2026-10-22, and the W3C Agentic Web WG charter is in refinement. [Seam S1](map-bundle.md#part-seams)
 
 **2. Product identity: one ratified route and one route marked at risk.** GS1 Digital Link gives a ratified route to product identifiers; the DID route cited for Digital Product Passports rests on a feature that the DID Resolution Candidate Recommendation Draft marks at risk. One workshop position statement (#31, Sven Böckelmann) frames the open question as three checks: "Where. Who signed. Who may." [Seam S2](map-bundle.md#part-seams)
 
@@ -68,7 +68,7 @@ Corrections and missing sources: [open an issue on the repository](https://githu
 
 ### How to cite
 
-Marinoni Moretto, F. (2026). Agentic Standards Map (Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23357362
+Marinoni Moretto, F. (2026). Agentic Standards Map (Version 1.0.1) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23357362
 
 Please cite the entry id, the date it was read and the DOI. To cite the map in general, use https://doi.org/10.5281/zenodo.23357361.
 

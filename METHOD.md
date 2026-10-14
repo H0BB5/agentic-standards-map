@@ -40,4 +40,24 @@ A negative is always written as "not found in [corpus, date]": it describes the 
 
 ## Versions and citation
 
-The website is the living version and changes as venues move. Version 1.0 is the tag v1.0.0 of the repository. Each DOI identifies a frozen snapshot: version 1.0 has the version DOI 10.5281/zenodo.23357362. The concept DOI 10.5281/zenodo.23357361 always resolves to the latest version; cite the version DOI for the text you read.
+The website is the living version and changes as venues move. Each DOI identifies a frozen snapshot: version 1.0.0 is the tag v1.0.0 of the repository and has the version DOI 10.5281/zenodo.23357362. Version 1.0.1 (2026-10-14) is the version shown on this site; its tag and its version DOI are recorded here when it is released. The concept DOI 10.5281/zenodo.23357361 always resolves to the latest version; cite the version DOI for the text you read.
+
+Archive copies: snapshots of the cited sources were requested on 2026-10-14 from the Wayback Machine of the Internet Archive. Of 576 distinct URLs of the entries and notes, 256 now have a snapshot (191 saved on request, 65 that already had a copy from 2026-10-01 or later), 312 failed (303 of them with an error of the service) and 8 were not requested (a login, a token, a placeholder or a Google Doc). Where a snapshot exists, `map.json` and the JSON of the entry carry it in an `archived` field next to the URL, and the entry page links it. A snapshot is a copy kept by a third party, taken at the time shown in its address; it is not the text read on the date of reading.
+
+**Changelog.**
+
+**1.0.1 (2026-10-14).** Corrections and additions to the living version; no entry was added or removed.
+
+- DAWN: the example "discover all agents in this shop" is given as the example of the local network, not as a commercial example on the web; the example of the public Internet is "discover all agents of example.org, for all its customers/members".
+- Seam S1: the redirect rules of UCP and of the Personal Agent Protocol are said to differ (different paths and different readers), not to be opposite.
+- Home and S1: the count of discovery paths is eight (the home page counted seven and left out the poppy.json of the Personal Agent Protocol).
+- Disclosure: the pull request on the W3C charter drafts is recorded as merged on 2026-10-13.
+- UCP: the census figure called "row 2" is "row 2 and ucp.version present", as its author wrote on 2026-10-14.
+- Calendar: three provisional TPAC breakout slots, with their source and the conversion to Rome time.
+- AI-USE.md: the hash it carries is that of the bundle of the released version, and the export checks it against the tag.
+- Disclosure: the presentation to the AAIF Agentic Commerce Working Group is recorded as given on 2026-10-14, with the list message of that day.
+- Disclosure: the time of the DAWN list message of 2026-09-25 is removed; the date stays.
+- IANA: a registration request for `ucp` has been open in the registry's repository since 2026-06-06 (issue #92), and is recorded in S1 and in the UCP entry.
+- TPAC: the entry follows the breakout calendar of 2026-10-14 (85 sessions, all marked tentative).
+- Sources: archive links in `map.json`, in the JSON of each entry and on the entry pages.
+- Presentation: the table "Payment protocols compared" has four columns, short labels for the source links, and may be wider than the text column; the text of its cells did not change.

@@ -24,6 +24,6 @@ The author of this map, Francesco Marinoni Moretto, has the following public int
 - IETF Web Bot Auth, crawler best practices (cbcp): entry `ietf-webbotauth`; seam S3.
 - IETF AUDIT list and architecture draft issue #35: entry `ietf-audit`; seams S4 and the closing section on what is not established.
 - IETF vcon list, two messages, and PR #41 on the charter text: entry `ietf-vcon`; seam S4.
-- AAIF Agentic Commerce Working Group, a message on the working group list (12 October, 06:23 UTC) and a presentation announced for the call of 14 October: entry `aaif-wg-agentic-commerce`; seam S4.
+- AAIF Agentic Commerce Working Group, two messages on the working group list (12 October, 06:23 UTC, and 14 October, 15:22 UTC) and a presentation given at the call of 14 October: entry `aaif-wg-agentic-commerce`; seam S4.
 - Shopify AI Toolkit, issue #62: entry `shopify`.
 - IETF AUDIT: the lead editor of the expected-record draft stated on 2026-10-08 that the author will be named as a contributor for case 7 (see the full disclosure): entry `ietf-audit`.

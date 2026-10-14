@@ -5,14 +5,14 @@ kind: charter
 tier: core
 status: 'Draft charter for a proposed Working Group, in refinement until approx. 2026-11-10 (W3C Team estimate, public-new-work). On 2026-10-13 the last change to the charter text is still the commit of 2026-09-30 (a definition of the term and a simplified scope), and the Strategy issue #576 is open with 4 comments, the last of 2026-10-01.'
 status_as_of: 2026-10-13
-relevance: 'The draft charter proposes a Working Group "to develop specifications that facilitate web pages and applications to be leveraged by LLMs and AI agents", scoped to site capabilities and context for agents, agent identity and delegation, and permissions and policies for agent actions. Its one normative deliverable is WebMCP, adopted from the Web Machine Learning Community Group; it lists the Web Payment Security Interest Group (IG), IETF webbotauth and IETF aipref for coordination. On 2026-08-13 a representative of Apple wrote on PR #829 "Expect a formal objection if this is merged.", about the earlier plan to place WebMCP in the Web Machine Learning Working Group (WG). Charter-drafts PR #888 (editorial fixes, opened by the author of this map on 2026-10-02) was open on 2026-10-13 with a clean merge state; a participant approved it on 2026-10-08 with the review text "LGTM" (review 5463458958).'
+relevance: 'The draft charter proposes a Working Group "to develop specifications that facilitate web pages and applications to be leveraged by LLMs and AI agents", scoped to site capabilities and context for agents, agent identity and delegation, and permissions and policies for agent actions. Its one normative deliverable is WebMCP, adopted from the Web Machine Learning Community Group; it lists the Web Payment Security Interest Group (IG), IETF webbotauth and IETF aipref for coordination. On 2026-08-13 a representative of Apple wrote on PR #829 "Expect a formal objection if this is merged.", about the earlier plan to place WebMCP in the Web Machine Learning Working Group (WG). Charter-drafts PR #888 (editorial fixes, opened by the author of this map on 2026-10-02) was merged on 2026-10-13 at 11:06 UTC by one of its reviewers, after approvals by three reviewers: a participant on 2026-10-08 with the review text "LGTM" (review 5463458958) and two on 2026-10-13 (GitHub, read on 2026-10-14).'
 committed_next:
 - what: Charter refinement until approximately 10 November 2026; notices of extension on the Strategy issue
   when: approx. 2026-11-10
   source: https://lists.w3.org/Archives/Public/public-new-work/2026Oct/0002.html
   class: decision
 boundary: 'Out of scope: model APIs, inference and execution; cryptographic authentication primitives; crawler controls; agent to server communications.'
-participation: 'The author of this map took part in charter-drafts PR #888 (editorial fixes to the draft, no change to scope; open on 2026-10-13); see Disclosure.'
+participation: 'The author of this map took part in charter-drafts PR #888 (editorial fixes to the draft, no change to scope; merged on 2026-10-13); see Disclosure.'
 sources:
 - url: https://w3c.github.io/charter-drafts/2026/agenticweb-wg.html
   read: 2026-10-02
@@ -29,6 +29,9 @@ sources:
 - url: https://github.com/w3c/charter-drafts/pull/888#pullrequestreview-5463458958
   read: 2026-10-09
   class: decision
+- url: https://github.com/w3c/charter-drafts/pull/888
+  read: 2026-10-14
+  class: decision
 overlaps:
 - w3c-tpac-2026
 - w3c-webmcp-cg-report
@@ -36,7 +39,7 @@ overlaps:
 - ietf-aipref
 seams:
 - S3
-verified: 2026-10-13
+verified: 2026-10-14
 evidence:
-  read: 'On 2026-10-13: the commit history of the charter file, PRs #829 and #888 with their reviews, and the Strategy issue #576.'
+  read: 'On 2026-10-14 also: the state, merge time and reviews of PR #888 (GitHub).'
   not_read: Charter HTML in the 2026-10-03 files, list archives, meeting minutes, TPAC breakout slots.

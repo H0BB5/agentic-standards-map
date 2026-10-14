@@ -20,6 +20,7 @@ by this script: see .github/workflows/pages.yml.disabled. --base-url is the addr
 placeholder until then): it is used for canonical links, the sitemap, JSON-LD and the UID domain-free calendar URLs.
 """
 import argparse
+import csv
 import datetime
 import html as htmllib
 import json
@@ -62,6 +63,8 @@ CLASSES = {"normative": "normative text", "decision": "official decision or comm
            "third-party": "participant or third party"}
 MATRIX_COLS = [("governance", "Owner / governance"), ("version_state", "Version and state"), ("signs", "What it signs"),
                ("signer", "Who signs"), ("record", "Receipt or record"), ("dispute", "Dispute"), ("source", "Source")]
+# the latest version that has a tag: updated by hand when a release is made (with RELEASED_TAG of tools/export_public.py)
+LATEST_RELEASE = ("1.0.0", "v1.0.0")
 MATRIX_ORDER = ["ap2", "ucp", "acp", "x402", "visa-tap", "verifiable-intent", "emvco-agentic-payments-framework"]
 NOTE_PAGES = [  # (source file in the export, page, title, description)
     ("notes/intro.md", "intro.html", "Introduction", "Why the map exists, who it is for and how to read it."),
@@ -507,7 +510,7 @@ th,td{border-bottom:1px solid var(--line);padding:.4rem .5rem;text-align:left;ve
 th{background:var(--chip)}blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:4px solid var(--line);color:var(--muted)}
 .chips span{display:inline-block;background:var(--chip);border-radius:1rem;padding:.1rem .7rem;margin:0 .4rem .4rem 0;font-size:.85rem}
 .verified{color:var(--muted);font-size:.9rem}td.nw,th.nw{white-space:nowrap}td.it{min-width:9rem}table.wts{min-width:42rem}dl.fields dt{font-weight:700;margin-top:1rem}dl.fields dd{margin:.2rem 0 0 0}
-ul.sources{padding-left:1.1rem}ul.sources li{margin:.3rem 0}.cls{color:var(--muted);font-size:.85rem}
+ul.sources{padding-left:1.1rem}ul.sources li{margin:.3rem 0}.cls{color:var(--muted);font-size:.85rem}.cls a.arch{color:var(--muted)}
 section.author{border-top:1px solid var(--line);margin-top:2rem;padding-top:.5rem}section.author h2{font-size:1.1rem}footer.site{border-top:1px solid var(--line);margin-top:3rem;padding-top:1rem;padding-bottom:1rem;color:var(--muted);font-size:.85rem}
 .eg svg{width:100%;height:auto}.eg .legend{font-size:.85rem;color:var(--muted)}.graph{overflow:auto;border:1px solid var(--line);margin:1rem 0}.graph svg{max-width:none;height:auto}
 table.matrix .mmeta{font-size:.8rem;color:var(--muted);margin-top:.35rem}table.matrix .mmeta div{margin-top:.15rem}table.matrix .lab{font-weight:700}
@@ -528,6 +531,8 @@ class Site:
         self.a, self.entries, self.src, self.sha, self.today, self.lastmods = a, entries, src, sha, today, lastmods
         self.pages = {}  # path -> dict(title, desc, lastmod)
         self.out = Path(a.out)
+        self.version = ""   # the version named in the first line of the README ("*Version 1.0.1, as of ...*"), shown in the footer
+        self.archived = {}  # source URL -> Wayback Machine snapshot URL, from notes/archived-sources.csv
 
     def base(self, path=""):
         return self.a.base_url + path
@@ -548,8 +553,8 @@ class Site:
         page = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n'
                 '<title>%s</title>\n<meta name="description" content="%s">\n<link rel="canonical" href="%s">\n<link rel="stylesheet" href="%sstyle.css">\n%s%s</head>\n'
                 '<body>\n<header class="site">%s</header>\n<main>\n%s\n</main>\n'
-                '<footer class="site">%s. Generated on %s from %s; content under CC BY 4.0. Generated from the data of the map, never edited by hand. No tracking, no scripts.</footer>\n</body>\n</html>\n'
-                % (esc(title), attr(desc), attr(self.base(path)), rel, alt, ld, nav, body, esc(SITE_TITLE), self.today, commit))
+                '<footer class="site">%s%s. Generated on %s from %s; content under CC BY 4.0. Generated from the data of the map, never edited by hand. No tracking, no scripts.</footer>\n</body>\n</html>\n'
+                % (esc(title), attr(desc), attr(self.base(path)), rel, alt, ld, nav, body, esc(SITE_TITLE), (", version %s" % esc(self.version)) if self.version else "", self.today, commit))
         target = self.out / path
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(page, encoding="utf-8", newline="\n")
@@ -610,14 +615,48 @@ def check_readme_block(readme_text):
     return miss
 
 
-def entry_object(e):
-    """The entry as in the YAML, without the working field _file."""
-    return {k: v for k, v in e.items() if k != "_file"}
+def load_archived(src):
+    """URL -> snapshot of the Wayback Machine, from notes/archived-sources.csv (columns url, archived, snapshot). Absent file: nothing archived."""
+    p = src / "notes" / "archived-sources.csv"
+    if not p.exists():
+        return {}
+    out = {}
+    for r in csv.DictReader(p.read_text(encoding="utf-8").splitlines()):
+        if not re.fullmatch(r"https://web\.archive\.org/web/\d{14}/.+", r["archived"]):
+            raise SystemExit("notes/archived-sources.csv: not a snapshot URL: %s" % r["archived"][:80])
+        out[r["url"]] = r["archived"]
+    return out
+
+
+def add_archived(o, archived):
+    """Put `archived` right after `url` (or `source` in committed_next) of every item that has a snapshot; items without one are left as they are."""
+    if not archived:
+        return o
+
+    def put(item, name):
+        if isinstance(item, dict) and item.get(name) in archived:
+            new = {}
+            for k, v in item.items():
+                new[k] = v
+                if k == name:
+                    new["archived"] = archived[item[name]]
+            return new
+        return item
+    o = dict(o)
+    for field, name in (("sources", "url"), ("open_proposals", "url"), ("committed_next", "source")):
+        if o.get(field):
+            o[field] = [put(x, name) for x in o[field]]
+    return o
+
+
+def entry_object(e, archived=None):
+    """The entry as in the YAML, without the working field _file; with `archived` next to the URLs that have a snapshot."""
+    return add_archived({k: v for k, v in e.items() if k != "_file"}, archived)
 
 
 def entry_json(site, e):
     """Per-entry JSON: the object of map.json plus url, source_url (the YAML at the source commit) and licence."""
-    o = entry_object(e)
+    o = entry_object(e, site.archived)
     ref = site.sha or "main"
     o["url"] = site.base("entries/%s.html" % e["id"])
     o["source_url"] = "%s/blob/%s/entries/%s" % (site.a.repo_url, ref, e["_file"])
@@ -642,14 +681,18 @@ def data_page_html(a, site, n_entries, newest, map_size, n_events, sha):
         cite_p = "<p>%s<br>%s</p>" % (link_dois(cite), link_dois(cite_request(a)))
     else:
         cite_p = "<p>Cite the entry id and the date it was read.</p>"
+    # the version that has a tag (and a DOI); the version shown on the site may be a later one, which has neither until its release is recorded here
+    rel_v, rel_tag = LATEST_RELEASE
+    shown = (a.cite_version or rel_v)
+    pending = "" if shown == rel_v else " The version shown on this site, %s, has no tag and no DOI of its own yet; they are recorded here when it is released." % esc(shown)
     if a.doi and a.version_doi:
-        citable_p = '<p>The website is the living version and changes as venues move. Each DOI identifies a frozen snapshot: version 1.0 is the tag <code>v1.0.0</code>, version DOI <a href="https://doi.org/%s" rel="noopener">%s</a>. The concept DOI <a href="https://doi.org/%s" rel="noopener">%s</a> always resolves to the latest version; cite the version DOI for the text you read.</p>' % (attr(a.version_doi), esc(a.version_doi), attr(a.doi), esc(a.doi))
+        citable_p = '<p>The website is the living version and changes as venues move. Each DOI identifies a frozen snapshot: version %s is the tag <code>%s</code>, version DOI <a href="https://doi.org/%s" rel="noopener">%s</a>.%s The concept DOI <a href="https://doi.org/%s" rel="noopener">%s</a> always resolves to the latest version; cite the version DOI for the text you read.</p>' % (rel_v, rel_tag, attr(a.version_doi), esc(a.version_doi), pending, attr(a.doi), esc(a.doi))
     elif a.doi:
-        citable_p = '<p>The website is the living version and changes as venues move. Each DOI identifies a frozen snapshot: version 1.0 is the tag <code>v1.0.0</code>, DOI <a href="https://doi.org/%s" rel="noopener">%s</a>. The concept DOI always resolves to the latest version; cite the version DOI for the text you read.</p>' % (attr(a.doi), esc(a.doi))
+        citable_p = '<p>The website is the living version and changes as venues move. Each DOI identifies a frozen snapshot: version %s is the tag <code>%s</code>, DOI <a href="https://doi.org/%s" rel="noopener">%s</a>.%s The concept DOI always resolves to the latest version; cite the version DOI for the text you read.</p>' % (rel_v, rel_tag, attr(a.doi), esc(a.doi), pending)
     else:
-        citable_p = "<p>The website is the living version and changes as venues move. Version 1.0 is the tag <code>v1.0.0</code> of the repository; a DOI for each frozen snapshot is not issued yet, and until it is, cite the entry id, the date it was read and the commit shown in the footer of the page.</p>"
+        citable_p = "<p>The website is the living version and changes as venues move. Version %s is the tag <code>%s</code> of the repository; a DOI for each frozen snapshot is not issued yet, and until it is, cite the entry id, the date it was read and the commit shown in the footer of the page.%s</p>" % (rel_v, rel_tag, pending)
     rows = [
-        ("<a href=\"map.json\">map.json</a>", "All entries as in the YAML (schema v2, described in entries/_schema.md) and the graph of overlaps and seams. Top-level fields: schema, schema_description, generated, source_commit, licence, entries, graph. %d entries; generated %s; source commit %s; licence CC BY 4.0; size %d bytes." % (n_entries, esc(site.today), esc(sha[:7] if sha else "not given"), map_size)),
+        ("<a href=\"map.json\">map.json</a>", "All entries as in the YAML (schema v2, described in entries/_schema.md) and the graph of overlaps and seams. Top-level fields: schema, schema_description, generated, source_commit, licence, entries, graph. Where a snapshot of a source exists in the Wayback Machine of the Internet Archive, the item of sources, open_proposals or committed_next carries an archived field next to its url (%d URLs). %d entries; generated %s; source commit %s; licence CC BY 4.0; size %d bytes." % (len(site.archived), n_entries, esc(site.today), esc(sha[:7] if sha else "not given"), map_size)),
         ("<code>entries/&lt;id&gt;.json</code>", "One file per entry: the same object as in map.json, plus <code>url</code> (the page of the entry), <code>source_url</code> (the YAML file in the repository at the source commit) and <code>licence</code>. Example: <a href=\"entries/ap2.json\">entries/ap2.json</a>."),
         ("<a href=\"calendar.ics\">calendar.ics</a>", "The same dated events as the Calendar page (%d), in iCalendar format." % n_events),
         ("<a href=\"map-bundle.md\">map-bundle.md</a>", "The full text of the map in one Markdown file."),
@@ -681,7 +724,7 @@ def dataset_ld(site, newest):
     return ld
 
 
-def entry_body(e, entries, md, seams, graph_html):
+def entry_body(e, entries, md, seams, graph_html, archived=None):
     rel = "../"
     ov = ", ".join('<a href="%s.html">%s</a>' % (attr(o), esc(entries[o]["name"])) for o in (e.get("overlaps") or []))
     p = ['<h1>%s</h1>' % esc(e["name"]),
@@ -703,7 +746,8 @@ def entry_body(e, entries, md, seams, graph_html):
     if e.get("participation"):
         p.append("<h2>Author participation</h2><p>%s</p>" % md.inline(one_line(e["participation"])))
     p.append("<h2>Sources</h2><ul class=\"sources\">%s</ul>" % "".join(
-        '<li><a href="%s" rel="noopener">%s</a> <span class="cls">%s, read %s</span></li>' % (attr(s["url"]), esc(s["url"]), esc(CLASSES[s["class"]]), esc(d(s["read"])))
+        '<li><a href="%s" rel="noopener">%s</a> <span class="cls">%s, read %s%s</span></li>' % (attr(s["url"]), esc(s["url"]), esc(CLASSES[s["class"]]), esc(d(s["read"])),
+                                                                                                  (' \u00b7 <a class="arch" href="%s" rel="noopener">archived</a>' % attr(archived[s["url"]])) if archived and s["url"] in archived else "")
         for s in e.get("sources", [])))
     if ov:
         p.append("<h2>Overlaps</h2><p>%s</p>" % ov)
@@ -868,6 +912,9 @@ def main():
         out.mkdir(parents=True)
         (out / "style.css").write_text(CSS, encoding="utf-8", newline="\n")
         site = Site(a, entries, src, sha, today, lastmods)
+        _v = re.search(r"\*Version ([0-9][0-9.]*), as of", (src / "README.md").read_text(encoding="utf-8"))
+        site.version = _v.group(1) if _v else ""
+        site.archived = load_archived(src)
         newest = max(d(e["verified"]) for e in entries.values())
         unmapped = []
 
@@ -889,7 +936,7 @@ def main():
                 graph_html = "<p>No overlap is declared and no seam names this entry, so it has no neighbours to draw.</p>"
             desc = short_desc(e["status"])
             ld = entry_ld(site, e, desc)
-            site.write("entries/%s.html" % e["id"], entry_body(e, entries, md, seams, graph_html), "%s | %s" % (e["name"], SITE_TITLE), desc, d(e["verified"]), ld, depth=1,
+            site.write("entries/%s.html" % e["id"], entry_body(e, entries, md, seams, graph_html, site.archived), "%s | %s" % (e["name"], SITE_TITLE), desc, d(e["verified"]), ld, depth=1,
                        alternates=[("application/json", "%s.json" % e["id"])])
             (out / "entries").mkdir(parents=True, exist_ok=True)
             (out / "entries" / ("%s.json" % e["id"])).write_text(json.dumps(entry_json(site, e), ensure_ascii=False, indent=1, default=d), encoding="utf-8", newline="\n")
@@ -984,7 +1031,7 @@ def main():
         events, stats, caldesc = calendar_events(src)
         (out / "calendar.ics").write_text(build_ics(events, site, caldesc), encoding="utf-8", newline="")
         mapjson = {"schema": "v2", "schema_description": "entries/_schema.md", "generated": today, "source_commit": sha or "", "licence": LICENCE_URL,
-                   "entries": [entry_object(entries[i]) for i in sorted(entries)],
+                   "entries": [entry_object(entries[i], site.archived) for i in sorted(entries)],
                    "graph": {"nodes": sorted(entries), "overlap_edges": [list(x) for x in edges], "seams": {k: {"title": t, "entries": ids_} for k, (t, ids_) in seams.items()}}}
         (out / "map.json").write_text(json.dumps(mapjson, ensure_ascii=False, indent=1, default=d), encoding="utf-8", newline="\n")
 
