@@ -59,7 +59,7 @@ Corrections and missing sources: [open an issue on the repository](https://githu
 
 ### How to cite
 
-Marinoni Moretto, F. (2026). Agentic Standards Map (Version 1.0.1) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23357362
+Marinoni Moretto, F. (2026). Agentic Standards Map (Version 1.0.1) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23377309
 
 Please cite the entry id, the date it was read and the DOI. To cite the map in general, use https://doi.org/10.5281/zenodo.23357361.
 
@@ -195,7 +195,7 @@ A negative is always written as "not found in [corpus, date]": it describes the 
 
 ## Versions and citation
 
-The website is the living version and changes as venues move. Each DOI identifies a frozen snapshot: version 1.0.0 is the tag v1.0.0 of the repository and has the version DOI 10.5281/zenodo.23357362. Version 1.0.1 (2026-10-14) is the version shown on this site; its tag and its version DOI are recorded here when it is released. The concept DOI 10.5281/zenodo.23357361 always resolves to the latest version; cite the version DOI for the text you read.
+The website is the living version and changes as venues move. Each DOI identifies a frozen snapshot: version 1.0.1 (2026-10-14) is the tag v1.0.1 of the repository and has the version DOI 10.5281/zenodo.23377309; version 1.0.0 is the tag v1.0.0 and has the version DOI 10.5281/zenodo.23357362. The concept DOI 10.5281/zenodo.23357361 always resolves to the latest version; cite the version DOI for the text you read.
 
 Archive copies: snapshots of the cited sources were requested on 2026-10-14 from the Wayback Machine of the Internet Archive. Of 576 distinct URLs of the entries and notes, 256 now have a snapshot (191 saved on request, 65 that already had a copy from 2026-10-01 or later), 312 failed (303 of them with an error of the service) and 8 were not requested (a login, a token, a placeholder or a Google Doc). Where a snapshot exists, `map.json` and the JSON of the entry carry it in an `archived` field next to the URL, and the entry page links it. A snapshot is a copy kept by a third party, taken at the time shown in its address; it is not the text read on the date of reading.
 
