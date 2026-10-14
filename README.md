@@ -10,6 +10,8 @@ This map documents public standardisation activity, specifications and declared 
 
 *Version 1.0, as of 2026-10-14. The map is updated as venues move; each entry carries its own read date.*
 
+DOI (all versions): [10.5281/zenodo.23357361](https://doi.org/10.5281/zenodo.23357361)
+
 ---
 
 ## Four things you see only when you look across venues
@@ -63,6 +65,12 @@ ORCID [0009-0004-0096-4712](https://orcid.org/0009-0004-0096-4712) · GitHub [fr
 I have taken part in some of the venues mapped; the [Disclosure](notes/disclosure.md) lists where, and the entries concerned say so.
 
 Corrections and missing sources: [open an issue on the repository](https://github.com/frmoretto/agentic-standards-map/issues).
+
+### How to cite
+
+Marinoni Moretto, F. (2026). Agentic Standards Map (Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23357362
+
+Please cite the entry id, the date it was read and the DOI. To cite the map in general, use https://doi.org/10.5281/zenodo.23357361.
 
 ## Contributing
 

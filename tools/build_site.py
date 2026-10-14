@@ -1,6 +1,6 @@
 """Build the static site of the map: one page per entry, the notes, a graph, the data files.
 
-Usage: python tools/build_site.py [--commit HEAD] [--source DIR] [--out site] [--base-url URL] [--repo-url URL] [--doi DOI]
+Usage: python tools/build_site.py [--commit HEAD] [--source DIR] [--out site] [--base-url URL] [--repo-url URL] [--doi DOI] [--version-doi DOI] [--cite-version V]
 
 The site is generated, never edited by hand, and only from the PUBLIC export: unless --source is given, the script runs
 tools/export_public.py on the commit (the same exclusions as the public bundle) in a temporary folder and reads entries/ and
@@ -51,6 +51,7 @@ ISSUES_URL = DEFAULT_REPO + "/issues"
 AUTHOR_LINE = "independent researcher on agentic commerce, Milan"
 AUTHOR_PART = "I have taken part in some of the venues mapped; the %s lists where, and the entries concerned say so."
 CITE_REQUEST = "Please cite the entry id, the date it was read and the DOI."
+CITE_GENERAL = "To cite the map in general, use https://doi.org/%s."
 CREATOR = {"@type": "Person", "name": AUTHOR, "identifier": ORCID, "sameAs": [ORCID, GITHUB, LINKEDIN], "url": GITHUB}
 LICENCE_URL = "https://creativecommons.org/licenses/by/4.0/"
 ORDER = ["W3C", "IETF", "GS1", "UN/CEFACT", "Other standards bodies", "AAIF", "Linux Foundation", "Independent", "Industry"]
@@ -550,8 +551,19 @@ def cite_text(a):
     """Citation line; empty unless a DOI was given."""
     if not a.doi:
         return ""
-    return "%s (2026). Agentic Standards Map (version %s). Zenodo. https://doi.org/%s" % (
-        "Marinoni Moretto, F.", a.cite_version or datetime.date.today().isoformat(), a.doi)
+    vdoi = a.version_doi or a.doi
+    return "%s (2026). Agentic Standards Map (Version %s) [Data set]. Zenodo. https://doi.org/%s" % (
+        "Marinoni Moretto, F.", a.cite_version or datetime.date.today().isoformat(), vdoi)
+
+
+def cite_request(a):
+    """The request that follows the citation: with a DOI it also names the concept DOI, for citing the map in general."""
+    return CITE_REQUEST + (" " + CITE_GENERAL % a.doi if a.doi and a.version_doi else "")
+
+
+def link_dois(text):
+    """escape the text and turn each https://doi.org/... into a link"""
+    return re.sub(r"(https://doi\.org/[0-9A-Za-z./-]+?)(?=[.]?(?:\s|$|<))", lambda m: '<a href="%s" rel="noopener">%s</a>' % (m.group(1), m.group(1)), esc(text))
 
 
 def author_block_html(a, disclosure_href="disclosure.html"):
@@ -564,7 +576,7 @@ def author_block_html(a, disclosure_href="disclosure.html"):
          '<p>Corrections and missing sources: <a href="%s" rel="noopener">open an issue on the repository</a>.</p>' % attr(ISSUES_URL)]
     ct = cite_text(a)
     if ct:
-        h.append('<h3>How to cite</h3><p>%s<br>%s</p>' % (esc(ct).replace("https://doi.org/%s" % a.doi, '<a href="https://doi.org/%s" rel="noopener">https://doi.org/%s</a>' % (attr(a.doi), esc(a.doi))), esc(CITE_REQUEST)))
+        h.append('<h3>How to cite</h3><p>%s<br>%s</p>' % (link_dois(ct), link_dois(cite_request(a))))
     h.append("</section>")
     return "".join(h)
 
@@ -578,7 +590,7 @@ def readme_author_md(a):
          "Corrections and missing sources: [open an issue on the repository](%s)." % ISSUES_URL]
     ct = cite_text(a)
     if ct:
-        t += ["", "### How to cite", "", ct, "", CITE_REQUEST]
+        t += ["", "### How to cite", "", ct, "", cite_request(a)]
     return "\n".join(t) + "\n"
 
 
@@ -618,10 +630,12 @@ def entry_ld(site, e, desc):
 def data_page_html(a, site, n_entries, newest, map_size, n_events, sha):
     cite = cite_text(a)
     if cite:
-        cite_p = "<p>%s<br>%s</p>" % (esc(cite), esc(CITE_REQUEST))
+        cite_p = "<p>%s<br>%s</p>" % (link_dois(cite), link_dois(cite_request(a)))
     else:
         cite_p = "<p>Cite the entry id and the date it was read.</p>"
-    if a.doi:
+    if a.doi and a.version_doi:
+        citable_p = '<p>The website is the living version and changes as venues move. Each DOI identifies a frozen snapshot: version 1.0 is the tag <code>v1.0.0</code>, version DOI <a href="https://doi.org/%s" rel="noopener">%s</a>. The concept DOI <a href="https://doi.org/%s" rel="noopener">%s</a> always resolves to the latest version; cite the version DOI for the text you read.</p>' % (attr(a.version_doi), esc(a.version_doi), attr(a.doi), esc(a.doi))
+    elif a.doi:
         citable_p = '<p>The website is the living version and changes as venues move. Each DOI identifies a frozen snapshot: version 1.0 is the tag <code>v1.0.0</code>, DOI <a href="https://doi.org/%s" rel="noopener">%s</a>. The concept DOI always resolves to the latest version; cite the version DOI for the text you read.</p>' % (attr(a.doi), esc(a.doi))
     else:
         citable_p = "<p>The website is the living version and changes as venues move. Version 1.0 is the tag <code>v1.0.0</code> of the repository; a DOI for each frozen snapshot is not issued yet, and until it is, cite the entry id, the date it was read and the commit shown in the footer of the page.</p>"
@@ -809,6 +823,7 @@ def main():
     ap.add_argument("--base-url", default=PLACEHOLDER_BASE, help="address of the site; a placeholder until GitHub Pages is on")
     ap.add_argument("--repo-url", default=DEFAULT_REPO)
     ap.add_argument("--doi", default="", help="DOI of the dataset; empty until it exists. With a DOI the author block carries a How to cite section")
+    ap.add_argument("--version-doi", default="", help="DOI of the cited version (the citation line uses it); --doi is then the concept DOI")
     ap.add_argument("--cite-version", default="", help="version named in the citation (default: the build date)")
     a = ap.parse_args()
     if not a.base_url.endswith("/"):

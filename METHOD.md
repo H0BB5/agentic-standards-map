@@ -40,4 +40,4 @@ A negative is always written as "not found in [corpus, date]": it describes the 
 
 ## Versions and citation
 
-The website is the living version and changes as venues move. Version 1.0 is the tag v1.0.0 of the repository. When a DOI is issued, each DOI identifies a frozen snapshot, the concept DOI always resolves to the latest version, and the version DOI should be cited for the text read.
+The website is the living version and changes as venues move. Version 1.0 is the tag v1.0.0 of the repository. Each DOI identifies a frozen snapshot: version 1.0 has the version DOI 10.5281/zenodo.23357362. The concept DOI 10.5281/zenodo.23357361 always resolves to the latest version; cite the version DOI for the text you read.

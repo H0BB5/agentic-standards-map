@@ -8,6 +8,14 @@ authors:
     orcid: "https://orcid.org/0009-0004-0096-4712"
 license: CC-BY-4.0
 version: 1.0.0
+doi: "10.5281/zenodo.23357361"
 date-released: 2026-10-14
 url: "https://frmoretto.github.io/agentic-standards-map/"
 repository-code: "https://github.com/frmoretto/agentic-standards-map"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23357361"
+    description: "Concept DOI: all versions of the Agentic Standards Map; always resolves to the latest version."
+  - type: doi
+    value: "10.5281/zenodo.23357362"
+    description: "Version DOI: version 1.0.0."
