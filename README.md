@@ -52,9 +52,15 @@ Full 60-day calendar: [Calendar](map-bundle.md#part-calendar)
 
 Inclusion, entry format and source classes are described in full in [METHOD.md](METHOD.md).
 
-## Who wrote it
+## About the author
 
-Francesco Marinoni Moretto, independent researcher on agentic commerce. I have taken part in some of the venues mapped; the [Disclosure](map-bundle.md#part-disclosure) lists where, and the entries concerned say so.
+Francesco Marinoni Moretto, independent researcher on agentic commerce, Milan.
+
+ORCID [0009-0004-0096-4712](https://orcid.org/0009-0004-0096-4712) · GitHub [frmoretto](https://github.com/frmoretto) · LinkedIn [francesco-moretto](https://www.linkedin.com/in/francesco-moretto/)
+
+I have taken part in some of the venues mapped; the [Disclosure](notes/disclosure.md) lists where, and the entries concerned say so.
+
+Corrections and missing sources: [open an issue on the repository](https://github.com/frmoretto/agentic-standards-map/issues).
 
 ## Contributing
 

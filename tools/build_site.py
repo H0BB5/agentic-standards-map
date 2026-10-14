@@ -41,7 +41,17 @@ PLACEHOLDER_BASE = "https://example.invalid/"
 DEFAULT_REPO = "https://github.com/frmoretto/agentic-standards-map"
 SITE_TITLE = "Agentic standards map"
 AUTHOR = "Francesco Marinoni Moretto"
-ORCID = "https://orcid.org/0009-0004-0096-4712"
+ORCID_ID = "0009-0004-0096-4712"
+ORCID = "https://orcid.org/" + ORCID_ID
+GITHUB_USER = "frmoretto"
+GITHUB = "https://github.com/" + GITHUB_USER
+LINKEDIN_USER = "francesco-moretto"
+LINKEDIN = "https://www.linkedin.com/in/" + LINKEDIN_USER + "/"
+ISSUES_URL = DEFAULT_REPO + "/issues"
+AUTHOR_LINE = "independent researcher on agentic commerce, Milan"
+AUTHOR_PART = "I have taken part in some of the venues mapped; the %s lists where, and the entries concerned say so."
+CITE_REQUEST = "Please cite the entry id, the date it was read and the DOI."
+CREATOR = {"@type": "Person", "name": AUTHOR, "identifier": ORCID, "sameAs": [ORCID, GITHUB, LINKEDIN], "url": GITHUB}
 LICENCE_URL = "https://creativecommons.org/licenses/by/4.0/"
 ORDER = ["W3C", "IETF", "GS1", "UN/CEFACT", "AAIF", "Linux Foundation", "Independent", "Industry"]
 COLOURS = {"W3C": "#1f6fb2", "IETF": "#c0392b", "GS1": "#2e8b57", "UN/CEFACT": "#8e6bbf", "AAIF": "#d98c10",
@@ -488,7 +498,7 @@ th{background:var(--chip)}blockquote{margin:1rem 0;padding:.2rem 1rem;border-lef
 .chips span{display:inline-block;background:var(--chip);border-radius:1rem;padding:.1rem .7rem;margin:0 .4rem .4rem 0;font-size:.85rem}
 .verified{color:var(--muted);font-size:.9rem}td.nw,th.nw{white-space:nowrap}td.it{min-width:9rem}table.wts{min-width:42rem}dl.fields dt{font-weight:700;margin-top:1rem}dl.fields dd{margin:.2rem 0 0 0}
 ul.sources{padding-left:1.1rem}ul.sources li{margin:.3rem 0}.cls{color:var(--muted);font-size:.85rem}
-footer.site{border-top:1px solid var(--line);margin-top:3rem;padding:1rem;color:var(--muted);font-size:.85rem}
+section.author{border-top:1px solid var(--line);margin-top:2rem;padding-top:.5rem}section.author h2{font-size:1.1rem}footer.site{border-top:1px solid var(--line);margin-top:3rem;padding:1rem;color:var(--muted);font-size:.85rem}
 .eg svg{width:100%;height:auto}.eg .legend{font-size:.85rem;color:var(--muted)}.graph{overflow:auto;border:1px solid var(--line);margin:1rem 0}.graph svg{max-width:none;height:auto}
 @media (max-width:40rem){body{font-size:15px}main{padding:.7rem}}
 """
@@ -511,11 +521,14 @@ class Site:
         ld = ""
         if jsonld:
             ld = '<script type="application/ld+json">%s</script>\n' % json.dumps(jsonld, ensure_ascii=False, indent=1).replace("</", "<\\/")
-        commit = '<a href="%s/commit/%s" rel="noopener">%s</a>' % (attr(self.a.repo_url), self.sha, self.sha[:7])
+        if self.sha:
+            commit = 'commit <a href="%s/commit/%s" rel="noopener">%s</a>' % (attr(self.a.repo_url), self.sha, self.sha[:7])
+        else:
+            commit = 'the <a href="%s" rel="noopener">repository</a>' % attr(self.a.repo_url)
         page = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n'
                 '<title>%s</title>\n<meta name="description" content="%s">\n<link rel="canonical" href="%s">\n<link rel="stylesheet" href="%sstyle.css">\n%s</head>\n'
                 '<body>\n<header class="site">%s</header>\n<main>\n%s\n</main>\n'
-                '<footer class="site">%s. Generated on %s from commit %s; content under CC BY 4.0. Generated from the data of the map, never edited by hand. No tracking, no scripts.</footer>\n</body>\n</html>\n'
+                '<footer class="site">%s. Generated on %s from %s; content under CC BY 4.0. Generated from the data of the map, never edited by hand. No tracking, no scripts.</footer>\n</body>\n</html>\n'
                 % (esc(title), attr(desc), attr(self.base(path)), rel, ld, nav, body, esc(SITE_TITLE), self.today, commit))
         target = self.out / path
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -523,10 +536,53 @@ class Site:
         self.pages[path] = {"title": title, "desc": desc, "lastmod": lastmod}
 
 
+def cite_text(a):
+    """Citation line; empty unless a DOI was given."""
+    if not a.doi:
+        return ""
+    return "%s (2026). Agentic Standards Map (version %s). Zenodo. https://doi.org/%s" % (
+        "Marinoni Moretto, F.", a.cite_version or datetime.date.today().isoformat(), a.doi)
+
+
+def author_block_html(a, disclosure_href="disclosure.html"):
+    """The 'About the author' block of the home page and of intro.html. Every URL comes from the constants at the top of this file."""
+    h = ['<section class="author"><h2>About the author</h2>',
+         "<p>%s, %s.</p>" % (esc(AUTHOR), esc(AUTHOR_LINE)),
+         '<p>ORCID <a href="%s" rel="noopener">%s</a> &middot; GitHub <a href="%s" rel="noopener">%s</a> &middot; LinkedIn <a href="%s" rel="noopener">%s</a></p>'
+         % (attr(ORCID), ORCID_ID, attr(GITHUB), GITHUB_USER, attr(LINKEDIN), LINKEDIN_USER),
+         "<p>%s</p>" % (AUTHOR_PART % ('<a href="%s">Disclosure</a>' % attr(disclosure_href))),
+         '<p>Corrections and missing sources: <a href="%s" rel="noopener">open an issue on the repository</a>.</p>' % attr(ISSUES_URL)]
+    ct = cite_text(a)
+    if ct:
+        h.append('<h3>How to cite</h3><p>%s<br>%s</p>' % (esc(ct).replace("https://doi.org/%s" % a.doi, '<a href="https://doi.org/%s" rel="noopener">https://doi.org/%s</a>' % (attr(a.doi), esc(a.doi))), esc(CITE_REQUEST)))
+    h.append("</section>")
+    return "".join(h)
+
+
+def readme_author_md(a):
+    """The same block as markdown, for public/README.md (the build checks that the README carries it)."""
+    t = ["## About the author", "",
+         "%s, %s." % (AUTHOR, AUTHOR_LINE), "",
+         "ORCID [%s](%s) · GitHub [%s](%s) · LinkedIn [%s](%s)" % (ORCID_ID, ORCID, GITHUB_USER, GITHUB, LINKEDIN_USER, LINKEDIN), "",
+         AUTHOR_PART % "[Disclosure](notes/disclosure.md)", "",
+         "Corrections and missing sources: [open an issue on the repository](%s)." % ISSUES_URL]
+    ct = cite_text(a)
+    if ct:
+        t += ["", "### How to cite", "", ct, "", CITE_REQUEST]
+    return "\n".join(t) + "\n"
+
+
+def check_readme_block(readme_text):
+    """The README is a hand-kept source; every constant must be in it, so that it cannot drift from the site."""
+    need = [AUTHOR, AUTHOR_LINE, ORCID, GITHUB, LINKEDIN, ISSUES_URL, "## About the author"]
+    miss = [n for n in need if n not in readme_text]
+    return miss
+
+
 def dataset_ld(site, newest):
     return {"@context": "https://schema.org", "@type": "Dataset", "@id": site.base("") + "#dataset", "name": SITE_TITLE,
             "description": "A map of who is standardising agentic commerce, where, and what each venue has committed to next: one dated, sourced entry per specification, draft or group.",
-            "url": site.base(""), "creator": {"@type": "Person", "name": AUTHOR, "sameAs": ORCID}, "license": LICENCE_URL,
+            "url": site.base(""), "creator": CREATOR, "license": LICENCE_URL,
             "dateModified": newest, "identifier": site.a.doi,
             "distribution": [{"@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": site.base("map.json")},
                              {"@type": "DataDownload", "encodingFormat": "text/calendar", "contentUrl": site.base("calendar.ics")}]}
@@ -678,7 +734,8 @@ def main():
     ap.add_argument("--out", default=str(ROOT / "site"))
     ap.add_argument("--base-url", default=PLACEHOLDER_BASE, help="address of the site; a placeholder until GitHub Pages is on")
     ap.add_argument("--repo-url", default=DEFAULT_REPO)
-    ap.add_argument("--doi", default="", help="DOI of the dataset; empty until it exists")
+    ap.add_argument("--doi", default="", help="DOI of the dataset; empty until it exists. With a DOI the author block carries a How to cite section")
+    ap.add_argument("--cite-version", default="", help="version named in the citation (default: the build date)")
     a = ap.parse_args()
     if not a.base_url.endswith("/"):
         a.base_url += "/"
@@ -689,7 +746,7 @@ def main():
     try:
         if a.source:
             src = Path(a.source)
-            sha = git(["rev-parse", "HEAD"], src) or "unknown"
+            sha = git(["rev-parse", "HEAD"], src) or None  # a commit of the folder given with --source, which is the public repository
             git_dir = src
         else:
             check = ROOT / "export_check.json"
@@ -700,7 +757,7 @@ def main():
                 if saved is not None:
                     check.write_bytes(saved)  # the export rewrites its report; the repository file stays as it was
             src = tmp / "export"
-            sha = git(["rev-parse", a.commit], ROOT)
+            sha = None  # a commit of the working repository does not exist in the public one: no link
             git_dir = ROOT
         entries = load_entries(src)
         ids = set(entries)
@@ -742,7 +799,13 @@ def main():
         for rel, page, title, desc in NOTE_PAGES:
             text = (src / rel).read_text(encoding="utf-8")
             md = Md(ids, a.repo_url)
-            body = md.render(text, skip_h1=False)
+            if page == "intro.html":
+                m = re.search(r"\n\nI am an independent researcher, and I have taken part.*\Z", text, re.S)
+                if not m:
+                    raise SystemExit("notes/intro.md: the closing paragraphs to replace by the author block were not found")
+                body = md.render(text[:m.start()] + "\n", skip_h1=False) + author_block_html(a)
+            else:
+                body = md.render(text, skip_h1=False)
             if not re.search(r"<h1[ >]", body):
                 body = "<h1>%s</h1>\n%s" % (esc(title), body)
             ld = {"@context": "https://schema.org", "@type": "WebPage", "name": title, "description": desc, "dateModified": lastmods[rel],
@@ -770,6 +833,12 @@ def main():
         head = readme.split("## Next on the calendar")[0]
         nextsec = "## Next on the calendar" + readme.split("## Next on the calendar", 1)[1].split("## Start here")[0]
         tail = "## Start here" + readme.split("## Start here", 1)[1]
+        miss = check_readme_block(readme)
+        if miss:
+            raise SystemExit("README.md does not carry the author block constants: %s" % miss)
+        tail_a, rest = tail.split("## About the author", 1)
+        tail_b = "## " + rest.split("\n## ", 1)[1]  # what follows the author section
+        author_html = author_block_html(a)
         rows = status_rows(entries)
         wt = ['<h2 id="where-things-stand">Where things stand</h2><div class="scroll"><table class="wts"><thead><tr><th class="nw">Org</th><th>Item</th><th>State (as of)</th><th class="nw">Next dated item</th></tr></thead><tbody>']
         for e, first, nd in rows:
@@ -788,8 +857,11 @@ def main():
             if es:
                 allp.append("<h3>%s</h3><ul>%s</ul>" % (esc(o), "".join('<li><a href="entries/%s.html">%s</a> <span class="cls">%s</span></li>' % (attr(e["id"]), esc(e["name"]), e["tier"]) for e in es)))
         links = '<p><a href="graph-seams.svg"><strong>Graph of the seams</strong></a> | <a href="graph.svg">All overlaps</a> | <a href="graph.html">Both graphs on one page</a> | <a href="seams.html">Seams</a> | <a href="calendar.html">Calendar</a> | <a href="map.json">map.json</a> | <a href="calendar.ics">calendar.ics</a></p>'
-        stamp = '<p class="verified">Entries verified up to %s; pages generated on %s from commit <a href="%s/commit/%s" rel="noopener">%s</a>.</p>' % (newest, today, attr(a.repo_url), sha, sha[:7])
-        ibody = md.render(head) + stamp + links + md.render(nextsec) + "".join(wt) + "".join(mx) + md.render(tail) + "".join(allp)
+        if sha:
+            stamp = '<p class="verified">Entries verified up to %s; pages generated on %s from commit <a href="%s/commit/%s" rel="noopener">%s</a>.</p>' % (newest, today, attr(a.repo_url), sha, sha[:7])
+        else:
+            stamp = '<p class="verified">Entries verified up to %s; pages generated on %s from the <a href="%s" rel="noopener">repository</a>.</p>' % (newest, today, attr(a.repo_url))
+        ibody = md.render(head) + stamp + links + md.render(nextsec) + "".join(wt) + "".join(mx) + md.render(tail_a) + author_html + md.render(tail_b) + "".join(allp)
         unmapped += md.unmapped
         idesc = short_desc("Who is standardising agentic commerce, where, and what each venue has committed to next: %d dated, sourced entries across W3C, IETF, GS1, UN/CEFACT, AAIF, Linux Foundation and industry protocols." % len(entries))
         site.write("index.html", ibody, SITE_TITLE, idesc, newest, dataset_ld(site, newest))
@@ -797,7 +869,7 @@ def main():
         # data files
         events, stats = ics_events(entries, site)
         (out / "calendar.ics").write_text(build_ics(events, site), encoding="utf-8", newline="")
-        mapjson = {"schema": "v2", "schema_description": "entries/_schema.md", "generated": today, "source_commit": sha, "licence": LICENCE_URL,
+        mapjson = {"schema": "v2", "schema_description": "entries/_schema.md", "generated": today, "source_commit": sha or "", "licence": LICENCE_URL,
                    "entries": [entries[i] for i in sorted(entries)],
                    "graph": {"nodes": sorted(entries), "overlap_edges": [list(x) for x in edges], "seams": {k: {"title": t, "entries": ids_} for k, (t, ids_) in seams.items()}}}
         (out / "map.json").write_text(json.dumps(mapjson, ensure_ascii=False, indent=1, default=d), encoding="utf-8", newline="\n")
