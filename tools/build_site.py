@@ -580,12 +580,15 @@ def check_readme_block(readme_text):
 
 
 def dataset_ld(site, newest):
-    return {"@context": "https://schema.org", "@type": "Dataset", "@id": site.base("") + "#dataset", "name": SITE_TITLE,
+    ld = {"@context": "https://schema.org", "@type": "Dataset", "@id": site.base("") + "#dataset", "name": SITE_TITLE,
             "description": "A map of who is standardising agentic commerce, where, and what each venue has committed to next: one dated, sourced entry per specification, draft or group.",
             "url": site.base(""), "creator": CREATOR, "license": LICENCE_URL,
-            "dateModified": newest, "identifier": site.a.doi,
+            "dateModified": newest,
             "distribution": [{"@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": site.base("map.json")},
                              {"@type": "DataDownload", "encodingFormat": "text/calendar", "contentUrl": site.base("calendar.ics")}]}
+    if site.a.doi:
+        ld["identifier"] = "https://doi.org/" + site.a.doi
+    return ld
 
 
 def entry_body(e, entries, md, seams, graph_html):
