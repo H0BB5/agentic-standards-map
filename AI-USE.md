@@ -1,0 +1,44 @@
+# Declaration of AI use for this map
+
+- **Tools.** Claude (Anthropic), used through claude.ai and Claude Code, for drafting entries under the author's direction, editing, source retrieval and checking quotes, dates and states against the sources; Claude in separate sessions, ChatGPT (OpenAI) and Perplexity as adversarial reviewers, with outputs retained.
+- **Uses** (STM categories): writing or drafting content; refinement and editing of text; assisting with gathering references. Not in the STM list: checking quotes and dates against the sources; adversarial review.
+- **Parts concerned:** all entries, seams, appendices and the calendar. The introduction and the README were drafted with assistance and revised by the author.
+- **Who directed the work:** the author, who chose the scope and the rules, decided every change and checked every statement against its source.
+- **As of:** 2026-10-06.
+- **Version covered:** `map-bundle.md` at tag v0.1, sha256 9e62ed4fb353a274369ed9f75f14ee1eb2725991cf8907e60b6d8ee2321d6ead.
+- **Record:** drafts, prompts, research outputs, reviews and the change log, retained by the author.
+- No pass to remove traces of machine assistance was applied to this text.
+
+The same declaration in a machine-readable form follows. It is illustrative, not a specification: field names and structure are not proposed as a standard.
+
+```json
+{
+  "illustrative_only": true,
+  "work": {
+    "title": "Agentic Standards Map",
+    "version": { "file": "map-bundle.md", "sha256": "9e62ed4fb353a274369ed9f75f14ee1eb2725991cf8907e60b6d8ee2321d6ead", "tag": "v0.1" }
+  },
+  "as_of": "2026-10-06",
+  "tools": [
+    { "name": "Claude", "provider": "Anthropic", "interfaces": ["claude.ai", "Claude Code"] },
+    { "name": "ChatGPT", "provider": "OpenAI" },
+    { "name": "Perplexity", "provider": "Perplexity AI" }
+  ],
+  "uses": [
+    { "category": "Writing or drafting content", "tools": ["Claude"], "parts": "all entries, seams, appendices and the calendar; the introduction and the README drafted with assistance and revised by the author", "directed_by": "author" },
+    { "category": "Refinement and editing of text", "tools": ["Claude"], "parts": "all entries, seams, appendices and the calendar; the introduction and the README", "directed_by": "author" },
+    { "category": "Assisting with gathering references", "tools": ["Claude"], "parts": "all entries and appendices", "directed_by": "author" },
+    { "category": "Checking quotes and dates against the sources (not in the STM list)", "tools": ["Claude"], "parts": "all entries and appendices", "directed_by": "author" },
+    { "category": "Adversarial review (not in the STM list)", "tools": ["Claude", "ChatGPT", "Perplexity"], "parts": "all entries, seams, appendices and the calendar", "directed_by": "author" }
+  ],
+  "not_done": [
+    "No pass to remove traces of machine assistance was applied to this text."
+  ],
+  "record": {
+    "held_by": "author",
+    "contents": ["drafts", "prompts", "research outputs", "reviews", "change log"],
+    "access": "on request, as far as needed"
+  },
+  "categories_source": "STM, Recommendations for a Classification of AI Use in Academic Manuscript Preparation, September 2025"
+}
+```

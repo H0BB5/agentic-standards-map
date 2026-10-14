@@ -1,0 +1,36 @@
+id: pact
+name: Personal Agent Consent & Trust Protocol (PACT), published by Decagon with Instinct
+org: Industry
+kind: specification
+tier: core
+status: 'Version 1.0 of the specification ("This is PACT 1.0.") is published at openpactprotocol.org (the Decagon announcement is dated 2026-10-06), and the repository openpactprotocol/openpactprotocol (created 2026-10-01, Apache-2.0) holds the documentation, a reference Provider, a demo personal agent and conformance tests; its latest commit on main is 838c6bd (2026-10-06, a dependency update), read 2026-10-13. Decagon, 2026-10-06: it is open-sourcing PACT, "co-developed and supported by Instinct". No standards body or governing organisation is named in the pages of the site read on 2026-10-13.'
+status_as_of: 2026-10-13
+relevance: 'PACT builds on A2A 1.0 and defines how a personal agent identifies itself to a business''s support agent and, optionally, which permissions the customer has granted it. The business''s Agent Card is found at "https://{brandDomain}/.well-known/agent-card.json", which "serves the card or redirects to" the Provider''s URL; the personal agent "never builds it from a Brand ID". The Poppy protocol uses a different well-known document (see pap and seam S1). The personal agent signs every request with a JWT (ES256 or RS256) checked against its published keys, and section 3.3 says what that proves: "That a known personal agent is calling for someone it calls sub. Not that sub owns a Brand account." Delegated authority is optional: the customer logs in with the business, never with the personal agent, and approves scopes that "Each Brand defines" (examples on the card: orders:read, orders:cancel), through OAuth 2.0 device code (RFC 8628). The Decagon post puts it as "It separates the identity of the personal agent from its authority to act on a customer". Section 5.6: every reply under a delegation token carries a signed receipt (grant id, user, scopes used, actions, timestamp), and "Personal agents SHOULD verify and keep receipts". The receipt records what the Provider''s agent did; the words consumer, durable medium and confirm are not found in the specification page (2026-10-13).'
+committed_next: []
+boundary: 'The specification does not define a registry: "This spec does not define a registry." Registration of a personal agent with a Provider is out of scope ("How these are exchanged is out of scope"), and each Brand defines its own scopes, none reserved by PACT.'
+sources:
+- url: https://openpactprotocol.org/spec
+  read: 2026-10-13
+  class: normative
+- url: https://openpactprotocol.org/
+  read: 2026-10-13
+  class: statement
+- url: https://github.com/openpactprotocol/openpactprotocol
+  read: 2026-10-13
+  class: normative
+- url: https://decagon.ai/blog/introducing-the-personal-agent-consent-trust-protocol-pact
+  read: 2026-10-13
+  class: statement
+overlaps:
+- pap
+- a2a-core
+- a2a-discovery
+seams:
+- S1
+- S3
+- S4
+verified: 2026-10-13
+evidence:
+  read: 'On 2026-10-13: the specification page and the home page of openpactprotocol.org, the repository metadata (default branch, licence, creation date, latest commit), the LICENSE file header and the README of the repository, and the Decagon announcement of 2026-10-06.'
+  not_read: The pages "Build a personal agent integration", "Build a Provider" and "Run the reference stack", the reference code and the conformance tests, the Instinct side of the announcement, any publication of a standards body on PACT.
+  not_found: 'Not found, 2026-10-13: a standards body, foundation or working group in the pages of the site read; consumer, durable medium, confirm, poppy.json and Web Bot Auth in the specification page.'

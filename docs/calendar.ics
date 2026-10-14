@@ -1,0 +1,124 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Agentic standards map//committed next//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Agentic standards map: committed next
+BEGIN:VEVENT
+UID:aaif-identity-trust-0-2026-10-15.agentic-standards-map.invalid
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:AAIF Identity and Trust group: ALIGN to confirm the start date of i
+ ts independent run ("We will confirm the start date…
+DESCRIPTION:ALIGN to confirm the start date of its independent run ("We wil
+ l confirm the start date on October 15.")\; a confirmation of the date\, n
+ ot the start. Source: https://lists.aaif.io/g/wg-identity-trust/message/47
+URL:https://frmoretto.github.io/agentic-standards-map/entries/aaif-identity
+ -trust.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ietf-agentproto-0-2026-12-31.agentic-standards-map.invalid
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:IETF agentproto: Charter milestones: use cases draft adopted Decemb
+ er 2026\, architecture February 2027\, protocol March…
+DESCRIPTION:Charter milestones: use cases draft adopted December 2026\, arc
+ hitecture February 2027\, protocol March 2027\; protocol to IESG March 202
+ 8. Source: https://datatracker.ietf.org/wg/agentproto/about/
+URL:https://frmoretto.github.io/agentic-standards-map/entries/ietf-agentpro
+ to.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ietf-aipref-0-2026-10-21.agentic-standards-map.invalid
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:IETF AI Preferences: Virtual interim meeting\, 20:00 to 21:30 UTC.
+DESCRIPTION:Virtual interim meeting\, 20:00 to 21:30 UTC. Source: https://m
+ ailarchive.ietf.org/arch/msg/ai-control/H8Gycx8vy4BKierBvIhG8V2JYFQ/
+URL:https://frmoretto.github.io/agentic-standards-map/entries/ietf-aipref.h
+ tml
+END:VEVENT
+BEGIN:VEVENT
+UID:ietf-dawn-0-2026-10-19.agentic-standards-map.invalid
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261020
+SUMMARY:IETF DAWN: Comments on the proposed charter due to the IESG mailing
+  list\, per the WG Review announcement.
+DESCRIPTION:Comments on the proposed charter due to the IESG mailing list\,
+  per the WG Review announcement. Source: https://mailarchive.ietf.org/arch
+ /msg/ietf-announce/T8B2tMLk8fU-UE8kASlDIIVLgb4/
+URL:https://frmoretto.github.io/agentic-standards-map/entries/ietf-dawn.htm
+ l
+END:VEVENT
+BEGIN:VEVENT
+UID:ietf-dawn-1-2026-10-22.agentic-standards-map.invalid
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:IETF DAWN: IESG telechat with the DAWN charter on the agenda ("On a
+ genda of 2026-10-22 IESG telechat"\, datatracker…
+DESCRIPTION:IESG telechat with the DAWN charter on the agenda ("On agenda o
+ f 2026-10-22 IESG telechat"\, datatracker\, 2026-10-13). Source: https://d
+ atatracker.ietf.org/doc/charter-ietf-dawn/
+URL:https://frmoretto.github.io/agentic-standards-map/entries/ietf-dawn.htm
+ l
+END:VEVENT
+BEGIN:VEVENT
+UID:ietf-dawn-2-2027-12-31.agentic-standards-map.invalid
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20271231
+DTEND;VALUE=DATE:20280101
+SUMMARY:IETF DAWN: Proposed charter milestones (00-10\, checked 2026-10-13)
+ : terminology June 2027 (optional)\, protocol…
+DESCRIPTION:Proposed charter milestones (00-10\, checked 2026-10-13): termi
+ nology June 2027 (optional)\, protocol specification December 2027\, archi
+ tecture January 2028. Source: https://datatracker.ietf.org/doc/charter-iet
+ f-dawn/
+URL:https://frmoretto.github.io/agentic-standards-map/entries/ietf-dawn.htm
+ l
+END:VEVENT
+BEGIN:VEVENT
+UID:ietf-vcon-1-2026-10-22.agentic-standards-map.invalid
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:IETF vcon: Virtual interim meeting 14:00 to 16:00 UTC\, agenda "Con
+ tinue discussion on core document leading up to -05…
+DESCRIPTION:Virtual interim meeting 14:00 to 16:00 UTC\, agenda "Continue d
+ iscussion on core document leading up to -05 submission before SFO includi
+ ng redaction PR inclusion. Discuss charter draft status." Source: https://
+ mailarchive.ietf.org/arch/msg/vcon/lnWLdI2xZtUWMMBhIB-pjok72dE/
+URL:https://frmoretto.github.io/agentic-standards-map/entries/ietf-vcon.htm
+ l
+END:VEVENT
+BEGIN:VEVENT
+UID:ucp-2-2026-11-02.agentic-standards-map.invalid
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:Universal Commerce Protocol: Agentic Donations DWG (proposal #924):
+  nominations to be filed by "October 23\, 2026"\; the…
+DESCRIPTION:Agentic Donations DWG (proposal #924): nominations to be filed 
+ by "October 23\, 2026"\; the initial package is targeted for "November 2\,
+  2026" Source: https://github.com/Universal-Commerce-Protocol/ucp/issues/9
+ 24
+URL:https://frmoretto.github.io/agentic-standards-map/entries/ucp.html
+END:VEVENT
+BEGIN:VEVENT
+UID:w3c-tpac-2026-1-2026-10-29.agentic-standards-map.invalid
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:W3C TPAC 2026 breakouts on agents: Deadline\, at noon local time\, 
+ for breakout proposals made once TPAC is under way…
+DESCRIPTION:Deadline\, at noon local time\, for breakout proposals made onc
+ e TPAC is under way (Thursday and Friday slots) Source: https://github.com
+ /w3c/tpac2026-breakouts
+URL:https://frmoretto.github.io/agentic-standards-map/entries/w3c-tpac-2026
+ .html
+END:VEVENT
+END:VCALENDAR

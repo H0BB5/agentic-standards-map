@@ -1,0 +1,107 @@
+id: ietf-dawn
+name: IETF DAWN, Discovery of Agents With Names (proposed WG)
+org: IETF
+kind: charter
+tier: core
+status: 'Charter 00-09 was on the IESG ballot: on 2026-10-06 one IESG member changed from Block (on 00-08) to No Objection and another voted Yes; on 2026-10-07 one member voted Yes with comments and three recorded No Objection; on 2026-10-08 two more recorded No Objection; the IESG telechat had been set for 2026-10-08. On 2026-10-09 the charter was revised to 00-10 and sent to external review: the datatracker history of that day shows the state changed from "Start Chartering/Rechartering (Internal Steering Group/IAB Review)" to "External Review (Message to Community, Selected by Secretariat)", the "Ready for external review" ballot closed, an "Approve" ballot created and the telechat date changed from 2026-10-08 to 2026-10-22; one IESG member recorded Yes on the new ballot on 2026-10-12. The datatracker pages read on 2026-10-13 show the WG as "Proposed" and charter-ietf-dawn-00-10 in that state, with "On agenda of 2026-10-22 IESG telechat". The Secretariat''s announcement "WG Review: Discovery of Agents With Names (dawn)", sent to ietf-announce on 2026-10-09, says "The IESG has not made any determination yet" and asks for comments to the IESG mailing list by 2026-10-19. No WG Action announcement for DAWN is among the ietf-announce messages up to 2026-10-12, the latest of the list on 2026-10-13; a decision on DAWN is not found.'
+status_as_of: 2026-10-13
+relevance: 'DAWN would standardise how a client discovers "public properties of AI resources", so it is the IETF venue where a seller''s agent surface would be found. The charter examples are commercial in form: "discover all agents in this shop" and "discover all agents of example.org, for all its customers/members". The WG "will also specify the minimum public discovery information (e.g., type, reachability information, communication protocol, services)."; commerce as a scope item: not found in charter 00-10, read 2026-10-13 (commerce, merchant, transaction, payment and purchase do not occur; "shop" occurs once, in the example "discover all agents in this shop"), nor in charter 00-08, 2026-10-03. On 2026-10-05 the INT Area Director wrote, on a request for a non-WG mailing list for DNS records under underscore labels that carry keys, key commitments or references to them, "While a mailing list will be created, I would like to push back on its name as it misses link to DNS"; the requester proposed the name dns-underscore-keys. An individual survey, draft-jimenez-dawn-discovery-landscape-00 (2026-07-03), compares discovery mechanisms from the IETF, AAIF, 3GPP and open-source projects and lists eight gaps, among them "Well-Known Namespace Pressure"; a text search of it finds no occurrence of AI Catalog, ARD, UCP or commerce (2026-10-06). draft-zhang-dawn-agent-discovery-framework-01 (2026-09-06) proposes a two-layer federated architecture. A second individual draft, draft-moussa-dawn-gap-analysis-01 (Moussa, Akhavain, 2026-06-12), is a gap analysis and applicability statement that maps existing discovery mechanisms to the DAWN problem statement and requirements; a text search of it finds no occurrence of AI Catalog, ARD, UCP or commerce (2026-10-06). draft-kay-dawn-use-cases-01 (2026-09-10) names Agentic Resource Discovery as a possible interface to a provider''s catalogue in a broadcast use case and adds: "ARD is an illustrative option; protocol choice remains open." The IETF Chair announced on 2026-10-02 that an INT Area Director resigned from the IESG as of 2026-10-01 and that the other co-AD for the INT area is the primary point of contact for the area; the datatracker lists that Area Director as responsible AD for DAWN (2026-10-03). On 2026-10-07 an IESG member entered a Yes with comments on 00-09 that asks the charter to say that the protocol specifications normatively define the minimum discovery information, that the WG is "expected to converge on one mechanism per deployment context", and that "discovering where a catalog is lives in DAWN, and what a catalog contains doesn''t"; the member also asks whether DAWN defines how agents are named, and that DNSSD, DNSOP and AgentProto be named in the coordination text. On the list thread "DAWN Coordination: Discovery Information and Trust Artifact Pointers" Girish Konda wrote on 2026-10-07 that a reference that does not resolve, one blocked by the discovering entity''s own retrieval policy, and one that resolves with the record absent are three causes: "All three end as no discovery result, and they have different owners and different retries." On 2026-10-12 a participant who states that they are a co-author of three individual drafts in this space wrote to the IESG on the DAWN list in reply to the WG Review thread "I support chartering DAWN as written in charter-ietf-dawn-00-10", and gave as a reason for keeping identity management of agents out of the first phase "Discovery has to work before anyone argues about who the discovered thing is".'
+committed_next:
+- what: Comments on the proposed charter due to the IESG mailing list, per the WG Review announcement.
+  when: 2026-10-19
+  source: https://mailarchive.ietf.org/arch/msg/ietf-announce/T8B2tMLk8fU-UE8kASlDIIVLgb4/
+  class: decision
+- what: IESG telechat with the DAWN charter on the agenda ("On agenda of 2026-10-22 IESG telechat", datatracker, 2026-10-13).
+  when: 2026-10-22
+  source: https://datatracker.ietf.org/doc/charter-ietf-dawn/
+  class: decision
+- what: 'Proposed charter milestones (00-10, checked 2026-10-13): terminology June 2027 (optional), protocol specification December 2027, architecture January 2028.'
+  when: 2027-12-31
+  source: https://datatracker.ietf.org/doc/charter-ietf-dawn/
+  class: normative
+boundary: 'Out of scope in the initial phase, charter 00-10 (read 2026-10-13): catalogs of capabilities, all communication beyond the initial discovery process, "AI resource indexing and searching across the wider Internet", "Identity management of AI agents, tools, and skills." and trust management beyond secure content exchange between DAWN parties. In scope as a discoverable AI resource: "a service such as a catalog that will further the discovery process".'
+participation: 'The author of this map wrote in the DAWN list thread "DAWN Coordination: Discovery Information and Trust Artifact Pointers", the latest messages on 2026-09-29, on 2026-10-08 (08:39 UTC, replying to Girish Konda) and on 2026-10-10 (08:06 UTC, accepting Konda''s wording on absence and incomplete results); the reply of Konda adds a third case to the author''s second requirement; see Disclosure.'
+overlaps:
+- w3c-agenticweb-wg
+- ard
+- a2a-discovery
+seams:
+- S1
+sources:
+- url: https://datatracker.ietf.org/doc/draft-jimenez-dawn-discovery-landscape/
+  read: 2026-10-06
+  class: third-party
+- url: https://www.ietf.org/archive/id/draft-zhang-dawn-agent-discovery-framework-01.txt
+  read: 2026-10-06
+  class: third-party
+- url: https://datatracker.ietf.org/doc/draft-moussa-dawn-gap-analysis/
+  read: 2026-10-06
+  class: third-party
+- url: https://datatracker.ietf.org/doc/draft-kay-dawn-use-cases/
+  read: 2026-10-06
+  class: third-party
+- url: https://mailarchive.ietf.org/arch/msg/dawn/8JaXo42KXJo4Z_tacrXT_lOT3gQ/
+  read: 2026-10-05
+  class: decision
+- url: https://mailarchive.ietf.org/arch/msg/ietf-announce/qwarn2pmj9fdyTTd1gBv6QbTXfU/
+  read: 2026-10-05
+  class: decision
+- url: https://datatracker.ietf.org/doc/charter-ietf-dawn/
+  read: 2026-10-13
+  class: normative
+- url: https://datatracker.ietf.org/doc/charter-ietf-dawn/ballot/
+  read: 2026-10-03
+  class: decision
+- url: https://datatracker.ietf.org/wg/dawn/about/
+  read: 2026-10-13
+  class: normative
+- url: https://datatracker.ietf.org/wg/dawn/history/
+  read: 2026-10-09
+  class: decision
+- url: https://mailarchive.ietf.org/arch/browse/ietf-announce/
+  read: 2026-10-13
+  class: decision
+- url: https://datatracker.ietf.org/doc/charter-ietf-dawn/history/
+  read: 2026-10-13
+  class: decision
+- url: https://mailarchive.ietf.org/arch/msg/dawn/3kOpxGr-Hiv_vBH-78W3_FSpD1Q/
+  read: 2026-10-08
+  class: statement
+- url: https://mailarchive.ietf.org/arch/msg/dawn/Ce73ar_tEl0XO2FE41sdNKAGjc8/
+  read: 2026-10-08
+  class: third-party
+- url: https://mailarchive.ietf.org/arch/msg/dawn/enY7W1mTMPvP9jnsNI5f-S70uPU/
+  read: 2026-10-08
+  class: statement
+- url: https://mailarchive.ietf.org/arch/msg/dawn/OxEhnEzg4SCzL_LLGY2uEPXgzEo/
+  read: 2026-10-08
+  class: statement
+- url: https://mailarchive.ietf.org/arch/msg/dawn/N9cewk1F_OMxNsKlQKNQsZ068Pg/
+  read: 2026-10-08
+  class: third-party
+- url: https://mailarchive.ietf.org/arch/msg/ietf-announce/T8B2tMLk8fU-UE8kASlDIIVLgb4/
+  read: 2026-10-13
+  class: decision
+- url: https://mailarchive.ietf.org/arch/msg/dawn/sdH3BGZF-XAv9ijMRE6p5pN4Id4/
+  read: 2026-10-13
+  class: statement
+- url: https://mailarchive.ietf.org/arch/msg/dawn/QAAfQwe2fvMBTonpP6NgeVFXUvE/
+  read: 2026-10-05
+  class: third-party
+- url: https://mailarchive.ietf.org/arch/msg/dawn/Xy97Fv9HzbhYGiCSvpefRYdpUmE/
+  read: 2026-10-05
+  class: third-party
+- url: https://mailarchive.ietf.org/arch/msg/dawn/C6Rg1eWrIv9tgjNqh6-ZYaqt6qk
+  read: 2026-10-03
+  class: third-party
+verified: 2026-10-13
+evidence:
+  read: The datatracker charter, WG and charter history pages, the WG Review announcement on ietf-announce and the ietf-announce list up to 2026-10-12, and the DAWN list message of 2026-10-12 to the IESG, read 2026-10-13.
+  not_read: The ballot positions on the "Approve" ballot beyond the history line of 2026-10-12, the ietf-announce messages after 2026-10-12, the DAWN list messages of 2026-10-10 to 2026-10-12 other than the one cited.
+  not_found: 'Not found in the 200 messages, 2026-10-03: AI Catalog.'
+open_proposals:
+- what: 'First work item: an organisation''s agent index, catalogue or registry. Against charter 00-10 (read 2026-10-13): the charter lists "a service such as a catalog that will further the discovery process" as a discoverable AI resource and excludes catalogs of capabilities and "AI resource indexing and searching across the wider Internet"; the proposal is not among its work items.'
+  author: Jim Mozley
+  date: 2026-08-05
+  state: open
+  url: https://mailarchive.ietf.org/arch/msg/dawn/fsJ8oAdR8rpNPhCj6LP9sspbxBA

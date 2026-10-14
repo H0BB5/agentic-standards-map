@@ -1,0 +1,33 @@
+id: ietf-individual-seller-drafts
+name: Individual IETF drafts on the seller side
+org: IETF
+kind: work-item
+tier: core
+status: 'Three individual Internet-Drafts on the seller side of agent transactions, none adopted by a WG: anders merchant-identity-assertions -01, kavian offering-discovery-protocol -01, hood agtp-merchant-identity (-02, an Independent Submission dated 26 May 2026, Informational, expires 27 November 2026; -00 and -02 read).'
+status_as_of: 2026-10-13
+relevance: draft-anders-merchant-identity-assertions defines a Merchant Identity Assertion, a signed JSON document binding a legal identity to the merchant receiving a payment, so that an automated client can verify the merchant before completing it. draft-kavian-offering-discovery-protocol lets an agent discover a Service's Collections and Offerings and find links to subsequent operations, for "catalogs ranging from a few Offerings to large marketplaces without imposing a universal product taxonomy". draft-hood-agtp-merchant-identity states "This is the merchant identity gap." and treats merchant identity as the receiving side of a purchase.
+committed_next: []
+boundary: 'draft-kavian-offering-discovery-protocol declines a product identifier scheme: its discovery is "without imposing a universal product taxonomy".'
+sources:
+- url: https://datatracker.ietf.org/api/v1/doc/document/?name=draft-anders-merchant-identity-assertions&format=json
+  read: 2026-10-02
+  class: third-party
+- url: https://datatracker.ietf.org/api/v1/doc/document/?name=draft-kavian-offering-discovery-protocol&format=json
+  read: 2026-10-02
+  class: third-party
+- url: https://www.ietf.org/archive/id/draft-hood-agtp-merchant-identity-00.txt
+  read: 2026-10-02
+  class: third-party
+- url: https://www.ietf.org/archive/id/draft-hood-agtp-merchant-identity-02.txt
+  read: 2026-10-13
+  class: third-party
+overlaps:
+- kyapay
+- ucp
+- ard
+- ietf-dawn
+verified: 2026-10-13
+evidence:
+  read: 'On 2026-10-13: the datatracker records of the three drafts (anders -01 of 2026-07-04, kavian -01 of 2026-09-04, hood -02 of 2026-05-26; no later revision) and the text of hood -02.'
+  not_read: Full texts of the anders and kavian drafts, authors' next steps, WG agendas, whether the kavian draft names UCP, ACP or GS1.
+  not_found: 'Not found in the DAWN list (2026-08-01 to 2026-10-02) and dnsop list text, 2026-10-03: names of the three drafts.'

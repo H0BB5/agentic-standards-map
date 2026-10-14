@@ -1,0 +1,30 @@
+id: oidf-authzen-agents
+name: OpenID Foundation AuthZEN Working Group (agent authorization drafts AARP and COAZ)
+org: Independent
+kind: work-item
+tier: context
+status: AARP and COAZ adopted as Working Group Drafts on 2026-06-15; to be refined through community review and interoperability testing.
+status_as_of: 2026-10-13
+relevance: AARP covers prerequisites such as approvals, consent or attestations before a policy decision; COAZ, the profile for MCP tool authorization, maps information models into the Subject-Action-Resource-Context structure. The OpenID Foundation published a whitepaper, "Identity Management for Agentic AI" (OpenID Foundation page 2025-10-07, arXiv 2510.25819 v1 2025-10-29), on authentication and authorization for AI agents; it "outlines the resources already available for securing today's agents and presents a strategic agenda". The whitepaper names Web Bot Auth, one IETF proposal described as a "passport for agents", and the Agent Payments Protocol (AP2); it does not name UCP, ACP, x402 or TAP (text search, counts in the evidence).
+sources:
+- url: https://arxiv.org/abs/2510.25819
+  read: 2026-10-06
+  class: third-party
+- url: https://openid.net/new-whitepaper-tackles-ai-agent-identity-challenges/
+  read: 2026-10-06
+  class: third-party
+- url: https://openid.net/openid-foundation-advances-authorization-for-the-agent-era-with-new-authzen-working-group-drafts/
+  read: 2026-10-13
+  class: decision
+- url: https://openid.net/wg/
+  read: 2026-10-02
+  class: statement
+overlaps:
+- ietf-agentproto
+seams:
+- S3
+verified: 2026-10-13
+evidence:
+  read: The announcement of the drafts (read 2026-10-02 and again 2026-10-13, "Published June 15, 2026") and the working groups page (2026-10-02); the arXiv version and the OpenID whitepaper page, 2026-10-06.
+  not_read: Authorization API 1.0 Final approval seen only in a search result.
+  not_found: 'Not found in the announcement, 2026-10-02: commerce, merchant, product. Counts in the text of the arXiv version, 2026-10-06: Web Bot Auth 8 times (one a reference, one an IETF proposal described as a "passport for agents"), Agent Payments Protocol (AP2) 3, commerce 2 and AuthZEN 1; not found, 2026-10-06: UCP, ACP, x402, TAP.'

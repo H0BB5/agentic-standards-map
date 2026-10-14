@@ -1,0 +1,17 @@
+id: w3c-agent-ready-video-cg
+name: W3C Agent-Ready Video Community Group
+org: W3C
+kind: venue
+tier: context
+status: 'Created 2026-10-01; chairs not yet selected: the W3C group data list no chair on 2026-10-13, and the group''s list holds one message, the call for participation of 2026-10-01.'
+status_as_of: 2026-10-13
+relevance: Aims to "make it easier for agents to find, cite and play relevant video on the Web", building on the Agent-Ready Video specification with per-moment rights and signed usage receipts.
+sources:
+- url: https://lists.w3.org/Archives/Public/public-new-work/2026Oct/0000.html
+  read: 2026-10-02
+  class: decision
+verified: 2026-10-13
+evidence:
+  read: 'On 2026-10-13: the chairs listed on the W3C group data and the October 2026 index of the group''s list.'
+  not_read: The list of the group, created on 2026-10-01.
+  not_found: 'Not found on 2026-10-03 in w3c/strategy, w3c/charter-drafts or WebKit/standards-positions (from 2026-01-01): Agent-Ready Video, ARV.'

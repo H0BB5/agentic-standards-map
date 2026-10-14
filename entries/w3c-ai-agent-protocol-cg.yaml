@@ -1,0 +1,50 @@
+id: w3c-ai-agent-protocol-cg
+name: W3C AI Agent Protocol Community Group
+org: W3C
+kind: venue
+tier: core
+status: Active Community Group (created 2025-05-08); agent identity is DID-method-agnostic (did:wba, did:web, did:webvh) since 2026-08-13. Bi-weekly meetings; the meeting of 2026-10-07 was announced as canceled (calendar notice of 2026-10-01) and the October 2026 list archive holds 5 messages, the last of 2026-10-07, none announcing a later meeting (read 2026-10-13); the W3C group data list two chairs.
+status_as_of: 2026-10-13
+relevance: The protocol draft defines an Agent Discovery Service Protocol in JSON-LD, with active discovery at https://{domain}/.well-known/agent-descriptions and an Agent Description "Information" that covers "products, or services". The use_case.html draft includes a hotel booking scenario (Personal Agent, Search Agent, hotel Service Agent) with the requirement "Agent Transactions". The agent identity draft uses a DID URL as the HTTP signature keyid with RFC 9421 and RFC 9530.
+committed_next:
+- what: Topics "streaming HTTP authentication, mutual DID authentication"; joint TPAC session with the WebAgents CG under discussion
+  when: undated
+  source: https://lists.w3.org/Archives/Public/public-agentprotocol/2026Sep/0009.html
+  class: statement
+boundary: On 2026-09-10 the maintainer wrote of a proposal on agent memory "My feeling is that this goes beyond the current scope of our protocol.".
+sources:
+- url: https://w3c-cg.github.io/ai-agent-protocol/protocol.html
+  read: 2026-10-02
+  class: normative
+- url: https://github.com/w3c-cg/ai-agent-protocol/blob/main/agent-identity.html
+  read: 2026-10-02
+  class: normative
+- url: https://github.com/w3c-cg/ai-agent-protocol/blob/main/use_case.html
+  read: 2026-10-02
+  class: normative
+- url: https://lists.w3.org/Archives/Public/public-agentprotocol/2026Oct/0000.html
+  read: 2026-10-03
+  class: statement
+- url: https://lists.w3.org/Archives/Public/public-agentprotocol/2026Oct/
+  read: 2026-10-13
+  class: statement
+- url: https://api.w3.org/groups/cg/agentprotocol
+  read: 2026-10-02
+  class: normative
+- url: https://github.com/w3c-cg/ai-agent-protocol/issues/36
+  read: 2026-10-03
+  class: third-party
+- url: https://lists.w3.org/Archives/Public/public-agentprotocol/2026Sep/0009.html
+  read: 2026-10-03
+  class: normative
+overlaps:
+- a2a-discovery
+- ard
+- ietf-webbotauth
+- w3c-agenticweb-wg
+seams:
+- S1
+verified: 2026-10-13
+evidence:
+  read: 'On 2026-10-13: the October 2026 index of public-agentprotocol (5 messages, subjects and dates) and the chairs listed on the W3C group data.'
+  not_read: Meeting minutes (2026-09-09, 2026-09-23), attachments, Google Docs and slides.

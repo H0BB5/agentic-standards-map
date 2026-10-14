@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://frmoretto.github.io/agentic-standards-map/sitemap.xml

@@ -1,0 +1,47 @@
+id: browsers-webmcp
+name: Browser vendor positions on WebMCP (WebKit, Mozilla, Chrome, Edge)
+org: Independent
+kind: position
+tier: core
+status: 'WebKit position issue #670 closed 2026-06-11 as "position: oppose"; Mozilla #1412 closed 2026-08-05 as "position: neutral". Chrome early preview 2026-02-10; Edge blog of 2026-09-21: implementation "is ready for testing".'
+status_as_of: 2026-10-13
+relevance: 'WebMCP lets a page expose tools to browsing agents; Chrome describes it as "a standard way for exposing structured tools, ensuring AI agents can perform actions on your site with increased speed, reliability, and precision". The WebKit reviewer wrote on 2026-06-03 "WebKit is **opposed** to this proposal due to the following concerns:", among them that "it has no consent or reversibility model for consequential actions". The Mozilla reviewer proposed a neutral position, writing that "in an adversarial setting there is a risk that sites will provide tools that do not match the experience of a user on the page". PayPal''s blog of 2026-09-16 says it is "extending WebMCP support through the PayPal JavaScript SDK" for Store Sync merchants; the agent can search, prepare the cart and initiate checkout, and "The buyer is then handed off to PayPal to sign in, choose or confirm a funding source, review the transaction, and approve payment." PayPal reports, as its own results of a small sandbox benchmark: "Approximately 4.6 times less costly in model-inference usage", "Approximately twice as fast at the median", and "three structured tool calls via WebMCP instead of more than 30 interface-interaction steps" (self-reported). Shopify''s developer changelog of 2026-09-28 says "Browser agents can now read and update Shopify checkouts using WebMCP tools for checkout", with get_checkout, update_checkout and complete_checkout ("Submit checkout after buyer confirmation"); the tools "don''t expose a new API or require merchant configuration". The Checkout WebMCP documentation says "Before you call complete_checkout, show the buyer the current order and total, and get their permission to place it. WBA and ready_for_complete don''t grant it."'
+committed_next:
+- what: 'Mozilla reviewer: "willing to come back to revisit it once there is more evidence of how it will be used by sites"'
+  when: undated
+  source: https://github.com/mozilla/standards-positions/issues/1412#issuecomment-4593221809
+  class: statement
+boundary: 'The positions concern WebMCP and not MCP: the Mozilla reviewer''s text says "There is no MCP here."'
+sources:
+- url: https://github.com/WebKit/standards-positions/issues/670
+  read: 2026-10-13
+  class: statement
+- url: https://github.com/mozilla/standards-positions/issues/1412
+  read: 2026-10-13
+  class: statement
+- url: https://developer.chrome.com/blog/webmcp-epp
+  read: 2026-10-13
+  class: decision
+- url: https://blogs.windows.com/msedgedev/2026/09/21/new-in-edge-for-developers-create-better-components-and-make-your-site-agent-ready/
+  read: 2026-10-13
+  class: decision
+- url: https://developer.paypal.com/community/blog/WebMCP_PayPal_Agent_Ready/
+  read: 2026-10-08
+  class: statement
+- url: https://shopify.dev/changelog/posts/webmcp-support-for-checkout
+  read: 2026-10-08
+  class: statement
+- url: https://shopify.dev/docs/agents/carts-and-checkout/checkout-webmcp
+  read: 2026-10-08
+  class: normative
+overlaps:
+- w3c-webmcp-cg-report
+- mcp-core
+- w3c-agenticweb-wg
+seams:
+- S3
+- S4
+verified: 2026-10-13
+evidence:
+  read: 'On 2026-10-13: the Chrome and Edge pages and the issues of WebKit and Mozilla, whose quoted sentences (the Chrome description, the Edge sentence "is ready for testing", and the WebKit and Mozilla statements) were found again in the current texts; the state and labels of both issues (closed 2026-06-11 "position: oppose" and closed 2026-08-05 "position: neutral", unchanged).'
+  not_read: Safari or Apple pages outside the issue, Chrome Status, other Mozilla pages, other vendors, implementation documentation.

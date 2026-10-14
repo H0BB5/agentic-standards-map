@@ -1,0 +1,29 @@
+id: w3c-did-methods-wg
+name: W3C DID Methods Working Group (proposed charter)
+org: W3C
+kind: charter
+tier: context
+status: Proposed charter in Advisory Committee review (2026-09-30); public comments invited through 2026-10-28.
+status_as_of: 2026-10-13
+relevance: 'Mission: "to standardize DID Methods that use Web technologies"; a separate maintenance charter for the existing DID WG, whose mission includes DID Resolution, went into refinement on 2026-08-10 and was sent to the Advisory Committee on 2026-10-07, with public comments invited through 2026-11-05 (see w3c-did-wg).'
+sources:
+- url: https://www.w3.org/2026/09/proposed-did-methods-wg-charter.html
+  read: 2026-10-02
+  class: normative
+- url: https://lists.w3.org/Archives/Public/public-new-work/2026Sep/0011.html
+  read: 2026-10-13
+  class: decision
+- url: https://lists.w3.org/Archives/Public/public-new-work/2026Aug/0003.html
+  read: 2026-10-13
+  class: decision
+- url: https://lists.w3.org/Archives/Public/public-new-work/2026Oct/0008.html
+  read: 2026-10-13
+  class: decision
+overlaps:
+- w3c-did-resolution
+- w3c-did-wg
+verified: 2026-10-13
+evidence:
+  read: Charter read in full on 2026-10-02; announcement of 2026-09-30 read on 2026-10-03 and again on 2026-10-13, with the announcements of 2026-08-10 (start of refinement of the DID WG maintenance charter) and 2026-10-07 (proposed DID WG charter sent to the Advisory Committee).
+  not_read: The public-review-comments list.
+  not_found: 'Not found in the charter text, 2026-10-02: agent, AI, commerce, merchant, payment, delegat (word stem).'

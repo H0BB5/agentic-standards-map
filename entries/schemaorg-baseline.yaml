@@ -1,0 +1,28 @@
+id: schemaorg-baseline
+name: schema.org vocabulary for products, offers, sellers and lodging (current release)
+org: Independent
+kind: specification
+tier: context
+status: Current release V30.1, 2026-09-16 (previous 30.0, 2026-03-19). Term definitions are quoted from schema.org without comment.
+status_as_of: 2026-10-13
+relevance: 'Present: Product ("Any offered product or service."), Offer ("An offer to transfer some rights to an item or to provide a service"), Organization, LocalBusiness, LodgingBusiness, MerchantReturnPolicy, gtin.'
+sources:
+- url: https://schema.org/version/latest
+  read: 2026-10-03
+  class: normative
+- url: https://schema.org/Product
+  read: 2026-10-03
+  class: normative
+- url: https://schema.org/docs/releases.html
+  read: 2026-10-13
+  class: normative
+overlaps:
+- schemaorg-open-agent-commerce-items
+- gs1-conformant-resolver
+seams:
+- S1
+- S2
+verified: 2026-10-13
+evidence:
+  read: 'On 2026-10-13: schema.org/docs/releases.html (30.1 dated 2026-09-16, 30.0 dated 2026-03-19, nothing later) and the GitHub release list (v30.1 published 2026-09-15 and v30.0 published 2026-03-25, a different instrument from the page; no release after v30.1; last commit on main 2026-10-01).'
+  not_read: Properties, expected types and examples on each term page, and the other terms of the vocabulary.

@@ -1,0 +1,51 @@
+id: kyapay
+name: KYAPay (Skyfire)
+org: Industry
+kind: specification
+tier: core
+status: 'Individual Internet-Drafts named for the OAuth WG (draft-skyfire-oauth-*); WG stream or adoption: not found on the datatracker, 2026-10-13 (the pages of kyapay-token and using-kyapay-tokens show "(No stream defined)"). On 2026-10-02 the author announced new revisions of five drafts: kyapay-token-02, using-kyapay-tokens-01, amr-values-02, id-verification-02 and aml-methods-01 (datatracker date 2026-10-01 for all five). The datatracker lists two more documents of the family, kyapay-token-exchange-01 (2026-07-19) and kyapayprofile-02 (2026-06-20, replaced by kyapay-token), seven in all. The TPAC breakout proposal #39 (KYAPay: Verified Agent Identity and Payments for Ubiquitous Agentic Commerce) is open on 2026-10-13 with one comment and no assigned slot; the datatracker shows no revision of kyapay-token-exchange after -01 of 2026-07-19.'
+status_as_of: 2026-10-13
+relevance: KYAPay defines a signed JWT carrying verified agent and human identity (KYA) and payment credentials (PAY), so that merchant security infrastructure can distinguish human-authorised agents from malicious bots. The author's announcement of 2026-10-02 describes the token as a "JWT token providing claims about the person or organization authorizing an agent to act, the agent platform, the agent instance, and optionally a payment method". On the oauth list the token is discussed among bot managers, CDNs and site policy engines.
+committed_next:
+- what: The author invites review of the updated drafts on the oauth list and at IETF 127 (14 to 20 November 2026).
+  when: undated
+  source: https://mailarchive.ietf.org/arch/msg/oauth/h_YQPuYbBQf0TaiNIJQDNcxgGfc/
+  class: third-party
+- what: Rework of the delegation text of the token-exchange draft, stated by the author on 2026-09-18.
+  when: undated
+  source: https://mailarchive.ietf.org/arch/msg/oauth/CbHD0qu_C-7AgMj3OdM7QNmbRjk
+  class: third-party
+boundary: A participant review of 2026-09-23 reads hid, aid and apd as identifying principal, agent and platform, not the authority delegated.
+overlaps:
+- w3c-agenticweb-wg
+- ietf-webbotauth
+- mastercard-agent-pay
+seams:
+- S3
+sources:
+- url: https://mailarchive.ietf.org/arch/msg/oauth/h_YQPuYbBQf0TaiNIJQDNcxgGfc
+  read: 2026-10-03
+  class: third-party
+- url: https://mailarchive.ietf.org/arch/msg/oauth/xFAGS_R8IsdZAQygs8J0DT5DgN0
+  read: 2026-10-03
+  class: third-party
+- url: https://mailarchive.ietf.org/arch/msg/oauth/CbHD0qu_C-7AgMj3OdM7QNmbRjk
+  read: 2026-10-03
+  class: third-party
+- url: https://datatracker.ietf.org/doc/draft-skyfire-oauth-kyapay-token/
+  read: 2026-10-13
+  class: decision
+- url: https://datatracker.ietf.org/doc/draft-skyfire-oauth-using-kyapay-tokens/
+  read: 2026-10-13
+  class: decision
+verified: 2026-10-13
+evidence:
+  read: 'Datatracker search for draft-skyfire and the pages of kyapay-token and using-kyapay-tokens, 2026-10-13 (seven documents: kyapay-token-02, using-kyapay-tokens-01, amr-values-02, id-verification-02, aml-methods-01, kyapay-token-exchange-01, kyapayprofile-02); datatracker listing of 2026-10-02 (it named four, kyapay-token-02, token-exchange-01, using-kyapay-tokens-01, kyapayprofile-02); the announcement of 2026-10-02 on the oauth list names five; oauth list from 2026-08-01, subject filter (142 of 505 messages), KYAPay threads read.'
+  not_read: The pages of the other five drafts on the datatracker (stream and state), skyfire-xyz repositories; IETF 126 session; kyapay.org beyond main page; adopters named in the announcement; threads excluded by the subject filter.
+  not_found: 'Not found in the messages read, 2026-10-03: the merchant''s own identity, product identity, prices, checkout.'
+open_proposals:
+- what: TPAC 2026 breakout on KYAPay (agentic commerce on the existing web); no slot assigned yet.
+  author: selfissued (Michael B. Jones) and skyfire-ankit
+  date: 2026-10-01
+  state: open
+  url: https://github.com/w3c/tpac2026-breakouts/issues/39

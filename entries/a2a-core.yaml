@@ -1,0 +1,36 @@
+id: a2a-core
+name: Agent2Agent (A2A) protocol, core specification
+org: Linux Foundation
+kind: specification
+tier: context
+status: 'Latest release v1.0.1, 2026-05-28. Technical Steering Committee of eight company seats: Google, Microsoft, Cisco, AWS, Salesforce, ServiceNow, SAP, IBM.'
+status_as_of: 2026-10-13
+relevance: 'The AgentCard is defined in specification/a2a.proto as "A self-describing manifest for an agent."; how cards are found is in a2a-discovery. PR #2081, merged on 2026-07-30, added section 7.6.4 to the specification: "Agents MUST NOT treat the TASK_STATE_AUTH_REQUIRED state transition, by itself, as authorization for any particular operation."; the PR description calls the state "a coordination signal, not an authorization grant".'
+sources:
+- url: https://github.com/a2aproject/A2A/blob/main/specification/a2a.proto
+  read: 2026-10-03
+  class: normative
+- url: https://github.com/a2aproject/A2A/blob/main/GOVERNANCE.md
+  read: 2026-10-03
+  class: normative
+- url: https://www.linuxfoundation.org/press/linux-foundation-launches-the-agent2agent-protocol-project-to-enable-secure-intelligent-communication-between-ai-agents
+  read: 2026-10-03
+  class: decision
+- url: https://github.com/a2aproject/A2A/blob/main/docs/specification.md
+  read: 2026-10-08
+  class: normative
+- url: https://github.com/a2aproject/A2A/pull/2081
+  read: 2026-10-08
+  class: third-party
+- url: https://www.iana.org/assignments/well-known-uris/well-known-uris.xml
+  read: 2026-10-05
+  class: normative
+overlaps:
+- a2a-discovery
+- mcp-core
+seams:
+- S1
+verified: 2026-10-13
+evidence:
+  read: 'On 2026-10-13: the release list (latest v1.0.1, 2026-05-28),. On 2026-10-03: a2a.proto, docs/specification.md, GOVERNANCE.md, the release list.'
+  not_read: TSC minutes and recordings, specification chapters beyond the definitions, the project's later announcements.
