@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this map, please cite it. Please also cite the entry id, the date it was read and the DOI."
+type: dataset
+title: "Agentic Standards Map"
+authors:
+  - family-names: "Marinoni Moretto"
+    given-names: "Francesco"
+    orcid: "https://orcid.org/0009-0004-0096-4712"
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2026-10-14
+url: "https://frmoretto.github.io/agentic-standards-map/"
+repository-code: "https://github.com/frmoretto/agentic-standards-map"
