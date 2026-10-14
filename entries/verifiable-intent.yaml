@@ -34,32 +34,32 @@ evidence:
   not_found: 'Not found in the 40 items read, 2026-10-03: standards-body submission, EMVCo.'
 open_proposals:
 - what: 'Issue #41: question whether the cumulative budget is meant to be tracked per merchant, since the L3a sd_hash includes the merchant disclosure (no comment on 2026-10-13).'
-  author: eishops23
+  author: a participant
   date: 2026-10-03
   state: open
   url: https://github.com/agent-intent/verifiable-intent/issues/41
 - what: 'Environment-state constraint types for autonomous execution (PRs #9, #11, #22, #32, issue #28)'
-  author: LembaGang
+  author: a participant
   date: 2026-03-17
   state: open
   url: https://github.com/agent-intent/verifiable-intent/pull/9
 - what: agent_attestation scheme, an SD-JWT agent passport
-  author: InnopulseConsulting
+  author: a participant
   date: 2026-09-21
   state: open
   url: https://github.com/agent-intent/verifiable-intent/issues/36
 - what: VI implementation for an EUDI wallet
-  author: ThierryThevenet
+  author: a participant
   date: 2026-03-31
   state: open
   url: https://github.com/agent-intent/verifiable-intent/issues/19
 - what: Questions on intent standing after authority change (#35) and on purchase-request matching (#37)
-  author: terryncew
+  author: a participant
   date: 2026-09-18
   state: open
   url: https://github.com/agent-intent/verifiable-intent/issues/35
 - what: 'Fix for prompt_summary accepted by the SDK but never written to L2 (issue #39, PR #40)'
-  author: ginjikurata
+  author: a participant
   date: 2026-09-28
   state: open
   url: https://github.com/agent-intent/verifiable-intent/issues/39

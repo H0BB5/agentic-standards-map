@@ -2,6 +2,8 @@
 
 This calendar lists dated public events of the next 60 days declared by the venues; charter milestones beyond 60 days are listed in the entries only, and the individual draft expiries listed here are marked as such: they are not commitments of a venue. Dates declared in public by the venues of `entries/`, read between 2026-10-02 and 2026-10-14. No estimates: a date that a source gives as "approximately" is marked so, and an undated commitment is not listed. Entries are linked by id. Rows already past on 2026-10-13 were removed: the IESG telechat of 2026-10-08 (the agentproto charter, with the WG formed the same day), the TPAC deadline of 2026-10-08 for breakouts scheduled in advance, the TPAC breakout schedule expected on 2026-10-13 (the README now says around 19 October) and the next meeting of the AAIF Security and Privacy group on 2026-10-13.
 
+Events as declared by the venues on 2026-10-14; check the venue for later changes.
+
 | Date | What | Entry | Source |
 |---|---|---|---|
 | 2026-10-15 | Accuracy & Reliability of AI Agents: Virtual Summit, 15:00 to 17:00 GMT, online, "Organized by Agentic AI Foundation" (event page, read on 2026-10-13) | `aaif-structure` | https://home.mlops.community/public/events/accuracy-and-reliability-of-ai-agents-virtual-summit-77nje0s530 |

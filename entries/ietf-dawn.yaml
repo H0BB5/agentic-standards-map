@@ -20,7 +20,7 @@ committed_next:
   source: https://datatracker.ietf.org/doc/charter-ietf-dawn/
   class: normative
 boundary: 'Out of scope in the initial phase, charter 00-10 (read 2026-10-13): catalogs of capabilities, all communication beyond the initial discovery process, "AI resource indexing and searching across the wider Internet", "Identity management of AI agents, tools, and skills." and trust management beyond secure content exchange between DAWN parties. In scope as a discoverable AI resource: "a service such as a catalog that will further the discovery process".'
-participation: 'The author of this map wrote in the DAWN list thread "DAWN Coordination: Discovery Information and Trust Artifact Pointers", the latest messages on 2026-09-29, on 2026-10-08 (08:39 UTC, replying to Girish Konda) and on 2026-10-10 (08:06 UTC, accepting Konda''s wording on absence and incomplete results); the reply of Konda adds a third case to the author''s second requirement; see Disclosure.'
+participation: 'The author of this map wrote in the DAWN list thread "DAWN Coordination: Discovery Information and Trust Artifact Pointers", the latest messages on 2026-09-29, on 2026-10-08 (replying to Girish Konda) and on 2026-10-10 (accepting Konda''s wording on absence and incomplete results); the reply of Konda adds a third case to the author''s second requirement; see Disclosure.'
 overlaps:
 - w3c-agenticweb-wg
 - ard

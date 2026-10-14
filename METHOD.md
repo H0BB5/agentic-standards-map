@@ -12,6 +12,12 @@ Entries are grouped by the kind of body behind them: W3C, IETF, GS1, UN/CEFACT, 
 
 Not covered: 3GPP (its agent discovery work is surveyed in draft-jimenez-dawn-discovery-landscape-00), ETSI, ITU-T and ISO/IEC JTC 1/SC 42.
 
+## Scope
+
+This map documents public standardisation activity, specifications and declared commitments. It does not measure market adoption, transaction volume, cross-protocol interoperability or the reliability of deployed implementations. Implementation claims are reported only where supported by dated public evidence and are not treated as evidence of interoperability.
+
+llms.txt is cited in the entry ard (a Lighthouse audit) and is not assessed in this version.
+
 ## Rules
 
 1. **Public sources only.** Every statement points to a public URL and the date it was read. No private correspondence, paraphrased or not.
@@ -31,3 +37,7 @@ Every source is tagged with one of four classes, shown in the text: **normative 
 ## How to read the negatives
 
 A negative is always written as "not found in [corpus, date]": it describes the texts that were searched, not the world. What was read and what was not is in the appendix "Evidence and coverage".
+
+## Versions and citation
+
+The website is the living version and changes as venues move. Version 1.0 is the tag v1.0.0 of the repository. When a DOI is issued, each DOI identifies a frozen snapshot, the concept DOI always resolves to the latest version, and the version DOI should be cited for the text read.

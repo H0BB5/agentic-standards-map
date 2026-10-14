@@ -52,27 +52,27 @@ evidence:
   not_found: 'Not found there (2026-10-03): GTIN, GS1.'
 open_proposals:
 - what: 'Issue #27 and Discussion #2831: payment and value metadata in the Server Card (_meta riders).'
-  author: YE-YI7
+  author: a participant
   date: 2026-06-09
   state: closed
   url: https://github.com/modelcontextprotocol/ext-server-card/issues/27
 - what: 'Discussion #2896: a commerce discovery extension for the Server Card in _meta.'
-  author: dtsoden
+  author: a participant
   date: 2026-06-09
   state: closed
   url: https://github.com/modelcontextprotocol/modelcontextprotocol/discussions/2896
 - what: 'Issue #3393: payment metadata in the server card or in the response of a call.'
-  author: genesiscode2026
+  author: a participant
   date: 2026-09-26
   state: closed
   url: https://github.com/modelcontextprotocol/modelcontextprotocol/issues/3393
 - what: 'Issue #30: optional tool metadata in the Server Card for offline discovery.'
-  author: vyshnavigadamsetti
+  author: a participant
   date: 2026-06-17
   state: open
   url: https://github.com/modelcontextprotocol/ext-server-card/issues/30
 - what: 'Schema and discovery issues #48, #50, #43, #44 (capabilities, instructions, links, nested catalogs).'
-  author: tadasant
+  author: a participant
   date: 2026-08-24
   state: open
   url: https://github.com/modelcontextprotocol/ext-server-card/issues/48

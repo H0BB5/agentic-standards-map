@@ -48,7 +48,7 @@ evidence:
   not_found: 'Not found in the messages read, 2026-10-03: the merchant''s own identity, product identity, prices, checkout.'
 open_proposals:
 - what: TPAC 2026 breakout on KYAPay (agentic commerce on the existing web); no slot assigned yet.
-  author: selfissued (Michael B. Jones) and skyfire-ankit
+  author: Michael B. Jones and a co-author
   date: 2026-10-01
   state: open
   url: https://github.com/w3c/tpac2026-breakouts/issues/39

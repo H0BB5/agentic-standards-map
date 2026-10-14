@@ -50,27 +50,27 @@ evidence:
   not_read: Slack, the tsc and wg-identity repositories, x402.org member and calendar pages, older items; usage figures on x402.org (self-reported).
 open_proposals:
 - what: Terms extension specification
-  author: CameronWhiteside
+  author: a participant
   date: 2026-04-10
   state: open
   url: https://github.com/x402-foundation/x402/pull/1986
 - what: 'Authority extension: bounded, offline-verifiable spending mandates'
-  author: whawk46
+  author: a participant
   date: 2026-08-20
   state: open
   url: https://github.com/x402-foundation/x402/pull/3220
 - what: 'Offer-receipt additions: action-receipt, v2 bindings, delivery proof, conformance (#2906 and others)'
-  author: jsuich
+  author: a participant
   date: 2026-07-19
   state: open
   url: https://github.com/x402-foundation/x402/issues/2906
 - what: 'Dispute evidence layer: working-group request (#2887), feature (#3500)'
-  author: stillmarcus24
+  author: a participant
   date: 2026-07-17
   state: open
   url: https://github.com/x402-foundation/x402/issues/2887
 - what: 'Reviews extension: links to payment-backed reviews in 402 and settlement responses'
-  author: damiafuentes
+  author: a participant
   date: 2026-10-02
   state: open
   url: https://github.com/x402-foundation/x402/pull/3656

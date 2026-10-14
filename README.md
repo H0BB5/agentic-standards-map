@@ -6,6 +6,8 @@ W3C, IETF, GS1, UN/CEFACT, the Linux Foundation, AAIF, and the industry protocol
 
 Every statement is dated and points to a public source. The map makes no predictions or recommendations of its own and does not rank approaches. Third-party proposals are recorded with attribution and their stated status.
 
+This map documents public standardisation activity, specifications and declared commitments. It does not measure market adoption, transaction volume, cross-protocol interoperability or the reliability of deployed implementations. Implementation claims are reported only where supported by dated public evidence and are not treated as evidence of interoperability.
+
 *Version 1.0, as of 2026-10-14. The map is updated as venues move; each entry carries its own read date.*
 
 ---
@@ -68,4 +70,4 @@ Corrections and additions based on public sources are welcome: see [CONTRIBUTING
 
 ## Licence
 
-Content (entries, notes, `MAP.md`, `map.json`, the per-entry JSON files, `map-bundle.md`): [CC BY 4.0](LICENSE). Code (`tools/`): [MIT](LICENSE-CODE).
+Content (entries, notes, `MAP.md`, `map.json`, the per-entry JSON files, `map-bundle.md`): [CC BY 4.0](LICENSE). Code (`tools/`): [MIT](LICENSE-CODE). Quotations from third-party texts remain under their own terms; CC BY 4.0 applies to the author's text and data.

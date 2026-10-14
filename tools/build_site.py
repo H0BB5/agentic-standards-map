@@ -316,9 +316,13 @@ def graph_data(entries, seams):
 
 # ---- graph (static SVG) -------------------------------------------------------------------------------------------
 
-def svg_open(w, h, title, tid="gt"):
+SVG_DESC = ("Each circle is an entry of the map and links to its page; the colour is the kind of body behind it, a filled circle is a core entry and a dashed circle a context entry.")
+
+
+def svg_open(w, h, title, tid="gt", desc=SVG_DESC):
     return ('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 %d %d" width="%d" height="%d" '
-            'role="img" aria-labelledby="%s" font-family="system-ui, sans-serif">\n<title id="%s">%s</title>\n' % (w, h, w, h, tid, tid, esc(title)))
+            'role="img" aria-labelledby="%s %sd" font-family="system-ui, sans-serif">\n<title id="%s">%s</title>\n<desc id="%sd">%s</desc>\n'
+            % (w, h, w, h, tid, tid, tid, esc(title), tid, esc(desc)))
 
 
 def node_svg(e, x, y, label_x, anchor="start", prefix="entries/", fs=11, maxlen=28, tags=None):
@@ -375,7 +379,8 @@ def graph_columns_svg(entries, edges):
     height = top + max(len(c) for c in cols.values()) * rowh + 30
     width = 40 + len(orgs) * 235
     xy = {i: (x + 8, top + r * rowh) for i, (x, r) in pos.items()}
-    s = [svg_open(width, height, "Graph of the entries of the map: overlaps between entries, grouped by organisation", "gt1")]
+    s = [svg_open(width, height, "Graph of the entries of the map: overlaps between entries, grouped by organisation", "gt1",
+                  SVG_DESC + " Entries are in columns by kind of body; a line joins two entries when one of them lists the other as an overlap.")]
     s.append('<text x="40" y="26" font-size="16" font-weight="bold" fill="#111">%s: overlaps between entries</text>' % esc(SITE_TITLE))
     s.append(legend_svg(40, 52))
     for o in orgs:
@@ -404,7 +409,8 @@ def graph_seams_svg(entries, seams):
     keys = [k for k in ("S1", "S2", "S3", "S4") if k in seams]
     pw, ph = 760, 640
     width, height = pw * 2, ph * 2 + 50
-    s = [svg_open(width, height, "Graph of the four seams: the entries each seam names", "gt2")]
+    s = [svg_open(width, height, "Graph of the four seams: the entries each seam names", "gt2",
+                  SVG_DESC + " The four seams S1 to S4 are drawn with the entries that notes/seams.md names for each.")]
     s.append('<text x="30" y="28" font-size="16" font-weight="bold" fill="#111">%s: the entries named by each seam</text>' % esc(SITE_TITLE))
     for n, k in enumerate(keys):
         title, ids = seams[k]
@@ -458,7 +464,8 @@ def entry_graph_svg(e, entries, ovn, smn):
     cx, cy = 380, top + (n * rowh) / 2.0 - 4
     xl, xr = 215, 545
     c = COLOURS.get(e["org"], "#555")
-    s = [svg_open(W, H, "Neighbours of %s in the map" % e["name"], "gte")]
+    s = [svg_open(W, H, "Neighbours of %s in the map" % e["name"], "gte",
+                  SVG_DESC + " The entry in the middle, with the entries it overlaps and the entries named by the same seams.")]
     s.append('<text x="%d" y="22" font-size="13" font-weight="bold" fill="#111" text-anchor="end">Overlaps (%d)</text>' % (xl + 6, len(ovn)))
     s.append('<text x="%d" y="22" font-size="13" font-weight="bold" fill="#111">Share a seam (%d)</text>' % (xr - 6, len(smn)))
     s.append('<g fill="none">')
@@ -615,9 +622,9 @@ def data_page_html(a, site, n_entries, newest, map_size, n_events, sha):
     else:
         cite_p = "<p>Cite the entry id and the date it was read.</p>"
     if a.doi:
-        citable_p = '<p>The citable version is the tag <code>v1.0.0</code> of the repository, archived with the DOI <a href="https://doi.org/%s" rel="noopener">%s</a>. The site is regenerated at each commit, so a page can be newer than the tag: cite the tag and the date it was read.</p>' % (attr(a.doi), esc(a.doi))
+        citable_p = '<p>The website is the living version and changes as venues move. Each DOI identifies a frozen snapshot: version 1.0 is the tag <code>v1.0.0</code>, DOI <a href="https://doi.org/%s" rel="noopener">%s</a>. The concept DOI always resolves to the latest version; cite the version DOI for the text you read.</p>' % (attr(a.doi), esc(a.doi))
     else:
-        citable_p = "<p>The citable version of the map is the tag <code>v1.0.0</code> of the repository, with its DOI. That tag and DOI do not exist yet; until they do, cite the entry id, the date it was read and the commit shown in the footer of the page.</p>"
+        citable_p = "<p>The website is the living version and changes as venues move. Version 1.0 is the tag <code>v1.0.0</code> of the repository; a DOI for each frozen snapshot is not issued yet, and until it is, cite the entry id, the date it was read and the commit shown in the footer of the page.</p>"
     rows = [
         ("<a href=\"map.json\">map.json</a>", "All entries as in the YAML (schema v2, described in entries/_schema.md) and the graph of overlaps and seams. Top-level fields: schema, schema_description, generated, source_commit, licence, entries, graph. %d entries; generated %s; source commit %s; licence CC BY 4.0; size %d bytes." % (n_entries, esc(site.today), esc(sha[:7] if sha else "not given"), map_size)),
         ("<code>entries/&lt;id&gt;.json</code>", "One file per entry: the same object as in map.json, plus <code>url</code> (the page of the entry), <code>source_url</code> (the YAML file in the repository at the source commit) and <code>licence</code>. Example: <a href=\"entries/ap2.json\">entries/ap2.json</a>."),
@@ -631,24 +638,12 @@ def data_page_html(a, site, n_entries, newest, map_size, n_events, sha):
             "<p>The map in machine-readable form. These are plain files and standard web formats.</p>"
             "<p>This site uses generic web mechanisms (JSON files, link rel=alternate, schema.org JSON-LD, a sitemap). It does not adopt any of the discovery mechanisms described in the map, so that the map does not take a side in what it maps.</p>"
             "<h2 id=\"files\">Files</h2><div class=\"scroll\"><table><thead><tr><th>File</th><th>What it holds</th></tr></thead><tbody>%s</tbody></table></div>"
-            "<h2 id=\"licence\">Licence</h2><p>The content is under <a href=\"%s\" rel=\"noopener\">CC BY 4.0</a>; the scripts in <code>tools/</code> are under the MIT licence. Reuse is free with attribution.</p>"
+            "<h2 id=\"licence\">Licence</h2><p>The content is under <a href=\"%s\" rel=\"noopener\">CC BY 4.0</a>; the scripts in <code>tools/</code> are under the MIT licence. Reuse is free with attribution. Quotations from third-party texts remain under their own terms; CC BY 4.0 applies to the author's text and data.</p>"
             "<h2 id=\"cite\">How to cite</h2>%s%s"
             "<h2 id=\"counts\">Counts</h2><p>The numbers of sources quoted on the site (source references, distinct URLs, primary and third-party-only URLs) are produced by <a href=\"%s\" rel=\"noopener\">tools/count_sources.py</a>, run on the files of the repository. A source reference is one use of a URL in the field <code>sources</code> or in a <code>committed_next</code> item; a distinct URL is counted once whatever the number of uses; a URL with a fragment is a different URL. The script counts URLs and does not check that they respond.</p>"
             "<h2 id=\"updates\">Updates</h2><p>Each entry carries its own read date (the fields <code>verified</code> and <code>status_as_of</code>). The site is regenerated from the data at each commit of the repository; the newest verification date is %s.</p>"
             "<h2 id=\"corrections\">Corrections</h2><p>Corrections and missing sources: <a href=\"%s\" rel=\"noopener\">open an issue on the repository</a>.</p>"
             % (tbl, attr(LICENCE_URL), cite_p, citable_p, attr(a.repo_url.rstrip("/") + "/blob/main/tools/count_sources.py"), esc(newest), attr(ISSUES_URL)))
-
-
-def llms_txt(a, site, n_entries):
-    lines = ["# Agentic Standards Map", "",
-             "> A map of who is standardising agentic commerce, where, and what each venue has committed to next: %d dated, sourced entries, one per specification, draft or group." % n_entries, "",
-             "- [For agents and tools](%s): files, formats, licence, how to cite" % site.base("data.html"),
-             "- [map.json](%s): all entries and the graph, schema v2" % site.base("map.json"),
-             "- [map-bundle.md](%s): the full text of the map in one Markdown file" % site.base("map-bundle.md"),
-             "- [calendar.ics](%s): dated items committed by the venues" % site.base("calendar.ics"),
-             "", "Licence: content CC BY 4.0 (%s); scripts MIT." % LICENCE_URL,
-             "How to cite: the entry id, the date it was read, and the DOI when there is one (see the page for agents and tools)."]
-    return "\n".join(lines) + "\n"
 
 
 def dataset_ld(site, newest):
@@ -746,6 +741,9 @@ def calendar_events(src):
     note = [l.strip() for l in text.split("\n") if l.strip().startswith("This calendar lists dated public events")]
     if len(note) != 1:
         raise SystemExit("notes/calendar-2026.md: the line 'This calendar lists dated public events ...' is missing or repeated")
+    asof = [l.strip() for l in text.split("\n") if l.strip().startswith("Events as declared by the venues on ")]
+    if len(asof) != 1:
+        raise SystemExit("notes/calendar-2026.md: the line 'Events as declared by the venues on <date>; ...' is missing or repeated")
     ev, stats = [], {"rows": 0, "approx": 0, "ranges": 0}
     for line in text.split("\n"):
         if not (line.startswith("| 20") or line.startswith("| approx.")):
@@ -760,7 +758,7 @@ def calendar_events(src):
         stats["ranges"] += 1 if len(dates) > 1 else 0
         ev.append({"start": dates[0], "end": dates[-1], "approx": approx, "what": cells[1].replace("`", ""),
                    "entries": re.findall(r"`([a-z0-9-]+)`", cells[2]), "sources": re.findall(r"https?://[^\s;]+", cells[3])})
-    return ev, stats, note[0].split(" Dates declared")[0]
+    return ev, stats, note[0].split(" Dates declared")[0] + " " + asof[0]
 
 
 def fold(line):
@@ -955,7 +953,7 @@ def main():
                    "graph": {"nodes": sorted(entries), "overlap_edges": [list(x) for x in edges], "seams": {k: {"title": t, "entries": ids_} for k, (t, ids_) in seams.items()}}}
         (out / "map.json").write_text(json.dumps(mapjson, ensure_ascii=False, indent=1, default=d), encoding="utf-8", newline="\n")
 
-        # page for agents and tools, llms.txt, the bundle
+        # page for agents and tools, the bundle
         bundle_src = src / "map-bundle.md"
         if bundle_src.exists():
             shutil.copyfile(bundle_src, out / "map-bundle.md")
@@ -966,7 +964,6 @@ def main():
         site.write("data.html", dbody, "For agents and tools | %s" % SITE_TITLE, "Files and formats of the map: map.json, one JSON per entry, calendar.ics, map-bundle.md, JSON-LD; licence and how to cite.", newest,
                    {"@context": "https://schema.org", "@type": "WebPage", "name": "For agents and tools", "dateModified": newest, "url": site.base("data.html"),
                     "description": "Files and formats of the map.", "isPartOf": {"@id": site.base("") + "#dataset"}})
-        (out / "llms.txt").write_text(llms_txt(a, site, len(entries)), encoding="utf-8", newline="\n")
 
         # sitemap and robots
         urls = sorted(site.pages)
