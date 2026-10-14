@@ -1,0 +1,71 @@
+{
+ "id": "w3c-tpac-2026",
+ "name": "W3C TPAC 2026 breakouts on agents (Dublin, 2026-10-26/30)",
+ "org": "W3C",
+ "kind": "event",
+ "tier": "core",
+ "status": "TPAC 2026 takes place 2026-10-26 to 2026-10-30 in Dublin (hybrid). The deadline for breakout proposals to be scheduled in advance was 2026-10-08 and has passed; the README (read 2026-10-13) says that \"Around 19 October\" the schedule of the breakout sessions for Monday to Wednesday is added to the TPAC calendar, and the calendar page of breakout sessions lists no session in its text on 2026-10-13.",
+ "status_as_of": "2026-10-13",
+ "relevance": "Breakouts on agents carry the label agentic web in w3c/tpac2026-breakouts; on 2026-10-13 twelve are open and none is closed or withdrawn: #22 The Agentic Web, #23 AI-friendly webpages, #24 declarative and imperative solutions, #25 permissions, actions and alignment, #31 the future of agentic web experiences, #34 Zurich workshop report, #36 extending WebMCP, #39 KYAPay, #56 agents and developer experience, #69 action semantics for agents, #71 user consent when browsers act, #84 WebMCP in WebExtensions. Two proposals without that label matter to this map: #37 a pre-kickoff meeting for the DID Methods WG (opened 2026-09-30) and #17 the proposed Digital Policy Working Group charter. The issues carry no slot (labels session and agentic web only) and the last push to the repository is of 2026-10-07. Issue #22 (opened 2026-09-16, with #24 and #25 on 2026-09-17, all by marcoscaceres) has the goal \"Directions for future work at the W3C around enabling the web to work well with AI agents.\" The repository w3c/tpac2026-miniworkshops hosts mini-workshops on AI and Society, Age Assurance, and Data Governance and Ownership, with submissions on product data discoverable by agents (#32) and agentic payments (#25).",
+ "committed_next": [
+  {
+   "what": "Schedule of the Monday to Wednesday breakouts added to the TPAC calendar (\"Around 19 October\")",
+   "when": "approx. 2026-10-19",
+   "source": "https://github.com/w3c/tpac2026-breakouts",
+   "class": "decision"
+  },
+  {
+   "what": "Deadline, at noon local time, for breakout proposals made once TPAC is under way (Thursday and Friday slots)",
+   "when": "2026-10-29",
+   "source": "https://github.com/w3c/tpac2026-breakouts",
+   "class": "decision"
+  }
+ ],
+ "boundary": "Breakouts are sessions proposed by participants, not Working Group work: TPAC has \"a series of breakout sessions determined by the attendees.\"",
+ "sources": [
+  {
+   "url": "https://www.w3.org/events/tpac/2026/",
+   "read": "2026-10-03",
+   "class": "decision"
+  },
+  {
+   "url": "https://github.com/w3c/tpac2026-breakouts",
+   "read": "2026-10-13",
+   "class": "decision"
+  },
+  {
+   "url": "https://github.com/w3c/tpac2026-breakouts/issues/22",
+   "read": "2026-10-03",
+   "class": "third-party"
+  },
+  {
+   "url": "https://www.w3.org/news-events/tpac/",
+   "read": "2026-10-03",
+   "class": "decision"
+  },
+  {
+   "url": "https://github.com/w3c/tpac2026-breakouts/issues/37",
+   "read": "2026-10-13",
+   "class": "third-party"
+  },
+  {
+   "url": "https://www.w3.org/calendar/tpac2026/breakout-sessions/",
+   "read": "2026-10-13",
+   "class": "decision"
+  }
+ ],
+ "overlaps": [
+  "w3c-agenticweb-wg",
+  "w3c-gs1-ecommerce-workshop",
+  "w3c-webmcp-cg-report",
+  "browsers-webmcp"
+ ],
+ "verified": "2026-10-13",
+ "evidence": {
+  "read": "Issues of w3c/tpac2026-breakouts and items of w3c/tpac2026-miniworkshops; README of tpac2026-breakouts (last commit 2026-09-30); event and news pages, read on 2026-10-03.",
+  "not_read": "Dates of the mini-workshops (not stated in the items read), breakout schedule, TPAC calendar page."
+ },
+ "url": "https://frmoretto.github.io/agentic-standards-map/entries/w3c-tpac-2026.html",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/8b8aca2cdd5768f0d04db57ce8e14b33221ac562/entries/w3c-tpac-2026.yaml",
+ "licence": "https://creativecommons.org/licenses/by/4.0/"
+}

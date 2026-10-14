@@ -1,0 +1,165 @@
+{
+ "id": "ietf-agentproto",
+ "name": "IETF agentproto (Agent Communication Protocols WG)",
+ "org": "IETF",
+ "kind": "charter",
+ "tier": "core",
+ "status": "The IESG announced on 2026-10-08, 16:55 UTC, \"A new IETF WG has been formed in the Applications and Real-Time Area\" for Agent Communication Protocols (agentproto), chairs Orie Steele and Leslie Daigle, and names the responsible Area Director. The datatracker page read on 2026-10-09 shows charter-ietf-agentproto-01, state \"Approved\", WG state \"Active\", area Applications and Real-Time Area (art), last updated 2026-10-08, and its history records \"Charter approved, group active\" on 2026-10-08. Reading of 2026-10-13: the datatracker charter page is still headed \"Agent Communication Protocols (agentproto) Proposed Charter\" while its state is Approved and the group is Active (charter-ietf-agentproto-01, last updated 2026-10-08). The related drafts page lists 15 drafts, among them draft-agentic-ai-usecases-requirements-03 (posted 2026-10-10) and draft-rosenberg-agentproto-usecases-00 (2026-07-04); a revision -04 of the first is not found there. The chairs wrote on the list on 2026-10-12 (15:05 UTC) that \"Our goal for this topic is to identify candidate starting points for the Use Cases and Requirements document.\", that the discussion \"identified two drafts for consideration\" (those two) and that \"We have useful contributions toward a working group document, but have not yet established which draft should be its starting point.\" In the same thread an author of the -03 draft proposed, for a -04, the requirements B1-7 (checks on resumption) and B1-8 (\"If any check in B1-7 fails or cannot be completed, the dialog is not resumed and the protocol is required to signal the reason.\"), and CMN-12 (\"Before accepting a change to a dialog, a participant is required to be able to verify that the change is authorized at that time.\"); on 2026-10-13 (05:23 UTC) the same author agreed to add to Section 4.2 \"If the outcome cannot be determined, the operation remains unresolved, and resuming the dialog alone does not justify resending it.\" (proposed text read as quoted in the chairs' message and in the reply). On 2026-10-12 (22:17 UTC) a chair answered a thread on implementation evidence with \"Please refrain from sending messages regarding implementations at this time.\" A session request for agentproto at IETF 127 exists in the datatracker (requested duration 2:00:00, last modified 2026-10-08); no timeslot assignment for it is found in the agenda schedule of the meeting (API, 2026-10-13).",
+ "status_as_of": "2026-10-13",
+ "relevance": "The charter (\"Agent Communication Protocols\") defines an \"agentic dialog management protocol\" of dialog identifiers, lifecycle semantics and propagation of dialog context, with bindings over existing IETF protocols; it \"neither replaces application-layer agent communication protocols nor defines a new transport protocol\". Commerce, payment, merchant and purchase: not found in charter 00-04 (saved 2026-10-03). The text of the charter on the datatracker page is still headed \"Agent Communication Protocols (agentproto) Proposed Charter\". Commerce, payment, merchant, purchase and seller: not found in the charter text of the page (2026-10-09). The coordination section reads \"This working group is expected to closely coordinate with other related IETF working groups on dependencies of the reference architecture and the agentic dialog management protocol, including security, transport, and discovery aspects\", and lists five groups of venues: \"Security: Web Authorization Protocol (OAuth), webbotauth, WIMSE - on identity, authorization, and security considerations.\", \"Transport: WebTransport, MoQ, QUIC, TSVWG, httpbis - on data transport.\", \"Discovery and Operations: INT area, OPS area - on agent discovery and operational considerations.\", \"Evidence and transparency: SCITT, RATS, on software and hardware security.\" and \"Conversational data: vCon - on conversation representation and its relationship to dialog context.\" On the list thread \"Topic: Existing practice, use cases, and deployment models\" Iman Schrock proposed on 2026-10-05 for section 3.3.5 of the use cases text: \"If a required authorization input cannot be established, preserve that fact separately from an evaluated refusal, even when both lead to local denial.\"; Girish Konda wrote the same day \"An unestablished input is a different fact from a negative one\" and pointed to his individual draft draft-konda-agentproto-evaluation-state-00. On 2026-10-07 Douglas Wadkins wrote, without asking to change or delay 00-04, that \"accurately recording that an authorization answer was unavailable is not the same thing as making that fact available to the decision that admits the continuation.\" On 2026-10-08 the responsible Area Director answered Wadkins, Konda and Lars Kroehl on the list: \"I believe this matter is one for the working group rather than the charter\", adding \"The use cases and requirements deliverable is the right home for the more detailed discussion of requirements and corresponding text.\"; the IAB reviewer wrote the same day \"The new charter looks good to me.\" Charter PR #128 (Mallory Knodel, opened 2026-10-02) was closed without a merge on 2026-10-08, 18:45 UTC; the responsible Area Director commented \"The PR is a substantial change very late in the process, and the concerns it aims to address were already handled by other, more targeted PRs.\" The milestones of charter 01 read \"Dec 2026 - Adopt an informational use cases draft\", \"Feb 2027 - Adopt an informational architecture draft\", \"Mar 2027 - Adopt proposed standard agentic dialog management protocol draft(s)\" and \"Mar 2028 - Submit agentic dialog management protocol draft(s) to the IESG as proposed standard\".",
+ "committed_next": [
+  {
+   "what": "Charter milestones: use cases draft adopted December 2026, architecture February 2027, protocol March 2027; protocol to IESG March 2028.",
+   "when": "2026-12-31",
+   "source": "https://datatracker.ietf.org/wg/agentproto/about/",
+   "class": "normative"
+  }
+ ],
+ "boundary": "Out of scope: \"Audit data structures and their production, validation, or consumption, though dialog identifiers may be used in auditing.\"",
+ "overlaps": [
+  "ietf-audit",
+  "ietf-dawn",
+  "ietf-webbotauth",
+  "ietf-wimse-aims"
+ ],
+ "seams": [
+  "S3"
+ ],
+ "sources": [
+  {
+   "url": "https://datatracker.ietf.org/doc/charter-ietf-agentproto/",
+   "read": "2026-10-03",
+   "class": "normative"
+  },
+  {
+   "url": "https://datatracker.ietf.org/doc/charter-ietf-agentproto/withmilestones-00-04.txt",
+   "read": "2026-10-03",
+   "class": "normative"
+  },
+  {
+   "url": "https://datatracker.ietf.org/doc/charter-ietf-agentproto/ballot/",
+   "read": "2026-10-03",
+   "class": "decision"
+  },
+  {
+   "url": "https://mailarchive.ietf.org/arch/msg/agentproto/XMpnWAx0K2u_ct-wh0sYFcPAiQ8/",
+   "read": "2026-10-08",
+   "class": "third-party"
+  },
+  {
+   "url": "https://mailarchive.ietf.org/arch/msg/agentproto/Oaunfd9TaD0GPF8cS3W9J7m8CQ8/",
+   "read": "2026-10-08",
+   "class": "third-party"
+  },
+  {
+   "url": "https://mailarchive.ietf.org/arch/msg/agentproto/H0wOi0o6P_ZgM8wxtF4yr58eCzU/",
+   "read": "2026-10-08",
+   "class": "third-party"
+  },
+  {
+   "url": "https://mailarchive.ietf.org/arch/msg/agentproto/NvwIOROZ6L4D2GEAo31aeUjsmOs/",
+   "read": "2026-10-08",
+   "class": "statement"
+  },
+  {
+   "url": "https://mailarchive.ietf.org/arch/msg/agentproto/jPb6inHUPJjYm5gpAs2TepfKDlU/",
+   "read": "2026-10-08",
+   "class": "statement"
+  },
+  {
+   "url": "https://mailarchive.ietf.org/arch/msg/agentproto/lsmWc7vs3FZl4F4GHu3SxU5dz0Q/",
+   "read": "2026-10-08",
+   "class": "statement"
+  },
+  {
+   "url": "https://mailarchive.ietf.org/arch/msg/agentproto/LwF8iPHLRP1RrSkIMQH2Om46Fw0/",
+   "read": "2026-10-08",
+   "class": "statement"
+  },
+  {
+   "url": "https://mailarchive.ietf.org/arch/msg/agentproto/SaTWzl_Kmrfy2QqdLNp7grfY24Y/",
+   "read": "2026-10-08",
+   "class": "statement"
+  },
+  {
+   "url": "https://mailarchive.ietf.org/arch/msg/agentproto/rXv38zFeEwDwrj_XQkt98CDVqX8/",
+   "read": "2026-10-08",
+   "class": "statement"
+  },
+  {
+   "url": "https://mailarchive.ietf.org/arch/msg/ietf-announce/olnzT0JibK7hkvy4ZgVlF_nmLa0/",
+   "read": "2026-10-09",
+   "class": "decision"
+  },
+  {
+   "url": "https://datatracker.ietf.org/doc/charter-ietf-agentproto/withmilestones-01.txt",
+   "read": "2026-10-09",
+   "class": "normative"
+  },
+  {
+   "url": "https://datatracker.ietf.org/wg/agentproto/about/",
+   "read": "2026-10-09",
+   "class": "normative"
+  },
+  {
+   "url": "https://datatracker.ietf.org/wg/agentproto/history/",
+   "read": "2026-10-09",
+   "class": "decision"
+  },
+  {
+   "url": "https://github.com/ietf-artarea/charters/pull/128",
+   "read": "2026-10-09",
+   "class": "statement"
+  },
+  {
+   "url": "https://mailarchive.ietf.org/arch/msg/agentproto/Oaunfd9TaD0GPF8cS3W9J7m8CQ8/",
+   "read": "2026-10-09",
+   "class": "third-party"
+  },
+  {
+   "url": "https://mailarchive.ietf.org/arch/msg/agentproto/O1OU6E7eP0a_DPXoufSJ220Ute4/",
+   "read": "2026-10-13",
+   "class": "third-party"
+  },
+  {
+   "url": "https://mailarchive.ietf.org/arch/msg/agentproto/EYHBmHhDeFCrHpUqkyW-YKXgicY/",
+   "read": "2026-10-13",
+   "class": "third-party"
+  },
+  {
+   "url": "https://mailarchive.ietf.org/arch/msg/agentproto/CGc5Kt1qm9Ht8oqy40sWLqAq0IQ/",
+   "read": "2026-10-13",
+   "class": "third-party"
+  },
+  {
+   "url": "https://datatracker.ietf.org/wg/agentproto/documents/",
+   "read": "2026-10-13",
+   "class": "normative"
+  }
+ ],
+ "verified": "2026-10-13",
+ "evidence": {
+  "read": "On 2026-10-13: the datatracker pages of the group (about, charter, related drafts), the subjects, senders and dates of the 40 latest list messages (2026-10-08 to 2026-10-13), eight of them in full (one of 2026-10-10, three of 2026-10-12 among them the chairs' message and one at 22:17 UTC, four of 2026-10-13), and the session request data of IETF 127 (API).",
+  "not_read": "The other list messages of 2026-10-08 to 2026-10-13 (subjects only), the texts of the related drafts; Threads on AGTP, SAMP, DMSC, COSA; messages in Chinese and Persian; IETF 126 minutes and chat log; 00-04 ballot positions on the list.",
+  "not_found": "Not found in 00-00 to 00-04: the list-proposed text. Not found in 408 messages, 2026-10-03: consent, KYA, AP2, x402."
+ },
+ "open_proposals": [
+  {
+   "what": "Charter PR #128: distinguish user from service agents; privacy analysis not to assume symmetry (closed without a merge on 2026-10-08).",
+   "author": "Mallory Knodel",
+   "date": "2026-10-02",
+   "state": "closed",
+   "url": "https://github.com/ietf-artarea/charters/pull/128"
+  },
+  {
+   "what": "List-proposed charter text: use cases document as informational RFC or working group input (not found in charter 01 as approved, datatracker page, 2026-10-09).",
+   "author": "the responsible Area Director (proposal quoted in a message by a participant)",
+   "date": "2026-09-11",
+   "state": "closed",
+   "url": "https://mailarchive.ietf.org/arch/msg/agentproto/myfwr_eF4abrR6Ayfff7cAYI0X0"
+  }
+ ],
+ "url": "https://frmoretto.github.io/agentic-standards-map/entries/ietf-agentproto.html",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/8b8aca2cdd5768f0d04db57ce8e14b33221ac562/entries/ietf-agentproto.yaml",
+ "licence": "https://creativecommons.org/licenses/by/4.0/"
+}

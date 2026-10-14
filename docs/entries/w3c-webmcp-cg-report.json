@@ -1,0 +1,58 @@
+{
+ "id": "w3c-webmcp-cg-report",
+ "name": "WebMCP (Draft Community Group Report, Web Machine Learning CG)",
+ "org": "W3C",
+ "kind": "specification",
+ "tier": "context",
+ "status": "Draft Community Group Report, dated 9 October 2026 on the page read on 2026-10-13 (2026-09-30 on 2026-10-03), no numbered version; on 2026-10-08 PR #338, \"Remove declarative API from spec\", was merged (the specification now focuses on the imperative registerTool() API); the draft Agentic Web WG charter lists WebMCP as its normative deliverable.",
+ "status_as_of": "2026-10-13",
+ "relevance": "Draft: \"The WebMCP API enables web applications to provide JavaScript-based tools to AI agents.\"; an editor wrote on 2026-09-25 that identity and delegation proposals \"are beyond the scope of the simple WebMCP API\".",
+ "sources": [
+  {
+   "url": "https://webmachinelearning.github.io/webmcp/",
+   "read": "2026-10-02",
+   "class": "normative"
+  },
+  {
+   "url": "https://github.com/webmachinelearning/webmcp/issues/257",
+   "read": "2026-10-03",
+   "class": "third-party"
+  },
+  {
+   "url": "https://github.com/webmachinelearning/webmcp/pull/338",
+   "read": "2026-10-13",
+   "class": "decision"
+  },
+  {
+   "url": "https://github.com/WebKit/standards-positions/issues/670",
+   "read": "2026-10-03",
+   "class": "third-party"
+  }
+ ],
+ "overlaps": [
+  "w3c-agenticweb-wg",
+  "ietf-webbotauth",
+  "kyapay",
+  "browsers-webmcp"
+ ],
+ "seams": [
+  "S3"
+ ],
+ "verified": "2026-10-13",
+ "evidence": {
+  "read": "On 2026-10-13: the draft report page and the latest commits of the repository (to 2026-10-09), PR #338 and issues #65, #192 and #257.",
+  "not_read": "Minutes pages, section 6.2 of the specification, items #165, #204, #255, #272, #273 and #312 in full."
+ },
+ "open_proposals": [
+  {
+   "what": "Proposes to \"Stand up a new community group for agent-assisted user agents (name to be decided).\"",
+   "author": "marcoscaceres (WebKit standards-positions)",
+   "date": "2026-06-17",
+   "state": "closed",
+   "url": "https://github.com/WebKit/standards-positions/issues/670#issuecomment-4729132384"
+  }
+ ],
+ "url": "https://frmoretto.github.io/agentic-standards-map/entries/w3c-webmcp-cg-report.html",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/8b8aca2cdd5768f0d04db57ce8e14b33221ac562/entries/w3c-webmcp-cg-report.yaml",
+ "licence": "https://creativecommons.org/licenses/by/4.0/"
+}

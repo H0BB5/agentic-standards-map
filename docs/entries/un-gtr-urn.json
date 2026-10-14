@@ -1,0 +1,37 @@
+{
+ "id": "un-gtr-urn",
+ "name": "UN Global Trust Register, namespace urn:gtr",
+ "org": "UN/CEFACT",
+ "kind": "work-item",
+ "tier": "context",
+ "status": "Namespace \"IANA registration pending\" per the UNTP specification. Not found in the IANA URN namespaces registry (updated 2026-10-12, read 2026-10-13): a record named gtr.",
+ "status_as_of": "2026-10-13",
+ "relevance": "The specification says \"Either register your own scheme with IANA or use the UN global trust register gtr URN namespace (IANA registration pending)\", pattern urn:gtr:{identifier-scheme}:{identifier-value}.",
+ "sources": [
+  {
+   "url": "https://untp.unece.org/docs/specification/IdentityResolver/",
+   "read": "2026-10-02",
+   "class": "normative"
+  },
+  {
+   "url": "https://www.iana.org/assignments/urn-namespaces/urn-namespaces.xml",
+   "read": "2026-10-13",
+   "class": "decision"
+  }
+ ],
+ "overlaps": [
+  "untp-identity-resolver"
+ ],
+ "seams": [
+  "S2"
+ ],
+ "verified": "2026-10-13",
+ "evidence": {
+  "read": "On 2026-10-13: the IANA URN namespaces registry XML (updated 2026-10-12): no value gtr and no occurrence of the token.",
+  "not_read": "Drafts under other names not excluded.",
+  "not_found": "Not found in the IANA XML, GRID site or Internet-Draft search, 2026-10-02: an operational register."
+ },
+ "url": "https://frmoretto.github.io/agentic-standards-map/entries/un-gtr-urn.html",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/8b8aca2cdd5768f0d04db57ce8e14b33221ac562/entries/un-gtr-urn.yaml",
+ "licence": "https://creativecommons.org/licenses/by/4.0/"
+}

@@ -1,0 +1,40 @@
+{
+ "id": "fido-agentic-standards",
+ "name": "FIDO Alliance agentic authentication and payments work",
+ "org": "Industry",
+ "kind": "work-item",
+ "tier": "context",
+ "status": "Announced 2026-04-28: an Agentic Authentication Technical Working Group, and work in the Payments Technical Working Group starting from Google (AP2) and Mastercard (Verifiable Intent) contributions.",
+ "status_as_of": "2026-10-03",
+ "relevance": "The release says the Payments Technical Working Group is \"chaired by members from Mastercard and Visa\"; it says contributed, while the AP2 repository says its core specification has been donated to FIDO.\n",
+ "sources": [
+  {
+   "url": "https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/",
+   "read": "2026-10-03",
+   "class": "decision"
+  },
+  {
+   "url": "https://github.com/google-agentic-commerce/AP2/blob/main/CONTRIBUTING.md",
+   "read": "2026-10-03",
+   "class": "normative"
+  }
+ ],
+ "overlaps": [
+  "verifiable-intent",
+  "mastercard-agent-pay",
+  "visa-tap",
+  "ap2"
+ ],
+ "seams": [
+  "S4"
+ ],
+ "verified": "2026-10-03",
+ "evidence": {
+  "read": "FIDO release of 2026-04-28 and blog of 2026-05-26 in full, 2026-10-03; AP2 CONTRIBUTING.md and docs/index.md.",
+  "not_read": "Working group charters, membership, specification text.",
+  "not_found": "Not found in pages read, 2026-10-03: AAIF coordination; Visa TAP among contributions."
+ },
+ "url": "https://frmoretto.github.io/agentic-standards-map/entries/fido-agentic-standards.html",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/8b8aca2cdd5768f0d04db57ce8e14b33221ac562/entries/fido-agentic-standards.yaml",
+ "licence": "https://creativecommons.org/licenses/by/4.0/"
+}

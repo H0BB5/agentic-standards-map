@@ -1,0 +1,36 @@
+{
+ "id": "w3c-web-payment-security-ig",
+ "name": "W3C Web Payment Security Interest Group",
+ "org": "W3C",
+ "kind": "venue",
+ "tier": "context",
+ "status": "Chartered 2025-04-01 to 2027-03-31 (shortname securepay); the draft Agentic Web charter lists the IG for \"agentic payments\".",
+ "status_as_of": "2026-10-03",
+ "relevance": "Mission: \"enhance the security and interoperability of various Web payments technologies\"; a W3C staff member expected the e-commerce workshop to identify future workstreams for this group (webai-roadmap#45, 2026-06-11).",
+ "sources": [
+  {
+   "url": "https://www.w3.org/securepay/charter-2025.html",
+   "read": "2026-10-02",
+   "class": "normative"
+  },
+  {
+   "url": "https://github.com/w3c/webai-roadmap/issues/45",
+   "read": "2026-10-03",
+   "class": "statement"
+  }
+ ],
+ "overlaps": [
+  "w3c-agenticweb-wg",
+  "w3c-gs1-ecommerce-workshop",
+  "kyapay"
+ ],
+ "verified": "2026-10-03",
+ "evidence": {
+  "read": "Charter and group page read on 2026-10-02; webai-roadmap and ai-web-impact items read on 2026-10-03.",
+  "not_read": "Member-only mailing list, wiki sub-pages, TPAC 2025 and 2026 minutes of the IG; w3c/wpsig is empty in the files read.",
+  "not_found": "Not found in the charter text, 2026-10-02: agent."
+ },
+ "url": "https://frmoretto.github.io/agentic-standards-map/entries/w3c-web-payment-security-ig.html",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/8b8aca2cdd5768f0d04db57ce8e14b33221ac562/entries/w3c-web-payment-security-ig.yaml",
+ "licence": "https://creativecommons.org/licenses/by/4.0/"
+}

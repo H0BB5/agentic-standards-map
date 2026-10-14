@@ -1,0 +1,43 @@
+{
+ "id": "cen-clc-jtc24-dpp",
+ "name": "CEN/CENELEC JTC 24 Digital Product Passport standards (EN 18216 to EN 18246)",
+ "org": "Industry",
+ "kind": "specification",
+ "tier": "core",
+ "status": "Eight horizontal standards; six cited in the Official Journal of the EU according to the CEN-CENELEC page of 2026-07-15 (page re-read on 2026-10-13, unchanged); the two not cited are EN 18239 and EN 18246, and their status is not read. The Official Journal itself was not read: EUR-Lex answered HTTP 202 without content on 2026-10-13.",
+ "status_as_of": "2026-10-13",
+ "relevance": "The eight standards cover data exchange protocols (EN 18216), unique identifiers (EN 18219), data carriers (EN 18220), data storage (EN 18221), APIs for lifecycle management and searchability (EN 18222), system interoperability (EN 18223), access rights and security (EN 18239) and data authentication and integrity (EN 18246). Two concern how a product is addressed and found: \"unique identifiers\" (EN 18219) and \"searchability\" (EN 18222).",
+ "committed_next": [
+  {
+   "what": "additional standards by product-specific Technical Committees under the 5-year ESPR work plan 2025-2030",
+   "when": "undated",
+   "source": "https://www.cencenelec.eu/news-events/news/2026/en-in-the-spotlight/2026-07-15-dpp/",
+   "class": "statement"
+  }
+ ],
+ "boundary": "Horizontal standards only; product-specific requirements are left to product-specific Technical Committees.",
+ "sources": [
+  {
+   "url": "https://www.cencenelec.eu/news-events/news/2026/en-in-the-spotlight/2026-07-15-dpp/",
+   "read": "2026-10-02",
+   "class": "statement"
+  },
+  {
+   "url": "https://ref.gs1.org/docs/2026/GS1-and-SDOs",
+   "read": "2026-10-02",
+   "class": "statement"
+  }
+ ],
+ "overlaps": [
+  "gs1-conformant-resolver",
+  "untp-identity-resolver"
+ ],
+ "verified": "2026-10-13",
+ "evidence": {
+  "read": "The CEN-CENELEC news page of 2026-07-15 (read 2026-10-02 and 2026-10-13) and the GS1 document on standards development organisations, read 2026-10-02.",
+  "not_read": "The standard texts (paid): whether EN 18219 refers to ISO/IEC 15459 or 18975, and the status of EN 18239 and EN 18246."
+ },
+ "url": "https://frmoretto.github.io/agentic-standards-map/entries/cen-clc-jtc24-dpp.html",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/8b8aca2cdd5768f0d04db57ce8e14b33221ac562/entries/cen-clc-jtc24-dpp.yaml",
+ "licence": "https://creativecommons.org/licenses/by/4.0/"
+}

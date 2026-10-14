@@ -1,0 +1,47 @@
+{
+ "id": "w3c-agent-identity-registry-cg",
+ "name": "W3C Agent Identity Registry Protocol Community Group",
+ "org": "W3C",
+ "kind": "venue",
+ "tier": "context",
+ "status": "Community group created 2026-04-24; calls every two weeks on Tuesdays at 15:00 UTC; the call of 2026-10-06 had an agenda on the list (message of 2026-10-01) and minutes of 22 September were posted on 2026-10-01; minutes of the call of 2026-10-06 and a later call: not found in the October 2026 list archive (4 messages, the last of 2026-10-02), read 2026-10-13. The W3C group data list one chair.",
+ "status_as_of": "2026-10-13",
+ "relevance": "Develops specifications to verify an agent's identity, controlling entity and authorization scope; the chair wrote on 2026-08-26 \"We'll keep this group focused on the registry and credential layer for now\".",
+ "sources": [
+  {
+   "url": "https://api.w3.org/groups/cg/agent-identity",
+   "read": "2026-10-02",
+   "class": "statement"
+  },
+  {
+   "url": "https://lists.w3.org/Archives/Public/public-agent-identity/2026Sep/0017.html",
+   "read": "2026-10-03",
+   "class": "statement"
+  },
+  {
+   "url": "https://lists.w3.org/Archives/Public/public-agent-identity/2026Oct/",
+   "read": "2026-10-13",
+   "class": "statement"
+  },
+  {
+   "url": "https://lists.w3.org/Archives/Public/public-agent-identity/2026Aug/0008.html",
+   "read": "2026-10-03",
+   "class": "statement"
+  }
+ ],
+ "overlaps": [
+  "w3c-agenticweb-wg",
+  "ietf-webbotauth",
+  "kyapay",
+  "dif-trusted-ai-agents"
+ ],
+ "verified": "2026-10-13",
+ "evidence": {
+  "read": "On 2026-10-13: the October 2026 index of public-agent-identity (4 messages, subjects and dates) and the chairs listed on the W3C group data. public-agent-identity (August to October 2026) read on 2026-10-03 without quoted replies.",
+  "not_read": "Group description in full, repository w3c-cg/agent-identity, minutes, cross-posted documents.",
+  "not_found": "Not found in those messages: agenticweb, webbotauth, kyapay, dif."
+ },
+ "url": "https://frmoretto.github.io/agentic-standards-map/entries/w3c-agent-identity-registry-cg.html",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/8b8aca2cdd5768f0d04db57ce8e14b33221ac562/entries/w3c-agent-identity-registry-cg.yaml",
+ "licence": "https://creativecommons.org/licenses/by/4.0/"
+}

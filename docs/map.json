@@ -2,7 +2,7 @@
  "schema": "v2",
  "schema_description": "entries/_schema.md",
  "generated": "2026-10-14",
- "source_commit": "515d6f4591440ae3a58692ffb68a75b7142b229c",
+ "source_commit": "8b8aca2cdd5768f0d04db57ce8e14b33221ac562",
  "licence": "https://creativecommons.org/licenses/by/4.0/",
  "entries": [
   {
@@ -57,8 +57,7 @@
    "evidence": {
     "read": "On 2026-10-13: the release list (latest v1.0.1, 2026-05-28),. On 2026-10-03: a2a.proto, docs/specification.md, GOVERNANCE.md, the release list.",
     "not_read": "TSC minutes and recordings, specification chapters beyond the definitions, the project's later announcements."
-   },
-   "_file": "a2a-core.yaml"
+   }
   },
   {
    "id": "a2a-discovery",
@@ -140,8 +139,7 @@
      "state": "open",
      "url": "https://github.com/a2aproject/A2A/issues/2248"
     }
-   ],
-   "_file": "a2a-discovery.yaml"
+   ]
   },
   {
    "id": "aaif-identity-trust",
@@ -305,8 +303,7 @@
     "read": "On 2026-10-13: the state, comments, commits and reviews of issue #13, issue #287 and pull request #288, the Proofable comments of 2026-10-09, the frozen packet 9851059 (eight files, SHA256SUMS recomputed), and the Reference Architecture working draft in full.",
     "not_read": "The mailing list archive pages (they require JavaScript, and its published rules ask for a licence for automated AI access; only six messages supplied by the author were used), the TRACE specification text under spec/, the source of any repository (no code was executed), the full Parmana repository.",
     "not_found": "Not found, 2026-10-09: a merge of pull request #288 (also not found on 2026-10-13); a release object or release notes for the MintID tags."
-   },
-   "_file": "aaif-identity-trust.yaml"
+   }
   },
   {
    "id": "aaif-structure",
@@ -375,8 +372,7 @@
     "read": "On 2026-10-13: the file listing, the commits to 2026-10-12, the releases and the issue and pull request list of ws-taxonomy-landscape, the portal page at aaif.github.io/ws-taxonomy-landscape, and the README (last changed 2026-09-16, unchanged on the Landscape sentence).",
     "not_read": "Discord, mailing lists, recordings, Google Documents.",
     "not_found": "Not found in the proposals repositories, 2026-10-03: AI Catalog, ARD, DAWN, UCP, Verifiable Intent."
-   },
-   "_file": "aaif-structure.yaml"
+   }
   },
   {
    "id": "aaif-wg-agentic-commerce",
@@ -462,8 +458,7 @@
      "state": "open",
      "url": "https://github.com/aaif/wg-agentic-commerce/issues/8"
     }
-   ],
-   "_file": "aaif-wg-agentic-commerce.yaml"
+   ]
   },
   {
    "id": "acp",
@@ -558,8 +553,7 @@
     "record": "receipt_url, \"URL to the order receipt\"; signed receipt: not found in specification and RFC files, 2026-10-03",
     "dispute": "\"dispute\" is a post-order adjustment type (unreleased schema); dispute process: not found in specification, RFC files, 2026-10-03",
     "source": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/main/README.md"
-   },
-   "_file": "acp.yaml"
+   }
   },
   {
    "id": "ap2",
@@ -679,8 +673,7 @@
      "state": "open",
      "url": "https://github.com/google-agentic-commerce/AP2/issues/374"
     }
-   ],
-   "_file": "ap2.yaml"
+   ]
   },
   {
    "id": "ard",
@@ -803,8 +796,7 @@
      "state": "closed",
      "url": "https://github.com/ards-project/ard-spec/issues/43"
     }
-   ],
-   "_file": "ard.yaml"
+   ]
   },
   {
    "id": "browsers-webmcp",
@@ -874,8 +866,7 @@
    "evidence": {
     "read": "On 2026-10-13: the Chrome and Edge pages and the issues of WebKit and Mozilla, whose quoted sentences (the Chrome description, the Edge sentence \"is ready for testing\", and the WebKit and Mozilla statements) were found again in the current texts; the state and labels of both issues (closed 2026-06-11 \"position: oppose\" and closed 2026-08-05 \"position: neutral\", unchanged).",
     "not_read": "Safari or Apple pages outside the issue, Chrome Status, other Mozilla pages, other vendors, implementation documentation."
-   },
-   "_file": "browsers-webmcp.yaml"
+   }
   },
   {
    "id": "cen-clc-jtc24-dpp",
@@ -915,8 +906,7 @@
    "evidence": {
     "read": "The CEN-CENELEC news page of 2026-07-15 (read 2026-10-02 and 2026-10-13) and the GS1 document on standards development organisations, read 2026-10-02.",
     "not_read": "The standard texts (paid): whether EN 18219 refers to ISO/IEC 15459 or 18975, and the status of EN 18239 and EN 18246."
-   },
-   "_file": "cen-clc-jtc24-dpp.yaml"
+   }
   },
   {
    "id": "dif-trusted-ai-agents",
@@ -948,8 +938,7 @@
     "read": "On 2026-10-13: the working group page (the Delegated Authority and KYA-OS task forces listed, with a meeting schedule; the blog post was not read again).",
     "not_read": "Overlaps are inferred from topic.",
     "not_found": "Not found in the working group page, 2026-10-02: discovery, commerce, merchants, products, catalogs."
-   },
-   "_file": "dif-trusted-ai-agents.yaml"
+   }
   },
   {
    "id": "emilia-protocol",
@@ -1000,8 +989,7 @@
     "read": "The texts of the architecture draft -03 and the boundary draft -07, the README and the repository metadata, and the comments of AAIF issue #13, read 2026-10-08.",
     "not_read": "The CAID and EP-AEC drafts, the other drafts of the same author, the code of the repository beyond the README.",
     "not_found": "Not found, 2026-10-08: EMILIA in the comments of AAIF issue #13 (7 comments)."
-   },
-   "_file": "emilia-protocol.yaml"
+   }
   },
   {
    "id": "emvco-agentic-payments-framework",
@@ -1062,8 +1050,7 @@
     "record": "Intent Services register, reference, retrieve and manage consumer-authorised intent (press release); draft not read",
     "dispute": "not found in the press release and Insights article, 2026-10-02 (draft not read)",
     "source": "https://www.emvco.com/news/emvco-requests-feedback-on-framework-for-secure-interoperable-and-scalable-card-based-agentic-payments/"
-   },
-   "_file": "emvco-agentic-payments-framework.yaml"
+   }
   },
   {
    "id": "fido-agentic-standards",
@@ -1100,8 +1087,7 @@
     "read": "FIDO release of 2026-04-28 and blog of 2026-05-26 in full, 2026-10-03; AP2 CONTRIBUTING.md and docs/index.md.",
     "not_read": "Working group charters, membership, specification text.",
     "not_found": "Not found in pages read, 2026-10-03: AAIF coordination; Visa TAP among contributions."
-   },
-   "_file": "fido-agentic-standards.yaml"
+   }
   },
   {
    "id": "gs1-conformant-resolver",
@@ -1143,8 +1129,7 @@
    "evidence": {
     "read": "Standards page, PDF (text extracted) and archive page of the Resolver, in full, 2026-10-03; for dates also the URI Syntax standard page and archive.",
     "not_read": "The www.gs1.org standards page."
-   },
-   "_file": "gs1-conformant-resolver.yaml"
+   }
   },
   {
    "id": "gs1-digital-link",
@@ -1177,8 +1162,7 @@
    "evidence": {
     "read": "The URI Syntax standard page and its archive on ref.gs1.org, read 2026-10-03 and again 2026-10-13 (\"Release 1.7.0, Ratified Aug 2026\"; archive: \"Published 7 August 2026\").",
     "not_read": "The www.gs1.org standards page."
-   },
-   "_file": "gs1-digital-link.yaml"
+   }
   },
   {
    "id": "ieee-p3931-addr",
@@ -1212,8 +1196,7 @@
     "read": "On 2026-10-13: the active PARs page (P3931 listed as Draft Development; the PAR text adds that identity frameworks, trust scoring systems, collaborative governance policies and domain-specific business semantics are beyond its scope).",
     "not_read": "Working group membership and chair; whether the work references DAWN or ARD.",
     "not_found": "Not found in the PAR scope text, 2026-10-02: commerce, merchant, product."
-   },
-   "_file": "ieee-p3931-addr.yaml"
+   }
   },
   {
    "id": "ietf-agentproto",
@@ -1375,8 +1358,7 @@
      "state": "closed",
      "url": "https://mailarchive.ietf.org/arch/msg/agentproto/myfwr_eF4abrR6Ayfff7cAYI0X0"
     }
-   ],
-   "_file": "ietf-agentproto.yaml"
+   ]
   },
   {
    "id": "ietf-aipref",
@@ -1443,8 +1425,7 @@
      "state": "open",
      "url": "https://mailarchive.ietf.org/arch/msg/ai-control/p9kpjIxFOia7MTYnQnDVrIZH8aw"
     }
-   ],
-   "_file": "ietf-aipref.yaml"
+   ]
   },
   {
    "id": "ietf-audit",
@@ -1622,8 +1603,7 @@
      "state": "open",
      "url": "https://github.com/mirjak/audit-bof-preparation/pull/61"
     }
-   ],
-   "_file": "ietf-audit.yaml"
+   ]
   },
   {
    "id": "ietf-dawn",
@@ -1790,8 +1770,7 @@
      "state": "open",
      "url": "https://mailarchive.ietf.org/arch/msg/dawn/fsJ8oAdR8rpNPhCj6LP9sspbxBA"
     }
-   ],
-   "_file": "ietf-dawn.yaml"
+   ]
   },
   {
    "id": "ietf-dnsaid",
@@ -1862,8 +1841,7 @@
     "read": "On 2026-10-13 also: the datatracker records (revision number and revision date) of the four related drafts, and the three messages of the archive of dns-underscore-keys.",
     "not_read": "A DNS-AID thread under another subject on dnsop; the texts of the four related drafts.",
     "not_found": "Adoption call, objection or dated promise for the draft: not found in the lists read, 2026-10-03."
-   },
-   "_file": "ietf-dnsaid.yaml"
+   }
   },
   {
    "id": "ietf-httpauth-payment",
@@ -1894,8 +1872,7 @@
     "read": "On 2026-10-13: the datatracker record.",
     "not_read": "Full -01 text, payment method and intent specifications on mpp.dev, SDK licensing, IETF list discussion, Tempo and Stripe pages.",
     "not_found": "Not found, 2026-10-03, in -01: agent protocol, card network, AP2, x402, Verifiable Intent; in the eight lists: the draft name."
-   },
-   "_file": "ietf-httpauth-payment.yaml"
+   }
   },
   {
    "id": "ietf-individual-seller-drafts",
@@ -1941,8 +1918,7 @@
     "read": "On 2026-10-13: the datatracker records of the three drafts (anders -01 of 2026-07-04, kavian -01 of 2026-09-04, hood -02 of 2026-05-26; no later revision) and the text of hood -02.",
     "not_read": "Full texts of the anders and kavian drafts, authors' next steps, WG agendas, whether the kavian draft names UCP, ACP or GS1.",
     "not_found": "Not found in the DAWN list (2026-08-01 to 2026-10-02) and dnsop list text, 2026-10-03: names of the three drafts."
-   },
-   "_file": "ietf-individual-seller-drafts.yaml"
+   }
   },
   {
    "id": "ietf-vcon",
@@ -2096,8 +2072,7 @@
      "state": "open",
      "url": "https://mailarchive.ietf.org/arch/msg/vcon/pSs7uBFPNQI5ZWd0h3zM60F5E0Q/"
     }
-   ],
-   "_file": "ietf-vcon.yaml"
+   ]
   },
   {
    "id": "ietf-webbotauth",
@@ -2268,8 +2243,7 @@
     "read": "WG charter and documents pages, read in full 2026-10-02; web-bot-auth list messages, 2026-08-01 to 2026-09-21, read 2026-10-03; the 11 messages of 2026-10-04 to 2026-10-08, read 2026-10-08; on 2026-10-13 the datatracker pages of the WG documents, of draft-ietf-webbotauth-httpsig-protocol and of draft-illyes-webbotauth-cbcp, the subjects and dates of the 26 latest list messages (2026-10-05 to 2026-10-13) and, in part, four messages of 2026-10-10 to 2026-10-13, and the state of cbcp PRs #19, #22 and #23; on 2026-10-09 the messages of the three threads below and the message of 2026-10-09 on Appendix C.1 (revocation and Cache-Control, signing on request, one Signature-Agent per purpose) and the announcement thread of the crawler best practices, read on mailarchive.ietf.org, and the repository garyillyes/cbcp at commit cc9942d with its pull requests #22 and #23.",
     "not_read": "The list messages of 2026-10-10 to 2026-10-13 beyond their subjects and the first lines of four of them, the list before 2026-08-01, issues of the draft repository.",
     "not_found": "Not found in datatracker and list (2026-08-01 to 2026-09-21): milestone completion, KYA, KYAPay, Mastercard Agent Pay."
-   },
-   "_file": "ietf-webbotauth.yaml"
+   }
   },
   {
    "id": "ietf-wimse-aims",
@@ -2297,8 +2271,7 @@
     "read": "On 2026-10-13: the datatracker record.",
     "not_read": "Issues of the draft repository; section numbers quoted by participants are from an earlier draft, not checked against -00.",
     "not_found": "Not found in the AIMS threads read, 2026-10-03: commerce or merchant text."
-   },
-   "_file": "ietf-wimse-aims.yaml"
+   }
   },
   {
    "id": "kyapay",
@@ -2373,8 +2346,7 @@
      "state": "open",
      "url": "https://github.com/w3c/tpac2026-breakouts/issues/39"
     }
-   ],
-   "_file": "kyapay.yaml"
+   ]
   },
   {
    "id": "lf-ai-catalog",
@@ -2515,8 +2487,7 @@
      "state": "open",
      "url": "https://github.com/Agent-Card/ai-catalog/pull/117"
     }
-   ],
-   "_file": "lf-ai-catalog.yaml"
+   ]
   },
   {
    "id": "mastercard-agent-pay",
@@ -2558,8 +2529,7 @@
    "evidence": {
     "read": "Framework page of 2025-10-14 in full (2026-10-02); FIDO release of 2026-04-28 (2026-10-03); Verifiable Intent README (2026-10-02).",
     "not_read": "Three Mastercard pages of 2026 (Agent Pay for Machines, trust and intelligence services, Verifiable Intent)."
-   },
-   "_file": "mastercard-agent-pay.yaml"
+   }
   },
   {
    "id": "mcp-core",
@@ -2595,8 +2565,7 @@
     "read": "On 2026-10-13: the list of releases and the specification directory of the repository; the blog post, the governance page and the versioning page were not re-read.",
     "not_read": "Full text of each specification chapter, the SEP process pages, licence texts beyond README and GOVERNANCE.md.",
     "not_found": "Not found on the governance and specification pages: foundation, AAIF, Linux."
-   },
-   "_file": "mcp-core.yaml"
+   }
   },
   {
    "id": "mcp-server-card",
@@ -2710,8 +2679,7 @@
      "state": "open",
      "url": "https://github.com/modelcontextprotocol/ext-server-card/issues/48"
     }
-   ],
-   "_file": "mcp-server-card.yaml"
+   ]
   },
   {
    "id": "oidf-authzen-agents",
@@ -2755,8 +2723,7 @@
     "read": "The announcement of the drafts (read 2026-10-02 and again 2026-10-13, \"Published June 15, 2026\") and the working groups page (2026-10-02); the arXiv version and the OpenID whitepaper page, 2026-10-06.",
     "not_read": "Authorization API 1.0 Final approval seen only in a search result.",
     "not_found": "Not found in the announcement, 2026-10-02: commerce, merchant, product. Counts in the text of the arXiv version, 2026-10-06: Web Bot Auth 8 times (one a reference, one an IETF proposal described as a \"passport for agents\"), Agent Payments Protocol (AP2) 3, commerce 2 and AuthZEN 1; not found, 2026-10-06: UCP, ACP, x402, TAP."
-   },
-   "_file": "oidf-authzen-agents.yaml"
+   }
   },
   {
    "id": "pact",
@@ -2806,8 +2773,7 @@
     "read": "On 2026-10-13: the specification page and the home page of openpactprotocol.org, the repository metadata (default branch, licence, creation date, latest commit), the LICENSE file header and the README of the repository, and the Decagon announcement of 2026-10-06.",
     "not_read": "The pages \"Build a personal agent integration\", \"Build a Provider\" and \"Run the reference stack\", the reference code and the conformance tests, the Instinct side of the announcement, any publication of a standards body on PACT.",
     "not_found": "Not found, 2026-10-13: a standards body, foundation or working group in the pages of the site read; consumer, durable medium, confirm, poppy.json and Web Bot Auth in the specification page."
-   },
-   "_file": "pact.yaml"
+   }
   },
   {
    "id": "pap",
@@ -2893,8 +2859,7 @@
     "read": "On 2026-10-13: the specification, the operations extension, the extensions page, the Path to 1.0 page, the home page and the licence page of personalagentprotocol.org (each marked \"Updated Oct 12, 2026\" where the page carries a date), the Sierra blog of 2026-10-09, the Decagon blog of 2026-10-06 and the IANA well-known URI registry XML. On 2026-10-08: the Sierra announcement of 2026-10-06 in full, one trade article on it and one on the Shopify and Meta agreement.",
     "not_read": "The sections of the specification beyond the discovery, agent identity and confirmation texts quoted, the PACT specification, any Meta publication on the protocol, the TechRepublic article on Meta's Muse (not retrievable on 2026-10-08), the Trustpilot item.",
     "not_found": "Not found, 2026-10-13: poppy.json in the IANA well-known URI registry XML; a standards body, foundation or working group in the pages of the site read (home, specification, extensions, operations, Path to 1.0, licence); UCP, A2A and Web Bot Auth in the same pages."
-   },
-   "_file": "pap.yaml"
+   }
   },
   {
    "id": "schemaorg-baseline",
@@ -2934,8 +2899,7 @@
    "evidence": {
     "read": "On 2026-10-13: schema.org/docs/releases.html (30.1 dated 2026-09-16, 30.0 dated 2026-03-19, nothing later) and the GitHub release list (v30.1 published 2026-09-15 and v30.0 published 2026-03-25, a different instrument from the page; no release after v30.1; last commit on main 2026-10-01).",
     "not_read": "Properties, expected types and examples on each term page, and the other terms of the vocabulary."
-   },
-   "_file": "schemaorg-baseline.yaml"
+   }
   },
   {
    "id": "schemaorg-open-agent-commerce-items",
@@ -3053,8 +3017,7 @@
      "state": "open",
      "url": "https://github.com/schemaorg/schemaorg/discussions/4699"
     }
-   ],
-   "_file": "schemaorg-open-agent-commerce-items.yaml"
+   ]
   },
   {
    "id": "shopify",
@@ -3151,8 +3114,7 @@
     "read": "Toolkit releases v2.0.0 to v2.1.1 and the two plugin files, a connector listing page, shopify.dev pages on Checkout WebMCP, the developer changelog of 2026-09-28 and the MCP developer page, npm registry metadata, issue #62, read 2026-10-08; on 2026-10-13: the list of toolkit releases (latest v2.1.1, 2026-10-08), the CHANGELOG and the folder skills/ucp at the tag v2.1.1, the npm registry entries of @shopify/dev-mcp (1.16.0) and @shopify/shopify-dev-tools (E404), and issue #62 (open, no comments).",
     "not_read": "The shopify.dev pages on Checkout WebMCP, the developer changelog of 2026-09-28 and the MCP developer page were not re-read on 2026-10-13 (last read 2026-10-08). help.shopify.com, any merchant-facing page on shopify.com, the telemetry code of the toolkit, the X post of the Shopify product manager on Checkout WebMCP; the compiled binary lib/shop.wasm and the .mjs files of Shop CLI, the server mcp.shop.com (no call made), the plugin files of Shop CLI.",
     "not_found": "Not found, 2026-10-08: setup.shopify.com in the shopify.dev pages read (the MCP developer page and the changelog index); a page of Shopify describing the merchant MCP. A connector listing on a third-party site names the same URL; it is listed among the sources only and is not used for any statement here. Not found in the README, SKILL.md and transactions.md of Shopify/shop at d1e8c7c (2026-10-13): beta, preview, experimental, a list of supported countries, and a confirmation sent to the shopper on a durable medium."
-   },
-   "_file": "shopify.yaml"
+   }
   },
   {
    "id": "trace",
@@ -3207,8 +3169,7 @@
    "evidence": {
     "read": "On 2026-10-13: the README of trace-spec (status paragraph), the repository metadata, the three latest commits, the release list and the file list of spec/, and the state, labels and description of aaif/project-proposals issue #42 (its comments were not read).",
     "not_read": "The rest of the specification (980 lines), the schema, the conformance suite, the roadmap and governance files, the limitations file."
-   },
-   "_file": "trace.yaml"
+   }
   },
   {
    "id": "ucp",
@@ -3652,8 +3613,7 @@
     "record": "Order entity, \"the authoritative latest state of the order at the time of retrieval or delivery\"",
     "dispute": "not found in the UCP pages read on main (2026-10-03); draft PR #890 only (author commented; see Disclosure)",
     "source": "https://github.com/Universal-Commerce-Protocol/ucp/blob/f2206e680f64fe2cc73495acc3557569afd9097a/docs/specification/payment/extensions/ap2-mandates.md"
-   },
-   "_file": "ucp.yaml"
+   }
   },
   {
    "id": "un-gtr-urn",
@@ -3687,8 +3647,7 @@
     "read": "On 2026-10-13: the IANA URN namespaces registry XML (updated 2026-10-12): no value gtr and no occurrence of the token.",
     "not_read": "Drafts under other names not excluded.",
     "not_found": "Not found in the IANA XML, GRID site or Internet-Draft search, 2026-10-02: an operational register."
-   },
-   "_file": "un-gtr-urn.yaml"
+   }
   },
   {
    "id": "untp-identity-resolver",
@@ -3737,8 +3696,7 @@
     "read": "On 2026-10-13: the versions page of untp.unece.org (0.7.0 still the only stable release listed; the GitLab tag list was not queried again).",
     "not_read": "The response diagram of the Resolver Workflow (an image).",
     "not_found": "Not found in the prose of either specification page, 2026-10-02: any mention of 404."
-   },
-   "_file": "untp-identity-resolver.yaml"
+   }
   },
   {
    "id": "verifiable-intent",
@@ -3835,8 +3793,7 @@
     "record": "Tamper-evident record of what the user delegated (README); receipt object: not found in README, design rationale, 2026-10-02",
     "dispute": "Dispute resolution is declared out of scope in the README",
     "source": "https://github.com/agent-intent/verifiable-intent/blob/main/README.md"
-   },
-   "_file": "verifiable-intent.yaml"
+   }
   },
   {
    "id": "visa-tap",
@@ -3899,8 +3856,7 @@
     "record": "not found in the merchant specification page and sample README, searched for receipt and audit, 2026-10-03",
     "dispute": "not found in the merchant specification page and sample README, searched for dispute, chargeback, liability, 2026-10-03",
     "source": "https://developer.visa.com/capabilities/trusted-agent-protocol/trusted-agent-protocol-specifications"
-   },
-   "_file": "visa-tap.yaml"
+   }
   },
   {
    "id": "w3c-agent-identity-registry-cg",
@@ -3944,8 +3900,7 @@
     "read": "On 2026-10-13: the October 2026 index of public-agent-identity (4 messages, subjects and dates) and the chairs listed on the W3C group data. public-agent-identity (August to October 2026) read on 2026-10-03 without quoted replies.",
     "not_read": "Group description in full, repository w3c-cg/agent-identity, minutes, cross-posted documents.",
     "not_found": "Not found in those messages: agenticweb, webbotauth, kyapay, dif."
-   },
-   "_file": "w3c-agent-identity-registry-cg.yaml"
+   }
   },
   {
    "id": "w3c-agent-ready-video-cg",
@@ -3968,8 +3923,7 @@
     "read": "On 2026-10-13: the chairs listed on the W3C group data and the October 2026 index of the group's list.",
     "not_read": "The list of the group, created on 2026-10-01.",
     "not_found": "Not found on 2026-10-03 in w3c/strategy, w3c/charter-drafts or WebKit/standards-positions (from 2026-01-01): Agent-Ready Video, ARV."
-   },
-   "_file": "w3c-agent-ready-video-cg.yaml"
+   }
   },
   {
    "id": "w3c-agent-to-web-framework-cg",
@@ -4001,8 +3955,7 @@
     "read": "On 2026-10-13: the chairs listed on the W3C group data and the October 2026 index of public-a2wf (404).",
     "not_read": "Relation to the exclusion of \"Agent to Server communications\" in the draft Agentic Web charter.",
     "not_found": "Not found on 2026-10-03: a deliverable, repository, charter or meeting of the group."
-   },
-   "_file": "w3c-agent-to-web-framework-cg.yaml"
+   }
   },
   {
    "id": "w3c-agenticweb-wg",
@@ -4063,8 +4016,7 @@
    "evidence": {
     "read": "On 2026-10-13: the commit history of the charter file, PRs #829 and #888 with their reviews, and the Strategy issue #576.",
     "not_read": "Charter HTML in the 2026-10-03 files, list archives, meeting minutes, TPAC breakout slots."
-   },
-   "_file": "w3c-agenticweb-wg.yaml"
+   }
   },
   {
    "id": "w3c-ai-agent-protocol-cg",
@@ -4139,8 +4091,7 @@
    "evidence": {
     "read": "On 2026-10-13: the October 2026 index of public-agentprotocol (5 messages, subjects and dates) and the chairs listed on the W3C group data.",
     "not_read": "Meeting minutes (2026-09-09, 2026-09-23), attachments, Google Docs and slides."
-   },
-   "_file": "w3c-ai-agent-protocol-cg.yaml"
+   }
   },
   {
    "id": "w3c-browser-testing-tools-wg",
@@ -4165,8 +4116,7 @@
    "evidence": {
     "read": "The description and metadata of pull request #882, read 2026-10-08.",
     "not_read": "The charter text, the issue it refers to in webdriver-bidi, the current charter of the group."
-   },
-   "_file": "w3c-browser-testing-tools-wg.yaml"
+   }
   },
   {
    "id": "w3c-did-methods-wg",
@@ -4208,8 +4158,7 @@
     "read": "Charter read in full on 2026-10-02; announcement of 2026-09-30 read on 2026-10-03 and again on 2026-10-13, with the announcements of 2026-08-10 (start of refinement of the DID WG maintenance charter) and 2026-10-07 (proposed DID WG charter sent to the Advisory Committee).",
     "not_read": "The public-review-comments list.",
     "not_found": "Not found in the charter text, 2026-10-02: agent, AI, commerce, merchant, payment, delegat (word stem)."
-   },
-   "_file": "w3c-did-methods-wg.yaml"
+   }
   },
   {
    "id": "w3c-did-resolution",
@@ -4346,8 +4295,7 @@
    "evidence": {
     "read": "On 2026-10-13: the minutes of the DID WG call of 2026-10-08 (w3.org/2026/10/08-did-minutes.html, read in the sections on PR #344 and the poll).",
     "not_read": "Minutes pages at w3.org other than that of 2026-10-08, Google Docs with the votes and slides of PR #344, the DID WG maintenance charter; the merged text of the specification and its at-risk markings; the repository role of the account that merged the PR."
-   },
-   "_file": "w3c-did-resolution.yaml"
+   }
   },
   {
    "id": "w3c-did-wg",
@@ -4384,8 +4332,7 @@
     "read": "The proposed charter page in full and the announcement of 2026-10-07, read 2026-10-08.",
     "not_read": "The charter's GitHub history and issues, the public-review-comments archive, the current charter of the group.",
     "not_found": "Not found, 2026-10-08: agent, payment, product, commerce."
-   },
-   "_file": "w3c-did-wg.yaml"
+   }
   },
   {
    "id": "w3c-digital-policy-wg",
@@ -4413,8 +4360,7 @@
     "read": "Charter read in full as published HTML on 2026-10-02; refinement announcement and breakout #17 read on 2026-10-03.",
     "not_read": "GitHub source of the charter in w3c/odrl; ODRL lists and repositories.",
     "not_found": "Not found in the charter text, 2026-10-02: agent, commerce, merchant, product."
-   },
-   "_file": "w3c-digital-policy-wg.yaml"
+   }
   },
   {
    "id": "w3c-gs1-ecommerce-workshop",
@@ -4473,8 +4419,7 @@
    "evidence": {
     "read": "On 2026-10-13: the file listing and the latest commits of the workshop repository and breakout issue #34.",
     "not_read": "The other slide files (PRs #57 to #85) and the position-statement PDFs in position_statement/ (Fabacus, KYA-OS, P&G); report and agenda pages, pre-recordings."
-   },
-   "_file": "w3c-gs1-ecommerce-workshop.yaml"
+   }
   },
   {
    "id": "w3c-tpac-2026",
@@ -4542,8 +4487,7 @@
    "evidence": {
     "read": "Issues of w3c/tpac2026-breakouts and items of w3c/tpac2026-miniworkshops; README of tpac2026-breakouts (last commit 2026-09-30); event and news pages, read on 2026-10-03.",
     "not_read": "Dates of the mini-workshops (not stated in the items read), breakout schedule, TPAC calendar page."
-   },
-   "_file": "w3c-tpac-2026.yaml"
+   }
   },
   {
    "id": "w3c-web-payment-security-ig",
@@ -4576,8 +4520,7 @@
     "read": "Charter and group page read on 2026-10-02; webai-roadmap and ai-web-impact items read on 2026-10-03.",
     "not_read": "Member-only mailing list, wiki sub-pages, TPAC 2025 and 2026 minutes of the IG; w3c/wpsig is empty in the files read.",
     "not_found": "Not found in the charter text, 2026-10-02: agent."
-   },
-   "_file": "w3c-web-payment-security-ig.yaml"
+   }
   },
   {
    "id": "w3c-webmcp-cg-report",
@@ -4632,8 +4575,7 @@
      "state": "closed",
      "url": "https://github.com/WebKit/standards-positions/issues/670#issuecomment-4729132384"
     }
-   ],
-   "_file": "w3c-webmcp-cg-report.yaml"
+   ]
   },
   {
    "id": "x402",
@@ -4749,8 +4691,7 @@
     "record": "Signed receipt (offer-and-receipt), declared use \"dispute evidence and auditability\"; wire shape not stable",
     "dispute": "\"irreversible once executed\" (exact scheme, FAQ); auth-capture: void, refund, reclaim; dispute process: not found, 2026-10-03",
     "source": "https://github.com/x402-foundation/x402/blob/main/specs/extensions/extension-offer-and-receipt.md"
-   },
-   "_file": "x402.yaml"
+   }
   }
  ],
  "graph": {

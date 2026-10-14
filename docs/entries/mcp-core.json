@@ -1,0 +1,39 @@
+{
+ "id": "mcp-core",
+ "name": "Model Context Protocol (MCP), core specification",
+ "org": "Linux Foundation",
+ "kind": "specification",
+ "tier": "context",
+ "status": "Specification version 2026-07-28 (the latest release is 2026-07-28; the specification directory holds 2025-03-26, 2025-06-18, 2025-11-25, 2026-07-28 and a draft; no later release, read 2026-10-13); the blog post of 2025-12-09 says \"Anthropic is donating MCP to the Agentic AI Foundation\".",
+ "status_as_of": "2026-10-13",
+ "relevance": "The specification describes MCP as \"an open protocol that enables seamless integration between LLM applications and external data sources and tools\"; discovery is in mcp-server-card and lf-ai-catalog.",
+ "sources": [
+  {
+   "url": "https://modelcontextprotocol.io/specification/latest",
+   "read": "2026-10-03",
+   "class": "normative"
+  },
+  {
+   "url": "https://blog.modelcontextprotocol.io/posts/2025-12-09-mcp-joins-agentic-ai-foundation/",
+   "read": "2026-10-03",
+   "class": "decision"
+  }
+ ],
+ "overlaps": [
+  "mcp-server-card",
+  "lf-ai-catalog",
+  "a2a-core"
+ ],
+ "seams": [
+  "S1"
+ ],
+ "verified": "2026-10-13",
+ "evidence": {
+  "read": "On 2026-10-13: the list of releases and the specification directory of the repository; the blog post, the governance page and the versioning page were not re-read.",
+  "not_read": "Full text of each specification chapter, the SEP process pages, licence texts beyond README and GOVERNANCE.md.",
+  "not_found": "Not found on the governance and specification pages: foundation, AAIF, Linux."
+ },
+ "url": "https://frmoretto.github.io/agentic-standards-map/entries/mcp-core.html",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/8b8aca2cdd5768f0d04db57ce8e14b33221ac562/entries/mcp-core.yaml",
+ "licence": "https://creativecommons.org/licenses/by/4.0/"
+}

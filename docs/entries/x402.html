@@ -7,6 +7,7 @@
 <meta name="description" content="Open payment protocol under the x402 Foundation (Linux Foundation): intent announced 2026-04-02; operational launch and completed contribution by Coinbase…">
 <link rel="canonical" href="https://frmoretto.github.io/agentic-standards-map/entries/x402.html">
 <link rel="stylesheet" href="../style.css">
+<link rel="alternate" type="application/json" href="x402.json">
 <script type="application/ld+json">{
  "@context": "https://schema.org",
  "@type": "WebPage",
@@ -16,11 +17,46 @@
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/x402.html",
  "isPartOf": {
   "@id": "https://frmoretto.github.io/agentic-standards-map/#dataset"
- }
+ },
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "about": {
+  "@type": "Thing",
+  "name": "x402"
+ },
+ "citation": [
+  {
+   "@type": "CreativeWork",
+   "url": "https://www.linuxfoundation.org/press/linux-foundation-is-launching-the-x402-foundation-and-welcoming-the-contribution-of-the-x402-protocol"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://www.linuxfoundation.org/press/linux-foundation-announces-operational-launch-of-x402-foundation-to-standardize-internet-native-payments-for-ai-agents-and-applications"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://github.com/x402-foundation/x402/blob/main/TSC.md"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://github.com/x402-foundation/x402/blob/main/specs/extensions/extension-offer-and-receipt.md"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://github.com/x402-foundation/x402/pull/3789"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://github.com/x402-foundation/x402/blob/main/python/legacy/README.md"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://github.com/x402-foundation/x402/blob/main/docs/faq.md"
+  }
+ ]
 }</script>
 </head>
 <body>
-<header class="site"><a href="../index.html">Map</a><a href="../graph.html">Graph</a><a href="../seams.html">Seams</a><a href="../calendar.html">Calendar</a><a href="../intro.html">Introduction</a><a href="../disclosure.html">Disclosure</a><a href="../method.html">Method</a></header>
+<header class="site"><a href="../index.html">Map</a><a href="../graph.html">Graph</a><a href="../seams.html">Seams</a><a href="../calendar.html">Calendar</a><a href="../intro.html">Introduction</a><a href="../disclosure.html">Disclosure</a><a href="../method.html">Method</a><a href="../data.html">For agents and tools</a></header>
 <main>
 <h1>x402</h1>
 <p class="chips"><span>Linux Foundation</span><span>specification</span><span>core entry</span></p>
@@ -81,6 +117,6 @@
 </tbody></table></div>
 <h2>Payment comparison row</h2><dl class="fields"><dt>Owner / governance</dt><dd>x402 Foundation (Linux Foundation); intent 2026-04-02, operational launch 2026-07-14; TSC.md lists Coinbase, Cloudflare, Stripe</dd><dt>Version and state</dt><dd>v1 SDK packages marked "Deprecated (v1)"; offer-and-receipt: "Wire shape and field placement are not considered stable"</dd><dt>What it signs</dt><dd>Payer signs the payment (PAYMENT-SIGNATURE); with offer-and-receipt the server commits to the offer terms and signs a receipt</dd><dt>Who signs</dt><dd>The client for the payment; the server for offer and receipt</dd><dt>Receipt or record</dt><dd>Signed receipt (offer-and-receipt), declared use "dispute evidence and auditability"; wire shape not stable</dd><dt>Dispute</dt><dd>"irreversible once executed" (exact scheme, FAQ); auth-capture: void, refund, reclaim; dispute process: not found, 2026-10-03</dd><dt>Source</dt><dd><a href="https://github.com/x402-foundation/x402/blob/main/specs/extensions/extension-offer-and-receipt.md" rel="noopener">https://github.com/x402-foundation/x402/blob/main/specs/extensions/extension-offer-and-receipt.md</a></dd></dl>
 </main>
-<footer class="site">Agentic standards map. Generated on 2026-10-14 from commit <a href="https://github.com/frmoretto/agentic-standards-map/commit/515d6f4591440ae3a58692ffb68a75b7142b229c" rel="noopener">515d6f4</a>; content under CC BY 4.0. Generated from the data of the map, never edited by hand. No tracking, no scripts.</footer>
+<footer class="site">Agentic standards map. Generated on 2026-10-14 from commit <a href="https://github.com/frmoretto/agentic-standards-map/commit/8b8aca2cdd5768f0d04db57ce8e14b33221ac562" rel="noopener">8b8aca2</a>; content under CC BY 4.0. Generated from the data of the map, never edited by hand. No tracking, no scripts.</footer>
 </body>
 </html>

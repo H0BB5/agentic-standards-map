@@ -7,6 +7,7 @@
 <meta name="description" content="Open protocol in the GitHub organisation google-agentic-commerce (Apache-2.0); latest release v0.2.0 of 2026-04-28, which &quot;focuses on providing Human Not…">
 <link rel="canonical" href="https://frmoretto.github.io/agentic-standards-map/entries/ap2.html">
 <link rel="stylesheet" href="../style.css">
+<link rel="alternate" type="application/json" href="ap2.json">
 <script type="application/ld+json">{
  "@context": "https://schema.org",
  "@type": "WebPage",
@@ -16,11 +17,62 @@
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/ap2.html",
  "isPartOf": {
   "@id": "https://frmoretto.github.io/agentic-standards-map/#dataset"
- }
+ },
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "about": {
+  "@type": "Thing",
+  "name": "Agent Payments Protocol (AP2)"
+ },
+ "citation": [
+  {
+   "@type": "CreativeWork",
+   "url": "https://github.com/google-agentic-commerce/AP2/releases/tag/v0.2.0"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://github.com/google-agentic-commerce/AP2/blob/main/docs/index.md"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://fidoalliance.org/building-the-trust-layer-for-agentic-payments-with-ap2-and-verifiable-intent/"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://github.com/google-agentic-commerce/AP2/blob/e1ea56db72a6385bce3e5c1112b3a56ce60acb43/docs/ap2/specification.md"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://github.com/google-agentic-commerce/AP2/blob/e1ea56db72a6385bce3e5c1112b3a56ce60acb43/docs/ap2/agent_authorization.md"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://github.com/google-agentic-commerce/AP2/blob/e1ea56db72a6385bce3e5c1112b3a56ce60acb43/code/sdk/schemas/ap2/checkout_receipt.json"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://github.com/google-agentic-commerce/AP2/blob/e1ea56db72a6385bce3e5c1112b3a56ce60acb43/docs/ap2/flows.md"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://github.com/google-agentic-commerce/AP2/blob/e1ea56db72a6385bce3e5c1112b3a56ce60acb43/docs/ap2/checkout_mandate.md"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://github.com/google-agentic-commerce/AP2/blob/main/CONTRIBUTING.md"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://github.com/google-agentic-commerce/AP2/blob/main/docs/faq.md"
+  }
+ ]
 }</script>
 </head>
 <body>
-<header class="site"><a href="../index.html">Map</a><a href="../graph.html">Graph</a><a href="../seams.html">Seams</a><a href="../calendar.html">Calendar</a><a href="../intro.html">Introduction</a><a href="../disclosure.html">Disclosure</a><a href="../method.html">Method</a></header>
+<header class="site"><a href="../index.html">Map</a><a href="../graph.html">Graph</a><a href="../seams.html">Seams</a><a href="../calendar.html">Calendar</a><a href="../intro.html">Introduction</a><a href="../disclosure.html">Disclosure</a><a href="../method.html">Method</a><a href="../data.html">For agents and tools</a></header>
 <main>
 <h1>Agent Payments Protocol (AP2)</h1>
 <p class="chips"><span>Industry</span><span>specification</span><span>core entry</span></p>
@@ -61,6 +113,6 @@
 </tbody></table></div>
 <h2>Payment comparison row</h2><dl class="fields"><dt>Owner / governance</dt><dd>Organisation google-agentic-commerce, Apache-2.0; core specification donated to FIDO (repository); FIDO Payments TWG to develop it</dd><dt>Version and state</dt><dd>v0.2.0 (2026-04-28), v0.1.0 (2025-09-16); standardisation continues in FIDO working groups</dd><dt>What it signs</dt><dd>Mandates (signed Verifiable Digital Credentials): Checkout Mandate (shared with merchant), Payment Mandate (instrument, amount)</dd><dt>Who signs</dt><dd>Closed mandates: the User (Human Present) or an Agent key (Human Not Present), whose trust "is provided by open Mandates that are signed by the User or a trust list of Agent Providers"; the Merchant provides "a merchant-signed JWT containing the Checkout" (docs/ap2/specification.md, Modes and Checkout Mandate, commit e1ea56d, 2026-10-05); FAQ: "user-signed Checkout Mandate"</dd><dt>Receipt or record</dt><dd>Checkout Receipt, returned by the Merchant after accepting or rejecting the Checkout Mandate, with fields status (Success or Error), iss, iat, reference (hash of the closed Mandate) and order_id on Success (checkout_receipt.json); a Mandate Receipt is "a Verifier-signed JWT" (agent_authorization.md); a "signed Payment Receipt" is returned by the Merchant Payment Processor (specification.md); all at commit e1ea56d, 2026-10-05; chained mandates give a verifiable audit trail (docs/index.md)</dd><dt>Dispute</dt><dd>FAQ: in a dispute the network adjudicator can use the user-signed Checkout Mandate; dispute process: not found in docs, 2026-10-03</dd><dt>Source</dt><dd><a href="https://github.com/google-agentic-commerce/AP2/blob/main/docs/index.md" rel="noopener">https://github.com/google-agentic-commerce/AP2/blob/main/docs/index.md</a></dd></dl>
 </main>
-<footer class="site">Agentic standards map. Generated on 2026-10-14 from commit <a href="https://github.com/frmoretto/agentic-standards-map/commit/515d6f4591440ae3a58692ffb68a75b7142b229c" rel="noopener">515d6f4</a>; content under CC BY 4.0. Generated from the data of the map, never edited by hand. No tracking, no scripts.</footer>
+<footer class="site">Agentic standards map. Generated on 2026-10-14 from commit <a href="https://github.com/frmoretto/agentic-standards-map/commit/8b8aca2cdd5768f0d04db57ce8e14b33221ac562" rel="noopener">8b8aca2</a>; content under CC BY 4.0. Generated from the data of the map, never edited by hand. No tracking, no scripts.</footer>
 </body>
 </html>

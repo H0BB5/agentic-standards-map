@@ -1,0 +1,35 @@
+{
+ "id": "dif-trusted-ai-agents",
+ "name": "DIF Trusted AI Agents Working Group",
+ "org": "Independent",
+ "kind": "venue",
+ "tier": "context",
+ "status": "Active; Delegated Authority and KYA-OS task forces; weekly meetings.",
+ "status_as_of": "2026-10-13",
+ "relevance": "The group defines \"an opinionated, interoperable stack to enable trustworthy, privacy-preserving, and secure AI agents\"; KYA-OS (donated by Vouched, March 2026) covers agent identity and delegation with DIDs and VCs.",
+ "sources": [
+  {
+   "url": "https://identity.foundation/working-groups/trusted-agents.html",
+   "read": "2026-10-13",
+   "class": "normative"
+  },
+  {
+   "url": "https://blog.identity.foundation/kya-os/",
+   "read": "2026-10-02",
+   "class": "statement"
+  }
+ ],
+ "overlaps": [
+  "ietf-webbotauth",
+  "kyapay"
+ ],
+ "verified": "2026-10-13",
+ "evidence": {
+  "read": "On 2026-10-13: the working group page (the Delegated Authority and KYA-OS task forces listed, with a meeting schedule; the blog post was not read again).",
+  "not_read": "Overlaps are inferred from topic.",
+  "not_found": "Not found in the working group page, 2026-10-02: discovery, commerce, merchants, products, catalogs."
+ },
+ "url": "https://frmoretto.github.io/agentic-standards-map/entries/dif-trusted-ai-agents.html",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/8b8aca2cdd5768f0d04db57ce8e14b33221ac562/entries/dif-trusted-ai-agents.yaml",
+ "licence": "https://creativecommons.org/licenses/by/4.0/"
+}

@@ -1,0 +1,31 @@
+{
+ "id": "w3c-digital-policy-wg",
+ "name": "W3C Digital Policy Working Group (ODRL, draft charter)",
+ "org": "W3C",
+ "kind": "charter",
+ "tier": "context",
+ "status": "Draft charter in refinement until approx. 2026-11-02 (public-new-work, 2026-09-30); TPAC breakout #17 aims to discuss it.",
+ "status_as_of": "2026-10-03",
+ "relevance": "Mission: \"to develop and maintain the foundational digital policy layer for the digital economy\", by extending the two ODRL recommendations.",
+ "sources": [
+  {
+   "url": "https://lists.w3.org/Archives/Public/public-new-work/2026Sep/0012.html",
+   "read": "2026-10-03",
+   "class": "decision"
+  },
+  {
+   "url": "https://w3c.github.io/odrl/w3c-wg-draft-charter-2026/dpwg-draft-charter.html",
+   "read": "2026-10-02",
+   "class": "normative"
+  }
+ ],
+ "verified": "2026-10-03",
+ "evidence": {
+  "read": "Charter read in full as published HTML on 2026-10-02; refinement announcement and breakout #17 read on 2026-10-03.",
+  "not_read": "GitHub source of the charter in w3c/odrl; ODRL lists and repositories.",
+  "not_found": "Not found in the charter text, 2026-10-02: agent, commerce, merchant, product."
+ },
+ "url": "https://frmoretto.github.io/agentic-standards-map/entries/w3c-digital-policy-wg.html",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/8b8aca2cdd5768f0d04db57ce8e14b33221ac562/entries/w3c-digital-policy-wg.yaml",
+ "licence": "https://creativecommons.org/licenses/by/4.0/"
+}

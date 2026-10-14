@@ -7,6 +7,7 @@
 <meta name="description" content="Specification and sample code published by Visa under Visa Product Terms of 2025-10-10; the product page says &quot;This product is in the process of development…">
 <link rel="canonical" href="https://frmoretto.github.io/agentic-standards-map/entries/visa-tap.html">
 <link rel="stylesheet" href="../style.css">
+<link rel="alternate" type="application/json" href="visa-tap.json">
 <script type="application/ld+json">{
  "@context": "https://schema.org",
  "@type": "WebPage",
@@ -16,11 +17,38 @@
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/visa-tap.html",
  "isPartOf": {
   "@id": "https://frmoretto.github.io/agentic-standards-map/#dataset"
- }
+ },
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "about": {
+  "@type": "Thing",
+  "name": "Visa Trusted Agent Protocol (TAP)"
+ },
+ "citation": [
+  {
+   "@type": "CreativeWork",
+   "url": "https://developer.visa.com/capabilities/trusted-agent-protocol"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://developer.visa.com/capabilities/trusted-agent-protocol/trusted-agent-protocol-specifications"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://developer.visa.com/capabilities/trusted-agent-protocol/product-terms"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://github.com/visa/trusted-agent-protocol"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://github.com/visa/trusted-agent-protocol/blob/main/README.md"
+  }
+ ]
 }</script>
 </head>
 <body>
-<header class="site"><a href="../index.html">Map</a><a href="../graph.html">Graph</a><a href="../seams.html">Seams</a><a href="../calendar.html">Calendar</a><a href="../intro.html">Introduction</a><a href="../disclosure.html">Disclosure</a><a href="../method.html">Method</a></header>
+<header class="site"><a href="../index.html">Map</a><a href="../graph.html">Graph</a><a href="../seams.html">Seams</a><a href="../calendar.html">Calendar</a><a href="../intro.html">Introduction</a><a href="../disclosure.html">Disclosure</a><a href="../method.html">Method</a><a href="../data.html">For agents and tools</a></header>
 <main>
 <h1>Visa Trusted Agent Protocol (TAP)</h1>
 <p class="chips"><span>Industry</span><span>specification</span><span>core entry</span></p>
@@ -60,6 +88,6 @@
 </dl>
 <h2>Payment comparison row</h2><dl class="fields"><dt>Owner / governance</dt><dd>Published by Visa under Visa Product Terms of 2025-10-10; licence conditioned on implementing the current Specification in full</dd><dt>Version and state</dt><dd>Product page: "This product is in the process of development and deployment."; revision date, release: not found, 2026-10-03</dd><dt>What it signs</dt><dd>Three signatures: agent recognition (header, HTTP Message Signatures), signed consumer/device identity, signed payment container</dd><dt>Who signs</dt><dd>The agent, with a private key; the merchant or site protection provider verifies with the public key from a key store</dd><dt>Receipt or record</dt><dd>not found in the merchant specification page and sample README, searched for receipt and audit, 2026-10-03</dd><dt>Dispute</dt><dd>not found in the merchant specification page and sample README, searched for dispute, chargeback, liability, 2026-10-03</dd><dt>Source</dt><dd><a href="https://developer.visa.com/capabilities/trusted-agent-protocol/trusted-agent-protocol-specifications" rel="noopener">https://developer.visa.com/capabilities/trusted-agent-protocol/trusted-agent-protocol-specifications</a></dd></dl>
 </main>
-<footer class="site">Agentic standards map. Generated on 2026-10-14 from commit <a href="https://github.com/frmoretto/agentic-standards-map/commit/515d6f4591440ae3a58692ffb68a75b7142b229c" rel="noopener">515d6f4</a>; content under CC BY 4.0. Generated from the data of the map, never edited by hand. No tracking, no scripts.</footer>
+<footer class="site">Agentic standards map. Generated on 2026-10-14 from commit <a href="https://github.com/frmoretto/agentic-standards-map/commit/8b8aca2cdd5768f0d04db57ce8e14b33221ac562" rel="noopener">8b8aca2</a>; content under CC BY 4.0. Generated from the data of the map, never edited by hand. No tracking, no scripts.</footer>
 </body>
 </html>

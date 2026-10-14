@@ -7,6 +7,7 @@
 <meta name="description" content="Specification in beta, maintained by OpenAI and Stripe; MAINTAINERS.md also lists Meta (PR #236 &quot;ADMIN: Add Meta as TSC member&quot;, merged 2026-04-24). Last dated…">
 <link rel="canonical" href="https://frmoretto.github.io/agentic-standards-map/entries/acp.html">
 <link rel="stylesheet" href="../style.css">
+<link rel="alternate" type="application/json" href="acp.json">
 <script type="application/ld+json">{
  "@context": "https://schema.org",
  "@type": "WebPage",
@@ -16,11 +17,38 @@
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/acp.html",
  "isPartOf": {
   "@id": "https://frmoretto.github.io/agentic-standards-map/#dataset"
- }
+ },
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "about": {
+  "@type": "Thing",
+  "name": "Agentic Commerce Protocol (ACP)"
+ },
+ "citation": [
+  {
+   "@type": "CreativeWork",
+   "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/main/README.md"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/02672abb230d7fd75b10264fd9a9a8b9b10e0fa6/MAINTAINERS.md#L9"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/pull/236"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/main/rfcs/rfc.discovery.md"
+  },
+  {
+   "@type": "CreativeWork",
+   "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/main/docs/governance.md"
+  }
+ ]
 }</script>
 </head>
 <body>
-<header class="site"><a href="../index.html">Map</a><a href="../graph.html">Graph</a><a href="../seams.html">Seams</a><a href="../calendar.html">Calendar</a><a href="../intro.html">Introduction</a><a href="../disclosure.html">Disclosure</a><a href="../method.html">Method</a></header>
+<header class="site"><a href="../index.html">Map</a><a href="../graph.html">Graph</a><a href="../seams.html">Seams</a><a href="../calendar.html">Calendar</a><a href="../intro.html">Introduction</a><a href="../disclosure.html">Disclosure</a><a href="../method.html">Method</a><a href="../data.html">For agents and tools</a></header>
 <main>
 <h1>Agentic Commerce Protocol (ACP)</h1>
 <p class="chips"><span>Industry</span><span>specification</span><span>core entry</span></p>
@@ -80,6 +108,6 @@
 </tbody></table></div>
 <h2>Payment comparison row</h2><dl class="fields"><dt>Owner / governance</dt><dd>OpenAI and Stripe maintainers; TSC of up to 7 seats; MAINTAINERS.md lists Meta; PR #236 "ADMIN: Add Meta as TSC member"</dd><dt>Version and state</dt><dd>Beta; dated versions 2025-09-29 to 2026-04-17 plus an unreleased folder; tag or release: not found in the repository, 2026-10-03</dd><dt>What it signs</dt><dd>Signature header on requests (required in delegate_authentication); Merchant-Signature HMAC on webhooks</dd><dt>Who signs</dt><dd>The request sender; for webhooks, the merchant side</dd><dt>Receipt or record</dt><dd>receipt_url, "URL to the order receipt"; signed receipt: not found in specification and RFC files, 2026-10-03</dd><dt>Dispute</dt><dd>"dispute" is a post-order adjustment type (unreleased schema); dispute process: not found in specification, RFC files, 2026-10-03</dd><dt>Source</dt><dd><a href="https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/main/README.md" rel="noopener">https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/main/README.md</a></dd></dl>
 </main>
-<footer class="site">Agentic standards map. Generated on 2026-10-14 from commit <a href="https://github.com/frmoretto/agentic-standards-map/commit/515d6f4591440ae3a58692ffb68a75b7142b229c" rel="noopener">515d6f4</a>; content under CC BY 4.0. Generated from the data of the map, never edited by hand. No tracking, no scripts.</footer>
+<footer class="site">Agentic standards map. Generated on 2026-10-14 from commit <a href="https://github.com/frmoretto/agentic-standards-map/commit/8b8aca2cdd5768f0d04db57ce8e14b33221ac562" rel="noopener">8b8aca2</a>; content under CC BY 4.0. Generated from the data of the map, never edited by hand. No tracking, no scripts.</footer>
 </body>
 </html>

@@ -1,0 +1,35 @@
+{
+ "id": "w3c-agent-to-web-framework-cg",
+ "name": "W3C Agent-to-Web Framework (A2WF) Community Group",
+ "org": "W3C",
+ "kind": "venue",
+ "tier": "context",
+ "status": "Community group created 2026-03-29; may publish Specifications; one chair is listed on the W3C group data on 2026-10-13, and the list public-a2wf has no October 2026 archive (HTTP 404 on the index).",
+ "status_as_of": "2026-10-13",
+ "relevance": "Develops technology for website operators to publish machine-readable governance policies for AI agents; examples of agent actions: \"fill forms, book appointments, add items to carts, submit orders\".",
+ "sources": [
+  {
+   "url": "https://api.w3.org/groups/cg/a2wf",
+   "read": "2026-10-02",
+   "class": "statement"
+  },
+  {
+   "url": "https://w3c.github.io/charter-drafts/2026/agenticweb-wg.html",
+   "read": "2026-10-02",
+   "class": "normative"
+  }
+ ],
+ "overlaps": [
+  "w3c-agenticweb-wg",
+  "ietf-aipref"
+ ],
+ "verified": "2026-10-13",
+ "evidence": {
+  "read": "On 2026-10-13: the chairs listed on the W3C group data and the October 2026 index of public-a2wf (404).",
+  "not_read": "Relation to the exclusion of \"Agent to Server communications\" in the draft Agentic Web charter.",
+  "not_found": "Not found on 2026-10-03: a deliverable, repository, charter or meeting of the group."
+ },
+ "url": "https://frmoretto.github.io/agentic-standards-map/entries/w3c-agent-to-web-framework-cg.html",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/8b8aca2cdd5768f0d04db57ce8e14b33221ac562/entries/w3c-agent-to-web-framework-cg.yaml",
+ "licence": "https://creativecommons.org/licenses/by/4.0/"
+}
