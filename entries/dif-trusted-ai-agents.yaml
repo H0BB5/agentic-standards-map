@@ -1,6 +1,6 @@
 id: dif-trusted-ai-agents
 name: DIF Trusted AI Agents Working Group
-org: Independent
+org: Linux Foundation
 kind: venue
 tier: context
 status: Active; Delegated Authority and KYA-OS task forces; weekly meetings.
@@ -13,10 +13,16 @@ sources:
 - url: https://blog.identity.foundation/kya-os/
   read: 2026-10-02
   class: statement
+- url: https://identity.foundation/faq/
+  read: 2026-10-15
+  class: statement
+- url: https://github.com/decentralized-identity/org/blob/main/Org%20documents/Membership%20agreements/DIF%20Project%20Charter%20_4.0.3.pdf
+  read: 2026-10-15
+  class: normative
 overlaps:
 - ietf-webbotauth
 - kyapay
-verified: 2026-10-13
+verified: 2026-10-15
 evidence:
   read: 'On 2026-10-13: the working group page (the Delegated Authority and KYA-OS task forces listed, with a meeting schedule; the blog post was not read again).'
   not_read: Overlaps are inferred from topic.

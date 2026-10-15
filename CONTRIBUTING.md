@@ -9,6 +9,7 @@ Corrections and additions are accepted when they rest on public sources.
 3. The public URL of the source.
 4. The date on which you read it.
 5. A quote from the source, 40 words at most.
+6. Disclosure: your role in the work you propose (author, maintainer, chair, contributor) and any employer or commercial interest in it, or "none".
 
 An issue with the "Correction" template carries these fields.
 

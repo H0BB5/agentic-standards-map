@@ -16,3 +16,5 @@ labels: correction
 **Date you read it** (YYYY-MM-DD):
 
 **Quote from the source** (40 words at most):
+
+**Disclosure:** your role in the work you propose (author, maintainer, chair, contributor) and any employer or commercial interest in it, or "none".

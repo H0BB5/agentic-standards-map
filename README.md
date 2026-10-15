@@ -8,7 +8,7 @@ Every statement is dated and points to a public source. The map makes no predict
 
 This map documents public standardisation activity, specifications and declared commitments. It does not measure market adoption, transaction volume, cross-protocol interoperability or the reliability of deployed implementations. Implementation claims are reported only where supported by dated public evidence and are not treated as evidence of interoperability.
 
-*Version 1.0.1, as of 2026-10-14. The map is updated as venues move; each entry carries its own read date.*
+*Version 1.0.1, as of 2026-10-15. The map is updated as venues move; each entry carries its own read date.*
 
 DOI (all versions): [10.5281/zenodo.23357361](https://doi.org/10.5281/zenodo.23357361)
 
