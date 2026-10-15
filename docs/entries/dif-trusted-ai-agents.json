@@ -1,7 +1,7 @@
 {
  "id": "dif-trusted-ai-agents",
  "name": "DIF Trusted AI Agents Working Group",
- "org": "Independent",
+ "org": "Linux Foundation",
  "kind": "venue",
  "tier": "context",
  "status": "Active; Delegated Authority and KYA-OS task forces; weekly meetings.",
@@ -19,19 +19,29 @@
    "archived": "https://web.archive.org/web/20261010115007/https://blog.identity.foundation/kya-os/",
    "read": "2026-10-02",
    "class": "statement"
+  },
+  {
+   "url": "https://identity.foundation/faq/",
+   "read": "2026-10-15",
+   "class": "statement"
+  },
+  {
+   "url": "https://github.com/decentralized-identity/org/blob/main/Org%20documents/Membership%20agreements/DIF%20Project%20Charter%20_4.0.3.pdf",
+   "read": "2026-10-15",
+   "class": "normative"
   }
  ],
  "overlaps": [
   "ietf-webbotauth",
   "kyapay"
  ],
- "verified": "2026-10-13",
+ "verified": "2026-10-15",
  "evidence": {
   "read": "On 2026-10-13: the working group page (the Delegated Authority and KYA-OS task forces listed, with a meeting schedule; the blog post was not read again).",
   "not_read": "Overlaps are inferred from topic.",
   "not_found": "Not found in the working group page, 2026-10-02: discovery, commerce, merchants, products, catalogs."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/dif-trusted-ai-agents.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/add0c1fbf77c8b1e54ee52b7a85fc1bb5f477adf/entries/dif-trusted-ai-agents.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/bd582831ac4fa00d226cdd262acb33617aed133c/entries/dif-trusted-ai-agents.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }
