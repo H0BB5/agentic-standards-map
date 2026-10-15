@@ -531,7 +531,7 @@ class Site:
         self.a, self.entries, self.src, self.sha, self.today, self.lastmods = a, entries, src, sha, today, lastmods
         self.pages = {}  # path -> dict(title, desc, lastmod)
         self.out = Path(a.out)
-        self.version = ""   # the version named in the first line of the README ("*Version 1.0.1, as of ...*"), shown in the footer
+        self.version = ""   # the version named in the first line of the README ("*Version 1.0.1 (2026-10-14) · site updated ...*"), shown in the footer
         self.archived = {}  # source URL -> Wayback Machine snapshot URL, from notes/archived-sources.csv
 
     def base(self, path=""):
@@ -912,7 +912,7 @@ def main():
         out.mkdir(parents=True)
         (out / "style.css").write_text(CSS, encoding="utf-8", newline="\n")
         site = Site(a, entries, src, sha, today, lastmods)
-        _v = re.search(r"\*Version ([0-9][0-9.]*), as of", (src / "README.md").read_text(encoding="utf-8"))
+        _v = re.search(r"\*Version ([0-9][0-9.]*)[ ,(]", (src / "README.md").read_text(encoding="utf-8"))
         site.version = _v.group(1) if _v else ""
         site.archived = load_archived(src)
         newest = max(d(e["verified"]) for e in entries.values())

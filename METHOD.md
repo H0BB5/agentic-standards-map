@@ -50,6 +50,7 @@ Archive copies: snapshots of the cited sources were requested on 2026-10-14 from
 
 - 2026-10-15, `dif-trusted-ai-agents`: org corrected to Linux Foundation, reported by a DIF participant on the AAIF Taxonomy list.
 - 2026-10-15, CONTRIBUTING and issue template: proposals now state the proposer's role and any employer or commercial interest.
+- 2026-10-15, header: the citable version and the date of the live site are shown separately.
 
 **1.0.1 (2026-10-14).** Corrections and additions to the living version; no entry was added or removed.
 
