@@ -24,11 +24,13 @@
   },
   {
    "url": "https://www.ietf.org/archive/id/draft-hood-agtp-merchant-identity-00.txt",
+   "archived": "https://web.archive.org/web/20261015040823/https://www.ietf.org/archive/id/draft-hood-agtp-merchant-identity-00.txt",
    "read": "2026-10-02",
    "class": "third-party"
   },
   {
    "url": "https://www.ietf.org/archive/id/draft-hood-agtp-merchant-identity-02.txt",
+   "archived": "https://web.archive.org/web/20261015040938/https://www.ietf.org/archive/id/draft-hood-agtp-merchant-identity-02.txt",
    "read": "2026-10-13",
    "class": "third-party"
   }
@@ -46,6 +48,6 @@
   "not_found": "Not found in the DAWN list (2026-08-01 to 2026-10-02) and dnsop list text, 2026-10-03: names of the three drafts."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/ietf-individual-seller-drafts.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/b5cd2603222c45b28e7bbf6ff8bbfb387ac52f2a/entries/ietf-individual-seller-drafts.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/add0c1fbf77c8b1e54ee52b7a85fc1bb5f477adf/entries/ietf-individual-seller-drafts.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

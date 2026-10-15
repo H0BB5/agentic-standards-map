@@ -12,12 +12,14 @@
    "what": "Roadmap (PR #47, merged 2026-08-12): graduate the Server Card as an official MCP extension, then static primitives (#30) and authentication (#13).",
    "when": "undated",
    "source": "https://github.com/modelcontextprotocol/ext-server-card/pull/47",
+   "archived": "https://web.archive.org/web/20261015052631/https://github.com/modelcontextprotocol/ext-server-card/pull/47",
    "class": "statement"
   },
   {
    "what": "Notes of 2026-07-20: \"Nested catalog and Link header features deferred to after release.\"",
    "when": "undated",
    "source": "https://github.com/modelcontextprotocol/modelcontextprotocol/discussions/3115",
+   "archived": "https://web.archive.org/web/20261015052718/https://github.com/modelcontextprotocol/modelcontextprotocol/discussions/3115",
    "class": "statement"
   }
  ],
@@ -25,36 +27,43 @@
  "sources": [
   {
    "url": "https://github.com/modelcontextprotocol/ext-server-card",
+   "archived": "https://web.archive.org/web/20261015052802/https://github.com/modelcontextprotocol/ext-server-card",
    "read": "2026-10-13",
    "class": "normative"
   },
   {
    "url": "https://github.com/modelcontextprotocol/ext-server-card/blob/main/docs/discovery.md",
+   "archived": "https://web.archive.org/web/20261015053024/https://github.com/modelcontextprotocol/ext-server-card/blob/main/docs/discovery.md",
    "read": "2026-10-02",
    "class": "normative"
   },
   {
    "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2127",
+   "archived": "https://web.archive.org/web/20261015053112/https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2127",
    "read": "2026-10-13",
    "class": "statement"
   },
   {
    "url": "https://github.com/modelcontextprotocol/ext-server-card/pull/47",
+   "archived": "https://web.archive.org/web/20261015052631/https://github.com/modelcontextprotocol/ext-server-card/pull/47",
    "read": "2026-10-13",
    "class": "statement"
   },
   {
    "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/seps/2127-mcp-server-cards.md",
+   "archived": "https://web.archive.org/web/20261015053259/https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/seps/2127-mcp-server-cards.md",
    "read": "2026-10-13",
    "class": "decision"
   },
   {
    "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/discussions/3115",
+   "archived": "https://web.archive.org/web/20261015052718/https://github.com/modelcontextprotocol/modelcontextprotocol/discussions/3115",
    "read": "2026-10-03",
    "class": "third-party"
   },
   {
    "url": "https://github.com/modelcontextprotocol/ext-server-card/issues/27",
+   "archived": "https://web.archive.org/web/20261015053348/https://github.com/modelcontextprotocol/ext-server-card/issues/27",
    "read": "2026-10-03",
    "class": "third-party"
   }
@@ -80,38 +89,43 @@
    "author": "a participant",
    "date": "2026-06-09",
    "state": "closed",
-   "url": "https://github.com/modelcontextprotocol/ext-server-card/issues/27"
+   "url": "https://github.com/modelcontextprotocol/ext-server-card/issues/27",
+   "archived": "https://web.archive.org/web/20261015053348/https://github.com/modelcontextprotocol/ext-server-card/issues/27"
   },
   {
    "what": "Discussion #2896: a commerce discovery extension for the Server Card in _meta.",
    "author": "a participant",
    "date": "2026-06-09",
    "state": "closed",
-   "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/discussions/2896"
+   "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/discussions/2896",
+   "archived": "https://web.archive.org/web/20261015053432/https://github.com/modelcontextprotocol/modelcontextprotocol/discussions/2896"
   },
   {
    "what": "Issue #3393: payment metadata in the server card or in the response of a call.",
    "author": "a participant",
    "date": "2026-09-26",
    "state": "closed",
-   "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/3393"
+   "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/3393",
+   "archived": "https://web.archive.org/web/20261015053611/https://github.com/modelcontextprotocol/modelcontextprotocol/issues/3393"
   },
   {
    "what": "Issue #30: optional tool metadata in the Server Card for offline discovery.",
    "author": "a participant",
    "date": "2026-06-17",
    "state": "open",
-   "url": "https://github.com/modelcontextprotocol/ext-server-card/issues/30"
+   "url": "https://github.com/modelcontextprotocol/ext-server-card/issues/30",
+   "archived": "https://web.archive.org/web/20261015053700/https://github.com/modelcontextprotocol/ext-server-card/issues/30"
   },
   {
    "what": "Schema and discovery issues #48, #50, #43, #44 (capabilities, instructions, links, nested catalogs).",
    "author": "a participant",
    "date": "2026-08-24",
    "state": "open",
-   "url": "https://github.com/modelcontextprotocol/ext-server-card/issues/48"
+   "url": "https://github.com/modelcontextprotocol/ext-server-card/issues/48",
+   "archived": "https://web.archive.org/web/20261015053745/https://github.com/modelcontextprotocol/ext-server-card/issues/48"
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/mcp-server-card.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/b5cd2603222c45b28e7bbf6ff8bbfb387ac52f2a/entries/mcp-server-card.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/add0c1fbf77c8b1e54ee52b7a85fc1bb5f477adf/entries/mcp-server-card.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

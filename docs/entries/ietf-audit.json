@@ -40,6 +40,7 @@
   },
   {
    "url": "https://github.com/mirjak/audit-bof-preparation/blob/main/bofreq-kuhlewind-agent-use-of-delegation-and-interaction-traceability-audit.md",
+   "archived": "https://web.archive.org/web/20261015040531/https://github.com/mirjak/audit-bof-preparation/blob/main/bofreq-kuhlewind-agent-use-of-delegation-and-interaction-traceability-audit.md",
    "read": "2026-10-06",
    "class": "statement"
   },
@@ -105,6 +106,7 @@
   },
   {
    "url": "https://github.com/mirjak/draft-audit-architecture/blob/main/draft-kuehlewind-audit-architecture.md",
+   "archived": "https://web.archive.org/web/20261015040726/https://github.com/mirjak/draft-audit-architecture/blob/main/draft-kuehlewind-audit-architecture.md",
    "read": "2026-10-06",
    "class": "third-party"
   },
@@ -204,6 +206,6 @@
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/ietf-audit.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/b5cd2603222c45b28e7bbf6ff8bbfb387ac52f2a/entries/ietf-audit.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/add0c1fbf77c8b1e54ee52b7a85fc1bb5f477adf/entries/ietf-audit.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

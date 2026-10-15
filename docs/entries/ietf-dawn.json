@@ -49,6 +49,7 @@
   },
   {
    "url": "https://www.ietf.org/archive/id/draft-zhang-dawn-agent-discovery-framework-01.txt",
+   "archived": "https://web.archive.org/web/20261014074930/https://www.ietf.org/archive/id/draft-zhang-dawn-agent-discovery-framework-01.txt",
    "read": "2026-10-06",
    "class": "third-party"
   },
@@ -190,6 +191,6 @@
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/ietf-dawn.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/b5cd2603222c45b28e7bbf6ff8bbfb387ac52f2a/entries/ietf-dawn.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/add0c1fbf77c8b1e54ee52b7a85fc1bb5f477adf/entries/ietf-dawn.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

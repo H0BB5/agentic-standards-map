@@ -12,12 +12,14 @@
    "what": "Technical Steering Committee (TSC) vote on the urn:air naming (issue #59): \"We may require a TSC vote to move forward.\"",
    "when": "undated",
    "source": "https://github.com/Agent-Card/ai-catalog/issues/59",
+   "archived": "https://web.archive.org/web/20261015051045/https://github.com/Agent-Card/ai-catalog/issues/59",
    "class": "statement"
   },
   {
    "what": "README: \"This project will be moved to a permanent location a later date with a permanent governance model.\"",
    "when": "undated",
    "source": "https://github.com/Agent-Card/ai-catalog/blob/main/README.md",
+   "archived": "https://web.archive.org/web/20261015051136/https://github.com/Agent-Card/ai-catalog/blob/main/README.md",
    "class": "normative"
   }
  ],
@@ -25,41 +27,49 @@
  "sources": [
   {
    "url": "https://github.com/Agent-Card/ai-catalog/blob/main/README.md",
+   "archived": "https://web.archive.org/web/20261015051136/https://github.com/Agent-Card/ai-catalog/blob/main/README.md",
    "read": "2026-10-13",
    "class": "normative"
   },
   {
    "url": "https://github.com/Agent-Card/ai-catalog/blob/main/GOVERNANCE.md",
+   "archived": "https://web.archive.org/web/20261015051316/https://github.com/Agent-Card/ai-catalog/blob/main/GOVERNANCE.md",
    "read": "2026-10-13",
    "class": "normative"
   },
   {
    "url": "https://github.com/Agent-Card/ai-catalog/blob/main/adr/0011-no-well-known-requirement.md",
+   "archived": "https://web.archive.org/web/20261015051402/https://github.com/Agent-Card/ai-catalog/blob/main/adr/0011-no-well-known-requirement.md",
    "read": "2026-10-02",
    "class": "normative"
   },
   {
    "url": "https://github.com/Agent-Card/ai-catalog/pull/110",
+   "archived": "https://web.archive.org/web/20261015051539/https://github.com/Agent-Card/ai-catalog/pull/110",
    "read": "2026-10-13",
    "class": "decision"
   },
   {
    "url": "https://github.com/Agent-Card/ai-catalog/blob/main/adr/0021-separate-artifact-identity-from-registry-coordinates.md",
+   "archived": "https://web.archive.org/web/20261015051628/https://github.com/Agent-Card/ai-catalog/blob/main/adr/0021-separate-artifact-identity-from-registry-coordinates.md",
    "read": "2026-10-13",
    "class": "statement"
   },
   {
    "url": "https://github.com/Agent-Card/ai-catalog/pull/77",
+   "archived": "https://web.archive.org/web/20261015051716/https://github.com/Agent-Card/ai-catalog/pull/77",
    "read": "2026-10-03",
    "class": "decision"
   },
   {
    "url": "https://github.com/Agent-Card/ai-catalog/issues/83",
+   "archived": "https://web.archive.org/web/20261015051813/https://github.com/Agent-Card/ai-catalog/issues/83",
    "read": "2026-10-03",
    "class": "third-party"
   },
   {
    "url": "https://github.com/Agent-Card/ai-catalog/issues/59",
+   "archived": "https://web.archive.org/web/20261015051045/https://github.com/Agent-Card/ai-catalog/issues/59",
    "read": "2026-10-03",
    "class": "third-party"
   }
@@ -86,59 +96,67 @@
    "author": "a participant",
    "date": "2026-06-19",
    "state": "closed",
-   "url": "https://github.com/Agent-Card/ai-catalog/issues/46"
+   "url": "https://github.com/Agent-Card/ai-catalog/issues/46",
+   "archived": "https://web.archive.org/web/20261015051945/https://github.com/Agent-Card/ai-catalog/issues/46"
   },
   {
    "what": "Issue #59: prefix air-type before the publisher in the urn:air schema.",
    "author": "a participant",
    "date": "2026-07-01",
    "state": "open",
-   "url": "https://github.com/Agent-Card/ai-catalog/issues/59"
+   "url": "https://github.com/Agent-Card/ai-catalog/issues/59",
+   "archived": "https://web.archive.org/web/20261015051045/https://github.com/Agent-Card/ai-catalog/issues/59"
   },
   {
    "what": "Issue #83: discovery-time access and monetization signalling (accessModel, x402).",
    "author": "a participant",
    "date": "2026-07-16",
    "state": "open",
-   "url": "https://github.com/Agent-Card/ai-catalog/issues/83"
+   "url": "https://github.com/Agent-Card/ai-catalog/issues/83",
+   "archived": "https://web.archive.org/web/20261015051813/https://github.com/Agent-Card/ai-catalog/issues/83"
   },
   {
    "what": "Issue #86: federation governance metadata, machine-readable alternative to terms URLs.",
    "author": "a participant",
    "date": "2026-07-17",
    "state": "open",
-   "url": "https://github.com/Agent-Card/ai-catalog/issues/86"
+   "url": "https://github.com/Agent-Card/ai-catalog/issues/86",
+   "archived": "https://web.archive.org/web/20261015052026/https://github.com/Agent-Card/ai-catalog/issues/86"
   },
   {
    "what": "Issue #101: a catalog and registry observe and never grant authority.",
    "author": "a participant",
    "date": "2026-08-20",
    "state": "open",
-   "url": "https://github.com/Agent-Card/ai-catalog/issues/101"
+   "url": "https://github.com/Agent-Card/ai-catalog/issues/101",
+   "archived": "https://web.archive.org/web/20261015052112/https://github.com/Agent-Card/ai-catalog/issues/101"
   },
   {
    "what": "PR #91: ADR-0021, multiple identities via alsoKnownAs (open, 11 comments; on main the number ADR-0021 is already used by \"Separate Artifact Identity from Registry Coordinates\", status Proposed, 2026-08-26).",
    "author": "a participant",
    "date": "2026-07-24",
    "state": "open",
-   "url": "https://github.com/Agent-Card/ai-catalog/pull/91"
+   "url": "https://github.com/Agent-Card/ai-catalog/pull/91",
+   "archived": "https://web.archive.org/web/20261015052155/https://github.com/Agent-Card/ai-catalog/pull/91"
   },
   {
    "what": "Issue #114: measurement of did:web host identifiers.",
    "author": "a participant",
    "date": "2026-09-13",
    "state": "open",
-   "url": "https://github.com/Agent-Card/ai-catalog/issues/114"
+   "url": "https://github.com/Agent-Card/ai-catalog/issues/114",
+   "archived": "https://web.archive.org/web/20261015052246/https://github.com/Agent-Card/ai-catalog/issues/114"
   },
   {
    "what": "PR #117: trust metadata grouped by contributor, generalized signatures (not a draft on 2026-10-13; open, 6 comments).",
    "author": "a participant",
    "date": "2026-09-13",
    "state": "open",
-   "url": "https://github.com/Agent-Card/ai-catalog/pull/117"
+   "url": "https://github.com/Agent-Card/ai-catalog/pull/117",
+   "archived": "https://web.archive.org/web/20261015052329/https://github.com/Agent-Card/ai-catalog/pull/117"
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/lf-ai-catalog.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/b5cd2603222c45b28e7bbf6ff8bbfb387ac52f2a/entries/lf-ai-catalog.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/add0c1fbf77c8b1e54ee52b7a85fc1bb5f477adf/entries/lf-ai-catalog.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

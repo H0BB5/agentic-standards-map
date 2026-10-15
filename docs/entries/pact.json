@@ -12,11 +12,13 @@
  "sources": [
   {
    "url": "https://openpactprotocol.org/spec",
+   "archived": "https://web.archive.org/web/20261015054217/https://openpactprotocol.org/spec",
    "read": "2026-10-13",
    "class": "normative"
   },
   {
    "url": "https://openpactprotocol.org/",
+   "archived": "https://web.archive.org/web/20261015054308/https://openpactprotocol.org/",
    "read": "2026-10-13",
    "class": "statement"
   },
@@ -50,6 +52,6 @@
   "not_found": "Not found, 2026-10-13: a standards body, foundation or working group in the pages of the site read; consumer, durable medium, confirm, poppy.json and Web Bot Auth in the specification page."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/pact.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/b5cd2603222c45b28e7bbf6ff8bbfb387ac52f2a/entries/pact.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/add0c1fbf77c8b1e54ee52b7a85fc1bb5f477adf/entries/pact.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

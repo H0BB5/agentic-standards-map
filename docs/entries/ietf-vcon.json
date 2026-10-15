@@ -12,12 +12,14 @@
    "what": "One session of 1.5 hours at IETF 127 (14 to 20 November 2026), requested by a chair on 2026-09-23 (requested, not scheduled).",
    "when": "undated",
    "source": "https://mailarchive.ietf.org/arch/msg/vcon/8X59uFX_MkTU5Sz2Y5bXio4eJd4/",
+   "archived": "https://web.archive.org/web/20261015041102/https://mailarchive.ietf.org/arch/msg/vcon/8X59uFX_MkTU5Sz2Y5bXio4eJd4/",
    "class": "decision"
   },
   {
    "what": "Virtual interim meeting 14:00 to 16:00 UTC, agenda \"Continue discussion on core document leading up to -05 submission before SFO including redaction PR inclusion.  Discuss charter draft status.\"",
    "when": "2026-10-22",
    "source": "https://mailarchive.ietf.org/arch/msg/vcon/lnWLdI2xZtUWMMBhIB-pjok72dE/",
+   "archived": "https://web.archive.org/web/20261015041220/https://mailarchive.ietf.org/arch/msg/vcon/lnWLdI2xZtUWMMBhIB-pjok72dE/",
    "class": "decision"
   }
  ],
@@ -25,11 +27,13 @@
  "sources": [
   {
    "url": "https://datatracker.ietf.org/doc/charter-ietf-vcon/",
+   "archived": "https://web.archive.org/web/20261015041407/https://datatracker.ietf.org/doc/charter-ietf-vcon/",
    "read": "2026-10-13",
    "class": "normative"
   },
   {
    "url": "https://datatracker.ietf.org/wg/vcon/about/",
+   "archived": "https://web.archive.org/web/20261015041547/https://datatracker.ietf.org/wg/vcon/about/",
    "read": "2026-10-13",
    "class": "decision"
   },
@@ -41,26 +45,31 @@
   },
   {
    "url": "https://mailarchive.ietf.org/arch/msg/vcon/O-raCMkzhsmHlOY0Hw48awOViGQ/",
+   "archived": "https://web.archive.org/web/20261015041755/https://mailarchive.ietf.org/arch/msg/vcon/O-raCMkzhsmHlOY0Hw48awOViGQ/",
    "read": "2026-10-06",
    "class": "third-party"
   },
   {
    "url": "https://github.com/ietf-wg-vcon/draft-ietf-vcon-vcon-core/pull/37",
+   "archived": "https://web.archive.org/web/20261015041903/https://github.com/ietf-wg-vcon/draft-ietf-vcon-vcon-core/pull/37",
    "read": "2026-10-13",
    "class": "decision"
   },
   {
    "url": "https://mailarchive.ietf.org/arch/msg/vcon/5tu645wIp4SyLHxLXh89fEPigPw/",
+   "archived": "https://web.archive.org/web/20261015042046/https://mailarchive.ietf.org/arch/msg/vcon/5tu645wIp4SyLHxLXh89fEPigPw/",
    "read": "2026-10-09",
    "class": "statement"
   },
   {
    "url": "https://datatracker.ietf.org/meeting/upcoming.ics?show=vcon",
+   "archived": "https://web.archive.org/web/20261015042136/https://datatracker.ietf.org/meeting/upcoming.ics?show=vcon",
    "read": "2026-10-09",
    "class": "decision"
   },
   {
    "url": "https://mailarchive.ietf.org/arch/msg/vcon/lnWLdI2xZtUWMMBhIB-pjok72dE/",
+   "archived": "https://web.archive.org/web/20261015041220/https://mailarchive.ietf.org/arch/msg/vcon/lnWLdI2xZtUWMMBhIB-pjok72dE/",
    "read": "2026-10-09",
    "class": "decision"
   },
@@ -72,51 +81,61 @@
   },
   {
    "url": "https://mailarchive.ietf.org/arch/browse/vcon/",
+   "archived": "https://web.archive.org/web/20261015042314/https://mailarchive.ietf.org/arch/browse/vcon/",
    "read": "2026-10-13",
    "class": "decision"
   },
   {
    "url": "https://github.com/ietf-wg-vcon/draft-ietf-vcon-vcon-core/issues/40",
+   "archived": "https://web.archive.org/web/20261015042454/https://github.com/ietf-wg-vcon/draft-ietf-vcon-vcon-core/issues/40",
    "read": "2026-10-13",
    "class": "third-party"
   },
   {
    "url": "https://github.com/ietf-wg-vcon/draft-ietf-vcon-vcon-core/pull/41",
+   "archived": "https://web.archive.org/web/20261015042540/https://github.com/ietf-wg-vcon/draft-ietf-vcon-vcon-core/pull/41",
    "read": "2026-10-13",
    "class": "third-party"
   },
   {
    "url": "https://mailarchive.ietf.org/arch/msg/vcon/rEI9Xl-8pRjNE09yMiL3ppEENAc/",
+   "archived": "https://web.archive.org/web/20261015042626/https://mailarchive.ietf.org/arch/msg/vcon/rEI9Xl-8pRjNE09yMiL3ppEENAc/",
    "read": "2026-10-06",
    "class": "decision"
   },
   {
    "url": "https://mailarchive.ietf.org/arch/msg/vcon/uiU5e8IUKRO5cVUiLwyg3hYYFJY/",
+   "archived": "https://web.archive.org/web/20261015042711/https://mailarchive.ietf.org/arch/msg/vcon/uiU5e8IUKRO5cVUiLwyg3hYYFJY/",
    "read": "2026-10-06",
    "class": "statement"
   },
   {
    "url": "https://www.ietf.org/archive/id/draft-rosenberg-cheq-00.txt",
+   "archived": "https://web.archive.org/web/20261015042754/https://www.ietf.org/archive/id/draft-rosenberg-cheq-00.txt",
    "read": "2026-10-06",
    "class": "third-party"
   },
   {
    "url": "https://www.ietf.org/archive/id/draft-rosenberg-vcon-restructure-00.txt",
+   "archived": "https://web.archive.org/web/20261015042828/https://www.ietf.org/archive/id/draft-rosenberg-vcon-restructure-00.txt",
    "read": "2026-10-06",
    "class": "third-party"
   },
   {
    "url": "https://mailarchive.ietf.org/arch/msg/vcon/oqJ2wLwEwk044RnhpfOwwosNLSA/",
+   "archived": "https://web.archive.org/web/20261015043020/https://mailarchive.ietf.org/arch/msg/vcon/oqJ2wLwEwk044RnhpfOwwosNLSA/",
    "read": "2026-10-08",
    "class": "third-party"
   },
   {
    "url": "https://mailarchive.ietf.org/arch/msg/vcon/LlpZX9eFYQXQJ0HmMfNxzJQhlDI/",
+   "archived": "https://web.archive.org/web/20261015043246/https://mailarchive.ietf.org/arch/msg/vcon/LlpZX9eFYQXQJ0HmMfNxzJQhlDI/",
    "read": "2026-10-08",
    "class": "statement"
   },
   {
    "url": "https://mailarchive.ietf.org/arch/msg/vcon/QzELgHpx8fXANqGtgFEEdve-cQw/",
+   "archived": "https://web.archive.org/web/20261015043447/https://mailarchive.ietf.org/arch/msg/vcon/QzELgHpx8fXANqGtgFEEdve-cQw/",
    "read": "2026-10-08",
    "class": "third-party"
   }
@@ -143,17 +162,19 @@
    "author": "Jonathan Rosenberg",
    "date": "2026-10-06",
    "state": "merged",
-   "url": "https://github.com/ietf-wg-vcon/draft-ietf-vcon-vcon-core/pull/37"
+   "url": "https://github.com/ietf-wg-vcon/draft-ietf-vcon-vcon-core/pull/37",
+   "archived": "https://web.archive.org/web/20261015041903/https://github.com/ietf-wg-vcon/draft-ietf-vcon-vcon-core/pull/37"
   },
   {
    "what": "Restructure the format with a session concept and an events object to represent AI agent use cases (draft-rosenberg-vcon-restructure-00; on 2026-10-13 the datatracker still shows -00 as the current revision, last updated 2026-09-11; the editors copy of the core draft of 2026-10-07 reports the elevation of party_history events to a top level Events Object and a Session concept, which are parts of this proposal).",
    "author": "Jonathan Rosenberg",
    "date": "2026-09-11",
    "state": "open",
-   "url": "https://mailarchive.ietf.org/arch/msg/vcon/pSs7uBFPNQI5ZWd0h3zM60F5E0Q/"
+   "url": "https://mailarchive.ietf.org/arch/msg/vcon/pSs7uBFPNQI5ZWd0h3zM60F5E0Q/",
+   "archived": "https://web.archive.org/web/20261015043550/https://mailarchive.ietf.org/arch/msg/vcon/pSs7uBFPNQI5ZWd0h3zM60F5E0Q/"
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/ietf-vcon.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/b5cd2603222c45b28e7bbf6ff8bbfb387ac52f2a/entries/ietf-vcon.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/add0c1fbf77c8b1e54ee52b7a85fc1bb5f477adf/entries/ietf-vcon.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

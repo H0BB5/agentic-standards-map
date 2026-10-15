@@ -28,6 +28,7 @@
  "sources": [
   {
    "url": "https://github.com/ards-project/ard-spec/blob/main/spec/ard.md",
+   "archived": "https://web.archive.org/web/20261015040200/https://github.com/ards-project/ard-spec/blob/main/spec/ard.md",
    "read": "2026-10-13",
    "class": "normative"
   },
@@ -136,6 +137,6 @@
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/ard.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/b5cd2603222c45b28e7bbf6ff8bbfb387ac52f2a/entries/ard.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/add0c1fbf77c8b1e54ee52b7a85fc1bb5f477adf/entries/ard.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

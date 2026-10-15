@@ -12,12 +12,14 @@
    "what": "The author invites review of the updated drafts on the oauth list and at IETF 127 (14 to 20 November 2026).",
    "when": "undated",
    "source": "https://mailarchive.ietf.org/arch/msg/oauth/h_YQPuYbBQf0TaiNIJQDNcxgGfc/",
+   "archived": "https://web.archive.org/web/20261015050501/https://mailarchive.ietf.org/arch/msg/oauth/h_YQPuYbBQf0TaiNIJQDNcxgGfc/",
    "class": "third-party"
   },
   {
    "what": "Rework of the delegation text of the token-exchange draft, stated by the author on 2026-09-18.",
    "when": "undated",
    "source": "https://mailarchive.ietf.org/arch/msg/oauth/CbHD0qu_C-7AgMj3OdM7QNmbRjk",
+   "archived": "https://web.archive.org/web/20261015050650/https://mailarchive.ietf.org/arch/msg/oauth/CbHD0qu_C-7AgMj3OdM7QNmbRjk",
    "class": "third-party"
   }
  ],
@@ -33,16 +35,19 @@
  "sources": [
   {
    "url": "https://mailarchive.ietf.org/arch/msg/oauth/h_YQPuYbBQf0TaiNIJQDNcxgGfc",
+   "archived": "https://web.archive.org/web/20261015050501/https://mailarchive.ietf.org/arch/msg/oauth/h_YQPuYbBQf0TaiNIJQDNcxgGfc",
    "read": "2026-10-03",
    "class": "third-party"
   },
   {
    "url": "https://mailarchive.ietf.org/arch/msg/oauth/xFAGS_R8IsdZAQygs8J0DT5DgN0",
+   "archived": "https://web.archive.org/web/20261015050911/https://mailarchive.ietf.org/arch/msg/oauth/xFAGS_R8IsdZAQygs8J0DT5DgN0",
    "read": "2026-10-03",
    "class": "third-party"
   },
   {
    "url": "https://mailarchive.ietf.org/arch/msg/oauth/CbHD0qu_C-7AgMj3OdM7QNmbRjk",
+   "archived": "https://web.archive.org/web/20261015050650/https://mailarchive.ietf.org/arch/msg/oauth/CbHD0qu_C-7AgMj3OdM7QNmbRjk",
    "read": "2026-10-03",
    "class": "third-party"
   },
@@ -74,10 +79,11 @@
    "author": "Michael B. Jones and a co-author",
    "date": "2026-10-01",
    "state": "open",
-   "url": "https://github.com/w3c/tpac2026-breakouts/issues/39"
+   "url": "https://github.com/w3c/tpac2026-breakouts/issues/39",
+   "archived": "https://web.archive.org/web/20261015051001/https://github.com/w3c/tpac2026-breakouts/issues/39"
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/kyapay.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/b5cd2603222c45b28e7bbf6ff8bbfb387ac52f2a/entries/kyapay.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/add0c1fbf77c8b1e54ee52b7a85fc1bb5f477adf/entries/kyapay.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }
