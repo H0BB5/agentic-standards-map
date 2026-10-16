@@ -49,6 +49,7 @@ GITHUB = "https://github.com/" + GITHUB_USER
 LINKEDIN_USER = "francesco-moretto"
 LINKEDIN = "https://www.linkedin.com/in/" + LINKEDIN_USER + "/"
 ISSUES_URL = DEFAULT_REPO + "/issues"
+NEW_ISSUE_URL = DEFAULT_REPO + "/issues/new/choose"   # the issue templates (Correction), linked from the cadence lines
 AUTHOR_LINE = "independent researcher on agentic commerce, Milan"
 AUTHOR_PART = "I have taken part in some of the venues mapped; the %s lists where, and the entries concerned say so."
 CITE_REQUEST = "Please cite the entry id, the date it was read and the DOI."
@@ -500,7 +501,7 @@ body{margin:0;font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-seri
 header.site,footer.site{padding-left:max(var(--pad),calc((100% - var(--measure))/2 + var(--pad)));padding-right:max(var(--pad),calc((100% - var(--measure))/2 + var(--pad)))}
 header.site{border-bottom:1px solid var(--line);padding-top:.6rem;padding-bottom:.6rem}
 header.site{display:flex;flex-wrap:wrap;row-gap:.2rem}
-header.site a{margin-right:1rem;color:var(--accent);text-decoration:none;font-weight:600;white-space:nowrap}
+header.site a{margin-right:1rem;color:var(--accent);text-decoration:none;font-weight:600;white-space:nowrap}header.site .cadence{flex-basis:100%;margin:0;font-size:.85rem;color:var(--muted)}header.site .cadence a{margin-right:0;font-weight:400;text-decoration:underline}footer.site .cadence{margin:0 0 .4rem}
 main{max-width:var(--measure);margin:0 auto;padding:var(--pad)}
 h1,h2,h3{color:var(--accent);line-height:1.25}h1{font-size:1.7rem}h2{font-size:1.3rem;margin-top:2rem}h3{font-size:1.1rem}
 a{color:var(--link);overflow-wrap:anywhere}code{background:var(--chip);padding:0 .25em;border-radius:3px;font-size:.92em;overflow-wrap:anywhere}
@@ -552,9 +553,9 @@ class Site:
             commit = 'the data of the <a href="%s" rel="noopener">repository</a>' % attr(self.a.repo_url)
         page = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n'
                 '<title>%s</title>\n<meta name="description" content="%s">\n<link rel="canonical" href="%s">\n<link rel="stylesheet" href="%sstyle.css">\n%s%s</head>\n'
-                '<body>\n<header class="site">%s</header>\n<main>\n%s\n</main>\n'
-                '<footer class="site">%s%s. Generated on %s from %s; content under CC BY 4.0. Generated from the data of the map, never edited by hand. No tracking, no scripts.</footer>\n</body>\n</html>\n'
-                % (esc(title), attr(desc), attr(self.base(path)), rel, alt, ld, nav, body, esc(SITE_TITLE), (", version %s" % esc(self.version)) if self.version else "", self.today, commit))
+                '<body>\n<header class="site">%s<p class="cadence">Updated weekly, new versions on Mondays &middot; Corrections: <a href="%s" rel="noopener">open an issue</a></p></header>\n<main>\n%s\n</main>\n'
+                '<footer class="site"><p class="cadence">Updated weekly: numbered versions are released on Mondays. To correct or propose an entry, <a href="%s" rel="noopener">open an issue</a>.</p>%s%s. Generated on %s from %s; content under CC BY 4.0. Generated from the data of the map, never edited by hand. No tracking, no scripts.</footer>\n</body>\n</html>\n'
+                % (esc(title), attr(desc), attr(self.base(path)), rel, alt, ld, nav, attr(NEW_ISSUE_URL), body, attr(NEW_ISSUE_URL), esc(SITE_TITLE), (", version %s" % esc(self.version)) if self.version else "", self.today, commit))
         target = self.out / path
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(page, encoding="utf-8", newline="\n")
@@ -707,9 +708,9 @@ def data_page_html(a, site, n_entries, newest, map_size, n_events, sha):
             "<h2 id=\"licence\">Licence</h2><p>The content is under <a href=\"%s\" rel=\"noopener\">CC BY 4.0</a>; the scripts in <code>tools/</code> are under the MIT licence. Reuse is free with attribution. Quotations from third-party texts remain under their own terms; CC BY 4.0 applies to the author's text and data.</p>"
             "<h2 id=\"cite\">How to cite</h2>%s%s"
             "<h2 id=\"counts\">Counts</h2><p>The numbers of sources quoted on the site (source references, distinct URLs, primary and third-party-only URLs) are produced by <a href=\"%s\" rel=\"noopener\">tools/count_sources.py</a>, run on the files of the repository. A source reference is one use of a URL in the field <code>sources</code> or in a <code>committed_next</code> item; a distinct URL is counted once whatever the number of uses; a URL with a fragment is a different URL. The script counts URLs and does not check that they respond.</p>"
-            "<h2 id=\"updates\">Updates</h2><p>Each entry carries its own read date (the fields <code>verified</code> and <code>status_as_of</code>). The site is regenerated from the data at each commit of the repository; the newest verification date is %s.</p>"
+            "<h2 id=\"updates\">Updates</h2><p>Each entry carries its own read date (the fields <code>verified</code> and <code>status_as_of</code>). The site is regenerated from the data at each commit of the repository; the newest verification date is %s. Update cadence: numbered versions are released on Mondays; changes verified by Friday enter the following Monday. Corrections and proposals: open an issue at <a href=\"%s\" rel=\"noopener\">%s</a>.</p>"
             "<h2 id=\"corrections\">Corrections</h2><p>Corrections and missing sources: <a href=\"%s\" rel=\"noopener\">open an issue on the repository</a>.</p>"
-            % (tbl, attr(LICENCE_URL), cite_p, citable_p, attr(a.repo_url.rstrip("/") + "/blob/main/tools/count_sources.py"), esc(newest), attr(ISSUES_URL)))
+            % (tbl, attr(LICENCE_URL), cite_p, citable_p, attr(a.repo_url.rstrip("/") + "/blob/main/tools/count_sources.py"), esc(newest), attr(ISSUES_URL), esc(ISSUES_URL), attr(ISSUES_URL)))
 
 
 def dataset_ld(site, newest):

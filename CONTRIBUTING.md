@@ -27,3 +27,5 @@ A proposal made by a third party goes to the Proposals appendix only if it is pu
 ## Decisions
 
 The author decides what is published and dates every change.
+
+Numbered versions go out on Mondays. Proposals verified by Friday evening enter the following Monday; later ones move to the next week. A Monday with no change to citable content produces no new version.
