@@ -4,7 +4,7 @@
  "org": "Independent",
  "kind": "work-item",
  "tier": "context",
- "status": "Two Internet-Drafts by Iman Schrock (EMILIA Protocol, Inc.) were current on 2026-10-08: draft-schrock-ep-architecture-03 (2026-09-06, Informational) and draft-schrock-action-evidence-boundary-07 (2026-09-25, Informational). The Apache-2.0 repository emiliaprotocol/emilia-protocol was created on 2026-03-13.",
+ "status": "Two individual Internet-Drafts by Iman Schrock (EMILIA Protocol, Inc.) were current on 2026-10-08: draft-schrock-ep-architecture-03 (2026-09-06, Informational) and draft-schrock-action-evidence-boundary-07 (2026-09-25, Informational). The Apache-2.0 repository emiliaprotocol/emilia-protocol was created on 2026-03-13.",
  "status_as_of": "2026-10-08",
  "relevance": "The architecture draft \"composes the Canonical Action Identifier (CAID), Authorization Evidence Chain (AEC), and Action Evidence Boundary (AEB)\" and says \"A valid signature, a current credential, a satisfied evidence requirement, and an observed effect remain different facts.\" The README says \"EMILIA Gate checks authority before a protected tool runs\"; its example MCP payment server \"refuses a call without approval, binds approval to the amount, currency, vendor, and destination\", and the README calls the example \"a local demonstration\" with \"a mock payment tool\". The boundary draft refers to AP2 repeatedly (counts in the evidence). On the AUDIT list its author and Sumit Ahuja are writing an expected-record draft that cites the boundary draft (see ietf-audit); on the agentproto list the author pointed on 2026-10-03 to the repository's response-loss example. AAIF Identity and Trust issue #13 compares MintID and Proofable; EMILIA does not appear in the comments of that issue read on 2026-10-08.",
  "sources": [
@@ -54,6 +54,6 @@
   "not_found": "Not found, 2026-10-08: EMILIA in the comments of AAIF issue #13 (7 comments)."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/emilia-protocol.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/a1ae242918902e0768e0e6a79bd2bffc4ac5cfa3/entries/emilia-protocol.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/acdb1d8ff05d92d8e32bc8b964cec7f3cc9eafe0/entries/emilia-protocol.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

@@ -1,20 +1,35 @@
 {
  "schema": "v2",
  "schema_description": "entries/_schema.md",
- "generated": "2026-10-15",
- "source_commit": "a1ae242918902e0768e0e6a79bd2bffc4ac5cfa3",
+ "generated": "2026-10-19",
+ "source_commit": "acdb1d8ff05d92d8e32bc8b964cec7f3cc9eafe0",
  "licence": "https://creativecommons.org/licenses/by/4.0/",
  "entries": [
   {
    "id": "a2a-core",
    "name": "Agent2Agent (A2A) protocol, core specification",
-   "org": "Linux Foundation",
+   "org": "AAIF",
    "kind": "specification",
    "tier": "context",
-   "status": "Latest release v1.0.1, 2026-05-28. Technical Steering Committee of eight company seats: Google, Microsoft, Cisco, AWS, Salesforce, ServiceNow, SAP, IBM.",
-   "status_as_of": "2026-10-13",
+   "status": "Hosted project of the Agentic AI Foundation (AAIF): AAIF announced on 2026-08-17 that A2A \"is joining the Agentic AI Foundation (AAIF) as a hosted project\", and the A2A blog of 2026-08-27 says it \"has officially been accepted as a Growth Stage project\"; latest release v1.0.1, 2026-05-28. Technical Steering Committee of eight company seats: Google, Microsoft, Cisco, AWS, Salesforce, ServiceNow, SAP, IBM.",
+   "status_as_of": "2026-10-19",
    "relevance": "The AgentCard is defined in specification/a2a.proto as \"A self-describing manifest for an agent.\"; how cards are found is in a2a-discovery. PR #2081, merged on 2026-07-30, added section 7.6.4 to the specification: \"Agents MUST NOT treat the TASK_STATE_AUTH_REQUIRED state transition, by itself, as authorization for any particular operation.\"; the PR description calls the state \"a coordination signal, not an authorization grant\".",
    "sources": [
+    {
+     "url": "https://aaif.io/blog/a2a-joins-aaif",
+     "read": "2026-10-19",
+     "class": "decision"
+    },
+    {
+     "url": "https://a2a-protocol.org/latest/blog/2026/08/27/a-new-chapter-for-a2a-joining-the-agentic-ai-foundation/",
+     "read": "2026-10-19",
+     "class": "statement"
+    },
+    {
+     "url": "https://aaif.io/projects",
+     "read": "2026-10-19",
+     "class": "statement"
+    },
     {
      "url": "https://github.com/a2aproject/A2A/blob/main/specification/a2a.proto",
      "archived": "https://web.archive.org/web/20261014051215/https://github.com/a2aproject/A2A/blob/main/specification/a2a.proto",
@@ -46,10 +61,25 @@
      "class": "third-party"
     },
     {
+     "url": "https://github.com/frmoretto/agentic-standards-map/issues/7",
+     "read": "2026-10-19",
+     "class": "third-party"
+    },
+    {
+     "url": "https://github.com/a2aproject/A2A/blob/main/README.md",
+     "read": "2026-10-19",
+     "class": "statement"
+    },
+    {
      "url": "https://www.iana.org/assignments/well-known-uris/well-known-uris.xml",
      "archived": "https://web.archive.org/web/20261014051947/https://www.iana.org/assignments/well-known-uris/well-known-uris.xml",
      "read": "2026-10-05",
      "class": "normative"
+    },
+    {
+     "url": "https://github.com/frmoretto/agentic-standards-map/issues/5",
+     "read": "2026-10-16",
+     "class": "third-party"
     }
    ],
    "overlaps": [
@@ -59,16 +89,25 @@
    "seams": [
     "S1"
    ],
-   "verified": "2026-10-13",
+   "verified": "2026-10-19",
    "evidence": {
-    "read": "On 2026-10-13: the release list (latest v1.0.1, 2026-05-28),. On 2026-10-03: a2a.proto, docs/specification.md, GOVERNANCE.md, the release list.",
+    "read": "On 2026-10-19: the AAIF announcement of 2026-08-17, the A2A blog post of 2026-08-27, aaif.io/projects (Agent2Agent listed), README.md and GOVERNANCE.md of main (eight seats) and the release list (latest still v1.0.1).",
     "not_read": "Technical Steering Committee (TSC) minutes and recordings, specification chapters beyond the definitions, the project's later announcements."
-   }
+   },
+   "open_proposals": [
+    {
+     "what": "Issue #2323: an extension proposal in the Proposal Phase of the A2A extension governance, for an \"Autonomy Envelope\" carried as an AgentExtension and liveness-gated authority; no maintainer sponsor as of 2026-10-16. The open proposal for A2A #2323 was proposed for the map in issue #5 (2026-10-15) by the author of that proposal.",
+     "author": "a participant",
+     "date": "2026-10-07",
+     "state": "open",
+     "url": "https://github.com/a2aproject/A2A/issues/2323"
+    }
+   ]
   },
   {
    "id": "a2a-discovery",
    "name": "A2A protocol, agent discovery",
-   "org": "Linux Foundation",
+   "org": "AAIF",
    "kind": "work-item",
    "tier": "core",
    "status": "A2A registers /.well-known/agent-card.json for a single AgentCard; proposals for hosts serving several agents (PR #2240, issues #2276 and #2248) were open on 2026-10-13: PR #2240 and issue #2248 have no comment, and issue #2276 has no comment after 2026-10-02.",
@@ -78,6 +117,11 @@
    "boundary": "A maintainer wrote on PR #418 that the A2A working group \"will not be building any kind of registry standard\".",
    "participation": "The author of this map took part in issue #2276 (two comments, 2026-10-02); see Disclosure.",
    "sources": [
+    {
+     "url": "https://aaif.io/blog/a2a-joins-aaif",
+     "read": "2026-10-19",
+     "class": "decision"
+    },
     {
      "url": "https://github.com/a2aproject/A2A/pull/2240",
      "archived": "https://web.archive.org/web/20261014052026/https://github.com/a2aproject/A2A/pull/2240",
@@ -109,6 +153,11 @@
      "class": "decision"
     },
     {
+     "url": "https://github.com/frmoretto/agentic-standards-map/issues/8",
+     "read": "2026-10-19",
+     "class": "third-party"
+    },
+    {
      "url": "https://www.linuxfoundation.org/press/linux-foundation-launches-the-agent2agent-protocol-project-to-enable-secure-intelligent-communication-between-ai-agents",
      "archived": "https://web.archive.org/web/20261009075953/https://www.linuxfoundation.org/press/linux-foundation-launches-the-agent2agent-protocol-project-to-enable-secure-intelligent-communication-between-ai-agents",
      "read": "2026-10-03",
@@ -123,9 +172,9 @@
    "seams": [
     "S1"
    ],
-   "verified": "2026-10-13",
+   "verified": "2026-10-19",
    "evidence": {
-    "read": "Repository items read (updated 2026-01-01 to 2026-10-02): discovery threads in full, the rest by keyword search; docs/roadmap.md and agent-discovery.md on main, 2026-10-03.",
+    "read": "On 2026-10-19: the AAIF announcement of 2026-08-17, which says A2A \"is joining the Agentic AI Foundation (AAIF) as a hosted project\". The change was proposed for the map in issue #8 (2026-10-18) by zeroasterisk, who disclosed: \"Proposer works at Google (Google contributed A2A to the Linux Foundation and donated AP2 to the FIDO Alliance); member of the AAIF Technical Steering Committee.",
     "not_read": "Technical Steering Committee (TSC) minutes and recordings, the diff of PR #2240, the Discord, long identity threads, replies on #2276 after 2026-10-02 (none found: the thread has three comments, the last of 2026-10-02).",
     "not_found": "On 2026-10-13 (main at commit 7c861a5): the state, comment count and last update of PR #2240 and issues #2276 and #2248, the latest release (v1.0.1, 2026-05-28), docs/topics/agent-discovery.md (the quoted sentence present; AI Catalog not found in it) and the history of GOVERNANCE.md (last change 2026-08-25). Not found in roadmap.md: discovery."
    },
@@ -153,6 +202,13 @@
      "state": "open",
      "url": "https://github.com/a2aproject/A2A/issues/2248",
      "archived": "https://web.archive.org/web/20261014052441/https://github.com/a2aproject/A2A/issues/2248"
+    },
+    {
+     "what": "Issue #2043: extension proposal for DANE-anchored identity for Agent Cards (DNSSEC TLSA binding for the signing key); no maintainer has commented as of 2026-10-15. The open proposal for A2A #2043 was proposed for the map in issue #4 (2026-10-15) by the author of that proposal.",
+     "author": "a participant",
+     "date": "2026-07-10",
+     "state": "open",
+     "url": "https://github.com/a2aproject/A2A/issues/2043"
     }
    ]
   },
@@ -352,10 +408,15 @@
    "org": "AAIF",
    "kind": "venue",
    "tier": "context",
-   "status": "AAIF has a Governing Board, a Technical Committee and working groups, each with a repository; Agentic Commerce has its own entry.",
+   "status": "AAIF has a Governing Board, a Technical Committee and working groups, each with a repository; Agentic Commerce has its own entry. Hosted projects listed on aaif.io/projects (read 2026-10-19): Model Context Protocol, goose, AGENTS.md, agentgateway, Agent2Agent and Agent Router.",
    "status_as_of": "2026-10-13",
    "relevance": "aaif.io describes AAIF as \"a neutral, open foundation under the Linux Foundation\". Its Identity and Trust group aims at standards so \"agents can be discovered across platforms, prove who they are, who they act for\". Taxonomy and Landscape Workstream (repository ws-taxonomy-landscape, read on 2026-10-09 at commit 6ac90f5 of main): its charter lists the deliverables \"Shared Taxonomy Explorer (v1.0)\" with the date 2026-08-15 and \"Ecosystem Architecture Map (v1.0)\", `landscape.yml` plus a web application, with the date 2026-10-15; these are dates of a charter table, not a commitment of the workstream. On 2026-10-13 a portal titled \"Taxonomy and Landscape Portal\" is published at aaif.github.io/ws-taxonomy-landscape (page marked updated 2026-10-11, 8:13 pm) with links to a Shared Taxonomy Explorer and an Ecosystem Landscape Map; neither is called v1.0 on the page, the repository has no release (0) and no tag read, its commits to 2026-10-12 define taxonomy terms, and the date 2026-10-15 of the Ecosystem Architecture Map is still ahead. Its README says \"The Landscape remains on the future roadmap, but its contribution and review process has not yet been accepted.\" and that \"pull requests that propose Landscape changes will be closed\"; the text was added by PR #61 (\"docs: clarify current taxonomy-only contribution scope\", merged 2026-09-16). PR #83 (\"Clarify taxonomy contribution process\", merged 2026-10-07) rewrote CONTRIBUTING.md: a term is raised in a Working Group, a delegate adds it to the taxonomy spreadsheet, the weekly workstream meeting votes KEEP, CULL or DEBATE, and only then does a delegate open a pull request, which needs approval from delegates of two different Working Groups before it is merged and the term is marked FINALIZED; the guide adds \"A pull request for a term that has not received a KEEP vote will be closed.\"",
    "sources": [
+    {
+     "url": "https://aaif.io/projects",
+     "read": "2026-10-19",
+     "class": "statement"
+    },
     {
      "url": "https://aaif.io/about",
      "archived": "https://web.archive.org/web/20261006190617/http://aaif.io/about",
@@ -409,6 +470,11 @@
      "archived": "https://web.archive.org/web/20261014054904/https://home.mlops.community/public/events/accuracy-and-reliability-of-ai-agents-virtual-summit-77nje0s530",
      "read": "2026-10-13",
      "class": "statement"
+    },
+    {
+     "url": "https://github.com/frmoretto/agentic-standards-map/issues/13",
+     "read": "2026-10-19",
+     "class": "third-party"
     }
    ],
    "overlaps": [
@@ -417,9 +483,9 @@
     "mcp-server-card",
     "lf-ai-catalog"
    ],
-   "verified": "2026-10-13",
+   "verified": "2026-10-19",
    "evidence": {
-    "read": "On 2026-10-13: the file listing, the commits to 2026-10-12, the releases and the issue and pull request list of ws-taxonomy-landscape, the portal page at aaif.github.io/ws-taxonomy-landscape, and the README (last changed 2026-09-16, unchanged on the Landscape sentence).",
+    "read": "On 2026-10-19: aaif.io/projects (six projects).",
     "not_read": "Discord, mailing lists, recordings, Google Documents.",
     "not_found": "Not found in the proposals repositories, 2026-10-03: AI Catalog, Agentic Resource Discovery (ARD), DAWN, UCP, Verifiable Intent."
    }
@@ -432,7 +498,7 @@
    "tier": "core",
    "status": "Charter approved 2026-05-15; Capability Map being built from contributed inputs. Charter targets: Capability Map (2026-09-01) and Recommendations to the Technical Committee on hosted projects (2026-10-01); both dates have passed, and no Capability Map or Recommendations document is found in the repository on 2026-10-13 (root: README.md, charter.md, reporting/; commits to 2026-10-12). Chairs per the August report: Ilya Grigorik (Shopify) and Rahul Bansal (OpenAI). The August report (merged by PR #7 on 2026-10-12) says the x402 session \"advanced the payment layer of the Capability Map\" and lists no decision needed from the Technical Committee; the report for September is opened as issue #9 (2026-10-12), covering deep dives on onX, MPP and the UCP August release.",
    "status_as_of": "2026-10-13",
-   "relevance": "The group aligns open specifications for commerce workflows carried out by AI agents; the charter says \"The Working Group does not author competing commerce protocols\" and lists UCP, ACP, Mastercard Verifiable Intent and Visa TAP as \"Source Projects (primary inputs to the Capability Map)\". The Running Notes record on product discovery (2026-04-01) \"Finding products is different from finding where to search\". The charter lists \"Open Meetings: No\". In issue #5 (Capability Map input: cross-boundary evidence and audit row) the author of draft-krausz-verification-state, who discloses it, wrote on 2026-10-08 that its v_verdict \"carries verified, contradicted, indeterminate or not_evaluated\" and that \"a mapping would need to preserve the distinction between an inconclusive evaluation and one that did not occur.\"",
+   "relevance": "The group aligns open specifications for commerce workflows carried out by AI agents; the charter says \"The Working Group does not author competing commerce protocols\" and lists UCP, ACP, Mastercard Verifiable Intent and Visa TAP as \"Source Projects (primary inputs to the Capability Map)\". The Running Notes record on product discovery (2026-04-01) \"Finding products is different from finding where to search\". The charter lists \"Open Meetings: No\". In issue #5 (Capability Map input: cross-boundary evidence and audit row) the author of the individual Internet-Draft draft-krausz-verification-state, who discloses it, wrote on 2026-10-08 that its v_verdict \"carries verified, contradicted, indeterminate or not_evaluated\" and that \"a mapping would need to preserve the distinction between an inconclusive evaluation and one that did not occur.\"",
    "committed_next": [],
    "boundary": "Out of scope: new commerce protocols, internals of any specific commerce system, end-user UI, marketplace design, hardware.",
    "sources": [
@@ -516,6 +582,88 @@
      "state": "open",
      "url": "https://github.com/aaif/wg-agentic-commerce/issues/8",
      "archived": "https://web.archive.org/web/20261014055836/https://github.com/aaif/wg-agentic-commerce/issues/8"
+    }
+   ]
+  },
+  {
+   "id": "accord-project",
+   "name": "Accord Project (agreement layer for agentic commerce)",
+   "org": "Linux Foundation",
+   "kind": "specification",
+   "tier": "context",
+   "status": "Open-source smart legal contract stack of Accord Project, a Series of LF Projects, LLC; its documentation page \"Agentic Commerce\" (no date on the page, last changed 2026-07-07 in the repository history, read 2026-10-15) describes it as the agreement layer beneath authorization and checkout protocols. The Concerto model of x402 presented on 2026-07-22 is pull request #194 of accordproject/models, open on 2026-10-15 (last update 2026-08-05).",
+   "status_as_of": "2026-10-15",
+   "relevance": "The documentation page says \"Accord Project is the agreement layer\" and calls its three integration patterns (an authorization credential binding a contract by hash, Concerto as schema language for a constraint registry, contract logic for terms \"authorization can't enforce\") \"illustrative\", describing \"technical fit, not partnerships or endorsements\" with AP2, UCP, ACP and Verifiable Intent. Two prototypes by individual members of the project's Technical Steering Committee (TSC), outside the project's repositories and without licence or release, apply them with stubbed or simulated settlement: mttrbrts/agentic-obligations (last commit 2026-05-20) and The-Building-Blocks/accord-x402-contract-server (last commit 2026-07-30). They bind a contract reference in AP2 mandates and in x402 payment requirements, and the second says the x402 payment signature \"does not sign the Accord `agreementHash`\".",
+   "boundary": "The documentation page: \"Accord Project is not an identity, authorization, or payment layer. It does not issue credentials, perform key binding, or implement selective disclosure\"; its footer says \"The Accord Project is not a standards setting body or organization.\"",
+   "committed_next": [
+    {
+     "what": "Q3 2026 review, \"Plans & Upcoming Work\": \"Publish the agentic commerce blog series, starting with x402 and followed by A2A, with a docs page for each protocol\". The review's summary of the meeting of 2026-07-22 records an agreement: \"The group agreed to take x402 all the way through model, example, docs and blog post before releasing the AP2, A2A and other bindings.\"",
+     "when": "undated",
+     "source": "https://accordproject.org/news/accord-project-tech-working-group-q3-2026-in-review/",
+     "class": "statement"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://docs.accordproject.org/docs/accordproject-agentic-commerce",
+     "read": "2026-10-15",
+     "class": "statement"
+    },
+    {
+     "url": "https://accordproject.org/news/accord-project-tech-working-group-q3-2026-in-review/",
+     "read": "2026-10-15",
+     "class": "statement"
+    },
+    {
+     "url": "https://github.com/accordproject/technical-steering-committee/blob/main/README.md",
+     "read": "2026-10-15",
+     "class": "statement"
+    },
+    {
+     "url": "https://github.com/accordproject/models/pull/194",
+     "read": "2026-10-15",
+     "class": "third-party"
+    },
+    {
+     "url": "https://github.com/accordproject/apap/blob/main/server/README.md",
+     "read": "2026-10-15",
+     "class": "statement"
+    },
+    {
+     "url": "https://github.com/mttrbrts/agentic-obligations",
+     "read": "2026-10-15",
+     "class": "third-party"
+    },
+    {
+     "url": "https://github.com/The-Building-Blocks/accord-x402-contract-server",
+     "read": "2026-10-15",
+     "class": "third-party"
+    },
+    {
+     "url": "https://github.com/frmoretto/agentic-standards-map/issues/1",
+     "read": "2026-10-16",
+     "class": "third-party"
+    }
+   ],
+   "overlaps": [
+    "x402",
+    "verifiable-intent",
+    "ap2",
+    "ucp",
+    "acp"
+   ],
+   "verified": "2026-10-16",
+   "evidence": {
+    "read": "On 2026-10-15: the documentation page \"Agentic Commerce\" and its change history, the written summaries of the Q3 2026 review (15 meetings, 2026-07-01 to 2026-09-30), the state of accordproject/models PR #194, the LCP and MCP sections of the APAP server README, the member list of the TSC README (last changed 2022-10-07), and the README, root listing, contributors and latest commit of mttrbrts/agentic-obligations and The-Building-Blocks/accord-x402-contract-server.",
+    "not_read": "The meeting recordings on Vimeo linked from the review, which were not opened because the host asks for a human verification step; the code and tests of the two prototype repositories; the A2A interface code of APAP."
+   },
+   "open_proposals": [
+    {
+     "what": "Concerto model org.accordproject.protocol.x402@0.2.0 of x402 specification v2 (payment requirements and payloads, facilitator responses, header binding).",
+     "author": "a participant",
+     "date": "2026-07-22",
+     "state": "open",
+     "url": "https://github.com/accordproject/models/pull/194"
     }
    ]
   },
@@ -636,12 +784,85 @@
    }
   },
   {
+   "id": "anp",
+   "name": "Agent Network Protocol (ANP)",
+   "org": "Independent",
+   "kind": "specification",
+   "tier": "core",
+   "status": "Specification set ANP 1.2, GitHub release v1.2 of 2026-09-24 (v1.1 of 2026-06-27, 1.0 of 2025-05-19); the README marks ANP-02, ANP-03, ANP-04, ANP-07 and ANP-08 \"Released v1.2\", the Messaging 1.2 catalog as published with profile P6 \"candidate\", and ANP-05, ANP-06 and ANP-10 as drafts. The release notes say \"Publication of specifications does not mean implementations already support ANP 1.2\".",
+   "status_as_of": "2026-10-16",
+   "relevance": "ANP-08 defines active discovery at https://{domain}/.well-known/agent-descriptions and passive registration with search agents; agent-descriptions is not found in the IANA well-known URI registry (copy updated 2026-10-07, read 2026-10-14). ANP-07 describes Agent Description documents and lists among its aims \"Defining core vocabularies for agent basic information, products, services, interfaces, etc.\". ANP-10 is \"an ANP application-layer adaptation of the Agent Payment Protocol (AP2)\" and says \"its presence does not establish stable interoperability, implementation conformance, or production readiness\". The protocol draft of the W3C AI Agent Protocol Community Group uses the same discovery path and lists as editor Gaowei Chang, \"ANP Open Source Community\".",
+   "committed_next": [
+    {
+     "what": "README roadmap item, open: \"Complete the registered MLS ExtensionType release gate for stable P6 v2.\"",
+     "when": "undated",
+     "source": "https://github.com/agent-network-protocol/AgentNetworkProtocol/blob/main/README.md",
+     "class": "statement"
+    }
+   ],
+   "boundary": "The v1.2 release notes: \"This is a documentation release: it does not change SDK, service, or product implementations, and it does not authorize public capability advertisement.\"",
+   "sources": [
+    {
+     "url": "https://github.com/agent-network-protocol/AgentNetworkProtocol/blob/main/README.md",
+     "read": "2026-10-16",
+     "class": "normative"
+    },
+    {
+     "url": "https://github.com/agent-network-protocol/AgentNetworkProtocol/releases/tag/v1.2",
+     "read": "2026-10-16",
+     "class": "decision"
+    },
+    {
+     "url": "https://github.com/agent-network-protocol/AgentNetworkProtocol/blob/main/08-ANP-Agent-Discovery-Protocol-Specification.md",
+     "read": "2026-10-16",
+     "class": "normative"
+    },
+    {
+     "url": "https://github.com/agent-network-protocol/AgentNetworkProtocol/blob/main/07-anp-agent-description-protocol-specification.md",
+     "read": "2026-10-16",
+     "class": "normative"
+    },
+    {
+     "url": "https://github.com/agent-network-protocol/AgentNetworkProtocol/blob/main/application/10-anp-agent-payment-protocol-specification.md",
+     "read": "2026-10-16",
+     "class": "normative"
+    },
+    {
+     "url": "https://w3c-cg.github.io/ai-agent-protocol/protocol.html",
+     "read": "2026-10-16",
+     "class": "normative"
+    },
+    {
+     "url": "https://www.agent-network-protocol.com/specs/",
+     "read": "2026-10-16",
+     "class": "normative"
+    },
+    {
+     "url": "https://github.com/frmoretto/agentic-standards-map/issues/6",
+     "read": "2026-10-16",
+     "class": "third-party"
+    }
+   ],
+   "overlaps": [
+    "w3c-ai-agent-protocol-cg",
+    "ard",
+    "a2a-discovery",
+    "a2a-core",
+    "ap2"
+   ],
+   "verified": "2026-10-16",
+   "evidence": {
+    "read": "On 2026-10-16: the README of agent-network-protocol/AgentNetworkProtocol, the v1.2 release notes, ANP-07, ANP-08 and ANP-10, the specification index of agent-network-protocol.com, and the editor field of the Community Group protocol draft.",
+    "not_read": "ANP-02 to ANP-06 and the Messaging profiles beyond their status lines; the SDK and implementation repositories."
+   }
+  },
+  {
    "id": "ap2",
    "name": "Agent Payments Protocol (AP2)",
    "org": "Industry",
    "kind": "specification",
    "tier": "core",
-   "status": "Open protocol in the GitHub organisation google-agentic-commerce (Apache-2.0); latest release v0.2.0 of 2026-04-28, which \"focuses on providing Human Not Present flows\"; core specification donated to FIDO.",
+   "status": "Open protocol in the GitHub organisation google-agentic-commerce (Apache-2.0); latest release v0.2.0 of 2026-04-28, which \"focuses on providing Human Not Present flows\"; core specification donated to FIDO. Google announced the donation on 2026-04-28 (\"We're donating Agent Payments Protocol to the FIDO Alliance\"); the FIDO release of the same day places the work in its Payments Technical Working Group, where the Google and Mastercard contributions are \"providing an initial foundation for these specifications\", and announces an Agentic Authentication Technical Working Group.",
    "status_as_of": "2026-10-13",
    "relevance": "AP2 is available as an extension for A2A and for UCP; its objects are mandates, signed Verifiable Digital Credentials, and the FIDO blog of 2026-05-26 names \"Checkout Mandate: This captures the details about and conditions on what the user wants to buy.\" and \"Payment Mandate : This captures the details about and conditions on how the user wants to pay (amount, instrument, timing).\" The docs say the Checkout Mandate is shared with the merchant, so the seller is a recipient of the user's signed purchase terms. The record the other way, the Mandate Receipt that the Verifier signs, is described with a `result` field in docs/ap2/agent_authorization.md and with a `status` field in the normative schemas, at the same commit e1ea56d (see issue #374 in the open proposals). UCP's AP2 mandates extension has businesses embed a signature over the checkout terms.\n",
    "boundary": "The docs index (docs/index.md at commit e1ea56d, the head of main on 2026-10-13) says the initial version supports pull payment methods such as credit and debit cards and that the roadmap includes e-wallets, push payments such as real-time bank transfers, and digital currencies; docs/index.md describes \"the initial version\" as supporting these payment methods, and the latest release is v0.2.0 (2026-04-28).",
@@ -662,6 +883,11 @@
     }
    ],
    "sources": [
+    {
+     "url": "https://blog.google/products-and-platforms/platforms/google-pay/agent-payments-protocol-fido-alliance/",
+     "read": "2026-10-19",
+     "class": "decision"
+    },
     {
      "url": "https://github.com/google-agentic-commerce/AP2/releases/tag/v0.2.0",
      "archived": "https://web.archive.org/web/20261014061252/https://github.com/google-agentic-commerce/AP2/releases/tag/v0.2.0",
@@ -690,6 +916,11 @@
      "url": "https://github.com/google-agentic-commerce/AP2/issues/374",
      "archived": "https://web.archive.org/web/20261014061406/https://github.com/google-agentic-commerce/AP2/issues/374",
      "read": "2026-10-13",
+     "class": "third-party"
+    },
+    {
+     "url": "https://github.com/frmoretto/agentic-standards-map/issues/11",
+     "read": "2026-10-19",
      "class": "third-party"
     },
     {
@@ -743,9 +974,9 @@
    "seams": [
     "S4"
    ],
-   "verified": "2026-10-14",
+   "verified": "2026-10-19",
    "evidence": {
-    "read": "On 2026-10-13: the release list (latest v0.2.0, 2026-04-28), the head of main (commit e1ea56d, 2026-04-29, unchanged since the reading of 2026-10-05), docs/index.md, docs/ap2/agent_authorization.md, checkout_receipt.json and receipt_status.json at that commit, and issue #374,. Also on 2026-10-13, at the same commit: docs/ap2/specification.md (section Checkout Mandate, which holds the sentence \"Once the Merchant has accepted or rejected the Checkout Mandate, it MUST return a Checkout Receipt.\"), flows.md (receipt passages), the Checkout Receipt section of checkout_mandate.md (which holds the schema fields), and a search of the seven documents of docs/ap2 for the words refund, cancel and fulfil(l), recounted on 2026-10-14. google-agentic-commerce/AP2, 2026-10-03: metadata, releases v0.2.0 and v0.1.0, README, CONTRIBUTING.md, docs/index.md, docs/faq.md; FIDO release of 2026-04-28 and blog of 2026-05-26, in full; at commit e1ea56d on 2026-10-05: docs/ap2/specification.md, docs/ap2/agent_authorization.md and code/sdk/schemas/ap2/checkout_receipt.json.",
+    "read": "On 2026-10-19: the Google blog post of 2026-04-28, the FIDO release of 2026-04-28 (page metadata: modified 2026-10-16), CONTRIBUTING.md (\"The core specification has been donated to FIDO\") and docs/faq.md of main.",
     "not_read": "The mandate pages checkout_mandate.md and payment_mandate.md beyond the receipt sections, other code, commits, issues, FIDO working group charters.",
     "not_found": "Not found in the seven documents of docs/ap2 at commit e1ea56d (agent_authorization, checkout_mandate, flows, implementation_considerations, payment_mandate, security_and_privacy_considerations, specification), 2026-10-14: refund and cancel (0 occurrences each)."
    },
@@ -1079,7 +1310,7 @@
    "org": "Independent",
    "kind": "work-item",
    "tier": "context",
-   "status": "Two Internet-Drafts by Iman Schrock (EMILIA Protocol, Inc.) were current on 2026-10-08: draft-schrock-ep-architecture-03 (2026-09-06, Informational) and draft-schrock-action-evidence-boundary-07 (2026-09-25, Informational). The Apache-2.0 repository emiliaprotocol/emilia-protocol was created on 2026-03-13.",
+   "status": "Two individual Internet-Drafts by Iman Schrock (EMILIA Protocol, Inc.) were current on 2026-10-08: draft-schrock-ep-architecture-03 (2026-09-06, Informational) and draft-schrock-action-evidence-boundary-07 (2026-09-25, Informational). The Apache-2.0 repository emiliaprotocol/emilia-protocol was created on 2026-03-13.",
    "status_as_of": "2026-10-08",
    "relevance": "The architecture draft \"composes the Canonical Action Identifier (CAID), Authorization Evidence Chain (AEC), and Action Evidence Boundary (AEB)\" and says \"A valid signature, a current credential, a satisfied evidence requirement, and an observed effect remain different facts.\" The README says \"EMILIA Gate checks authority before a protected tool runs\"; its example MCP payment server \"refuses a call without approval, binds approval to the amount, currency, vendor, and destination\", and the README calls the example \"a local demonstration\" with \"a mock payment tool\". The boundary draft refers to AP2 repeatedly (counts in the evidence). On the AUDIT list its author and Sumit Ahuja are writing an expected-record draft that cites the boundary draft (see ietf-audit); on the agentproto list the author pointed on 2026-10-03 to the repository's response-loss example. AAIF Identity and Trust issue #13 compares MintID and Proofable; EMILIA does not appear in the comments of that issue read on 2026-10-08.",
    "sources": [
@@ -1203,8 +1434,13 @@
    "tier": "context",
    "status": "Announced 2026-04-28: an Agentic Authentication Technical Working Group, and work in the Payments Technical Working Group starting from Google (AP2) and Mastercard (Verifiable Intent) contributions.",
    "status_as_of": "2026-10-14",
-   "relevance": "The release says the Payments Technical Working Group is \"chaired by members from Mastercard and Visa\"; it says contributed, while the AP2 repository says its core specification has been donated to FIDO. For the Agentic Authentication Technical Working Group the release says it is \"chaired by members from CVS Health, Google and OpenAI and vice-chaired by members from Amazon, Google and Okta\" (read in a browser on 2026-10-14); it names companies, not persons.",
+   "relevance": "The release says the Payments Technical Working Group is \"chaired by members from Mastercard and Visa\"; it says contributed; Google's announcement of the same day says \"We're donating Agent Payments Protocol to the FIDO Alliance\", and the AP2 repository says its core specification has been donated to FIDO. For the Agentic Authentication Technical Working Group the release says it is \"chaired by members from CVS Health, Google and OpenAI and vice-chaired by members from Amazon, Google and Okta\" (read in a browser on 2026-10-14); it names companies, not persons.",
    "sources": [
+    {
+     "url": "https://blog.google/products-and-platforms/platforms/google-pay/agent-payments-protocol-fido-alliance/",
+     "read": "2026-10-19",
+     "class": "decision"
+    },
     {
      "url": "https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/",
      "archived": "https://web.archive.org/web/20261014061119/https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/",
@@ -1216,6 +1452,11 @@
      "archived": "https://web.archive.org/web/20261014061817/https://github.com/google-agentic-commerce/AP2/blob/main/CONTRIBUTING.md",
      "read": "2026-10-03",
      "class": "normative"
+    },
+    {
+     "url": "https://github.com/frmoretto/agentic-standards-map/issues/12",
+     "read": "2026-10-19",
+     "class": "third-party"
     }
    ],
    "overlaps": [
@@ -1227,9 +1468,9 @@
    "seams": [
     "S4"
    ],
-   "verified": "2026-10-14",
+   "verified": "2026-10-19",
    "evidence": {
-    "read": "FIDO release of 2026-04-28 in full, read again in a browser on 2026-10-14 (page metadata: published and modified 2026-04-28); blog of 2026-05-26 in full, 2026-10-03, not read again; AP2 CONTRIBUTING.md and docs/index.md, 2026-10-03.",
+    "read": "On 2026-10-19: the FIDO release again (page metadata: modified 2026-10-16; the sentences quoted here are unchanged) and the Google blog post of 2026-04-28.",
     "not_read": "Working group charters, membership, specification text.",
     "not_found": "Not found in pages read, 2026-10-03: AAIF coordination; Visa TAP among contributions."
    }
@@ -1356,7 +1597,7 @@
    "org": "IETF",
    "kind": "charter",
    "tier": "core",
-   "status": "The Internet Engineering Steering Group (IESG) announced on 2026-10-08, 16:55 UTC, \"A new IETF WG has been formed in the Applications and Real-Time Area\" for Agent Communication Protocols (agentproto), chairs Orie Steele and Leslie Daigle, and names the responsible Area Director. The datatracker page read on 2026-10-09 shows charter-ietf-agentproto-01, state \"Approved\", Working Group (WG) state \"Active\", area Applications and Real-Time Area (art), last updated 2026-10-08, and its history records \"Charter approved, group active\" on 2026-10-08. Reading of 2026-10-13: the datatracker charter page is still headed \"Agent Communication Protocols (agentproto) Proposed Charter\" while its state is Approved and the group is Active (charter-ietf-agentproto-01, last updated 2026-10-08). The related drafts page lists 15 drafts, among them draft-agentic-ai-usecases-requirements-03 (posted 2026-10-10) and draft-rosenberg-agentproto-usecases-00 (2026-07-04); a revision -04 of the first is not found there. The chairs wrote on the list on 2026-10-12 that \"Our goal for this topic is to identify candidate starting points for the Use Cases and Requirements document.\", that the discussion \"identified two drafts for consideration\" (those two) and that \"We have useful contributions toward a working group document, but have not yet established which draft should be its starting point.\" In the same thread an author of the -03 draft proposed, for a -04, the requirements B1-7 (checks on resumption) and B1-8 (\"If any check in B1-7 fails or cannot be completed, the dialog is not resumed and the protocol is required to signal the reason.\"), and CMN-12 (\"Before accepting a change to a dialog, a participant is required to be able to verify that the change is authorized at that time.\"); on 2026-10-13 the same author agreed to add to Section 4.2 \"If the outcome cannot be determined, the operation remains unresolved, and resuming the dialog alone does not justify resending it.\" (proposed text read as quoted in the chairs' message and in the reply). On 2026-10-12 a chair answered a thread on implementation evidence with \"Please refrain from sending messages regarding implementations at this time.\" A session request for agentproto at IETF 127 exists in the datatracker (requested duration 2:00:00, last modified 2026-10-08); no timeslot assignment for it is found in the agenda schedule of the meeting (API, 2026-10-13).",
+   "status": "The Internet Engineering Steering Group (IESG) announced on 2026-10-08, 16:55 UTC, \"A new IETF WG has been formed in the Applications and Real-Time Area\" for Agent Communication Protocols (agentproto), chairs Orie Steele and Leslie Daigle, and names the responsible Area Director. The datatracker page read on 2026-10-09 shows charter-ietf-agentproto-01, state \"Approved\", Working Group (WG) state \"Active\", area Applications and Real-Time Area (art), last updated 2026-10-08, and its history records \"Charter approved, group active\" on 2026-10-08. Reading of 2026-10-13: the datatracker charter page is still headed \"Agent Communication Protocols (agentproto) Proposed Charter\" while its state is Approved and the group is Active (charter-ietf-agentproto-01, last updated 2026-10-08). The related drafts page lists 15 drafts, among them the individual Internet-Drafts draft-agentic-ai-usecases-requirements-03 (posted 2026-10-10) and draft-rosenberg-agentproto-usecases-00 (2026-07-04); the datatracker page of the first, read on 2026-10-16, shows revision -04, last updated 2026-10-15. The chairs wrote on the list on 2026-10-12 that \"Our goal for this topic is to identify candidate starting points for the Use Cases and Requirements document.\", that the discussion \"identified two drafts for consideration\" (those two) and that \"We have useful contributions toward a working group document, but have not yet established which draft should be its starting point.\" In the same thread an author of the -03 draft proposed, for a -04, the requirements B1-7 (checks on resumption) and B1-8 (\"If any check in B1-7 fails or cannot be completed, the dialog is not resumed and the protocol is required to signal the reason.\"), and CMN-12 (\"Before accepting a change to a dialog, a participant is required to be able to verify that the change is authorized at that time.\"); on 2026-10-13 the same author agreed to add to Section 4.2 \"If the outcome cannot be determined, the operation remains unresolved, and resuming the dialog alone does not justify resending it.\" (proposed text read as quoted in the chairs' message and in the reply). On 2026-10-12 a chair answered a thread on implementation evidence with \"Please refrain from sending messages regarding implementations at this time.\" A session request for agentproto at IETF 127 exists in the datatracker (requested duration 2:00:00, last modified 2026-10-08); no timeslot assignment for it is found in the agenda schedule of the meeting (API, 2026-10-13).",
    "status_as_of": "2026-10-13",
    "relevance": "The charter (\"Agent Communication Protocols\") defines an \"agentic dialog management protocol\" of dialog identifiers, lifecycle semantics and propagation of dialog context, with bindings over existing IETF protocols; it \"neither replaces application-layer agent communication protocols nor defines a new transport protocol\". Commerce, payment, merchant and purchase: not found in charter 00-04 (saved 2026-10-03). The text of the charter on the datatracker page is still headed \"Agent Communication Protocols (agentproto) Proposed Charter\". Commerce, payment, merchant, purchase and seller: not found in the charter text of the page (2026-10-09). The coordination section reads \"This working group is expected to closely coordinate with other related IETF working groups on dependencies of the reference architecture and the agentic dialog management\", and lists five groups of venues: \"Security: Web Authorization Protocol (OAuth), webbotauth, WIMSE - on identity, authorization, and security considerations.\", \"Transport: WebTransport, MoQ, QUIC, TSVWG, httpbis - on data transport.\", \"Discovery and Operations: INT area, OPS area - on agent discovery and operational considerations.\", \"Evidence and transparency: SCITT, RATS, on software and hardware security.\" and \"Conversational data: vCon - on conversation representation and its relationship to dialog context.\" On the list thread \"Topic: Existing practice, use cases, and deployment models\" Iman Schrock proposed on 2026-10-05 for section 3.3.5 of the use cases text: \"If a required authorization input cannot be established, preserve that fact separately from an evaluated refusal, even when both lead to local denial.\"; Girish Konda wrote the same day \"An unestablished input is a different fact from a negative one\" and pointed to his individual draft draft-konda-agentproto-evaluation-state-00. On 2026-10-07 a participant wrote, without asking to change or delay 00-04, that \"accurately recording that an authorization answer was unavailable is not the same thing as making that fact available to the decision that admits the continuation.\" On 2026-10-08 the responsible Area Director answered three participants on the list: \"I believe this matter is one for the working group rather than the charter\", adding \"The use cases and requirements deliverable is the right home for the more detailed discussion of requirements and corresponding text.\"; the Internet Architecture Board (IAB) reviewer wrote the same day \"The new charter looks good to me.\" Charter PR #128 (Mallory Knodel, opened 2026-10-02) was closed without a merge on 2026-10-08; the responsible Area Director commented \"The PR is a substantial change very late in the process, and the concerns it aims to address were already handled by other, more targeted\" The milestones of charter 01 read \"Dec 2026 - Adopt an informational use cases draft\", \"Feb 2027 - Adopt an informational architecture draft\", \"Mar 2027 - Adopt proposed standard agentic dialog management protocol draft(s)\" and \"Mar 2028 - Submit agentic dialog management protocol draft(s) to the IESG as proposed standard\".",
    "committed_next": [
@@ -1379,6 +1620,11 @@
     "S3"
    ],
    "sources": [
+    {
+     "url": "https://datatracker.ietf.org/doc/draft-agentic-ai-usecases-requirements/",
+     "read": "2026-10-16",
+     "class": "third-party"
+    },
     {
      "url": "https://datatracker.ietf.org/doc/charter-ietf-agentproto/",
      "archived": "https://web.archive.org/web/20261014065512/https://datatracker.ietf.org/doc/charter-ietf-agentproto/",
@@ -1512,9 +1758,9 @@
      "class": "normative"
     }
    ],
-   "verified": "2026-10-13",
+   "verified": "2026-10-16",
    "evidence": {
-    "read": "On 2026-10-13: the datatracker pages of the group (about, charter, related drafts), the subjects, senders and dates of the 40 latest list messages (2026-10-08 to 2026-10-13), eight of them in full (one of 2026-10-10, three of 2026-10-12 among them the chairs' message and a chair's answer, four of 2026-10-13), and the session request data of IETF 127 (API).",
+    "read": "On 2026-10-16: the datatracker page of draft-agentic-ai-usecases-requirements (revision -04, individual, no stream).",
     "not_read": "The other list messages of 2026-10-08 to 2026-10-13 (subjects only), the texts of the related drafts; Threads on AGTP, SAMP, DMSC, COSA; messages in Chinese and Persian; IETF 126 minutes and chat log; 00-04 ballot positions on the list.",
     "not_found": "Not found in 00-00 to 00-04: the list-proposed text. Not found in 408 messages, 2026-10-03: consent, Know Your Agent (KYA), AP2, x402."
    },
@@ -1620,7 +1866,7 @@
    "tier": "core",
    "status": "Charter text under discussion on the audit list and in mirjak/audit-bof-preparation; the BoF request lists \"User e-commerce use case\" in its proposed agenda (file updated 2026-09-18). On 2026-10-05 and 2026-10-06 participants agreed in words on the sentence \"VCON is considered a suitable record format and the audit group will work with the vcon group to ensure the specified format addresses the auditing\"; pull request #61 (one commit, 009b915) was still open on 2026-10-08 and does not contain that sentence. On 2026-10-13 the datatracker group page of audit shows the state Birds of a Feather (BOF) and no charter; a name search for expected-records finds no draft (not found on the datatracker, 2026-10-13), although a list message of 2026-10-10 refers to draft-ahuja-schrock-audit-expected-records-00. On 2026-10-10 a BoF proponent wrote on the list to a participant who had asked for a presentation slot \"I am not the chair of the BoF meeting. The chairs will be selected by the ADs.\" and that the BoF agenda \"will not be based on an open call for presentation\". Pull request #61 was still open on 2026-10-13 (3 comments, last update 2026-10-06) and the repository mirjak/audit-bof-preparation has no commit after 2026-09-18.",
    "status_as_of": "2026-10-13",
-   "relevance": "AUDIT concerns audit information about agents and delegated systems, so it touches commerce wherever an agent acts for a buyer and a seller or payer later needs a record of what happened. The charter scope reads \"The scope of such auditing is the observable behavior of agents, including user intent, agent or tool interactions, invoked or declined actions, exchanged data, and\" Commerce, seller, merchant: not found in the charter text, 2026-10-02; repository example: \"booking a hotel room\" (issue #16). The BoF request lists under \"Architecture overview und use cases (20 mins)\" a \"User e-commerce use case\" and names no presenter; the architecture draft has no \"e-commerce\" text, and its use cases include a flight booked through a chain of agents and \"Financial Transactions by Agents\": \"Agents may execute financial operations such as payments or procurement actions on behalf of users\". The sentence on VCON was proposed on the list on 2026-10-05 by a BoF proponent, Mirja Kuehlewind (\"VCON is considered a suitable record format and the audit group will work with the vcon group to ensure the specified format addresses the auditing\") and accepted on 2026-10-06 by a participant (\"I'm OK with this wording\"); another participant proposed a variant in charter style. On 2026-10-06 Sumit Ahuja wrote that he and Iman Schrock are writing an expected-record draft, \"We are aiming for the -00 before the IETF 127 cutoff\", which \"declares which records each participant in a cross-domain chain is expected to produce, what each establishes, and when an absent one becomes a finding\"; Schrock listed six conformance cases for it (declaration integrity, all slots filled, bounded observed absence, incomplete observation, wrong or ineligible record, late record) and the claim boundary \"no qualifying record was found in the declared sources by the cutoff\". No text of that draft was read; it was announced on the list. Case 4 reads \"An unavailable source, incomplete pagination or coverage, unresolved participant set, or open window produces an incomplete audit, never an absence finding.\" On 2026-10-07 the author of this map wrote a seventh case on the list at Schrock's request, \"Wrong recipient or holder\": a record produced by the right party but held only by another does not fill the slot, and if the declared holder's source cannot be checked the audit is incomplete; the example is the confirmation that an EU trader owes the consumer on a durable medium (Directive 2011/83/EU, Art. 8(7)), held only by the agent platform. a co-author of the draft replied the same day that the case \"catches a distinction the six cases do not state clearly\" and asked for it to be written in the same shape; the draft text has not been read. The text of PR #61 adds to deliverable 2: \"For interaction records - the expectation is that the group will leverage the VCON format. Extensions to VCON to add data needed to model AI\" On 2026-10-07 a participant proposed case 8, \"Declined action\": \"A slot for an action that was refused before it ran is filled by the decider's signed refusal bound to that action.\"; on 2026-10-08 Iman Schrock replied \"the refusal should satisfy the decision slot, not fill the downstream effect slot\", and that a verified refusal \"can make that effect slot not applicable when the declaration names refusal as a terminal condition.\" On 2026-10-07 Pavel Izmaylov posted the individual draft draft-izmaylov-agent-permission-receipts: the principal signs a permission with a passkey that carries \"limits a machine can check\" and conditions, and a verifier states for each recorded action whether it stayed within that permission. Schrock replied on 2026-10-08 comparing it with draft-schrock-ep-authorization-receipts-13 and draft-schrock-ep-bounded-capability-receipts-06 and suggested a comparison in Section 11 of the draft. On 2026-09-30 a participant wrote on the list \"Let me know if you want me to share some of our practices on EDR and Gateways during any interim or future meetings.\" (EDR: endpoint detection and response); on 2026-10-08 the lead editor of the expected-record draft answered \"thank you for offering text, and yes please.\" and the participant wrote that the architecture draft and the charter should \"identify the necessary PEPs that should be covered first, rather than jumping into defining the record entries directly\" (the message does not expand PEPs; policy enforcement points is the usual expansion). On 2026-10-08 the lead editor of the expected-record draft wrote \"Both cases go into the -00.\" (cases 7 and 8), added that the contributors of the two cases \"will be named as contributors for these\" (see Disclosure for the credit to the author of this map), and wrote \"The draft will be draft-ahuja-schrock-audit-expected-records.\"; the datatracker page of that name returned 404 and the document search found no draft with \"expected-record\" in its name on 2026-10-09, so the text is pending and its content was not read. On 2026-10-11 a participant wrote a ninth case, \"Refusal with an undetermined cause\": \"The slot is filled by a record that states whether a refusal came from a check that ran and failed, or from a check that\", adding \"AAE as published collapses both causes into a single DENY, so this case describes a gap in my own specification as much as anywhere else.\" Iman Schrock answered the same day (his text read as quoted in the lead editor's reply) that where the declaration requires grounds, \"a single DENY cannot tell us whether revocation was established or the status check could not finish\", and the lead editor of the expected-record draft wrote the same day \"This goes into the -00 as Case 9, just like Iman put it. Lars will be named as a contributor for this case.\" On 2026-10-12 the same participant wrote that the decision receipt format that he publishes \"carries Case 9 as fields\". The draft itself is still not found on the datatracker (document search for expected-record and audit-expected, and the page and text URLs of draft-ahuja-schrock-audit-expected-records-00, HTTP 404, 2026-10-13), so cases 7, 8 and 9 are announced for the -00 and not read in it.",
+   "relevance": "AUDIT concerns audit information about agents and delegated systems, so it touches commerce wherever an agent acts for a buyer and a seller or payer later needs a record of what happened. The charter scope reads \"The scope of such auditing is the observable behavior of agents, including user intent, agent or tool interactions, invoked or declined actions, exchanged data, and\" Commerce, seller, merchant: not found in the charter text, 2026-10-02; repository example: \"booking a hotel room\" (issue #16). The BoF request lists under \"Architecture overview und use cases (20 mins)\" a \"User e-commerce use case\" and names no presenter; the architecture draft has no \"e-commerce\" text, and its use cases include a flight booked through a chain of agents and \"Financial Transactions by Agents\": \"Agents may execute financial operations such as payments or procurement actions on behalf of users\". The sentence on VCON was proposed on the list on 2026-10-05 by a BoF proponent, Mirja Kuehlewind (\"VCON is considered a suitable record format and the audit group will work with the vcon group to ensure the specified format addresses the auditing\") and accepted on 2026-10-06 by a participant (\"I'm OK with this wording\"); another participant proposed a variant in charter style. On 2026-10-06 Sumit Ahuja wrote that he and Iman Schrock are writing an expected-record draft, \"We are aiming for the -00 before the IETF 127 cutoff\", which \"declares which records each participant in a cross-domain chain is expected to produce, what each establishes, and when an absent one becomes a finding\"; Schrock listed six conformance cases for it (declaration integrity, all slots filled, bounded observed absence, incomplete observation, wrong or ineligible record, late record) and the claim boundary \"no qualifying record was found in the declared sources by the cutoff\". No text of that draft was read; it was announced on the list. Case 4 reads \"An unavailable source, incomplete pagination or coverage, unresolved participant set, or open window produces an incomplete audit, never an absence finding.\" On 2026-10-07 the author of this map wrote a seventh case on the list at Schrock's request, \"Wrong recipient or holder\": a record produced by the right party but held only by another does not fill the slot, and if the declared holder's source cannot be checked the audit is incomplete; the example is the confirmation that an EU trader owes the consumer on a durable medium (Directive 2011/83/EU, Art. 8(7)), held only by the agent platform. a co-author of the draft replied the same day that the case \"catches a distinction the six cases do not state clearly\" and asked for it to be written in the same shape; the draft text has not been read. The text of PR #61 adds to deliverable 2: \"For interaction records - the expectation is that the group will leverage the VCON format. Extensions to VCON to add data needed to model AI\" On 2026-10-07 a participant proposed case 8, \"Declined action\": \"A slot for an action that was refused before it ran is filled by the decider's signed refusal bound to that action.\"; on 2026-10-08 Iman Schrock replied \"the refusal should satisfy the decision slot, not fill the downstream effect slot\", and that a verified refusal \"can make that effect slot not applicable when the declaration names refusal as a terminal condition.\" On 2026-10-07 Pavel Izmaylov posted the individual draft draft-izmaylov-agent-permission-receipts: the principal signs a permission with a passkey that carries \"limits a machine can check\" and conditions, and a verifier states for each recorded action whether it stayed within that permission. Schrock replied on 2026-10-08 comparing it with the individual drafts draft-schrock-ep-authorization-receipts-13 and draft-schrock-ep-bounded-capability-receipts-06 and suggested a comparison in Section 11 of the draft. On 2026-09-30 a participant wrote on the list \"Let me know if you want me to share some of our practices on EDR and Gateways during any interim or future meetings.\" (EDR: endpoint detection and response); on 2026-10-08 the lead editor of the expected-record draft answered \"thank you for offering text, and yes please.\" and the participant wrote that the architecture draft and the charter should \"identify the necessary PEPs that should be covered first, rather than jumping into defining the record entries directly\" (the message does not expand PEPs; policy enforcement points is the usual expansion). On 2026-10-08 the lead editor of the expected-record draft wrote \"Both cases go into the -00.\" (cases 7 and 8), added that the contributors of the two cases \"will be named as contributors for these\" (see Disclosure for the credit to the author of this map), and wrote \"The draft will be draft-ahuja-schrock-audit-expected-records.\"; the datatracker page of that name returned 404 and the document search found no draft with \"expected-record\" in its name on 2026-10-09, so the text is pending and its content was not read. On 2026-10-11 a participant wrote a ninth case, \"Refusal with an undetermined cause\": \"The slot is filled by a record that states whether a refusal came from a check that ran and failed, or from a check that\", adding \"AAE as published collapses both causes into a single DENY, so this case describes a gap in my own specification as much as anywhere else.\" Iman Schrock answered the same day (his text read as quoted in the lead editor's reply) that where the declaration requires grounds, \"a single DENY cannot tell us whether revocation was established or the status check could not finish\", and the lead editor of the expected-record draft wrote the same day \"This goes into the -00 as Case 9, just like Iman put it. Lars will be named as a contributor for this case.\" On 2026-10-12 the same participant wrote that the decision receipt format that he publishes \"carries Case 9 as fields\". The draft itself is still not found on the datatracker (document search for expected-record and audit-expected, and the page and text URLs of draft-ahuja-schrock-audit-expected-records-00, HTTP 404, 2026-10-13), so cases 7, 8 and 9 are announced for the -00 and not read in it.",
    "committed_next": [
     {
      "what": "BoF session at IETF 127 (14 to 20 November 2026): described as a BoF on the list on 2026-10-10 by a BoF proponent and as the upcoming AUDIT session by a participant; slot or date: not found; the datatracker holds a session request for audit at IETF 127 (requested duration 1:30:00, last modified 2026-10-08) and no timeslot assignment for it is found in the agenda schedule of the meeting (API, 2026-10-13).",
@@ -1807,7 +2053,7 @@
    "evidence": {
     "read": "On 2026-10-13 also: the session request data of IETF 127 for audit (API); the three audit list messages of 2026-10-11 and 2026-10-12 on case 9, found among the 40 latest messages of the list page.",
     "not_read": "The expected-record draft (announced, no text read); diffs of PR #52, #53, #58, #60; issues of mirjak/draft-audit-architecture; the audit list before 2026-09-17 for the e-commerce search.",
-    "not_found": "Not found in the items read, 2026-10-02: minors, buyer age, terms of use, Know Your Agent (KYA), product identity. Not found in the 80 audit list messages (2026-09-17 to 2026-10-06): e-commerce, UCP, ACP, AP2, x402, Verifiable Intent, Visa. Not found in the draft-kuehlewind-audit-architecture files and history, 2026-10-06: e-commerce. Not found on the datatracker BoF page (2026-10-02) and in the IETF 127 agenda updated 2026-10-02 (read 2026-10-06): an AUDIT session."
+    "not_found": "Not found in the items read, 2026-10-02: minors, buyer age, terms of use, Know Your Agent (KYA), product identity. Not found in the 80 audit list messages (2026-09-17 to 2026-10-06): e-commerce, UCP, ACP, AP2, x402, Verifiable Intent, Visa. Not found in the files and history of the individual Internet-Draft draft-kuehlewind-audit-architecture, 2026-10-06: e-commerce. Not found on the datatracker BoF page (2026-10-02) and in the IETF 127 agenda updated 2026-10-02 (read 2026-10-06): an AUDIT session."
    },
    "open_proposals": [
     {
@@ -1828,7 +2074,7 @@
    "tier": "core",
    "status": "Charter 00-10 has been in external review since 2026-10-09, with comments to the Internet Engineering Steering Group (IESG) due by 2026-10-19 and an IESG telechat listed for 2026-10-22; the Working Group (WG) is \"Proposed\", and the WG Review announcement of 2026-10-09 says \"The IESG has not made any determination yet\". The Approve ballot on 00-10, read on the datatracker on 2026-10-14, carries the summary \"Has enough positions to pass.\" with one Yes and one No Objection recorded; the charter has not been recorded as approved, and no WG Action announcement for DAWN is found among the ietf-announce messages up to 2026-10-12 (read 2026-10-13). The announcement names the chairs of the proposed WG: Adrian Farrel and Wes Hardaker. Earlier history: charter 00-09 was on the IESG ballot: on 2026-10-06 one IESG member changed from Block (on 00-08) to No Objection and another voted Yes; on 2026-10-07 one member voted Yes with comments and three recorded No Objection; on 2026-10-08 two more recorded No Objection; the IESG telechat had been set for 2026-10-08. On 2026-10-09 the charter was revised to 00-10 and sent to external review: the datatracker history of that day shows the state changed from \"Start Chartering/Rechartering (Internal Steering Group/IAB Review)\" to \"External Review (Message to Community, Selected by Secretariat)\", the \"Ready for external review\" ballot closed, an \"Approve\" ballot created and the telechat date changed from 2026-10-08 to 2026-10-22; one IESG member recorded Yes on the new ballot on 2026-10-12. The datatracker pages read on 2026-10-13 show the WG as \"Proposed\" and charter-ietf-dawn-00-10 in that state, with \"On agenda of 2026-10-22 IESG telechat\". The Secretariat's announcement \"WG Review: Discovery of Agents With Names (dawn)\", sent to ietf-announce on 2026-10-09, says \"The IESG has not made any determination yet\" and asks for comments to the IESG mailing list by 2026-10-19. No WG Action announcement for DAWN is among the ietf-announce messages up to 2026-10-12, the latest of the list on 2026-10-13; a decision on DAWN is not found.",
    "status_as_of": "2026-10-14",
-   "relevance": "DAWN would standardise how a client discovers \"public properties of AI resources\", so it is the IETF venue where a seller's agent surface would be found. The charter gives three deployment contexts with one example each (charter 00-10, read on the datatracker on 2026-10-14): for the local network \"within the local network, e.g., discover all agents in this shop;\", and for the public Internet \"between cooperating parties with trust relationships over the public Internet, e.g., discover all agents of example.org, for all its customers/members.\". The WG \"will also specify the minimum public discovery information (e.g., type, reachability information, communication protocol, services).\"; commerce as a scope item: not found in charter 00-10, read 2026-10-13 (commerce, merchant, transaction, payment and purchase do not occur; \"shop\" occurs once, in the local network example \"within the local network, e.g., discover all agents in this shop;\"), nor in charter 00-08, 2026-10-03. On 2026-10-05 the INT Area Director wrote, on a request for a non-WG mailing list for DNS records under underscore labels that carry keys, key commitments or references to them, \"While a mailing list will be created, I would like to push back on its name as it misses link to DNS\"; the requester proposed the name dns-underscore-keys. An individual survey, draft-jimenez-dawn-discovery-landscape-00 (2026-07-03), compares discovery mechanisms from the IETF, AAIF, 3GPP and open-source projects and lists eight gaps, among them \"Well-Known Namespace Pressure\"; a text search of it finds no occurrence of AI Catalog, Agentic Resource Discovery (ARD), UCP or commerce (2026-10-06). draft-zhang-dawn-agent-discovery-framework-01 (2026-09-06) proposes a two-layer federated architecture. A second individual draft, draft-moussa-dawn-gap-analysis-01 (Moussa, Akhavain, 2026-06-12), is a gap analysis and applicability statement that maps existing discovery mechanisms to the DAWN problem statement and requirements; a text search of it finds no occurrence of AI Catalog, ARD, UCP or commerce (2026-10-06). draft-kay-dawn-use-cases-01 (2026-09-10) names Agentic Resource Discovery as a possible interface to a provider's catalogue in a broadcast use case and adds: \"ARD is an illustrative option; protocol choice remains open.\" The IETF Chair announced on 2026-10-02 that an INT Area Director resigned from the IESG as of 2026-10-01 and that the other co-AD for the INT area is the primary point of contact for the area; the datatracker lists that Area Director as responsible Area Director (AD) for DAWN (2026-10-03). On 2026-10-07 an IESG member entered a Yes with comments on 00-09 that asks the charter to say that the protocol specifications normatively define the minimum discovery information, that the WG is \"expected to converge on one mechanism per deployment context\", and that \"discovering where a catalog is lives in DAWN, and what a catalog contains doesn't\"; the member also asks whether DAWN defines how agents are named, and that DNSSD, DNSOP and AgentProto be named in the coordination text. On the list thread \"DAWN Coordination: Discovery Information and Trust Artifact Pointers\" Girish Konda wrote on 2026-10-07 that a reference that does not resolve, one blocked by the discovering entity's own retrieval policy, and one that resolves with the record absent are three causes: \"All three end as no discovery result, and they have different owners and different retries.\" On 2026-10-12 a participant who states that they are a co-author of three individual drafts in this space wrote to the IESG on the DAWN list in reply to the WG Review thread \"I support chartering DAWN as written in charter-ietf-dawn-00-10\", and gave as a reason for keeping identity management of agents out of the first phase \"Discovery has to work before anyone argues about who the discovered thing is\".",
+   "relevance": "DAWN would standardise how a client discovers \"public properties of AI resources\", so it is the IETF venue where a seller's agent surface would be found. The charter gives three deployment contexts with one example each (charter 00-10, read on the datatracker on 2026-10-14): for the local network \"within the local network, e.g., discover all agents in this shop;\", and for the public Internet \"between cooperating parties with trust relationships over the public Internet, e.g., discover all agents of example.org, for all its customers/members.\". The WG \"will also specify the minimum public discovery information (e.g., type, reachability information, communication protocol, services).\"; commerce as a scope item: not found in charter 00-10, read 2026-10-13 (commerce, merchant, transaction, payment and purchase do not occur; \"shop\" occurs once, in the local network example \"within the local network, e.g., discover all agents in this shop;\"), nor in charter 00-08, 2026-10-03. On 2026-10-05 the INT Area Director wrote, on a request for a non-WG mailing list for DNS records under underscore labels that carry keys, key commitments or references to them, \"While a mailing list will be created, I would like to push back on its name as it misses link to DNS\"; the requester proposed the name dns-underscore-keys. An individual survey, draft-jimenez-dawn-discovery-landscape-00 (2026-07-03), compares discovery mechanisms from the IETF, AAIF, 3GPP and open-source projects and lists eight gaps, among them \"Well-Known Namespace Pressure\"; a text search of it finds no occurrence of AI Catalog, Agentic Resource Discovery (ARD), UCP or commerce (2026-10-06). The individual draft draft-zhang-dawn-agent-discovery-framework-07 (2026-10-15; datatracker, read 2026-10-16) proposes a two-layer federated architecture. A second individual draft, draft-moussa-dawn-gap-analysis-01 (Moussa, Akhavain, 2026-06-12), is a gap analysis and applicability statement that maps existing discovery mechanisms to the DAWN problem statement and requirements; a text search of it finds no occurrence of AI Catalog, ARD, UCP or commerce (2026-10-06). The individual draft draft-kay-dawn-use-cases-01 (2026-09-10) names Agentic Resource Discovery as a possible interface to a provider's catalogue in a broadcast use case and adds: \"ARD is an illustrative option; protocol choice remains open.\" The IETF Chair announced on 2026-10-02 that an INT Area Director resigned from the IESG as of 2026-10-01 and that the other co-AD for the INT area is the primary point of contact for the area; the datatracker lists that Area Director as responsible Area Director (AD) for DAWN (2026-10-03). On 2026-10-07 an IESG member entered a Yes with comments on 00-09 that asks the charter to say that the protocol specifications normatively define the minimum discovery information, that the WG is \"expected to converge on one mechanism per deployment context\", and that \"discovering where a catalog is lives in DAWN, and what a catalog contains doesn't\"; the member also asks whether DAWN defines how agents are named, and that DNSSD, DNSOP and AgentProto be named in the coordination text. On the list thread \"DAWN Coordination: Discovery Information and Trust Artifact Pointers\" Girish Konda wrote on 2026-10-07 that a reference that does not resolve, one blocked by the discovering entity's own retrieval policy, and one that resolves with the record absent are three causes: \"All three end as no discovery result, and they have different owners and different retries.\" On 2026-10-12 a participant who states that they are a co-author of three individual drafts in this space wrote to the IESG on the DAWN list in reply to the WG Review thread \"I support chartering DAWN as written in charter-ietf-dawn-00-10\", and gave as a reason for keeping identity management of agents out of the first phase \"Discovery has to work before anyone argues about who the discovered thing is\".",
    "committed_next": [
     {
      "what": "Comments on the proposed charter due to the IESG mailing list, per the WG Review announcement.",
@@ -1870,9 +2116,8 @@
      "class": "third-party"
     },
     {
-     "url": "https://www.ietf.org/archive/id/draft-zhang-dawn-agent-discovery-framework-01.txt",
-     "archived": "https://web.archive.org/web/20261014074930/https://www.ietf.org/archive/id/draft-zhang-dawn-agent-discovery-framework-01.txt",
-     "read": "2026-10-06",
+     "url": "https://datatracker.ietf.org/doc/draft-zhang-dawn-agent-discovery-framework/",
+     "read": "2026-10-16",
      "class": "third-party"
     },
     {
@@ -1996,9 +2241,9 @@
      "class": "third-party"
     }
    ],
-   "verified": "2026-10-14",
+   "verified": "2026-10-16",
    "evidence": {
-    "read": "On 2026-10-14: the datatracker charter page and the ballot page of charter-ietf-dawn-00-10 (summary, positions) and the WG Review announcement (chairs).",
+    "read": "On 2026-10-16: the datatracker page and the text of draft-zhang-dawn-agent-discovery-framework-07 (individual, no stream); the two-layer federated architecture is in the text.",
     "not_read": "Ballot comments and positions beyond the summary and the count of positions, the ietf-announce messages after 2026-10-12, the DAWN list messages of 2026-10-10 to 2026-10-12 other than the one cited.",
     "not_found": "Not found in the 200 messages, 2026-10-03: AI Catalog."
    },
@@ -2019,10 +2264,20 @@
    "org": "IETF",
    "kind": "work-item",
    "tier": "context",
-   "status": "Individual Internet-Draft -02 (2026-05-27), \"(No stream defined)\", not adopted by a Working Group (WG); expires 2026-11-28. Related individual proposals, none adopted by a WG (datatracker, 2026-10-13): draft-ihsanullah-dnsid-01 (2026-06-29), draft-ferro-dnsop-apertoid-02 (2026-08-12), draft-morrison-mcp-dns-discovery-08 (2026-10-09) and draft-ranjbar-dane-did-01 (2026-08-01); DNS-AID is not among them. The IETF Secretariat announced on 2026-10-09 (15:20 UTC) a non-WG list, dns-underscore-keys (area INT), whose purpose is \"To compare existing proposals for publishing keys, or references to them, under underscore labels in DNS\" and names those four drafts; its public archive held three messages on 2026-10-13. The first post, by an author of one of the four drafts (2026-10-10), compares them on five axes: who the record is about, where the key sits, what makes the record trustworthy, revocation, and continuity of holding after a domain changes hands; it leaves open the enumeration of names in a zone, record size, and TXT against a new RRTYPE. On 2026-10-12 an author of another of the four wrote that \"A 3 1 1 TLSA with SHA-256 is 35 bytes of RDATA\" and \"The full signed answer with the DO bit set is 271 bytes\", measured on one live record (figures declared by the source, not reproduced here). The draft texts were not read for this entry; their content is as the list messages describe it.",
+   "status": "Individual Internet-Draft -02 (2026-05-27), \"(No stream defined)\", not adopted by a Working Group (WG); expires 2026-11-28. Related individual proposals, none adopted by a WG (datatracker, 2026-10-13): draft-ihsanullah-dnsid-01 (2026-06-29), draft-ferro-dnsop-apertoid-02 (2026-08-12), draft-morrison-mcp-dns-discovery-08 (2026-10-09) and draft-ranjbar-dane-did-01 (2026-08-01), and a fifth, draft-ranjbar-dane-anchored-identity-00 (2026-07-21; datatracker, 2026-10-15); DNS-AID is not among them. The IETF Secretariat announced on 2026-10-09 (15:20 UTC) a non-WG list, dns-underscore-keys (area INT), whose purpose is \"To compare existing proposals for publishing keys, or references to them, under underscore labels in DNS\" and names those four drafts; its public archive held three messages on 2026-10-13. The first post, by an author of one of the four drafts (2026-10-10), compares them on five axes: who the record is about, where the key sits, what makes the record trustworthy, revocation, and continuity of holding after a domain changes hands; it leaves open the enumeration of names in a zone, record size, and TXT against a new RRTYPE. On 2026-10-12 an author of another of the four wrote that \"A 3 1 1 TLSA with SHA-256 is 35 bytes of RDATA\" and \"The full signed answer with the DO bit set is 271 bytes\", measured on one live record (figures declared by the source, not reproduced here). The draft texts were not read for this entry; their content is as the list messages describe it.",
    "status_as_of": "2026-10-13",
    "relevance": "The abstract says the document \"standardizes an approach for publishing AI agents in the Domain Name System (DNS) so that other agents can discover them\". The draft publishes AI agents in DNS; Section 5.6 reserves SvcParamKeys for \"commercial signaling such as cost-per-unit-of-input, unit-of-input definitions, billing tiers, or rate-limit hints\".",
    "sources": [
+    {
+     "url": "https://github.com/danubetech/did-method-dns/issues/12",
+     "read": "2026-10-15",
+     "class": "third-party"
+    },
+    {
+     "url": "https://lists.w3.org/Archives/Public/public-credentials/2026Jul/0041.html",
+     "read": "2026-10-19",
+     "class": "third-party"
+    },
     {
      "url": "https://www.ietf.org/archive/id/draft-mozleywilliams-dnsop-dnsaid-02.txt",
      "archived": "https://web.archive.org/web/20261014085023/https://www.ietf.org/archive/id/draft-mozleywilliams-dnsop-dnsaid-02.txt",
@@ -2060,6 +2315,11 @@
      "class": "third-party"
     },
     {
+     "url": "https://datatracker.ietf.org/doc/draft-ranjbar-dane-anchored-identity/",
+     "read": "2026-10-15",
+     "class": "third-party"
+    },
+    {
      "url": "https://mailarchive.ietf.org/arch/msg/dns-underscore-keys/Atm6JcPnAlMDGYTfUwksFWi9KO4/",
      "archived": "https://web.archive.org/web/20261014085542/https://mailarchive.ietf.org/arch/msg/dns-underscore-keys/Atm6JcPnAlMDGYTfUwksFWi9KO4/",
      "read": "2026-10-13",
@@ -2078,6 +2338,11 @@
      "class": "third-party"
     },
     {
+     "url": "https://github.com/frmoretto/agentic-standards-map/issues/3",
+     "read": "2026-10-19",
+     "class": "third-party"
+    },
+    {
      "url": "https://datatracker.ietf.org/doc/html/draft-mozleywilliams-dnsop-dnsaid-02",
      "archived": "https://web.archive.org/web/20261014085743/https://datatracker.ietf.org/doc/html/draft-mozleywilliams-dnsop-dnsaid-02",
      "read": "2026-10-05",
@@ -2087,12 +2352,21 @@
    "seams": [
     "S1"
    ],
-   "verified": "2026-10-13",
+   "verified": "2026-10-19",
    "evidence": {
-    "read": "On 2026-10-13 also: the datatracker records (revision number and revision date) of the four related drafts, and the three messages of the archive of dns-underscore-keys.",
+    "read": "On 2026-10-19: the archive page of the message of 2026-07-11 on the public-credentials list of the W3C, and issue #3 of this repository, in which the addition for draft-ranjbar-dane-did was proposed on 2026-10-15; the draft is not linked in the message.",
     "not_read": "A DNS-AID thread under another subject on dnsop; the texts of the four related drafts.",
     "not_found": "Adoption call, objection or dated promise for the draft: not found in the lists read, 2026-10-03."
-   }
+   },
+   "open_proposals": [
+    {
+     "what": "Issue #12 of danubetech/did-method-dns: make DNSSEC normative (MUST) in did:dns and add an optional DANE/TLSA key binding for verification methods, together with the individual Internet-Draft draft-ranjbar-dane-did-01. On the datatracker the draft is under \"Individual Submissions\" with no stream and no group (read 2026-10-16). A message of 2026-07-11 on the public-credentials list of the W3C proposes a normative DANE-EE profile that did:web and did:dns could point at; the list dns-underscore-keys compares the draft with three others. The addition for draft-ranjbar-dane-did was proposed for the map in issue #3 (2026-10-15) by an author of that draft, who wrote in it: \"For disclosure, I opened the issue below and co-author the draft it refers to.\"",
+     "author": "a participant",
+     "date": "2026-07-09",
+     "state": "open",
+     "url": "https://github.com/danubetech/did-method-dns/issues/12"
+    }
+   ]
   },
   {
    "id": "ietf-httpauth-payment",
@@ -2139,7 +2413,7 @@
    "org": "IETF",
    "kind": "work-item",
    "tier": "core",
-   "status": "Three individual Internet-Drafts on the seller side of agent transactions, none adopted by a Working Group (WG): anders merchant-identity-assertions -01, kavian offering-discovery-protocol -01, hood agtp-merchant-identity (-02, an Independent Submission dated 26 May 2026, Informational, expires 27 November 2026; -00 and -02 read).",
+   "status": "Three individual Internet-Drafts on the seller side of agent transactions, none adopted by a Working Group (WG): anders merchant-identity-assertions -01, kavian offering-discovery-protocol -01, hood agtp-merchant-identity (-02, an individual submission dated 26 May 2026, Informational, expires 27 November 2026; -00 and -02 read).",
    "status_as_of": "2026-10-13",
    "relevance": "draft-anders-merchant-identity-assertions defines a Merchant Identity Assertion, a signed JSON document binding a legal identity to the merchant receiving a payment, so that an automated client can verify the merchant before completing it. draft-kavian-offering-discovery-protocol lets an agent discover a Service's Collections and Offerings and find links to subsequent operations, for \"catalogs ranging from a few Offerings to large marketplaces without imposing a universal product taxonomy\". draft-hood-agtp-merchant-identity states \"This is the merchant identity gap.\" and treats merchant identity as the receiving side of a purchase.",
    "committed_next": [],
@@ -2337,9 +2611,9 @@
    ],
    "verified": "2026-10-13",
    "evidence": {
-    "read": "On 2026-10-13: issue #40 and PR #41 of the core draft repository (state and text), the history page of the charter, the datatracker pages of the group, its charter, draft-ietf-vcon-vcon-core and draft-rosenberg-vcon-restructure, pull request #37, and the subjects and dates of the latest 40 messages of the vcon list (to 2026-10-11).",
+    "read": "On 2026-10-13: issue #40 and PR #41 of the core draft repository (state and text), the history page of the charter, the datatracker pages of the group, its charter, draft-ietf-vcon-vcon-core and the individual draft draft-rosenberg-vcon-restructure, pull request #37, and the subjects and dates of the latest 40 messages of the vcon list (to 2026-10-11).",
     "not_read": "The messages of the vcon list before 2026-09-01, the minutes, and the completion state of the milestones.",
-    "not_found": "Not found in the 35 vcon list messages (2026-09-01 to 2026-10-06) and in the texts of draft-ietf-vcon-vcon-core-04, draft-ietf-vcon-overview-02, draft-rosenberg-vcon-restructure-00, draft-howe-vcon-agent-session-00 and draft-rosenberg-cheq-00, 2026-10-06: UCP, ACP, AP2, x402, Verifiable Intent, Visa. Not found in the files, issues and pull requests of the repositories of UCP, ACP, AP2, x402, Verifiable Intent and Visa TAP, 2026-10-06: vCon or \"virtualized conversation\". Not found in charter-ietf-vcon-01, 2026-10-06: commerce, payment, purchase, agent."
+    "not_found": "Not found in the 35 vcon list messages (2026-09-01 to 2026-10-06) and in the texts of the WG documents draft-ietf-vcon-vcon-core-04 and draft-ietf-vcon-overview-02 and of the individual drafts draft-rosenberg-vcon-restructure-00, draft-howe-vcon-agent-session-00 and draft-rosenberg-cheq-00, 2026-10-06: UCP, ACP, AP2, x402, Verifiable Intent, Visa. Not found in the files, issues and pull requests of the repositories of UCP, ACP, AP2, x402, Verifiable Intent and Visa TAP, 2026-10-06: vCon or \"virtualized conversation\". Not found in charter-ietf-vcon-01, 2026-10-06: commerce, payment, purchase, agent."
    },
    "open_proposals": [
     {
@@ -2351,7 +2625,7 @@
      "archived": "https://web.archive.org/web/20261015041903/https://github.com/ietf-wg-vcon/draft-ietf-vcon-vcon-core/pull/37"
     },
     {
-     "what": "Restructure the format with a session concept and an events object to represent AI agent use cases (draft-rosenberg-vcon-restructure-00; on 2026-10-13 the datatracker still shows -00 as the current revision, last updated 2026-09-11; the editors copy of the core draft of 2026-10-07 reports the elevation of party_history events to a top level Events Object and a Session concept, which are parts of this proposal).",
+     "what": "Restructure the format with a session concept and an events object to represent AI agent use cases (the individual draft draft-rosenberg-vcon-restructure-00; on 2026-10-13 the datatracker still shows -00 as the current revision, last updated 2026-09-11; the editors copy of the core draft of 2026-10-07 reports the elevation of party_history events to a top level Events Object and a Session concept, which are parts of this proposal).",
      "author": "Jonathan Rosenberg",
      "date": "2026-09-11",
      "state": "open",
@@ -2366,7 +2640,7 @@
    "org": "IETF",
    "kind": "venue",
    "tier": "core",
-   "status": "Active Working Group (WG), listed for coordination by the draft W3C Agentic Web charter; the first WG draft, draft-ietf-webbotauth-httpsig-protocol-00, was adopted on 2026-09-01, and a two-hour session was requested for IETF 127 on 2026-09-15. Implementation reports and proposed edits to the draft were on the list between 2026-10-04 and 2026-10-13. On 2026-10-13 the datatracker still lists draft-ietf-webbotauth-httpsig-protocol-00 (2026-09-01) as the only WG draft, and draft-illyes-webbotauth-cbcp-00 (2026-04-21, expires 23 October 2026) with no later revision. In the thread on updates to the crawler best practices draft a participant posted a revised text proposal on 2026-10-12 for a distinct Signature-Agent URL, key and key directory per crawler purpose, with pull requests in the WG draft repository and as PR #23 of garyillyes/cbcp (open, last update 2026-10-12); PR #22 of the same repository is open (3 comments, last update 2026-10-11). The IETF 127 session is still recorded as requested: no scheduling is found in the list subjects to 2026-10-13.",
+   "status": "Active Working Group (WG), listed for coordination by the draft W3C Agentic Web charter; the first WG draft, draft-ietf-webbotauth-httpsig-protocol-00, was adopted on 2026-09-01, and a two-hour session was requested for IETF 127 on 2026-09-15. Implementation reports and proposed edits to the draft were on the list between 2026-10-04 and 2026-10-13. On 2026-10-13 the datatracker still lists draft-ietf-webbotauth-httpsig-protocol-00 (2026-09-01) as the only WG draft, and the individual draft draft-illyes-webbotauth-cbcp-00 (2026-04-21, expires 23 October 2026) with no later revision. In the thread on updates to the crawler best practices draft a participant posted a revised text proposal on 2026-10-12 for a distinct Signature-Agent URL, key and key directory per crawler purpose, with pull requests in the WG draft repository and as PR #23 of garyillyes/cbcp (open, last update 2026-10-12); PR #22 of the same repository is open (3 comments, last update 2026-10-11). The IETF 127 session is still recorded as requested: no scheduling is found in the list subjects to 2026-10-13.",
    "status_as_of": "2026-10-13",
    "relevance": "The WG standardises cryptographic authentication of automated clients (HTTP message signatures, key directories), which a seller or its content delivery network (CDN) can use to tell which agent is calling. The chairs wrote on 2026-09-01 \"Based on the feedback on the mailing list, the WG decided to adopt this draft as a WG document.\" Participants wrote of merchant-side verifiers: \"We operate a production merchant-side verifier for automated commerce traffic (Web Bot Auth, Visa TAP, Google AP2)\" (2026-08-03) and \"We have implemented and use WBA for bot auth at Shopify in production, and we landed WBA interop for UCP\" (2026-08-19). On 2026-10-04 a participant from Auth Your Agent reported an implementation in which a user withdraws an agent by serving its key directory with no keys, cut max-age from 3600 to 300 because \"an hour is a long time when the agent has just bought something the user disputes\", and asked that verifiers respecting Cache-Control become a normative SHOULD in section 5.5.2 (the draft's appendix C.4 says they \"should respect Cache-Control\"); Thibault Meunier replied on 2026-10-07 \"It seems that the simpler solution would be to prevent the agent from making request in the first place.\" On 2026-10-08 a participant from Akamai, writing as a verifier, supported moving the C.4 guidance into section 5.5.2 as normative text and proposed \"Verifiers SHOULD NOT treat a cached directory as fresh beyond its freshness lifetime as defined in Section 4.2 of [HTTP-CACHE], except as permitted by Section\", adding that \"short signature expires values (Section 6.3) act faster than any directory TTL\". The same day a participant, who publishes per-agent keys as a DNSSEC-signed record set and deactivates an agent by removing its key, wrote that \"Section 5.5.2 bounds the wrong thing\": where the key set reaches a verifier as a signed artifact (section 5.5.3), \"the bound is the Appendix B signature's expires rather than any cache lifetime\", and he measured on his apex \"TTL 300 seconds against a signature window of 14 days and 1 hour\". He proposed a sentence for 5.5.2 on the signature's expires and noted that section 6.3 (removal as the only remedy) and appendix C.12 (manual key rotation as the only revocation mechanism, listed as an anti-pattern) read as a contradiction when taken together. that participant answered on 2026-10-08 that his directories sent max-age=300 while the Appendix B proof on each was valid for 7 days, that he had cut the proof to one hour with a re-signature every 15 minutes, and that he supported the text of the participant who publishes per-agent keys. On 2026-10-09 the same participant wrote that \"The revocation thread got me reading the rest of the draft\" and proposed for Appendix C.1 to replace \"or the key is unknown\" with \"or the resolved directory does not provide the key\", because a verifier could read an unknown key as \"the key isn't on my list of bots\" and so put a new agent that signs correctly in the same \"unverified\" outcome as a failed fetch; he also asked whether the draft should say anything about an intermediary that signs all its users' requests with one operator key, where removal under section 6.3 withdraws every user at once. On 2026-10-07 a participant asked whether two bots with different purposes from one operator should have distinct Signature-Agent values and proposed a statement \"So it's clear different Signature-Agents need to be used for different purposes / use cases.\"; he wrote that section 4.1 makes the Signature-Agent URL the identifier. A participant from hCaptcha answered that it is similar to an open proposal, pull request #23 of garyillyes/cbcp, and that some crawl operators already do it, and wrote \"I would support this proposal.\" On 2026-10-08 the same participant from Akamai supported a Signature-Agent per crawler purpose on the cbcp thread, citing that section 6.5 of the protocol draft \"already says implementations SHOULD NOT reuse a signing key for different purposes and should use distinct keys and directories\" and that \"A signature that spans several purposes verifies fine but cannot carry that policy.\"; he asked that the 6.5 example be broadened to \"an operator that runs both crawlers and user-directed agents\". The crawler best practices draft (draft-illyes-webbotauth-cbcp, individual) was changed on 2026-10-05 (commit cc9942d of garyillyes/cbcp) and announced on the list the same day: a note that the practices \"are intended for crawlers\" and are \"not necessarily appropriate for all automated clients\", particularly \"user-directed AI agents\"; the requirement levels of the recommended practices changed from MUST to SHOULD; the proposal for a central crawler registry removed; and a Security Considerations section written, which says the opt-outs \"are voluntary and do not constitute access control or content security measures\" and that the User-Agent \"is unauthenticated and trivially spoofed\". Pull request #22 of garyillyes/cbcp (the author of this map, opened 2026-09-26, 429 and Retry-After in the back-out logic and a 429 on robots.txt read as unreachable) and #23 (opened 2026-10-06 by a participant, distinct subdomains for different crawl types) were both open on 2026-10-09; the only comment on #22 is of 2026-10-06 and reads \"Common Crawl has always treated 429 as unreachable.\", and in the announcement Gary Illyes wrote \"I'm reviewing the pending PR to explicitly cover HTTP 429 and Retry-After\". On 2026-10-05 a participant reported that his REDbot implementation emits signatures only when challenged (\"the decision to only emit WBA when challenged\") and that his agent-census log analyser sees \"a reasonable number of bots emitting WBA by default\"; he wrote that this is \"an interoperability issue\" worth highlighting in the document. Thibault Meunier proposed on 2026-10-07 for section 5.3 \"An Origin that expects a signature SHOULD request one from clients that did not provide it.\" in place of \"An Origin MAY choose to request signatures from clients that did not initially provide them.\", and a paragraph for appendix C, \"Signing conditionally\", saying that signing only when an origin asks \"adds a round trip, and non-idempotent requests may not be safely retried\". On 2026-10-08 a participant answered with text under which an origin that refuses unsigned requests \"SHOULD include the Accept-Signature field\", and \"Origins that do not send Accept-Signature in either of these cases SHOULD NOT rely on the presence of signatures in requests unless there is a\"",
    "committed_next": [
@@ -2554,7 +2828,7 @@
    ],
    "verified": "2026-10-13",
    "evidence": {
-    "read": "WG charter and documents pages, read in full 2026-10-02; web-bot-auth list messages, 2026-08-01 to 2026-09-21, read 2026-10-03; the 11 messages of 2026-10-04 to 2026-10-08, read 2026-10-08; on 2026-10-13 the datatracker pages of the WG documents, of draft-ietf-webbotauth-httpsig-protocol and of draft-illyes-webbotauth-cbcp, the subjects and dates of the 26 latest list messages (2026-10-05 to 2026-10-13) and, in part, four messages of 2026-10-10 to 2026-10-13, and the state of cbcp PRs #19, #22 and #23; on 2026-10-09 the messages of the three threads below and the message of 2026-10-09 on Appendix C.1 (revocation and Cache-Control, signing on request, one Signature-Agent per purpose) and the announcement thread of the crawler best practices, read on mailarchive.ietf.org, and the repository garyillyes/cbcp at commit cc9942d with its pull requests #22 and #23.",
+    "read": "WG charter and documents pages, read in full 2026-10-02; web-bot-auth list messages, 2026-08-01 to 2026-09-21, read 2026-10-03; the 11 messages of 2026-10-04 to 2026-10-08, read 2026-10-08; on 2026-10-13 the datatracker pages of the WG documents, of draft-ietf-webbotauth-httpsig-protocol and of the individual draft draft-illyes-webbotauth-cbcp, the subjects and dates of the 26 latest list messages (2026-10-05 to 2026-10-13) and, in part, four messages of 2026-10-10 to 2026-10-13, and the state of cbcp PRs #19, #22 and #23; on 2026-10-09 the messages of the three threads below and the message of 2026-10-09 on Appendix C.1 (revocation and Cache-Control, signing on request, one Signature-Agent per purpose) and the announcement thread of the crawler best practices, read on mailarchive.ietf.org, and the repository garyillyes/cbcp at commit cc9942d with its pull requests #22 and #23.",
     "not_read": "The list messages of 2026-10-10 to 2026-10-13 beyond their subjects and the first lines of four of them, the list before 2026-08-01, issues of the draft repository.",
     "not_found": "Not found in datatracker and list (2026-08-01 to 2026-09-21): milestone completion, Know Your Agent (KYA), KYAPay, Mastercard Agent Pay."
    }
@@ -2881,13 +3155,18 @@
   {
    "id": "mcp-core",
    "name": "Model Context Protocol (MCP), core specification",
-   "org": "Linux Foundation",
+   "org": "AAIF",
    "kind": "specification",
    "tier": "context",
    "status": "Specification version 2026-07-28 (the latest release is 2026-07-28; the specification directory holds 2025-03-26, 2025-06-18, 2025-11-25, 2026-07-28 and a draft; no later release, read 2026-10-13); the blog post of 2025-12-09 says \"Anthropic is donating MCP to the Agentic AI Foundation\".",
    "status_as_of": "2026-10-13",
    "relevance": "The specification describes MCP as \"an open protocol that enables seamless integration between LLM applications and external data sources and tools\"; discovery is in mcp-server-card and lf-ai-catalog.",
    "sources": [
+    {
+     "url": "https://aaif.io/projects",
+     "read": "2026-10-19",
+     "class": "statement"
+    },
     {
      "url": "https://modelcontextprotocol.io/specification/latest",
      "archived": "https://web.archive.org/web/20261015052545/https://modelcontextprotocol.io/specification/latest",
@@ -2899,6 +3178,11 @@
      "archived": "https://web.archive.org/web/20261005180937/https://blog.modelcontextprotocol.io/posts/2025-12-09-mcp-joins-agentic-ai-foundation/",
      "read": "2026-10-03",
      "class": "decision"
+    },
+    {
+     "url": "https://github.com/frmoretto/agentic-standards-map/issues/9",
+     "read": "2026-10-19",
+     "class": "third-party"
     }
    ],
    "overlaps": [
@@ -2909,17 +3193,17 @@
    "seams": [
     "S1"
    ],
-   "verified": "2026-10-13",
+   "verified": "2026-10-19",
    "evidence": {
-    "read": "On 2026-10-13: the list of releases and the specification directory of the repository; the blog post, the governance page and the versioning page were not re-read.",
+    "read": "The change was proposed for the map in issue #9 (2026-10-18) by zeroasterisk, who disclosed: \"Proposer works at Google (Google contributed A2A to the Linux Foundation and donated AP2 to the FIDO Alliance); member of the AAIF Technical Steering Committee.",
     "not_read": "Full text of each specification chapter, the Specification Enhancement Proposal (SEP) process pages, licence texts beyond README and GOVERNANCE.md.",
-    "not_found": "Not found on the governance and specification pages: foundation, AAIF, Linux."
+    "not_found": "On 2026-10-19: aaif.io/projects, which lists Model Context Protocol among the projects AAIF hosts, and the governance page (last modified 2026-08-05), where AAIF, Agentic AI Foundation and Linux Foundation are not found. Not found on the governance and specification pages: foundation, AAIF, Linux."
    }
   },
   {
    "id": "mcp-server-card",
    "name": "MCP Server Cards (ext-server-card, SEP-2127)",
-   "org": "Linux Foundation",
+   "org": "AAIF",
    "kind": "specification",
    "tier": "core",
    "status": "Experimental extension of MCP: the README of the extension repository still reads \"not an accepted or official MCP extension\" (2026-10-13). SEP-2127 (PR #2127, \"MCP Server Cards - HTTP Server Discovery\", Extensions Track) was merged on 2026-10-06 (14:43 UTC, merge commit 0a11bf6) by a maintainer of the MCP repository; the Specification Enhancement Proposal (SEP) file, read 2026-10-13, carries \"Status: Final\" and says the full extension specification stays in the extension repository, graduating to a repository named ext-server-card on acceptance. The last commit of the extension repository on main is of 2026-08-12 (PR #47); latest activity read: issue #30 (2026-10-10, 9 comments).",
@@ -2943,6 +3227,16 @@
    ],
    "boundary": "The README says a Server Card \"describes remote connectivity only\"; local installation metadata stays in the MCP Registry server.json.",
    "sources": [
+    {
+     "url": "https://modelcontextprotocol.io/community/working-groups/server-card",
+     "read": "2026-10-19",
+     "class": "normative"
+    },
+    {
+     "url": "https://aaif.io/projects",
+     "read": "2026-10-19",
+     "class": "statement"
+    },
     {
      "url": "https://github.com/modelcontextprotocol/ext-server-card",
      "archived": "https://web.archive.org/web/20261015052802/https://github.com/modelcontextprotocol/ext-server-card",
@@ -2974,6 +3268,11 @@
      "class": "decision"
     },
     {
+     "url": "https://github.com/frmoretto/agentic-standards-map/issues/10",
+     "read": "2026-10-19",
+     "class": "third-party"
+    },
+    {
      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/discussions/3115",
      "archived": "https://web.archive.org/web/20261015052718/https://github.com/modelcontextprotocol/modelcontextprotocol/discussions/3115",
      "read": "2026-10-03",
@@ -2995,9 +3294,9 @@
    "seams": [
     "S1"
    ],
-   "verified": "2026-10-13",
+   "verified": "2026-10-19",
    "evidence": {
-    "read": "On 2026-10-13: PR #2127 with its labels and files, the SEP file seps/2127-mcp-server-cards.md, the README of the extension repository and the state of PR #47 and issues #13, #30, #43, #44, #48 and #50. ext-server-card: README, discovery.md, all issues and PRs in full; core repository since 2026-01-01: PR #2127, notes, Discussions #2831, #2896.",
+    "read": "On 2026-10-19: the charter page of the Server Card Working Group in the MCP governance pages (last modified 2026-06-16), \"Charter for the MCP Server Card Working Group\", which names SEP-2127 and ext-server-card, and aaif.io/projects (Model Context Protocol listed).",
     "not_read": "Issue #1649 comments, Core Maintainer meetings, external links.",
     "not_found": "Not found there (2026-10-03): GTIN, GS1."
    },
@@ -4518,6 +4817,7 @@
    ],
    "overlaps": [
     "a2a-discovery",
+    "anp",
     "ard",
     "ietf-webbotauth",
     "w3c-agenticweb-wg"
@@ -4525,9 +4825,9 @@
    "seams": [
     "S1"
    ],
-   "verified": "2026-10-13",
+   "verified": "2026-10-16",
    "evidence": {
-    "read": "On 2026-10-13: the October 2026 index of public-agentprotocol (5 messages, subjects and dates) and the chairs listed on the W3C group data.",
+    "read": "On 2026-10-16: the editor fields of protocol.html and agent-identity.html in the repository w3c-cg/ai-agent-protocol, and the chairs listed on the W3C group data.",
     "not_read": "Meeting minutes (2026-09-09, 2026-09-23), attachments, Google Docs and slides."
    }
   },
@@ -5146,7 +5446,9 @@
    "aaif-identity-trust",
    "aaif-structure",
    "aaif-wg-agentic-commerce",
+   "accord-project",
    "acp",
+   "anp",
    "ap2",
    "ard",
    "browsers-webmcp",
@@ -5208,6 +5510,10 @@
    ],
    [
     "a2a-core",
+    "anp"
+   ],
+   [
+    "a2a-core",
     "mcp-core"
    ],
    [
@@ -5217,6 +5523,10 @@
    [
     "a2a-discovery",
     "aaif-structure"
+   ],
+   [
+    "a2a-discovery",
+    "anp"
    ],
    [
     "a2a-discovery",
@@ -5279,6 +5589,26 @@
     "visa-tap"
    ],
    [
+    "accord-project",
+    "acp"
+   ],
+   [
+    "accord-project",
+    "ap2"
+   ],
+   [
+    "accord-project",
+    "ucp"
+   ],
+   [
+    "accord-project",
+    "verifiable-intent"
+   ],
+   [
+    "accord-project",
+    "x402"
+   ],
+   [
     "acp",
     "ap2"
    ],
@@ -5293,6 +5623,18 @@
    [
     "acp",
     "x402"
+   ],
+   [
+    "anp",
+    "ap2"
+   ],
+   [
+    "anp",
+    "ard"
+   ],
+   [
+    "anp",
+    "w3c-ai-agent-protocol-cg"
    ],
    [
     "ap2",

@@ -6,7 +6,7 @@
  "tier": "core",
  "status": "Charter approved 2026-05-15; Capability Map being built from contributed inputs. Charter targets: Capability Map (2026-09-01) and Recommendations to the Technical Committee on hosted projects (2026-10-01); both dates have passed, and no Capability Map or Recommendations document is found in the repository on 2026-10-13 (root: README.md, charter.md, reporting/; commits to 2026-10-12). Chairs per the August report: Ilya Grigorik (Shopify) and Rahul Bansal (OpenAI). The August report (merged by PR #7 on 2026-10-12) says the x402 session \"advanced the payment layer of the Capability Map\" and lists no decision needed from the Technical Committee; the report for September is opened as issue #9 (2026-10-12), covering deep dives on onX, MPP and the UCP August release.",
  "status_as_of": "2026-10-13",
- "relevance": "The group aligns open specifications for commerce workflows carried out by AI agents; the charter says \"The Working Group does not author competing commerce protocols\" and lists UCP, ACP, Mastercard Verifiable Intent and Visa TAP as \"Source Projects (primary inputs to the Capability Map)\". The Running Notes record on product discovery (2026-04-01) \"Finding products is different from finding where to search\". The charter lists \"Open Meetings: No\". In issue #5 (Capability Map input: cross-boundary evidence and audit row) the author of draft-krausz-verification-state, who discloses it, wrote on 2026-10-08 that its v_verdict \"carries verified, contradicted, indeterminate or not_evaluated\" and that \"a mapping would need to preserve the distinction between an inconclusive evaluation and one that did not occur.\"",
+ "relevance": "The group aligns open specifications for commerce workflows carried out by AI agents; the charter says \"The Working Group does not author competing commerce protocols\" and lists UCP, ACP, Mastercard Verifiable Intent and Visa TAP as \"Source Projects (primary inputs to the Capability Map)\". The Running Notes record on product discovery (2026-04-01) \"Finding products is different from finding where to search\". The charter lists \"Open Meetings: No\". In issue #5 (Capability Map input: cross-boundary evidence and audit row) the author of the individual Internet-Draft draft-krausz-verification-state, who discloses it, wrote on 2026-10-08 that its v_verdict \"carries verified, contradicted, indeterminate or not_evaluated\" and that \"a mapping would need to preserve the distinction between an inconclusive evaluation and one that did not occur.\"",
  "committed_next": [],
  "boundary": "Out of scope: new commerce protocols, internals of any specific commerce system, end-user UI, marketplace design, hardware.",
  "sources": [
@@ -93,6 +93,6 @@
   }
  ],
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/aaif-wg-agentic-commerce.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/a1ae242918902e0768e0e6a79bd2bffc4ac5cfa3/entries/aaif-wg-agentic-commerce.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/acdb1d8ff05d92d8e32bc8b964cec7f3cc9eafe0/entries/aaif-wg-agentic-commerce.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

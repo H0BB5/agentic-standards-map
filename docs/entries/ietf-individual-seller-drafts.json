@@ -4,7 +4,7 @@
  "org": "IETF",
  "kind": "work-item",
  "tier": "core",
- "status": "Three individual Internet-Drafts on the seller side of agent transactions, none adopted by a Working Group (WG): anders merchant-identity-assertions -01, kavian offering-discovery-protocol -01, hood agtp-merchant-identity (-02, an Independent Submission dated 26 May 2026, Informational, expires 27 November 2026; -00 and -02 read).",
+ "status": "Three individual Internet-Drafts on the seller side of agent transactions, none adopted by a Working Group (WG): anders merchant-identity-assertions -01, kavian offering-discovery-protocol -01, hood agtp-merchant-identity (-02, an individual submission dated 26 May 2026, Informational, expires 27 November 2026; -00 and -02 read).",
  "status_as_of": "2026-10-13",
  "relevance": "draft-anders-merchant-identity-assertions defines a Merchant Identity Assertion, a signed JSON document binding a legal identity to the merchant receiving a payment, so that an automated client can verify the merchant before completing it. draft-kavian-offering-discovery-protocol lets an agent discover a Service's Collections and Offerings and find links to subsequent operations, for \"catalogs ranging from a few Offerings to large marketplaces without imposing a universal product taxonomy\". draft-hood-agtp-merchant-identity states \"This is the merchant identity gap.\" and treats merchant identity as the receiving side of a purchase.",
  "committed_next": [],
@@ -48,6 +48,6 @@
   "not_found": "Not found in the DAWN list (2026-08-01 to 2026-10-02) and dnsop list text, 2026-10-03: names of the three drafts."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/ietf-individual-seller-drafts.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/a1ae242918902e0768e0e6a79bd2bffc4ac5cfa3/entries/ietf-individual-seller-drafts.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/acdb1d8ff05d92d8e32bc8b964cec7f3cc9eafe0/entries/ietf-individual-seller-drafts.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }
