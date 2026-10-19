@@ -44,7 +44,7 @@ An Internet-Draft is not an IETF decision, and the map says which kind of draft 
 
 ## Versions and citation
 
-The website is the living version and changes as venues move. Each DOI identifies a frozen snapshot: version 1.0.1 (2026-10-14) is the tag v1.0.1 of the repository and has the version DOI 10.5281/zenodo.23377309; version 1.0.0 is the tag v1.0.0 and has the version DOI 10.5281/zenodo.23357362. The concept DOI 10.5281/zenodo.23357361 always resolves to the latest version; cite the version DOI for the text you read. Version 1.1 (2026-10-19) is the version shown on the site; its tag and its version DOI are recorded here when it is released.
+The website is the living version and changes as venues move. Each DOI identifies a frozen snapshot: version 1.1 (2026-10-19) is the tag v1.1 of the repository and has the version DOI 10.5281/zenodo.23464332; version 1.0.1 (2026-10-14) is the tag v1.0.1 and has the version DOI 10.5281/zenodo.23377309; version 1.0.0 is the tag v1.0.0 and has the version DOI 10.5281/zenodo.23357362. The concept DOI 10.5281/zenodo.23357361 always resolves to the latest version; cite the version DOI for the text you read.
 
 Changes verified by Friday evening enter the following Monday's release; a Monday with no change to citable content produces no new version. Corrections and proposals go through issues on the repository, one per entry, so that each change has a public trail.
 

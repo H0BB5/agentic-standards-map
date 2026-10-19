@@ -65,7 +65,7 @@ CLASSES = {"normative": "normative text", "decision": "official decision or comm
 MATRIX_COLS = [("governance", "Owner / governance"), ("version_state", "Version and state"), ("signs", "What it signs"),
                ("signer", "Who signs"), ("record", "Receipt or record"), ("dispute", "Dispute"), ("source", "Source")]
 # the latest version that has a tag: updated by hand when a release is made (with RELEASED_TAG of tools/export_public.py)
-LATEST_RELEASE = ("1.0.1", "v1.0.1")
+LATEST_RELEASE = ("1.1", "v1.1")
 MATRIX_ORDER = ["ap2", "ucp", "acp", "x402", "visa-tap", "verifiable-intent", "emvco-agentic-payments-framework"]
 NOTE_PAGES = [  # (source file in the export, page, title, description)
     ("notes/intro.md", "intro.html", "Introduction", "Why the map exists, who it is for and how to read it."),
