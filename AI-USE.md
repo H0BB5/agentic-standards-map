@@ -5,7 +5,7 @@
 - **Parts concerned:** all entries, seams, appendices and the calendar. The introduction and the README were drafted with assistance and revised by the author.
 - **Who directed the work:** the author, who chose the scope and the rules, decided every change and checked every statement against its source.
 - **As of:** 2026-10-14.
-- **Version covered:** version 1.0.1; `map-bundle.md` at tag v1.0.1, sha256 e4468806224d9ebc8d5d702ca24196434474f7d85f6ad0cd53cea9c3f5d7c1ee.
+- **Version covered:** version 1.1; `map-bundle.md` at tag v1.0.1, sha256 e4468806224d9ebc8d5d702ca24196434474f7d85f6ad0cd53cea9c3f5d7c1ee.
 - **Review passes:** 2026-10-14: two separate model passes acted as adversarial reviewers of the full public site (snapshot c04592a); their findings were checked against sources before any change.
 - **Record:** drafts, prompts, research outputs, reviews and the change log, retained by the author.
 - No pass to remove traces of machine assistance was applied to this text.

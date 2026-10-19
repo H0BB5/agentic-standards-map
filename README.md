@@ -8,7 +8,7 @@ Every statement is dated and points to a public source. The map makes no predict
 
 This map documents public standardisation activity, specifications and declared commitments. It does not measure market adoption, transaction volume, cross-protocol interoperability or the reliability of deployed implementations. Implementation claims are reported only where supported by dated public evidence and are not treated as evidence of interoperability.
 
-*Version 1.0.1 (2026-10-14) · site updated 2026-10-15. The map is updated as venues move; each entry carries its own read date.*
+*Version 1.1 (2026-10-19) · site updated 2026-10-19. The map is updated as venues move; each entry carries its own read date.*
 
 DOI (all versions): [10.5281/zenodo.23357361](https://doi.org/10.5281/zenodo.23357361)
 
@@ -26,11 +26,11 @@ DOI (all versions): [10.5281/zenodo.23357361](https://doi.org/10.5281/zenodo.233
 
 ## Next on the calendar
 
-- **15 Oct** Accuracy & Reliability of AI Agents: Virtual Summit, 15:00 to 17:00 GMT, online
-- **15 Oct** AAIF Taxonomy and Landscape Workstream: Ecosystem Architecture Map v1.0, target in the charter
 - **approx. 19 Oct** Schedule of the Monday to Wednesday TPAC breakouts added to the TPAC calendar
 - **19 Oct** Comments on the proposed DAWN charter due to the IESG mailing list
 - **21 Oct** aipref virtual interim meeting, 20:00 to 21:30 UTC, no agenda submitted on 2026-09-30
+- **22 Oct** IESG telechat with the DAWN charter on the agenda
+- **22 Oct** vCon working group virtual interim meeting, 14:00 to 16:00 UTC
 
 Full 60-day calendar: [Calendar](map-bundle.md#part-calendar)
 

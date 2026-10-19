@@ -84,16 +84,16 @@ seams:
 - S4
 verified: 2026-10-13
 evidence:
-  read: 'On 2026-10-13: issue #40 and PR #41 of the core draft repository (state and text), the history page of the charter, the datatracker pages of the group, its charter, draft-ietf-vcon-vcon-core and draft-rosenberg-vcon-restructure, pull request #37, and the subjects and dates of the latest 40 messages of the vcon list (to 2026-10-11).'
+  read: 'On 2026-10-13: issue #40 and PR #41 of the core draft repository (state and text), the history page of the charter, the datatracker pages of the group, its charter, draft-ietf-vcon-vcon-core and the individual draft draft-rosenberg-vcon-restructure, pull request #37, and the subjects and dates of the latest 40 messages of the vcon list (to 2026-10-11).'
   not_read: The messages of the vcon list before 2026-09-01, the minutes, and the completion state of the milestones.
-  not_found: 'Not found in the 35 vcon list messages (2026-09-01 to 2026-10-06) and in the texts of draft-ietf-vcon-vcon-core-04, draft-ietf-vcon-overview-02, draft-rosenberg-vcon-restructure-00, draft-howe-vcon-agent-session-00 and draft-rosenberg-cheq-00, 2026-10-06: UCP, ACP, AP2, x402, Verifiable Intent, Visa. Not found in the files, issues and pull requests of the repositories of UCP, ACP, AP2, x402, Verifiable Intent and Visa TAP, 2026-10-06: vCon or "virtualized conversation". Not found in charter-ietf-vcon-01, 2026-10-06: commerce, payment, purchase, agent.'
+  not_found: 'Not found in the 35 vcon list messages (2026-09-01 to 2026-10-06) and in the texts of the WG documents draft-ietf-vcon-vcon-core-04 and draft-ietf-vcon-overview-02 and of the individual drafts draft-rosenberg-vcon-restructure-00, draft-howe-vcon-agent-session-00 and draft-rosenberg-cheq-00, 2026-10-06: UCP, ACP, AP2, x402, Verifiable Intent, Visa. Not found in the files, issues and pull requests of the repositories of UCP, ACP, AP2, x402, Verifiable Intent and Visa TAP, 2026-10-06: vCon or "virtualized conversation". Not found in charter-ietf-vcon-01, 2026-10-06: commerce, payment, purchase, agent.'
 open_proposals:
 - what: 'Recharter: finish the core specification, then an extension for AI agent interaction record data (message and pull request #37, merged on 2026-10-08 into the charter file of the repository; the interim of 2026-10-08 discussed it, a chair''s reminder of 2026-10-06 listing "discuss proposed charter updates").'
   author: Jonathan Rosenberg
   date: 2026-10-06
   state: merged
   url: https://github.com/ietf-wg-vcon/draft-ietf-vcon-vcon-core/pull/37
-- what: Restructure the format with a session concept and an events object to represent AI agent use cases (draft-rosenberg-vcon-restructure-00; on 2026-10-13 the datatracker still shows -00 as the current revision, last updated 2026-09-11; the editors copy of the core draft of 2026-10-07 reports the elevation of party_history events to a top level Events Object and a Session concept, which are parts of this proposal).
+- what: Restructure the format with a session concept and an events object to represent AI agent use cases (the individual draft draft-rosenberg-vcon-restructure-00; on 2026-10-13 the datatracker still shows -00 as the current revision, last updated 2026-09-11; the editors copy of the core draft of 2026-10-07 reports the elevation of party_history events to a top level Events Object and a Session concept, which are parts of this proposal).
   author: Jonathan Rosenberg
   date: 2026-09-11
   state: open

@@ -1,26 +1,32 @@
 id: mcp-core
 name: Model Context Protocol (MCP), core specification
-org: Linux Foundation
+org: AAIF
 kind: specification
 tier: context
 status: Specification version 2026-07-28 (the latest release is 2026-07-28; the specification directory holds 2025-03-26, 2025-06-18, 2025-11-25, 2026-07-28 and a draft; no later release, read 2026-10-13); the blog post of 2025-12-09 says "Anthropic is donating MCP to the Agentic AI Foundation".
 status_as_of: 2026-10-13
 relevance: The specification describes MCP as "an open protocol that enables seamless integration between LLM applications and external data sources and tools"; discovery is in mcp-server-card and lf-ai-catalog.
 sources:
+- url: https://aaif.io/projects
+  read: 2026-10-19
+  class: statement
 - url: https://modelcontextprotocol.io/specification/latest
   read: 2026-10-03
   class: normative
 - url: https://blog.modelcontextprotocol.io/posts/2025-12-09-mcp-joins-agentic-ai-foundation/
   read: 2026-10-03
   class: decision
+- url: https://github.com/frmoretto/agentic-standards-map/issues/9
+  read: 2026-10-19
+  class: third-party
 overlaps:
 - mcp-server-card
 - lf-ai-catalog
 - a2a-core
 seams:
 - S1
-verified: 2026-10-13
+verified: 2026-10-19
 evidence:
-  read: 'On 2026-10-13: the list of releases and the specification directory of the repository; the blog post, the governance page and the versioning page were not re-read.'
+  read: 'The change was proposed for the map in issue #9 (2026-10-18) by zeroasterisk, who disclosed: "Proposer works at Google (Google contributed A2A to the Linux Foundation and donated AP2 to the FIDO Alliance); member of the AAIF Technical Steering Committee.'
   not_read: Full text of each specification chapter, the Specification Enhancement Proposal (SEP) process pages, licence texts beyond README and GOVERNANCE.md.
-  not_found: 'Not found on the governance and specification pages: foundation, AAIF, Linux.'
+  not_found: 'On 2026-10-19: aaif.io/projects, which lists Model Context Protocol among the projects AAIF hosts, and the governance page (last modified 2026-08-05), where AAIF, Agentic AI Foundation and Linux Foundation are not found. Not found on the governance and specification pages: foundation, AAIF, Linux.'

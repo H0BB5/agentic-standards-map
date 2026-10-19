@@ -7,9 +7,9 @@ authors:
     given-names: "Francesco"
     orcid: "https://orcid.org/0009-0004-0096-4712"
 license: CC-BY-4.0
-version: 1.0.1
+version: "1.1"
 doi: "10.5281/zenodo.23357361"
-date-released: 2026-10-14
+date-released: 2026-10-19
 url: "https://frmoretto.github.io/agentic-standards-map/"
 repository-code: "https://github.com/frmoretto/agentic-standards-map"
 identifiers:
