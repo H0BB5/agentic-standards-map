@@ -43,7 +43,7 @@ DEFAULT_REPO = "https://github.com/frmoretto/agentic-standards-map"
 SITE_TITLE = "Agentic standards map"
 SITE_NAME = "Agentic Standards Map"   # the name in the header of every page and in the breadcrumb of the entries
 INTRO_STRIP = ("An open, dated map of who is standardising agentic commerce (W3C, IETF, GS1, AAIF and the industry protocols) and what each "
-               "venue has committed to next. Every statement points to a public source. Maintained by %s. <strong>New here?</strong> Start with the %s.")
+               "venue has committed to next. Every statement points to a public source. Maintained by %s.<br><strong>New here?</strong> Start with the %s.")
 AUTHOR = "Francesco Marinoni Moretto"
 ORCID_ID = "0009-0004-0096-4712"
 ORCID = "https://orcid.org/" + ORCID_ID
@@ -299,7 +299,7 @@ class Md:
                 while j < n and is_row(lines[j]):
                     rows.append(cells(lines[j]))
                     j += 1
-                t = ['<div class="scroll wide"><table><thead><tr>%s</tr></thead><tbody>' % "".join("<th>%s</th>" % self.inline(c) for c in head)]
+                t = ['<div class="scroll"><table><thead><tr>%s</tr></thead><tbody>' % "".join("<th>%s</th>" % self.inline(c) for c in head)]
                 for r in rows:
                     t.append("<tr>%s</tr>" % "".join("<td>%s</td>" % self.inline(c) for c in r))
                 t.append("</tbody></table></div>")
@@ -552,23 +552,24 @@ def entry_graph_svg(e, entries, ovn, smn):
 
 # ---- pages --------------------------------------------------------------------------------------------------------
 
-CSS = """:root{--measure:56rem;--pad:1rem;--fg:#1b1b1b;--bg:#fff;--muted:#555;--line:#d9d9d9;--link:#0b5cad;--accent:#0f4761;--chip:#eef2f6}
-@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--bg:#161a1d;--muted:#aab;--line:#333b42;--link:#7ab8f5;--accent:#8fc4dd;--chip:#232a30}}
+CSS = """:root{--measure:56rem;--pad:1rem;--fg:#1b1b1b;--bg:#fff;--muted:#555;--line:#d9d9d9;--link:#0b5cad;--accent:#0f4761;--chip:#eef2f6;--strip:#d6e6f5;--sep:#a3a3a3}
+@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--bg:#161a1d;--muted:#aab;--line:#333b42;--link:#7ab8f5;--accent:#8fc4dd;--chip:#232a30;--strip:#1c3247;--sep:#5f6870}}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
 body{margin:0;font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--fg);background:var(--bg)}
-header.site,footer.site,div.strip{padding-left:max(var(--pad),calc((100% - var(--measure))/2 + var(--pad)));padding-right:max(var(--pad),calc((100% - var(--measure))/2 + var(--pad)))}
-header.site{border-bottom:1px solid var(--line);padding-top:.6rem;padding-bottom:.6rem}
+header.site,footer.site{padding-left:max(var(--pad),calc((100% - var(--measure))/2 + var(--pad)));padding-right:max(var(--pad),calc((100% - var(--measure))/2 + var(--pad)))}
+header.site{padding-top:.6rem;padding-bottom:.6rem;background:linear-gradient(var(--line),var(--line)) center bottom/min(var(--measure),100%) 1px no-repeat}
 header.site{display:flex;flex-wrap:wrap;row-gap:.2rem}
-header.site a{margin-right:1rem;color:var(--accent);text-decoration:none;font-weight:600;white-space:nowrap}header.site a.brand{flex-basis:100%;font-size:1.85rem;font-weight:700;margin-bottom:.2rem}header.site .cadence{flex-basis:100%;margin:0;font-size:.85rem;color:var(--muted)}header.site .cadence a{margin-right:0;font-weight:400;text-decoration:underline}footer.site .cadence{margin:0 0 .4rem}
-div.strip{background:var(--chip);border-bottom:1px solid var(--line);padding-top:.55rem;padding-bottom:.55rem;font-size:.9rem}div.strip p{margin:0}
-p.crumbs{font-size:.85rem;color:var(--muted);margin:.6rem 0 -.4rem}
+header.site a{margin-right:1rem;color:var(--accent);text-decoration:none;font-weight:600;white-space:nowrap}header.site a.brand{flex-basis:100%;font-size:1.85rem;font-weight:700;margin-bottom:.2rem}header.site .menuw{flex-basis:100%;overflow:hidden}header.site nav.menu{display:flex;flex-wrap:wrap;row-gap:.2rem;margin-left:-.75rem}header.site nav.menu a{margin-right:.75rem;padding-left:.75rem}header.site nav.menu a::before{content:"";display:inline-block;height:.6em;vertical-align:0;border-left:1px solid var(--sep);margin-left:-.75rem;margin-right:calc(.75rem - 1px)}header.site .cadence{flex-basis:100%;margin:0;font-size:.85rem;color:var(--muted)}header.site .cadence a{margin-right:0;font-weight:400;text-decoration:underline}footer.site .cadence{margin:0 0 .4rem}
+div.strip{max-width:var(--measure);margin:.8rem auto 0;padding:.55rem var(--pad);background:var(--strip);border-radius:.4rem;font-size:.9rem}div.strip p{margin:0}
+@media (max-width:56rem){div.strip{border-radius:0;margin-top:0}}
+p.crumbs{font-size:.85rem;color:var(--muted);margin:.6rem 0 -.4rem}p.crumbs+h1::before{content:"\\25B8";content:"\\25B8" / "";margin-right:.35em}
 a[target="_blank"]::after{content:"\\2197";content:"\\2197" / "";font-size:.8em;margin-left:.15em;text-decoration:none;display:inline-block}
 td code,td .nw{white-space:nowrap}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
 main{max-width:var(--measure);margin:0 auto;padding:var(--pad)}
 h1,h2,h3{color:var(--accent);line-height:1.25}h1{font-size:1.45rem}h2{font-size:1.3rem;margin-top:2rem}h3{font-size:1.1rem}
 a{color:var(--link);overflow-wrap:anywhere}code{background:var(--chip);padding:0 .25em;border-radius:3px;font-size:.92em;overflow-wrap:anywhere}
-pre{background:var(--chip);padding:.8rem;overflow:auto}hr{border:0;border-top:1px solid var(--line);margin:1.5rem 0}
+pre{background:var(--chip);padding:.8rem;overflow:auto}hr{border:0;border-top:1px solid var(--line);margin:1.5rem calc(-1 * var(--pad))}
 .scroll{overflow-x:auto;margin:1rem 0;position:relative}table{border-collapse:collapse;font-size:.9rem;width:100%}
 th,td{border-bottom:1px solid var(--line);padding:.4rem .5rem;text-align:left;vertical-align:top;overflow-wrap:break-word}td:has(a){overflow-wrap:anywhere}
 th{background:var(--chip)}blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:4px solid var(--line);color:var(--muted)}
@@ -646,9 +647,10 @@ class Site:
         rel = "../" * depth
         alt = "".join('<link rel="alternate" type="%s" href="%s">\n' % (attr(t_), attr(h_)) for t_, h_ in (alternates or []))
         nav = '<a class="brand" href="%sindex.html">%s</a>' % (rel, esc(SITE_NAME))
-        nav += "".join('<a href="%s%s">%s</a>' % (rel, h, t) for h, t in (("index.html#entries", "Entries"), ("graph.html", "Graph"), ("seams.html", "Seams"),
-                                                                           ("calendar.html", "Calendar"), ("intro.html", "Introduction"),
-                                                                           ("disclosure.html", "Disclosure"), ("method.html", "Method"), ("data.html", "For agents and tools")))
+        nav += '<div class="menuw"><nav class="menu" aria-label="Site">%s</nav></div>' % "".join(  # the wrapper hides the separator at the start of each row
+            '<a href="%s%s">%s</a>' % (rel, h, t) for h, t in (("index.html#entries", "Entries"), ("graph.html", "Graph"), ("seams.html", "Seams"),
+                                                               ("calendar.html", "Calendar"), ("intro.html", "Introduction"),
+                                                               ("disclosure.html", "Disclosure"), ("method.html", "Method"), ("data.html", "For agents and tools")))
         strip = ""
         if path != "index.html":   # the home page has its own introduction
             strip = '<div class="strip"><p>%s</p></div>\n' % (INTRO_STRIP % ('<a href="%s" rel="noopener">%s</a>' % (attr(GITHUB), esc(AUTHOR)),
@@ -815,7 +817,7 @@ def data_page_html(a, site, n_entries, newest, map_size, n_events, sha):
     return ("<h1>For agents and tools</h1>"
             "<p>The map in machine-readable form. These are plain files and standard web formats.</p>"
             "<p>This site uses generic web mechanisms (JSON files, link rel=alternate, schema.org JSON-LD, a sitemap). It does not adopt any of the discovery mechanisms described in the map, so that the map does not take a side in what it maps.</p>"
-            "<h2 id=\"files\">Files</h2><div class=\"scroll wide\"><table><thead><tr><th>File</th><th>What it holds</th></tr></thead><tbody>%s</tbody></table></div>"
+            "<h2 id=\"files\">Files</h2><div class=\"scroll\"><table><thead><tr><th>File</th><th>What it holds</th></tr></thead><tbody>%s</tbody></table></div>"
             "<h2 id=\"licence\">Licence</h2><p>The content is under <a href=\"%s\" rel=\"noopener\">CC BY 4.0</a>; the scripts in <code>tools/</code> are under the MIT licence. Reuse is free with attribution. Quotations from third-party texts remain under their own terms; CC BY 4.0 applies to the author's text and data.</p>"
             "<h2 id=\"cite\">How to cite</h2>%s%s"
             "<h2 id=\"counts\">Counts</h2><p>The numbers of sources quoted on the site (source references, distinct URLs, primary and third-party-only URLs) are produced by <a href=\"%s\" rel=\"noopener\">tools/count_sources.py</a>, run on the files of the repository. A source reference is one use of a URL in the field <code>sources</code> or in a <code>committed_next</code> item; a distinct URL is counted once whatever the number of uses; a URL with a fragment is a different URL. The script counts URLs and does not check that they respond.</p>"
@@ -874,7 +876,7 @@ def entry_body(e, entries, md, seams, graph_html, archived=None):
         p.append("</dl>")
     ops = e.get("open_proposals") or []
     if ops:
-        p.append("<h2>Open proposals</h2><div class=\"scroll wide\"><table><thead><tr><th>Proposal</th><th>Author</th><th>Date</th><th>State</th><th>Link</th></tr></thead><tbody>")
+        p.append("<h2>Open proposals</h2><div class=\"scroll\"><table><thead><tr><th>Proposal</th><th>Author</th><th>Date</th><th>State</th><th>Link</th></tr></thead><tbody>")
         for o in ops:
             p.append("<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td><a href=\"%s\" rel=\"noopener\">%s</a></td></tr>" % (
                 md.inline(one_line(o["what"])), esc(o["author"]), esc(d(o["date"])), esc(o["state"]), attr(o["url"]), esc(o["url"])))

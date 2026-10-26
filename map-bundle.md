@@ -218,6 +218,7 @@ Archive copies: snapshots of the cited sources were requested on 2026-10-14 from
 - Calendar: the IETF 127 sessions of agentproto, AUDIT (BoF), vcon, webbotauth, wimse (two, the second a joint session with OAUTH) and dawn, read on the datatracker agenda on 2026-10-26.
 - Site header: map name on every page, link to the repository, short introduction for visitors arriving on an inner page. External links open in a new tab and are marked.
 - Site tables: dates kept on one line and long source URLs shown as short link text (the links are unchanged).
+- Site layout: tables kept within the text column, header line and intro box aligned to it (links unchanged).
 
 **1.2 (2026-10-26).** One entry added; corrections and additions to the living version.
 
