@@ -84,6 +84,61 @@ LINK_MAP = {"map-bundle.md#part-seams": "seams.html", "map-bundle.md#part-calend
 REPO_FILES = ("CONTRIBUTING.md", "LICENSE", "LICENSE-CODE")
 
 
+DATE_CELL = re.compile(r"(?:approx\. )?\d{4}-\d{2}-\d{2}.{0,20}", re.S)   # a table cell that holds a date, "approx." before it, a short suffix (", 14:00", " to 2026-11-20")
+
+
+def short_link_text(url):
+    """Visible text of a bare URL in a table cell (the href stays the full URL). GitHub: owner/repo#N for issues, pull
+    requests and discussions, owner/repo: file for /blob/ and /tree/, owner/repo for the repository. Datatracker: the
+    document or group name, "group: page" for other group pages, "datatracker: last segment" for meeting pages. Other
+    sites: host without www., then /…/ and the last segment, cut to 40 characters."""
+    u = urllib.parse.urlparse(url)
+    host = u.netloc.lower()
+    host = host[4:] if host.startswith("www.") else host
+    parts = [urllib.parse.unquote(x) for x in u.path.split("/") if x]
+
+    def cut(s):
+        return s if len(s) <= 40 else s[:39] + "…"
+    if host == "github.com" and len(parts) >= 2:
+        repo = "%s/%s" % (parts[0], parts[1])
+        if len(parts) == 2:
+            return repo
+        if len(parts) >= 4 and parts[2] in ("issues", "pull", "discussions") and parts[3].isdigit():
+            return "%s#%s" % (repo, parts[3])
+        if len(parts) >= 4 and parts[2] in ("blob", "tree"):
+            return "%s: %s" % (repo, cut(parts[-1]))
+    if host == "datatracker.ietf.org" and len(parts) >= 2:
+        if parts[0] == "doc":
+            return cut(parts[1])
+        if parts[0] in ("group", "wg", "rg"):
+            return parts[1] if len(parts) == 2 or parts[-1] == "about" else "%s: %s" % (parts[1], cut(parts[-1]))
+        if parts[0] == "meeting":
+            return "datatracker: " + cut(parts[-1])
+    if not parts:
+        return host
+    return host + "/" + (cut(parts[0]) if len(parts) == 1 else "…/" + cut(parts[-1]))
+
+
+def short_link_selftest():
+    """the short label of known URLs, the date-cell rule on cells that must and must not match"""
+    cases = {"https://github.com/w3c/tpac2026-breakouts/issues/22": "w3c/tpac2026-breakouts#22",
+             "https://github.com/aaif/ws-taxonomy-landscape/pull/61": "aaif/ws-taxonomy-landscape#61",
+             "https://github.com/aaif/ws-taxonomy-landscape/blob/main/charter/charter.md": "aaif/ws-taxonomy-landscape: charter.md",
+             "https://github.com/w3c/tpac2026-breakouts": "w3c/tpac2026-breakouts",
+             "https://datatracker.ietf.org/doc/charter-ietf-dawn/": "charter-ietf-dawn",
+             "https://datatracker.ietf.org/group/dawn/about/": "dawn",
+             "https://datatracker.ietf.org/meeting/127/agenda.json": "datatracker: agenda.json",
+             "https://www.w3.org/2026/09/ecommerce-agents/": "w3.org/…/ecommerce-agents",
+             "https://example.org/": "example.org",
+             "https://example.org/" + "x" * 50: "example.org/" + "x" * 39 + "…"}
+    for u, want in cases.items():
+        assert short_link_text(u) == want, (u, short_link_text(u), want)
+    for c in ("2026-10-15", "2026-11-17, 16:30", "2026-11-16 to 2026-11-20", "approx. 2026-10-19"):
+        assert DATE_CELL.fullmatch(c), c
+    for c in ("Version 1.2 (2026-10-26)", "2026-10-15 the IESG approved the charter of the group", "2026-10"):
+        assert not DATE_CELL.fullmatch(c), c
+
+
 def esc(s):
     return htmllib.escape(str(s), quote=False)
 
@@ -244,7 +299,7 @@ class Md:
                 while j < n and is_row(lines[j]):
                     rows.append(cells(lines[j]))
                     j += 1
-                t = ['<div class="scroll"><table><thead><tr>%s</tr></thead><tbody>' % "".join("<th>%s</th>" % self.inline(c) for c in head)]
+                t = ['<div class="scroll wide"><table><thead><tr>%s</tr></thead><tbody>' % "".join("<th>%s</th>" % self.inline(c) for c in head)]
                 for r in rows:
                     t.append("<tr>%s</tr>" % "".join("<td>%s</td>" % self.inline(c) for c in r))
                 t.append("</tbody></table></div>")
@@ -508,13 +563,14 @@ header.site a{margin-right:1rem;color:var(--accent);text-decoration:none;font-we
 div.strip{background:var(--chip);border-bottom:1px solid var(--line);padding-top:.55rem;padding-bottom:.55rem;font-size:.9rem}div.strip p{margin:0}
 p.crumbs{font-size:.85rem;color:var(--muted);margin:.6rem 0 -.4rem}
 a[target="_blank"]::after{content:"\\2197";content:"\\2197" / "";font-size:.8em;margin-left:.15em;text-decoration:none;display:inline-block}
+td code,td .nw{white-space:nowrap}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
 main{max-width:var(--measure);margin:0 auto;padding:var(--pad)}
 h1,h2,h3{color:var(--accent);line-height:1.25}h1{font-size:1.45rem}h2{font-size:1.3rem;margin-top:2rem}h3{font-size:1.1rem}
 a{color:var(--link);overflow-wrap:anywhere}code{background:var(--chip);padding:0 .25em;border-radius:3px;font-size:.92em;overflow-wrap:anywhere}
 pre{background:var(--chip);padding:.8rem;overflow:auto}hr{border:0;border-top:1px solid var(--line);margin:1.5rem 0}
-.scroll{overflow-x:auto;margin:1rem 0}table{border-collapse:collapse;font-size:.9rem;width:100%}
-th,td{border-bottom:1px solid var(--line);padding:.4rem .5rem;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+.scroll{overflow-x:auto;margin:1rem 0;position:relative}table{border-collapse:collapse;font-size:.9rem;width:100%}
+th,td{border-bottom:1px solid var(--line);padding:.4rem .5rem;text-align:left;vertical-align:top;overflow-wrap:break-word}td:has(a){overflow-wrap:anywhere}
 th{background:var(--chip)}blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:4px solid var(--line);color:var(--muted)}
 .chips span{display:inline-block;background:var(--chip);border-radius:1rem;padding:.1rem .7rem;margin:0 .4rem .4rem 0;font-size:.85rem}
 .verified{color:var(--muted);font-size:.9rem}td.nw,th.nw{white-space:nowrap}td.it{min-width:9rem}table.wts{min-width:42rem}dl.fields dt{font-weight:700;margin-top:1rem}dl.fields dd{margin:.2rem 0 0 0}
@@ -523,7 +579,7 @@ section.author{border-top:1px solid var(--line);margin-top:2rem;padding-top:.5re
 .eg svg{width:100%;height:auto}.eg .legend{font-size:.85rem;color:var(--muted)}.graph{overflow:auto;border:1px solid var(--line);margin:1rem 0}.graph svg{max-width:none;height:auto}
 table.matrix .mmeta{font-size:.8rem;color:var(--muted);margin-top:.35rem}table.matrix .mmeta div{margin-top:.15rem}table.matrix .lab{font-weight:700}
 table.matrix td.mp{min-width:11rem}
-@media (min-width:64rem){.scroll.wide{position:relative;left:50%;transform:translateX(-50%);width:min(72rem,calc(100vw - 4rem))}}
+@media (min-width:64rem){.scroll.wide{position:relative;left:50%;transform:translateX(-50%);width:min(72rem,calc(100vw - 4rem))}td:has(a),td a{overflow-wrap:break-word}}
 @media (max-width:40rem){:root{--pad:.7rem}body{font-size:15px}
 table.matrix,table.matrix tbody,table.matrix tr,table.matrix td{display:block;width:100%}
 table.matrix thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
@@ -544,6 +600,29 @@ class Site:
 
     def base(self, path=""):
         return self.a.base_url + path
+
+    def table_cells(self, page):
+        """Inside <td> only: a cell whose text is an ISO date with a short suffix stays on one line; slugs listed in one cell
+        go one per line; a bare URL (link text = href) shows a short label, the full URL in title. The href never changes."""
+        def cell(m):
+            open_, inner = m.group(1), m.group(2)
+            text = htmllib.unescape(re.sub(r"<[^>]+>", "", inner)).strip()
+            if DATE_CELL.fullmatch(text):   # the date itself never breaks; a time or a second date may go to the next line
+                inner = "".join(x if x.startswith("<") else re.sub(r"(?<![\w-])(\d{4}-\d{2}-\d{2})(?![\w-])", r'<span class="nw">\1</span>', x)
+                                for x in re.split(r"(<[^>]*>)", inner))   # text only, never inside a tag
+            inner = re.sub(r'(?<=</code></a>),\s+(?=<a href="[^"]*entries/[a-z0-9-]+\.html"><code>)', "<br>", inner)  # only links to entries, not code in prose
+
+            def bare(a):
+                h = re.search(r'\bhref="(https?://[^"]*)"', a.group(1))
+                if not h or htmllib.unescape(a.group(2)) != htmllib.unescape(h.group(1)) or h.group(1).startswith(self.a.base_url):
+                    return a.group(0)
+                url = htmllib.unescape(h.group(1))
+                label = re.sub(r"([/#:])", r"\1<wbr>", esc(short_link_text(url)))   # the line breaks after / # : and not inside a word
+                return '<a%s title="%s">%s</a>' % (a.group(1), attr(url), label)
+            inner = re.sub(r"<a\b([^>]*)>(.*?)</a>", bare, inner, flags=re.S)
+            return open_ + inner + "</td>"
+        parts = re.split(r'(<script type="application/ld\+json">.*?</script>)', page, flags=re.S)
+        return "".join(p if p.startswith('<script type="application/ld+json">') else re.sub(r"(<td\b[^>]*>)(.*?)</td>", cell, p, flags=re.S) for p in parts)
 
     def external_in_new_window(self, page):
         """Every link that leaves the site opens in a new tab and says so: an <a> whose href is http(s) and not under the base URL
@@ -587,7 +666,7 @@ class Site:
                 ' &middot; Source and data: <a href="%s" rel="noopener">GitHub</a></p></header>\n%s<main>\n%s\n</main>\n'
                 '<footer class="site"><p class="cadence">Updated weekly: numbered versions are released on Mondays. To correct or propose an entry, <a href="%s" rel="noopener">open an issue</a>.</p>%s%s. Generated on %s from %s; content under CC BY 4.0. Generated from the data of the map, never edited by hand. No tracking, no scripts.</footer>\n</body>\n</html>\n'
                 % (esc(title), attr(desc), attr(self.base(path)), rel, alt, ld, nav, attr(NEW_ISSUE_URL), attr(self.a.repo_url), strip, body, attr(NEW_ISSUE_URL), esc(SITE_TITLE), (", version %s" % esc(self.version)) if self.version else "", self.today, commit))
-        page = self.external_in_new_window(page)
+        page = self.external_in_new_window(self.table_cells(page))
         target = self.out / path
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(page, encoding="utf-8", newline="\n")
@@ -736,7 +815,7 @@ def data_page_html(a, site, n_entries, newest, map_size, n_events, sha):
     return ("<h1>For agents and tools</h1>"
             "<p>The map in machine-readable form. These are plain files and standard web formats.</p>"
             "<p>This site uses generic web mechanisms (JSON files, link rel=alternate, schema.org JSON-LD, a sitemap). It does not adopt any of the discovery mechanisms described in the map, so that the map does not take a side in what it maps.</p>"
-            "<h2 id=\"files\">Files</h2><div class=\"scroll\"><table><thead><tr><th>File</th><th>What it holds</th></tr></thead><tbody>%s</tbody></table></div>"
+            "<h2 id=\"files\">Files</h2><div class=\"scroll wide\"><table><thead><tr><th>File</th><th>What it holds</th></tr></thead><tbody>%s</tbody></table></div>"
             "<h2 id=\"licence\">Licence</h2><p>The content is under <a href=\"%s\" rel=\"noopener\">CC BY 4.0</a>; the scripts in <code>tools/</code> are under the MIT licence. Reuse is free with attribution. Quotations from third-party texts remain under their own terms; CC BY 4.0 applies to the author's text and data.</p>"
             "<h2 id=\"cite\">How to cite</h2>%s%s"
             "<h2 id=\"counts\">Counts</h2><p>The numbers of sources quoted on the site (source references, distinct URLs, primary and third-party-only URLs) are produced by <a href=\"%s\" rel=\"noopener\">tools/count_sources.py</a>, run on the files of the repository. A source reference is one use of a URL in the field <code>sources</code> or in a <code>committed_next</code> item; a distinct URL is counted once whatever the number of uses; a URL with a fragment is a different URL. The script counts URLs and does not check that they respond.</p>"
@@ -795,7 +874,7 @@ def entry_body(e, entries, md, seams, graph_html, archived=None):
         p.append("</dl>")
     ops = e.get("open_proposals") or []
     if ops:
-        p.append("<h2>Open proposals</h2><div class=\"scroll\"><table><thead><tr><th>Proposal</th><th>Author</th><th>Date</th><th>State</th><th>Link</th></tr></thead><tbody>")
+        p.append("<h2>Open proposals</h2><div class=\"scroll wide\"><table><thead><tr><th>Proposal</th><th>Author</th><th>Date</th><th>State</th><th>Link</th></tr></thead><tbody>")
         for o in ops:
             p.append("<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td><a href=\"%s\" rel=\"noopener\">%s</a></td></tr>" % (
                 md.inline(one_line(o["what"])), esc(o["author"]), esc(d(o["date"])), esc(o["state"]), attr(o["url"]), esc(o["url"])))
@@ -903,6 +982,7 @@ def git(args, cwd):
 
 
 def main():
+    short_link_selftest()   # before any page is written
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--commit", default="HEAD")
     ap.add_argument("--source", help="read this folder (a public export or the public repository) instead of exporting a commit")
