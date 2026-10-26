@@ -9,7 +9,8 @@ X-WR-CALDESC:This calendar lists dated public events of the next 60 days de
   entries only\, and the individual draft expiries listed here are marked a
  s such: they are not commitments of a venue. Events as declared by the ven
  ues on 2026-10-14\; the rows from 2026-10-22 onwards were checked again on
-  2026-10-23\; check the venue for later changes.
+  2026-10-23\, and the IETF 127 rows were read on the datatracker on 2026-1
+ 0-26\; check the venue for later changes.
 BEGIN:VEVENT
 UID:aaif-structure-2026-10-15-0.agentic-standards-map.invalid
 DTSTAMP:20261026T000000Z
@@ -293,19 +294,108 @@ DTSTART;VALUE=DATE:20261114
 DTEND;VALUE=DATE:20261121
 SUMMARY:IETF 127\, San Francisco
 DESCRIPTION:IETF 127\, San Francisco (ietf.org/meeting/127\, read on 2026-1
- 0-13: "14 Nov 2026 - 20 Nov 2026")\; a two-hour webbotauth session has bee
- n requested\, not scheduled (request of 2026-09-15)\; on 2026-10-23 the da
- tatracker records the webbotauth and agentproto sessions as "Waiting for S
- cheduling" Source: https://www.ietf.org/meeting/127/\; https://datatracker
- .ietf.org/meeting/upcoming/\; https://mailarchive.ietf.org/arch/msg/web-bo
- t-auth/w0al4_01_6Evh8AI9wXnbKz6Kc0/\; https://datatracker.ietf.org/group/w
- ebbotauth/meetings/\; https://datatracker.ietf.org/group/agentproto/meetin
- gs/
+ 0-13: "14 Nov 2026 - 20 Nov 2026")\; the sessions of the groups in this ma
+ p are listed below by day (datatracker agenda of the meeting\, read on 202
+ 6-10-26\; times in San Francisco time\, America/Los_Angeles\, UTC-8) Sourc
+ e: https://www.ietf.org/meeting/127/\; https://datatracker.ietf.org/meetin
+ g/upcoming/\; https://mailarchive.ietf.org/arch/msg/web-bot-auth/w0al4_01_
+ 6Evh8AI9wXnbKz6Kc0/\; https://datatracker.ietf.org/group/webbotauth/meetin
+ gs/\; https://datatracker.ietf.org/group/agentproto/meetings/
 URL:https://frmoretto.github.io/agentic-standards-map/entries/ietf-webbotau
  th.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ietf-dnsaid-2026-11-28-21.agentic-standards-map.invalid
+UID:ietf-agentproto-2026-11-16-21.agentic-standards-map.invalid
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261117
+SUMMARY:IETF 127: agentproto session\, 14:00 to 16:00 San Francisco time\, 
+ room Continental 5
+DESCRIPTION:IETF 127: agentproto session\, 14:00 to 16:00 San Francisco tim
+ e\, room Continental 5 Source: https://datatracker.ietf.org/meeting/127/ag
+ enda.json
+URL:https://frmoretto.github.io/agentic-standards-map/entries/ietf-agentpro
+ to.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ietf-audit-2026-11-17-22.agentic-standards-map.invalid
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261118
+SUMMARY:IETF 127: AUDIT BoF session\, 09:00 to 10:30 San Francisco time\, r
+ oom Continental 6
+DESCRIPTION:IETF 127: AUDIT BoF session\, 09:00 to 10:30 San Francisco time
+ \, room Continental 6 Source: https://datatracker.ietf.org/meeting/127/age
+ nda.json
+URL:https://frmoretto.github.io/agentic-standards-map/entries/ietf-audit.ht
+ ml
+END:VEVENT
+BEGIN:VEVENT
+UID:ietf-vcon-2026-11-17-23.agentic-standards-map.invalid
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261118
+SUMMARY:IETF 127: vcon session\, 11:00 to 12:30 San Francisco time\, room G
+ olden Gate 2
+DESCRIPTION:IETF 127: vcon session\, 11:00 to 12:30 San Francisco time\, ro
+ om Golden Gate 2 Source: https://datatracker.ietf.org/meeting/127/agenda.j
+ son
+URL:https://frmoretto.github.io/agentic-standards-map/entries/ietf-vcon.htm
+ l
+END:VEVENT
+BEGIN:VEVENT
+UID:ietf-webbotauth-2026-11-17-24.agentic-standards-map.invalid
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261118
+SUMMARY:IETF 127: webbotauth session\, 16:30 to 18:30 San Francisco time\, 
+ room Continental 4
+DESCRIPTION:IETF 127: webbotauth session\, 16:30 to 18:30 San Francisco tim
+ e\, room Continental 4 Source: https://datatracker.ietf.org/meeting/127/ag
+ enda.json
+URL:https://frmoretto.github.io/agentic-standards-map/entries/ietf-webbotau
+ th.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ietf-wimse-aims-2026-11-18-25.agentic-standards-map.invalid
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:IETF 127: wimse session\, 14:00 to 16:00 San Francisco time\, room 
+ Golden Gate 4-5
+DESCRIPTION:IETF 127: wimse session\, 14:00 to 16:00 San Francisco time\, r
+ oom Golden Gate 4-5 Source: https://datatracker.ietf.org/meeting/127/agend
+ a.json
+URL:https://frmoretto.github.io/agentic-standards-map/entries/ietf-wimse-ai
+ ms.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ietf-wimse-aims-2026-11-19-26.agentic-standards-map.invalid
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:IETF 127: wimse session\, joint session with OAUTH
+DESCRIPTION:IETF 127: wimse session\, joint session with OAUTH (agenda note
+ )\, 14:00 to 16:00 San Francisco time\, room Golden Gate 4-5 Source: https
+ ://datatracker.ietf.org/meeting/127/agenda.json
+URL:https://frmoretto.github.io/agentic-standards-map/entries/ietf-wimse-ai
+ ms.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ietf-dawn-2026-11-19-27.agentic-standards-map.invalid
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:IETF 127: dawn session\, 16:30 to 18:30 San Francisco time\, room C
+ ontinental 4
+DESCRIPTION:IETF 127: dawn session\, 16:30 to 18:30 San Francisco time\, ro
+ om Continental 4 Source: https://datatracker.ietf.org/meeting/127/agenda.j
+ son
+URL:https://frmoretto.github.io/agentic-standards-map/entries/ietf-dawn.htm
+ l
+END:VEVENT
+BEGIN:VEVENT
+UID:ietf-dnsaid-2026-11-28-28.agentic-standards-map.invalid
 DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
