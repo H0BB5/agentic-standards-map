@@ -3,7 +3,7 @@ name: Agent Payments Protocol (AP2)
 org: Industry
 kind: specification
 tier: core
-status: Open protocol in the GitHub organisation google-agentic-commerce (Apache-2.0); latest release v0.2.0 of 2026-04-28, which "focuses on providing Human Not Present flows"; core specification donated to FIDO. Google announced the donation on 2026-04-28 ("We're donating Agent Payments Protocol to the FIDO Alliance"); the FIDO release of the same day places the work in its Payments Technical Working Group, where the Google and Mastercard contributions are "providing an initial foundation for these specifications", and announces an Agentic Authentication Technical Working Group.
+status: 'Open protocol in the GitHub organisation google-agentic-commerce (Apache-2.0); latest release v0.2.0 of 2026-04-28, which "focuses on providing Human Not Present flows"; core specification donated to FIDO. Google announced the donation on 2026-04-28 ("We''re donating Agent Payments Protocol to the FIDO Alliance"); the FIDO release of the same day places the work in its Payments Technical Working Group, where the Google and Mastercard contributions are "providing an initial foundation for these specifications", and announces an Agentic Authentication Technical Working Group. The AP2 documentation (docs/index.md, commit b4587ac of 2026-04-28, the v0.2 release) says "Standardization of the specification will continue within the Agentic Authentication Technical and Payments Technical Working Groups in FIDO."; the FIDO page "Agentic AI" says that FIDO''s work in agentic AI "is being carried out in its Agentic Authentication Technical Working Group, and the Payments Technical Working Group", and ties the contributions of Google and Mastercard to the specifications of the Payments Technical Working Group: "These specifications will draw from initial contributions from Google (AP2) and Mastercard (Verifiable Intent)" (both read 2026-10-23).'
 status_as_of: 2026-10-13
 relevance: 'AP2 is available as an extension for A2A and for UCP; its objects are mandates, signed Verifiable Digital Credentials, and the FIDO blog of 2026-05-26 names "Checkout Mandate: This captures the details about and conditions on what the user wants to buy." and "Payment Mandate : This captures the details about and conditions on how the user wants to pay (amount, instrument, timing)." The docs say the Checkout Mandate is shared with the merchant, so the seller is a recipient of the user''s signed purchase terms. The record the other way, the Mandate Receipt that the Verifier signs, is described with a `result` field in docs/ap2/agent_authorization.md and with a `status` field in the normative schemas, at the same commit e1ea56d (see issue #374 in the open proposals). UCP''s AP2 mandates extension has businesses embed a signature over the checkout terms.
 
@@ -37,6 +37,12 @@ sources:
 - url: https://github.com/google-agentic-commerce/AP2/issues/374
   read: 2026-10-13
   class: third-party
+- url: https://github.com/google-agentic-commerce/AP2/blob/b4587ac1d055888a73b4b21750973cffba961793/docs/index.md
+  read: 2026-10-23
+  class: statement
+- url: https://fidoalliance.org/fido-alliance-agentic-ai/
+  read: 2026-10-23
+  class: decision
 - url: https://github.com/frmoretto/agentic-standards-map/issues/11
   read: 2026-10-19
   class: third-party
@@ -68,9 +74,9 @@ overlaps:
 - acp
 seams:
 - S4
-verified: 2026-10-19
+verified: 2026-10-23
 evidence:
-  read: 'On 2026-10-19: the Google blog post of 2026-04-28, the FIDO release of 2026-04-28 (page metadata: modified 2026-10-16), CONTRIBUTING.md ("The core specification has been donated to FIDO") and docs/faq.md of main.'
+  read: 'On 2026-10-23: docs/index.md at commit b4587ac (2026-04-28) and at the head of main (e1ea56d, same text), and the FIDO page "Agentic AI" (published 2026-04-28, modified 2026-08-20), for point 1 of issue #11 on this map''s repository.'
   not_read: The mandate pages checkout_mandate.md and payment_mandate.md beyond the receipt sections, other code, commits, issues, FIDO working group charters.
   not_found: 'Not found in the seven documents of docs/ap2 at commit e1ea56d (agent_authorization, checkout_mandate, flows, implementation_considerations, payment_mandate, security_and_privacy_considerations, specification), 2026-10-14: refund and cancel (0 occurrences each).'
 matrix:

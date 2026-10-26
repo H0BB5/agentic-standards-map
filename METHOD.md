@@ -44,13 +44,47 @@ An Internet-Draft is not an IETF decision, and the map says which kind of draft 
 
 ## Versions and citation
 
-The website is the living version and changes as venues move. Each DOI identifies a frozen snapshot: version 1.1 (2026-10-19) is the tag v1.1 of the repository and has the version DOI 10.5281/zenodo.23464332; version 1.0.1 (2026-10-14) is the tag v1.0.1 and has the version DOI 10.5281/zenodo.23377309; version 1.0.0 is the tag v1.0.0 and has the version DOI 10.5281/zenodo.23357362. The concept DOI 10.5281/zenodo.23357361 always resolves to the latest version; cite the version DOI for the text you read.
+The website is the living version and changes as venues move. Each DOI identifies a frozen snapshot: version 1.2 (2026-10-26) is the tag v1.2 of the repository, and its version DOI is recorded here once Zenodo assigns it; version 1.1 (2026-10-19) is the tag v1.1 of the repository and has the version DOI 10.5281/zenodo.23464332; version 1.0.1 (2026-10-14) is the tag v1.0.1 and has the version DOI 10.5281/zenodo.23377309; version 1.0.0 is the tag v1.0.0 and has the version DOI 10.5281/zenodo.23357362. The concept DOI 10.5281/zenodo.23357361 always resolves to the latest version; cite the version DOI for the text you read.
 
 Changes verified by Friday evening enter the following Monday's release; a Monday with no change to citable content produces no new version. Corrections and proposals go through issues on the repository, one per entry, so that each change has a public trail.
 
 Archive copies: snapshots of the cited sources were requested on 2026-10-14 from the Wayback Machine of the Internet Archive, and the failed ones were requested again, in part, on 2026-10-15. Of 576 distinct URLs of the entries and notes, 357 now have a snapshot (291 saved on request, 66 that already had a copy from 2026-10-01 or later), 211 failed (206 of them with an error of the service) and 8 were not requested (a login, a token, a placeholder or a Google Doc). Where a snapshot exists, `map.json` and the JSON of the entry carry it in an `archived` field next to the URL, and the entry page links it. A snapshot is a copy kept by a third party, taken at the time shown in its address; it is not the text read on the date of reading.
 
 **Changelog.**
+
+**1.2 (2026-10-26).** One entry added; corrections and additions to the living version.
+
+Corrections:
+
+- `aaif-identity-trust`: the entry said on 2026-10-09 and 2026-10-13 that no release notes were found for the MintID tags; that was a misreading, since CHANGELOG.md is present in the tagged tree since public-v2026-10-06. Corrected on 2026-10-19 after issue #16, which also reported the merge of pull request #288 on 2026-10-13 and the independent run on issue #13; the status was re-read and is dated 2026-10-19.
+- `aaif-identity-trust`: issue #16 is named in the text of the evidence instead of linked.
+- `aaif-identity-trust`: the name of the entry was cut after "issue" wherever it was shown, including in version 1.1, because the YAML file read the rest as a comment; it is now quoted and shown in full.
+- Tools: `build_map.py --check` refuses an unquoted value followed by " #", which YAML reads as a comment, and names file, key and line; it reads the source text, after a self-test.
+- `ucp` and Disclosure: after the comments of the author of this map on PR #966, the entry reports what the PR author wrote on 2026-10-22 (an update pushed, then the merge into the branch of PR #634), no longer that the comments were acted on.
+
+Additions:
+
+- `ietf-audit`: adjacent work, the individual Internet-Draft draft-mih-scitt-agent-action-capsule-05 (read on the datatracker on 2026-10-21).
+- `aaif-identity-trust`: a context entry for MintID, proposed in issue #15, is recorded under Open proposals; the PyPI records and the AAIF list messages it cites could not be read.
+- New entry: `iab-tech-lab-aamp` (context), IAB Tech Lab AAMP 3.0 and OpenProposal, a draft whose public comment period ran until 2026-10-22; its proposals on a well-known manifest and on Web Bot Auth are listed as open proposals.
+- `ietf-dawn`: the working group was formed on 2026-10-22 (charter-ietf-dawn-01; chairs Dapeng Liu and Frank Brockners, technical advisor Kehan Yao, Area Director Éric Vyncke); milestones of the approved charter; the entry was reviewed after the formation (no WG document yet, revisions of the individual drafts, the BoF and telechat states in the past tense), and seam S1 follows it.
+- `ietf-dawn`: the individual draft draft-jakab-dawn-agent-discovery-mdns-00 (mDNS and DNS-SD on a local link), proposed in issue #18.
+- `w3c-ai-agent-protocol-cg`: the meeting of 2026-10-21 and pull request #46 (open, no choice recorded between two approaches); participation and Disclosure.
+- `ucp`: pull request #966 merged on 2026-10-22 into the branch of PR #634 (not into main), with the `not_accepted` wording of policy_return.json; #940 merged, #985 open; participation and Disclosure.
+- `w3c-tpac-2026`, `w3c-agenticweb-wg`: slots of the breakouts on agents, breakout #22 on 2026-10-30 with a discussion of the Agentic Web charter proposed for it; the charter is still in refinement.
+- `w3c-browser-testing-tools-wg`: the new charter of the Browser Testing and Tools Working Group (2026-10-20 or 2026-10-21 to 2028-10-20, as each W3C page states it), whose scope includes agentic browsing.
+- `ietf-webbotauth`: draft-illyes-webbotauth-cbcp-01 (2026-10-22), cbcp PR #23 and protocol PR #140 merged, the individual draft draft-kelley-webbotauth-sail-00; participation and Disclosure.
+- `ietf-audit`: issue #64 of the BoF preparation repository on an out-of-scope section; still a BoF with no charter on 2026-10-23.
+- `ietf-agentproto`: the IETF 127 session is waiting for scheduling.
+- `ietf-vcon`: the interim of 2026-10-22 (no minutes yet) and pull request #41 changed after it; participation and Disclosure.
+- `ap2`: the AP2 documentation and the FIDO "Agentic AI" page on the FIDO working groups, each attributed to its source (issue #11).
+- `a2a-discovery`: pull request #2240 merged on 2026-10-21 into the branch dev-1.1 (not into main): AI Catalog is the preferred discovery mechanism there; seam S1 follows it.
+- `x402`: added to seam S1, with the Domain Discovery working group (PR #6 merged; PR #8 and issue #11 open) and PR #2979 open, proposed in issue #17.
+- `aaif-structure`: ten hosted projects listed on aaif.io/projects, four of them announced on 2026-10-22.
+- Calendar: the events of 2026-10-22 marked as held, the comment deadline of the DID WG charter (2026-11-05) added, and the rows checked again on 2026-10-23.
+- `ietf-vcon`: pull request #41 merged on 2026-10-25 into main of the core draft repository; state of the charter on the datatracker re-read.
+- Disclosure: the two rows on vCon pull request #41 give its state as merged on 2026-10-25.
+- Credit: proposals by Michael Blake (issue #17), Marc Molas (issues #15 and #16), Alan Blount (issue #11) and ljakab (issue #18).
 
 **1.1 (2026-10-19).** Two entries added; corrections and additions to the living version.
 

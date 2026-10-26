@@ -8,7 +8,7 @@ Every statement is dated and points to a public source. The map makes no predict
 
 This map documents public standardisation activity, specifications and declared commitments. It does not measure market adoption, transaction volume, cross-protocol interoperability or the reliability of deployed implementations. Implementation claims are reported only where supported by dated public evidence and are not treated as evidence of interoperability.
 
-*Version 1.1 (2026-10-19) · site updated 2026-10-19. The map is updated as venues move; each entry carries its own read date.*
+*Version 1.2 (2026-10-26) · site updated 2026-10-26. The map is updated as venues move; each entry carries its own read date.*
 
 DOI (all versions): [10.5281/zenodo.23357361](https://doi.org/10.5281/zenodo.23357361)
 
@@ -26,11 +26,11 @@ DOI (all versions): [10.5281/zenodo.23357361](https://doi.org/10.5281/zenodo.233
 
 ## Next on the calendar
 
-- **approx. 19 Oct** Schedule of the Monday to Wednesday TPAC breakouts added to the TPAC calendar
-- **19 Oct** Comments on the proposed DAWN charter due to the IESG mailing list
-- **21 Oct** aipref virtual interim meeting, 20:00 to 21:30 UTC, no agenda submitted on 2026-09-30
-- **22 Oct** IESG telechat with the DAWN charter on the agenda
-- **22 Oct** vCon working group virtual interim meeting, 14:00 to 16:00 UTC
+- **26 to 30 Oct** TPAC 2026, Dublin. Proposed breakouts on agents
+- **26 Oct** TPAC 2026 breakout #39, KYAPay: Verified Agent Identity and Payments for Ubiquitous Agentic Commerce on the
+- **28 Oct** TPAC 2026 breakout #34, Report and follow-ups from the E-commerce for Humans and AI Agents workshop:
+- **28 Oct** Advisory Committee review of the DID Methods WG charter closes
+- **29 Oct** TPAC 2026: deadline, at noon local time, for breakout proposals made once TPAC is under way
 
 Full 60-day calendar: [Calendar](map-bundle.md#part-calendar)
 
@@ -68,9 +68,9 @@ Corrections and missing sources: [open an issue on the repository](https://githu
 
 ### How to cite
 
-Marinoni Moretto, F. (2026). Agentic Standards Map (Version 1.1) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23464332
+Marinoni Moretto, F. (2026). Agentic Standards Map (Version 1.2) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23357361
 
-Please cite the entry id, the date it was read and the DOI. To cite the map in general, use https://doi.org/10.5281/zenodo.23357361.
+Please cite the entry id, the date it was read and the DOI. The version DOI of 1.2 is assigned by Zenodo when this release is archived; it is listed in the Zenodo record and on the live site.
 
 ## Contributing
 

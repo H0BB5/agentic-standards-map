@@ -11,6 +11,10 @@ committed_next:
   when: 2026-12-31
   source: https://datatracker.ietf.org/wg/agentproto/about/
   class: normative
+- what: 'Session at IETF 127 (14 to 20 November 2026): recorded on the datatracker as "Waiting for Scheduling" on 2026-10-23, with no agenda listed there.'
+  when: undated
+  source: https://datatracker.ietf.org/group/agentproto/meetings/
+  class: decision
 boundary: 'Out of scope: "Audit data structures and their production, validation, or consumption, though dialog identifiers may be used in auditing."'
 overlaps:
 - ietf-audit
@@ -89,10 +93,13 @@ sources:
 - url: https://datatracker.ietf.org/wg/agentproto/documents/
   read: 2026-10-13
   class: normative
-verified: 2026-10-16
+- url: https://datatracker.ietf.org/group/agentproto/meetings/
+  read: 2026-10-23
+  class: decision
+verified: 2026-10-23
 evidence:
-  read: 'On 2026-10-16: the datatracker page of draft-agentic-ai-usecases-requirements (revision -04, individual, no stream).'
-  not_read: The other list messages of 2026-10-08 to 2026-10-13 (subjects only), the texts of the related drafts; Threads on AGTP, SAMP, DMSC, COSA; messages in Chinese and Persian; IETF 126 minutes and chat log; 00-04 ballot positions on the list.
+  read: 'On 2026-10-23: the meetings page of the group and the session page for IETF 127 on the datatracker (state, materials), and the datatracker record of draft-agentic-ai-usecases-requirements, "Agentic AI Use Cases and Requirements" (individual Internet-Draft, group Individual Submissions on the datatracker; still -04, 2026-10-15; name and label checked with the datatracker API on 2026-10-26).'
+  not_read: The other list messages of 2026-10-08 to 2026-10-13 (subjects only), the texts of the related drafts; Threads on AGTP, SAMP, DMSC, COSA; messages in Chinese and Persian; IETF 126 minutes and chat log; 00-04 ballot positions on the list; the list messages after 2026-10-13.
   not_found: 'Not found in 00-00 to 00-04: the list-proposed text. Not found in 408 messages, 2026-10-03: consent, Know Your Agent (KYA), AP2, x402.'
 open_proposals:
 - what: 'Charter PR #128: distinguish user from service agents; privacy analysis not to assume symmetry (closed without a merge on 2026-10-08).'

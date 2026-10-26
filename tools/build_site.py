@@ -65,7 +65,7 @@ CLASSES = {"normative": "normative text", "decision": "official decision or comm
 MATRIX_COLS = [("governance", "Owner / governance"), ("version_state", "Version and state"), ("signs", "What it signs"),
                ("signer", "Who signs"), ("record", "Receipt or record"), ("dispute", "Dispute"), ("source", "Source")]
 # the latest version that has a tag: updated by hand when a release is made (with RELEASED_TAG of tools/export_public.py)
-LATEST_RELEASE = ("1.1", "v1.1")
+LATEST_RELEASE = ("1.2", "v1.2")
 MATRIX_ORDER = ["ap2", "ucp", "acp", "x402", "visa-tap", "verifiable-intent", "emvco-agentic-payments-framework"]
 NOTE_PAGES = [  # (source file in the export, page, title, description)
     ("notes/intro.md", "intro.html", "Introduction", "Why the map exists, who it is for and how to read it."),
@@ -689,7 +689,7 @@ def data_page_html(a, site, n_entries, newest, map_size, n_events, sha):
     if a.doi and a.version_doi:
         citable_p = '<p>The website is the living version and changes as venues move. Each DOI identifies a frozen snapshot: version %s is the tag <code>%s</code>, version DOI <a href="https://doi.org/%s" rel="noopener">%s</a>.%s The concept DOI <a href="https://doi.org/%s" rel="noopener">%s</a> always resolves to the latest version; cite the version DOI for the text you read.</p>' % (rel_v, rel_tag, attr(a.version_doi), esc(a.version_doi), pending, attr(a.doi), esc(a.doi))
     elif a.doi:
-        citable_p = '<p>The website is the living version and changes as venues move. Each DOI identifies a frozen snapshot: version %s is the tag <code>%s</code>, DOI <a href="https://doi.org/%s" rel="noopener">%s</a>.%s The concept DOI always resolves to the latest version; cite the version DOI for the text you read.</p>' % (rel_v, rel_tag, attr(a.doi), esc(a.doi), pending)
+        citable_p = '<p>The website is the living version and changes as venues move. Each DOI identifies a frozen snapshot: version %s is the tag <code>%s</code>; its version DOI is recorded here once Zenodo assigns it. The concept DOI <a href="https://doi.org/%s" rel="noopener">%s</a> always resolves to the latest version.%s</p>' % (rel_v, rel_tag, attr(a.doi), esc(a.doi), pending)
     else:
         citable_p = "<p>The website is the living version and changes as venues move. Version %s is the tag <code>%s</code> of the repository; a DOI for each frozen snapshot is not issued yet, and until it is, cite the entry id, the date it was read and the commit shown in the footer of the page.%s</p>" % (rel_v, rel_tag, pending)
     rows = [

@@ -5,7 +5,7 @@
 - **Parts concerned:** all entries, seams, appendices and the calendar. The introduction and the README were drafted with assistance and revised by the author.
 - **Who directed the work:** the author, who chose the scope and the rules, decided every change and checked every statement against its source.
 - **As of:** 2026-10-14.
-- **Version covered:** version 1.1; `map-bundle.md` at tag v1.1, sha256 0fad91a7675c083a3057c8c2a7dc8c15d98e988c81241d7761997bb93dc79bff.
+- **Version covered:** version 1.2; `map-bundle.md` at tag v1.2, sha256 6724af9f8bd30a29abbb71445207d3d280d507d62a78ce0ab3a8a179daeac4fb.
 - **Review passes:** 2026-10-14: two separate model passes acted as adversarial reviewers of the full public site (snapshot c04592a); their findings were checked against sources before any change.
 - **Record:** drafts, prompts, research outputs, reviews and the change log, retained by the author.
 - No pass to remove traces of machine assistance was applied to this text.
@@ -17,7 +17,7 @@ The same declaration in a machine-readable form follows. It is illustrative, not
   "illustrative_only": true,
   "work": {
     "title": "Agentic Standards Map",
-    "version": { "file": "map-bundle.md", "sha256": "0fad91a7675c083a3057c8c2a7dc8c15d98e988c81241d7761997bb93dc79bff", "tag": "v1.1" }
+    "version": { "file": "map-bundle.md", "sha256": "6724af9f8bd30a29abbb71445207d3d280d507d62a78ce0ab3a8a179daeac4fb", "tag": "v1.2" }
   },
   "as_of": "2026-10-14",
   "tools": [

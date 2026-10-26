@@ -71,6 +71,42 @@ def italian_selftest():
     assert find_italian("the order of the cards, a note about the fountain, 'come back'") == [], "italian check fired on English"
 
 
+def find_plain_hash(text):
+    """[(line, key, value read, rest)] for every plain (unquoted, non-block) scalar that a ' #' cuts: YAML reads the rest of
+    the line as a comment, so the loaded value is truncated and nothing raises. Works on the source tokens, not on the loaded
+    value, where the cut is invisible. Also catches a comment line right after a plain scalar, which ends it the same way."""
+    lines = text.split("\n")
+    hits, key, expect_key = [], None, False
+    for tok in yaml.scan(text):
+        if isinstance(tok, yaml.KeyToken):
+            expect_key = True
+            continue
+        if not isinstance(tok, yaml.ScalarToken):
+            continue
+        if expect_key:
+            key, expect_key = tok.value, False
+            continue
+        if not tok.plain:
+            continue
+        ln, col = tok.end_mark.line, tok.end_mark.column
+        rest = lines[ln][col:] if ln < len(lines) else ""
+        nxt = lines[ln + 1] if ln + 1 < len(lines) else ""
+        if re.match(r"[ \t]+#", rest):
+            hits.append((ln + 1, key, tok.value, rest.strip()))
+        elif re.match(r"[ \t]+#", nxt):
+            hits.append((ln + 2, key, tok.value, nxt.strip()))
+    return hits
+
+
+def hash_selftest():
+    """the check must find a value cut by ' #' and stay silent on quoted values, blocks and a '#' with no space before it"""
+    assert [h[1:3] for h in find_plain_hash("a: Breakout #22, The Agentic Web\n")] == [("a", "Breakout")], "plain ' #' missed"
+    assert [h[1:3] for h in find_plain_hash("l:\n  - what: issue #13 x\n    when: undated\n")] == [("what", "issue")], "list item missed"
+    assert len(find_plain_hash("a: issue\n  # 13 and the rest\nb: c\n")) == 1, "comment line after a plain scalar missed"
+    quiet = "a: 'Breakout #22'\nb: \"issue #13\"\nc: >-\n  Breakout #22, text\nd: x#y\ne: https://example.org/p#frag\nf: 3\n"
+    assert find_plain_hash(quiet) == [], find_plain_hash(quiet)
+
+
 def seam_members(text):
     """sections of notes/seams.md whose first line is a list of backticked ids -> {key: (title, [ids])};
     the key is S1..S4 for the numbered seams and a slug of the title for the other sections"""
@@ -132,6 +168,10 @@ def check_entry(p):
     text = Path(p).read_text(encoding="utf-8")
     e = yaml.safe_load(text)
     name = Path(p).name
+    cut = find_plain_hash(text)
+    if cut:
+        raise SystemExit("\n".join(f"{name}: line {n}, key {k!r}: unquoted value followed by {r[:40]!r}; YAML reads it as a comment "
+                                   f"and the value becomes {v!r}. Quote the value or write it as a block (>-)." for n, k, v, r in cut))
     first = re.search(r"^sources:[ ]*\n([ ]*)- url:", text, flags=re.M)
     if first:
         listed = len(re.findall(r"^" + first.group(1) + r"- url:", text, flags=re.M))
@@ -369,6 +409,7 @@ def render(entries):
 
 if __name__ == "__main__":
     if len(sys.argv) > 2 and sys.argv[1] == "--check":
+        hash_selftest()
         sp = ROOT / "notes" / "seams.md"
         for f in sys.argv[2:]:
             e = check_entry(f)
@@ -378,7 +419,8 @@ if __name__ == "__main__":
                     raise SystemExit("\n".join(diffs))
             print("ok", f)
         print("[SCOPE] --check looks at: tier, org, required fields, seams against notes/seams.md, source and committed_next classes, "
-              "committed_next 'when' format, open_proposals state enum, verified not earlier than status_as_of or than any source read, and that every '  - url:' line of the file is a parsed source (an item pasted inside another field is refused). "
+              "committed_next 'when' format, open_proposals state enum, verified not earlier than status_as_of or than any source read, and that every '  - url:' line of the file is a parsed source (an item pasted inside another field is refused), "
+              "and that no unquoted value is cut by ' #' (read on the source text, with a self-test run first). "
               "It does NOT check: that a URL answers, that a quote is in its source (check_sources.py does), or that the dates are true.")
         sys.exit(0)
     md = render(load())
