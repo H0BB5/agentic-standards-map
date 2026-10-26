@@ -1,13 +1,33 @@
 {
  "id": "w3c-browser-testing-tools-wg",
- "name": "W3C browser-testing-tools Working Group (charter draft)",
+ "name": "W3C Browser Testing and Tools Working Group",
  "org": "W3C",
  "kind": "charter",
  "tier": "context",
- "status": "Pull request #882 on w3c/charter-drafts, \"Update charter-wg-btt.html\", was merged on 2026-10-07 at 17:24 UTC. The merge text was read in the pull request only; the charter file was not read.",
- "status_as_of": "2026-10-08",
- "relevance": "The pull request, opened by tantek, says it \"Updates to broaden Motivation and Background, Scope sections to include end users and agentic browsing use-cases.\"",
+ "status": "The Browser Testing and Tools Working Group has a new charter: the W3C charters page of the group lists it as \"Chartered under the Patent Policy 2025 from 2026-10-21 until 2028-10-20 (active)\", and the charter document gives \"Start date 20 October 2026\" and \"End date 20 October 2028\"; the activity page of the group lists a Call for Participation on 2026-10-21, with \"Participants had to rejoin under this charter.\" Chair: David Burns (W3C Invited Experts) (read 2026-10-23). The draft of this charter had been updated by pull request #882 on w3c/charter-drafts, \"Update charter-wg-btt.html\", merged on 2026-10-07 at 17:24 UTC.",
+ "status_as_of": "2026-10-23",
+ "relevance": "The scope of the charter \"includes protocols and APIs for automation of web browsers, for purposes including automated testing of web applications, and agentic browsing where a user interacts with their browser through an automation API.\"; the draft change of pull request #882, opened by tantek, said it \"Updates to broaden Motivation and Background, Scope sections to include end users and agentic browsing use-cases.\"",
  "sources": [
+  {
+   "url": "https://www.w3.org/2026/10/btt-wg-charter.html",
+   "read": "2026-10-23",
+   "class": "normative"
+  },
+  {
+   "url": "https://www.w3.org/groups/wg/browser-tools-testing/charters/",
+   "read": "2026-10-23",
+   "class": "decision"
+  },
+  {
+   "url": "https://www.w3.org/groups/wg/browser-tools-testing/activity/",
+   "read": "2026-10-23",
+   "class": "decision"
+  },
+  {
+   "url": "https://www.w3.org/groups/wg/browser-tools-testing/",
+   "read": "2026-10-23",
+   "class": "statement"
+  },
   {
    "url": "https://github.com/w3c/charter-drafts/pull/882",
    "read": "2026-10-08",
@@ -17,12 +37,12 @@
  "overlaps": [
   "w3c-agenticweb-wg"
  ],
- "verified": "2026-10-08",
+ "verified": "2026-10-23",
  "evidence": {
-  "read": "The description and metadata of pull request #882, read 2026-10-08.",
-  "not_read": "The charter text, the issue it refers to in webdriver-bidi, the current charter of the group."
+  "read": "On 2026-10-23: the charter document, the group page, its charters page and its activity page on w3.org.",
+  "not_read": "The text of the Call for Participation (it is in a Member-only archive), the issue the pull request refers to in webdriver-bidi."
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/w3c-browser-testing-tools-wg.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/4113f180fe562b9bbf493ad9c64858b7474b5545/entries/w3c-browser-testing-tools-wg.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/1150c52e9f5327bc729309f914275d6c05013cc2/entries/w3c-browser-testing-tools-wg.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

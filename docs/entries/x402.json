@@ -6,7 +6,7 @@
  "tier": "core",
  "status": "Open payment protocol under the x402 Foundation (Linux Foundation): intent announced 2026-04-02; operational launch and completed contribution by Coinbase announced 2026-07-14, with 40 member organisations at launch. On 2026-10-13 main is at commit 6c470a8 and the core specification header reads \"Protocol Version: 2\" (specs/x402-specification-v2.md); no release is listed on GitHub (not found, 2026-10-13). The file ROADMAP.md, which read \"(update coming soon)\" on 2026-10-03, was removed from main on 2026-10-13 by PR #3789, \"chore: remove outdated ROADMAP.md and PROJECT-IDEAS.md\".",
  "status_as_of": "2026-10-13",
- "relevance": "The README says \"x402 is an open standard for internet native payments.\"; the server answers 402 with a PAYMENT-REQUIRED header, the client replies with PAYMENT-SIGNATURE, and an http-message-signatures extension identifies the paying agent. The offer-and-receipt extension lets the server \"cryptographically commit to the payment terms it presents in\" accepts[] (the payment terms of the offer, not the commercial terms of the sale) and sign a receipt; it says \"Wire shape and field placement are not considered stable\". The FAQ describes the exact scheme as a push payment, \"irreversible once executed\".\n",
+ "relevance": "The README says \"x402 is an open standard for internet native payments.\"; the server answers 402 with a PAYMENT-REQUIRED header, the client replies with PAYMENT-SIGNATURE, and an http-message-signatures extension identifies the paying agent. The offer-and-receipt extension lets the server \"cryptographically commit to the payment terms it presents in\" accepts[] (the payment terms of the offer, not the commercial terms of the sale) and sign a receipt; it says \"Wire shape and field placement are not considered stable\". The FAQ describes the exact scheme as a push payment, \"irreversible once executed\". Discovery (seam S1), read 2026-10-23: in the Domain Discovery working group of the x402 Foundation (x402-foundation/wg-domain-discovery) a verifier response schema was merged on 2026-10-02 (PR #6, proposal/verifier-schema.md); PR #8, open since 2026-10-11, proposes `/.well-known/x402` as a single canonical discovery path with a JSON schema, and issue #11, open since 2026-10-14, discusses the shape of that entry and its alignment with x402; in the core repository PR #2979, open since 2026-07-29, proposes DNS and `.well-known` records for facilitators. `/.well-known/x402`: not found in a GitHub code search of x402-foundation/x402 (default branch), 2026-10-23.\n",
  "boundary": "The FAQ answers \"Not natively.\" on credit-card deposits, placing fiat rails outside the protocol.",
  "committed_next": [],
  "sources": [
@@ -36,6 +36,26 @@
    "class": "decision"
   },
   {
+   "url": "https://github.com/x402-foundation/wg-domain-discovery/pull/6",
+   "read": "2026-10-23",
+   "class": "decision"
+  },
+  {
+   "url": "https://github.com/x402-foundation/wg-domain-discovery/pull/8",
+   "read": "2026-10-23",
+   "class": "third-party"
+  },
+  {
+   "url": "https://github.com/x402-foundation/wg-domain-discovery/issues/11",
+   "read": "2026-10-23",
+   "class": "third-party"
+  },
+  {
+   "url": "https://github.com/x402-foundation/x402/pull/2979",
+   "read": "2026-10-23",
+   "class": "third-party"
+  },
+  {
    "url": "https://github.com/x402-foundation/x402/blob/main/python/legacy/README.md",
    "read": "2026-10-03",
    "class": "normative"
@@ -58,13 +78,14 @@
   "ietf-httpauth-payment"
  ],
  "seams": [
+  "S1",
   "S2",
   "S3",
   "S4"
  ],
- "verified": "2026-10-14",
+ "verified": "2026-10-23",
  "evidence": {
-  "read": "On 2026-10-13 (fetch of the repository, commit 6c470a8): TSC.md, README.md, the core specification header, specs/extensions/extension-offer-and-receipt.md (still \"Wire shape and field placement are not considered stable\"), docs/faq.md, and the state of PRs #1986, #3220, #3656, #3789 and issues #2887, #2906, #3500. x402-foundation/x402, 2026-10-03: main branch read (README, TSC.md, ROADMAP, specs, docs, Technical Charter), issues and pull requests updated since 2026-03-01, and the two Linux Foundation releases.",
+  "read": "On 2026-10-23, after issue #17 on this map's repository, whose proposer wrote \"Disclosure: I opened issue #9 in that working group (on the verifier schema), have commented there, and expect to propose a change to the verifier schema in a pull request.",
   "not_read": "Slack, the tsc and wg-identity repositories, x402.org member and calendar pages, older items; usage figures on x402.org (self-reported)."
  },
  "open_proposals": [
@@ -102,6 +123,27 @@
    "date": "2026-10-02",
    "state": "open",
    "url": "https://github.com/x402-foundation/x402/pull/3656"
+  },
+  {
+   "what": "Discovery: DNS and .well-known records for facilitators",
+   "author": "a participant",
+   "date": "2026-07-29",
+   "state": "open",
+   "url": "https://github.com/x402-foundation/x402/pull/2979"
+  },
+  {
+   "what": "Domain Discovery working group: /.well-known/x402 as a single canonical discovery path with a JSON schema",
+   "author": "a participant",
+   "date": "2026-10-11",
+   "state": "open",
+   "url": "https://github.com/x402-foundation/wg-domain-discovery/pull/8"
+  },
+  {
+   "what": "Domain Discovery working group: shape of the /.well-known/x402 entry and its alignment with x402",
+   "author": "a participant",
+   "date": "2026-10-14",
+   "state": "open",
+   "url": "https://github.com/x402-foundation/wg-domain-discovery/issues/11"
   }
  ],
  "matrix": {
@@ -114,6 +156,6 @@
   "source": "https://github.com/x402-foundation/x402/blob/main/specs/extensions/extension-offer-and-receipt.md"
  },
  "url": "https://frmoretto.github.io/agentic-standards-map/entries/x402.html",
- "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/4113f180fe562b9bbf493ad9c64858b7474b5545/entries/x402.yaml",
+ "source_url": "https://github.com/frmoretto/agentic-standards-map/blob/1150c52e9f5327bc729309f914275d6c05013cc2/entries/x402.yaml",
  "licence": "https://creativecommons.org/licenses/by/4.0/"
 }

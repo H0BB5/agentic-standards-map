@@ -8,10 +8,11 @@ X-WR-CALDESC:This calendar lists dated public events of the next 60 days de
  clared by the venues\; charter milestones beyond 60 days are listed in the
   entries only\, and the individual draft expiries listed here are marked a
  s such: they are not commitments of a venue. Events as declared by the ven
- ues on 2026-10-14\; check the venue for later changes.
+ ues on 2026-10-14\; the rows from 2026-10-22 onwards were checked again on
+  2026-10-23\; check the venue for later changes.
 BEGIN:VEVENT
 UID:aaif-structure-2026-10-15-0.agentic-standards-map.invalid
-DTSTAMP:20261019T000000Z
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Accuracy & Reliability of AI Agents: Virtual Summit\, 15:00 to 17:0
@@ -25,7 +26,7 @@ URL:https://frmoretto.github.io/agentic-standards-map/entries/aaif-structur
 END:VEVENT
 BEGIN:VEVENT
 UID:aaif-structure-2026-10-15-1.agentic-standards-map.invalid
-DTSTAMP:20261019T000000Z
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:AAIF Taxonomy and Landscape Workstream: Ecosystem Architecture Map 
@@ -41,7 +42,7 @@ URL:https://frmoretto.github.io/agentic-standards-map/entries/aaif-structur
 END:VEVENT
 BEGIN:VEVENT
 UID:w3c-tpac-2026-2026-10-19-2.agentic-standards-map.invalid
-DTSTAMP:20261019T000000Z
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261019
 DTEND;VALUE=DATE:20261020
 SUMMARY:approx. Schedule of the Monday to Wednesday TPAC breakouts added to
@@ -55,7 +56,7 @@ URL:https://frmoretto.github.io/agentic-standards-map/entries/w3c-tpac-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:ietf-dawn-2026-10-19-3.agentic-standards-map.invalid
-DTSTAMP:20261019T000000Z
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261019
 DTEND;VALUE=DATE:20261020
 SUMMARY:Comments on the proposed DAWN charter due to the IESG mailing list
@@ -69,7 +70,7 @@ URL:https://frmoretto.github.io/agentic-standards-map/entries/ietf-dawn.htm
 END:VEVENT
 BEGIN:VEVENT
 UID:ietf-aipref-2026-10-21-4.agentic-standards-map.invalid
-DTSTAMP:20261019T000000Z
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
 SUMMARY:aipref virtual interim meeting\, 20:00 to 21:30 UTC\, no agenda sub
@@ -82,33 +83,37 @@ URL:https://frmoretto.github.io/agentic-standards-map/entries/ietf-aipref.h
 END:VEVENT
 BEGIN:VEVENT
 UID:ietf-dawn-2026-10-22-5.agentic-standards-map.invalid
-DTSTAMP:20261019T000000Z
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
-SUMMARY:IESG telechat with the DAWN charter on the agenda
-DESCRIPTION:IESG telechat with the DAWN charter on the agenda (datatracker\
- , read on 2026-10-13: "On agenda of 2026-10-22 IESG telechat")\; no WG Act
- ion announced up to 2026-10-12 Source: https://datatracker.ietf.org/doc/ch
- arter-ietf-dawn/
+SUMMARY:IESG telechat with the DAWN charter on the agenda: held
+DESCRIPTION:IESG telechat with the DAWN charter on the agenda: held\; the I
+ ESG approved the charter (charter-ietf-dawn-01) and the WG is active since
+  that day (datatracker\, read on 2026-10-23) Source: https://datatracker.i
+ etf.org/doc/charter-ietf-dawn/\; https://datatracker.ietf.org/group/dawn/a
+ bout/
 URL:https://frmoretto.github.io/agentic-standards-map/entries/ietf-dawn.htm
  l
 END:VEVENT
 BEGIN:VEVENT
 UID:ietf-vcon-2026-10-22-6.agentic-standards-map.invalid
-DTSTAMP:20261019T000000Z
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:vCon working group virtual interim meeting\, 14:00 to 16:00 UTC
 DESCRIPTION:vCon working group virtual interim meeting\, 14:00 to 16:00 UTC
   (agenda: "Continue discussion on core document leading up to -05 submissi
  on before SFO including redaction PR inclusion.  Discuss charter draft sta
- tus.") Source: https://datatracker.ietf.org/meeting/upcoming.ics?show=vcon
+ tus."): held (interim-2026-vcon-05\; agenda\, slides\, bluesheets\, record
+ ing and chat log on the datatracker\, no minutes on 2026-10-23) Source: ht
+ tps://datatracker.ietf.org/meeting/upcoming.ics?show=vcon\; https://datatr
+ acker.ietf.org/meeting/interim-2026-vcon-05/session/vcon
 URL:https://frmoretto.github.io/agentic-standards-map/entries/ietf-vcon.htm
  l
 END:VEVENT
 BEGIN:VEVENT
 UID:ucp-2026-10-23-7.agentic-standards-map.invalid
-DTSTAMP:20261019T000000Z
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261024
 SUMMARY:UCP Agentic Donations DWG proposal
@@ -119,20 +124,21 @@ URL:https://frmoretto.github.io/agentic-standards-map/entries/ucp.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ietf-webbotauth-2026-10-23-8.agentic-standards-map.invalid
-DTSTAMP:20261019T000000Z
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261024
-SUMMARY:Expiry of the individual draft draft-illyes-webbotauth-cbcp unless 
- revised
-DESCRIPTION:Expiry of the individual draft draft-illyes-webbotauth-cbcp unl
- ess revised (draft expiry\, not a WG commitment) Source: https://datatrack
- er.ietf.org/doc/draft-illyes-webbotauth-cbcp/
+SUMMARY:Expiry of the individual draft draft-illyes-webbotauth-cbcp-00 unle
+ ss revised
+DESCRIPTION:Expiry of the individual draft draft-illyes-webbotauth-cbcp-00 
+ unless revised (draft expiry\, not a WG commitment): revised on 2026-10-22
+ \, revision -01 expires 2027-04-25 (datatracker\, read on 2026-10-23) Sour
+ ce: https://datatracker.ietf.org/doc/draft-illyes-webbotauth-cbcp/
 URL:https://frmoretto.github.io/agentic-standards-map/entries/ietf-webbotau
  th.html
 END:VEVENT
 BEGIN:VEVENT
 UID:w3c-tpac-2026-2026-10-26-9.agentic-standards-map.invalid
-DTSTAMP:20261019T000000Z
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261026
 DTEND;VALUE=DATE:20261031
 SUMMARY:TPAC 2026\, Dublin. Proposed breakouts on agents
@@ -147,7 +153,7 @@ URL:https://frmoretto.github.io/agentic-standards-map/entries/w3c-tpac-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:kyapay-2026-10-26-10.agentic-standards-map.invalid
-DTSTAMP:20261019T000000Z
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261026
 DTEND;VALUE=DATE:20261027
 SUMMARY:TPAC 2026 breakout #39\, KYAPay: Verified Agent Identity and Paymen
@@ -161,7 +167,7 @@ URL:https://frmoretto.github.io/agentic-standards-map/entries/kyapay.html
 END:VEVENT
 BEGIN:VEVENT
 UID:w3c-gs1-ecommerce-workshop-2026-10-28-11.agentic-standards-map.invalid
-DTSTAMP:20261019T000000Z
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261029
 SUMMARY:TPAC 2026 breakout #34\, Report and follow-ups from the E-commerce 
@@ -176,7 +182,7 @@ URL:https://frmoretto.github.io/agentic-standards-map/entries/w3c-gs1-ecomm
 END:VEVENT
 BEGIN:VEVENT
 UID:w3c-did-methods-wg-2026-10-28-12.agentic-standards-map.invalid
-DTSTAMP:20261019T000000Z
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261029
 SUMMARY:Advisory Committee review of the DID Methods WG charter closes
@@ -188,7 +194,7 @@ URL:https://frmoretto.github.io/agentic-standards-map/entries/w3c-did-metho
 END:VEVENT
 BEGIN:VEVENT
 UID:w3c-tpac-2026-2026-10-29-13.agentic-standards-map.invalid
-DTSTAMP:20261019T000000Z
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
 SUMMARY:TPAC 2026: deadline\, at noon local time\, for breakout proposals m
@@ -202,7 +208,7 @@ URL:https://frmoretto.github.io/agentic-standards-map/entries/w3c-tpac-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:aaif-structure-2026-10-29-14.agentic-standards-map.invalid
-DTSTAMP:20261019T000000Z
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
 SUMMARY:AAIF Workflows and Process Integration group: target of the Best Pr
@@ -216,21 +222,25 @@ URL:https://frmoretto.github.io/agentic-standards-map/entries/aaif-structur
 END:VEVENT
 BEGIN:VEVENT
 UID:w3c-agenticweb-wg-2026-10-30-15.agentic-standards-map.invalid
-DTSTAMP:20261019T000000Z
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
-SUMMARY:TPAC 2026 breakout #22\, The Agentic Web: provisional slot\, 08:30 
- to 09:30 GMT as listed
-DESCRIPTION:TPAC 2026 breakout #22\, The Agentic Web: provisional slot\, 08
- :30 to 09:30 GMT as listed (09:30 to 10:30 in Rome\, converted)\, Second F
- loor - Room 3\, marked "Tentative" (TPAC calendar\, read on 2026-10-14) So
- urce: https://www.w3.org/calendar/tpac2026/breakout-sessions/
+SUMMARY:TPAC 2026 breakout #22\, The Agentic Web: Friday 08:30 to 09:30 as 
+ written in the issue on 2026-10-23
+DESCRIPTION:TPAC 2026 breakout #22\, The Agentic Web: Friday 08:30 to 09:30
+  as written in the issue on 2026-10-23 (no time zone given\; 08:30 to 09:3
+ 0 GMT on the TPAC calendar of 2026-10-14\, 09:30 to 10:30 in Rome\, conver
+ ted)\, Second Floor - Room 3 on that calendar\; additional chairs sarony a
+ nd yoavweiss\; agenda not published on 2026-10-23\; a discussion of the Ag
+ entic Web WG charter was proposed for it Source: https://github.com/w3c/tp
+ ac2026-breakouts/issues/22\; https://www.w3.org/calendar/tpac2026/breakout
+ -sessions/
 URL:https://frmoretto.github.io/agentic-standards-map/entries/w3c-agenticwe
  b-wg.html
 END:VEVENT
 BEGIN:VEVENT
 UID:ucp-2026-11-02-16.agentic-standards-map.invalid
-DTSTAMP:20261019T000000Z
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
 SUMMARY:UCP Agentic Donations DWG proposal
@@ -241,7 +251,7 @@ URL:https://frmoretto.github.io/agentic-standards-map/entries/ucp.html
 END:VEVENT
 BEGIN:VEVENT
 UID:w3c-digital-policy-wg-2026-11-02-17.agentic-standards-map.invalid
-DTSTAMP:20261019T000000Z
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
 SUMMARY:approx. Charter refinement of the Digital Policy WG ends
@@ -251,8 +261,22 @@ URL:https://frmoretto.github.io/agentic-standards-map/entries/w3c-digital-p
  olicy-wg.html
 END:VEVENT
 BEGIN:VEVENT
-UID:w3c-agenticweb-wg-2026-11-10-18.agentic-standards-map.invalid
-DTSTAMP:20261019T000000Z
+UID:w3c-did-wg-2026-11-05-18.agentic-standards-map.invalid
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:Public comments on the proposed maintenance charter of the Decentra
+ lized Identifier
+DESCRIPTION:Public comments on the proposed maintenance charter of the Dece
+ ntralized Identifier (DID) WG due\; the Advisory Committee review closes a
+ t 23:59 UTC Source: https://lists.w3.org/Archives/Public/public-new-work/2
+ 026Oct/0008.html
+URL:https://frmoretto.github.io/agentic-standards-map/entries/w3c-did-wg.ht
+ ml
+END:VEVENT
+BEGIN:VEVENT
+UID:w3c-agenticweb-wg-2026-11-10-19.agentic-standards-map.invalid
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
 SUMMARY:approx. Charter refinement of the Agentic Web WG ends
@@ -263,23 +287,26 @@ URL:https://frmoretto.github.io/agentic-standards-map/entries/w3c-agenticwe
  b-wg.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ietf-webbotauth-2026-11-14-19.agentic-standards-map.invalid
-DTSTAMP:20261019T000000Z
+UID:ietf-webbotauth-2026-11-14-20.agentic-standards-map.invalid
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261114
 DTEND;VALUE=DATE:20261121
 SUMMARY:IETF 127\, San Francisco
 DESCRIPTION:IETF 127\, San Francisco (ietf.org/meeting/127\, read on 2026-1
  0-13: "14 Nov 2026 - 20 Nov 2026")\; a two-hour webbotauth session has bee
- n requested\, not scheduled (request of 2026-09-15) Source: https://www.ie
- tf.org/meeting/127/\; https://datatracker.ietf.org/meeting/upcoming/\; htt
- ps://mailarchive.ietf.org/arch/msg/web-bot-auth/w0al4_01_6Evh8AI9wXnbKz6Kc
- 0/
+ n requested\, not scheduled (request of 2026-09-15)\; on 2026-10-23 the da
+ tatracker records the webbotauth and agentproto sessions as "Waiting for S
+ cheduling" Source: https://www.ietf.org/meeting/127/\; https://datatracker
+ .ietf.org/meeting/upcoming/\; https://mailarchive.ietf.org/arch/msg/web-bo
+ t-auth/w0al4_01_6Evh8AI9wXnbKz6Kc0/\; https://datatracker.ietf.org/group/w
+ ebbotauth/meetings/\; https://datatracker.ietf.org/group/agentproto/meetin
+ gs/
 URL:https://frmoretto.github.io/agentic-standards-map/entries/ietf-webbotau
  th.html
 END:VEVENT
 BEGIN:VEVENT
-UID:ietf-dnsaid-2026-11-28-20.agentic-standards-map.invalid
-DTSTAMP:20261019T000000Z
+UID:ietf-dnsaid-2026-11-28-21.agentic-standards-map.invalid
+DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Expiry of the individual draft draft-mozleywilliams-dnsop-dnsaid -0
