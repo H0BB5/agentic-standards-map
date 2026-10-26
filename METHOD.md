@@ -58,6 +58,7 @@ Archive copies: snapshots of the cited sources were requested on 2026-10-14 from
 - `ietf-webbotauth`: the IETF 127 session is scheduled on 2026-11-17, 16:30 to 18:30 San Francisco time, room Continental 4 (datatracker agenda, read on 2026-10-26).
 - `ietf-audit`, `ietf-vcon`, `ietf-dawn`, `ietf-wimse-aims`: the IETF 127 sessions with day, time and room: AUDIT BoF and vcon on 2026-11-17, dawn on 2026-11-19, wimse on 2026-11-18 and 2026-11-19 (the second a joint session with OAUTH) (datatracker agenda, read on 2026-10-26).
 - Calendar: the IETF 127 sessions of agentproto, AUDIT (BoF), vcon, webbotauth, wimse (two, the second a joint session with OAUTH) and dawn, read on the datatracker agenda on 2026-10-26.
+- Site header: map name on every page, link to the repository, short introduction for visitors arriving on an inner page. External links open in a new tab and are marked.
 
 **1.2 (2026-10-26).** One entry added; corrections and additions to the living version.
 

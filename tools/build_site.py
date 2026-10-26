@@ -41,6 +41,9 @@ ROOT = HERE.parent
 PLACEHOLDER_BASE = "https://example.invalid/"
 DEFAULT_REPO = "https://github.com/frmoretto/agentic-standards-map"
 SITE_TITLE = "Agentic standards map"
+SITE_NAME = "Agentic Standards Map"   # the name in the header of every page and in the breadcrumb of the entries
+INTRO_STRIP = ("An open, dated map of who is standardising agentic commerce (W3C, IETF, GS1, AAIF and the industry protocols) and what each "
+               "venue has committed to next. Every statement points to a public source. Maintained by %s. <strong>New here?</strong> Start with the %s.")
 AUTHOR = "Francesco Marinoni Moretto"
 ORCID_ID = "0009-0004-0096-4712"
 ORCID = "https://orcid.org/" + ORCID_ID
@@ -498,12 +501,16 @@ CSS = """:root{--measure:56rem;--pad:1rem;--fg:#1b1b1b;--bg:#fff;--muted:#555;--
 @media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--bg:#161a1d;--muted:#aab;--line:#333b42;--link:#7ab8f5;--accent:#8fc4dd;--chip:#232a30}}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
 body{margin:0;font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--fg);background:var(--bg)}
-header.site,footer.site{padding-left:max(var(--pad),calc((100% - var(--measure))/2 + var(--pad)));padding-right:max(var(--pad),calc((100% - var(--measure))/2 + var(--pad)))}
+header.site,footer.site,div.strip{padding-left:max(var(--pad),calc((100% - var(--measure))/2 + var(--pad)));padding-right:max(var(--pad),calc((100% - var(--measure))/2 + var(--pad)))}
 header.site{border-bottom:1px solid var(--line);padding-top:.6rem;padding-bottom:.6rem}
 header.site{display:flex;flex-wrap:wrap;row-gap:.2rem}
-header.site a{margin-right:1rem;color:var(--accent);text-decoration:none;font-weight:600;white-space:nowrap}header.site .cadence{flex-basis:100%;margin:0;font-size:.85rem;color:var(--muted)}header.site .cadence a{margin-right:0;font-weight:400;text-decoration:underline}footer.site .cadence{margin:0 0 .4rem}
+header.site a{margin-right:1rem;color:var(--accent);text-decoration:none;font-weight:600;white-space:nowrap}header.site a.brand{flex-basis:100%;font-size:1.85rem;font-weight:700;margin-bottom:.2rem}header.site .cadence{flex-basis:100%;margin:0;font-size:.85rem;color:var(--muted)}header.site .cadence a{margin-right:0;font-weight:400;text-decoration:underline}footer.site .cadence{margin:0 0 .4rem}
+div.strip{background:var(--chip);border-bottom:1px solid var(--line);padding-top:.55rem;padding-bottom:.55rem;font-size:.9rem}div.strip p{margin:0}
+p.crumbs{font-size:.85rem;color:var(--muted);margin:.6rem 0 -.4rem}
+a[target="_blank"]::after{content:"\\2197";content:"\\2197" / "";font-size:.8em;margin-left:.15em;text-decoration:none;display:inline-block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
 main{max-width:var(--measure);margin:0 auto;padding:var(--pad)}
-h1,h2,h3{color:var(--accent);line-height:1.25}h1{font-size:1.7rem}h2{font-size:1.3rem;margin-top:2rem}h3{font-size:1.1rem}
+h1,h2,h3{color:var(--accent);line-height:1.25}h1{font-size:1.45rem}h2{font-size:1.3rem;margin-top:2rem}h3{font-size:1.1rem}
 a{color:var(--link);overflow-wrap:anywhere}code{background:var(--chip);padding:0 .25em;border-radius:3px;font-size:.92em;overflow-wrap:anywhere}
 pre{background:var(--chip);padding:.8rem;overflow:auto}hr{border:0;border-top:1px solid var(--line);margin:1.5rem 0}
 .scroll{overflow-x:auto;margin:1rem 0}table{border-collapse:collapse;font-size:.9rem;width:100%}
@@ -538,12 +545,35 @@ class Site:
     def base(self, path=""):
         return self.a.base_url + path
 
+    def external_in_new_window(self, page):
+        """Every link that leaves the site opens in a new tab and says so: an <a> whose href is http(s) and not under the base URL
+        gets target="_blank", rel="noopener" and a visually hidden "(opens in a new tab)"; the CSS adds the arrow. JSON-LD blocks
+        and links that already carry a target (the nodes of the graph) are left as they are."""
+        def fix(m):
+            a, inner = m.group(1), m.group(2)
+            h = re.search(r'\bhref="(https?://[^"]*)"', a)
+            if not h or h.group(1).startswith(self.a.base_url) or "target=" in a:
+                return m.group(0)
+            if re.search(r'\brel="', a):
+                if not re.search(r'\brel="[^"]*\bnoopener\b', a):
+                    a = re.sub(r'\brel="([^"]*)"', r'rel="\1 noopener"', a, count=1)
+            else:
+                a = a[:-1] + ' rel="noopener"' + a[-1]
+            return a[:-1] + ' target="_blank"' + a[-1] + inner + '<span class="sr"> (opens in a new tab)</span></a>'
+        parts = re.split(r'(<script type="application/ld\+json">.*?</script>)', page, flags=re.S)
+        return "".join(p if p.startswith('<script type="application/ld+json">') else re.sub(r"(<a\b[^>]*>)(.*?)</a>", fix, p, flags=re.S) for p in parts)
+
     def write(self, path, body, title, desc, lastmod, jsonld=None, depth=0, alternates=None):
         rel = "../" * depth
         alt = "".join('<link rel="alternate" type="%s" href="%s">\n' % (attr(t_), attr(h_)) for t_, h_ in (alternates or []))
-        nav = "".join('<a href="%s%s">%s</a>' % (rel, h, t) for h, t in (("index.html", "Map"), ("graph.html", "Graph"), ("seams.html", "Seams"),
+        nav = '<a class="brand" href="%sindex.html">%s</a>' % (rel, esc(SITE_NAME))
+        nav += "".join('<a href="%s%s">%s</a>' % (rel, h, t) for h, t in (("index.html#entries", "Entries"), ("graph.html", "Graph"), ("seams.html", "Seams"),
                                                                            ("calendar.html", "Calendar"), ("intro.html", "Introduction"),
                                                                            ("disclosure.html", "Disclosure"), ("method.html", "Method"), ("data.html", "For agents and tools")))
+        strip = ""
+        if path != "index.html":   # the home page has its own introduction
+            strip = '<div class="strip"><p>%s</p></div>\n' % (INTRO_STRIP % ('<a href="%s" rel="noopener">%s</a>' % (attr(GITHUB), esc(AUTHOR)),
+                                                                             '<a href="%sintro.html">Introduction</a>' % rel))
         ld = ""
         if jsonld:
             ld = '<script type="application/ld+json">%s</script>\n' % json.dumps(jsonld, ensure_ascii=False, indent=1).replace("</", "<\\/")
@@ -553,9 +583,11 @@ class Site:
             commit = 'the data of the <a href="%s" rel="noopener">repository</a>' % attr(self.a.repo_url)
         page = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n'
                 '<title>%s</title>\n<meta name="description" content="%s">\n<link rel="canonical" href="%s">\n<link rel="stylesheet" href="%sstyle.css">\n%s%s</head>\n'
-                '<body>\n<header class="site">%s<p class="cadence">Updated weekly, new versions on Mondays &middot; Corrections: <a href="%s" rel="noopener">open an issue</a></p></header>\n<main>\n%s\n</main>\n'
+                '<body>\n<header class="site">%s<p class="cadence">Updated weekly, new versions on Mondays &middot; Corrections: <a href="%s" rel="noopener">open an issue</a>'
+                ' &middot; Source and data: <a href="%s" rel="noopener">GitHub</a></p></header>\n%s<main>\n%s\n</main>\n'
                 '<footer class="site"><p class="cadence">Updated weekly: numbered versions are released on Mondays. To correct or propose an entry, <a href="%s" rel="noopener">open an issue</a>.</p>%s%s. Generated on %s from %s; content under CC BY 4.0. Generated from the data of the map, never edited by hand. No tracking, no scripts.</footer>\n</body>\n</html>\n'
-                % (esc(title), attr(desc), attr(self.base(path)), rel, alt, ld, nav, attr(NEW_ISSUE_URL), body, attr(NEW_ISSUE_URL), esc(SITE_TITLE), (", version %s" % esc(self.version)) if self.version else "", self.today, commit))
+                % (esc(title), attr(desc), attr(self.base(path)), rel, alt, ld, nav, attr(NEW_ISSUE_URL), attr(self.a.repo_url), strip, body, attr(NEW_ISSUE_URL), esc(SITE_TITLE), (", version %s" % esc(self.version)) if self.version else "", self.today, commit))
+        page = self.external_in_new_window(page)
         target = self.out / path
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(page, encoding="utf-8", newline="\n")
@@ -728,7 +760,8 @@ def dataset_ld(site, newest):
 def entry_body(e, entries, md, seams, graph_html, archived=None):
     rel = "../"
     ov = ", ".join('<a href="%s.html">%s</a>' % (attr(o), esc(entries[o]["name"])) for o in (e.get("overlaps") or []))
-    p = ['<h1>%s</h1>' % esc(e["name"]),
+    p = ['<p class="crumbs"><a href="%sindex.html">%s</a> &rsaquo; <a href="%sindex.html#entries">Entries</a> &rsaquo; %s</p>' % (rel, esc(SITE_NAME), rel, esc(e["name"])),
+         '<h1>%s</h1>' % esc(e["name"]),
          '<p class="chips"><span>%s</span><span>%s</span><span>%s entry</span></p>' % (esc(e["org"]), esc(e["kind"]), esc(e["tier"])),
          '<p class="verified">Verified %s. Status as of %s. <a href="%sindex.html#entries">All entries</a>.</p>' % (d(e["verified"]), d(e["status_as_of"]), rel)]
     if e.get("seams"):
